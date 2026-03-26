@@ -249,6 +249,13 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
     Since <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is not a cover for <m>K</m>, the set <m>K \setminus \bigcup_{i=1}^n U_i</m> is not empty.  Choose <m>x_n \in K \setminus  \bigcup_{i=1}^n U_i</m>.  Doing this for each <m>n \in\mathbb{N}</m> creates a sequence <m>(x_n) \subset K</m>.  
   </p>
   </proof>
+
+  </section>
+  
+<!-- ========================================   -->
+
+<section>
+
   <proof>
   <p>
     Because <m>K</m> is (sequentially) compact, <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>K</m>.  Leet <m>x=\lim_k x_{n_k}</m>.  Since <m>K</m> is compact, <m>x \in K</m>.
@@ -276,6 +283,12 @@ Since <m>U_m</m> is open, there in an <m>\epsilon &gt; 0</m> for which <m>V_{\ep
     These are the <m>1-</m>neighborhoods of <m>x</m>.  Then the collection <m>\{v_1(x)\}_{x \in K}</m> is an open cover of <m>K</m>.  Since <m>K</m> has the Heine-Borel property, this open cover has a finite subcover <m>\{V_1(x_k)\}_{k=1}^n</m>, noting that <m>x_k \in K</m> for all <m>k</m>.
   </p>
     </proof>
+
+    </section>
+  
+<!-- ========================================   -->
+
+<section>
   <proof>
 
   <p>
