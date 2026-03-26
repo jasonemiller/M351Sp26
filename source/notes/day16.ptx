@@ -28,20 +28,133 @@
 <!-- ========================================   -->
 
 <section>
+<title>Note:  index sets</title>
+
+<p>When we have a collection of things, we often organize them using an <term>index</term>.  This is especially helpful when we need to order or manipulate elements of the collection.</p>
+
+<example>
+  <title>Finite sum</title>
+  <p>Consider this finite collection of numbers <m>A=\{a_1, a_2,a_3,\ldots,a_N\}</m>.  Here we are using subscripts to index the numbers in this collection.  Let <m>I=\{1, 2, 3,\ldtos,N\}</m>.  This is the index set we are using to index our collection of numbers.  We can use it to express <m>A</m> using the index set <m>I</m> as follows:
+    <me>
+      <mrow>A=\{a_i \, : \, i \in I\}.</mrow>
+    </me></p>
+  <p>When we learned about sigma-notation in Calculus 1, we learned to write the sum of the numbers in <m>A</m> as
+      <me>
+      <mrow>\displaystye \sum_{i=1}^N a_i.</mrow>
+    </me>
+  In this notation we actually call <m>i</m> the <term>index of summation</term>.  We can write the same sum using the index set <m>I</m> as follows:
+    <me>
+      <mrow>\displaystye \sum_{i=1}^N a_i \displaystye \sum_{i \in I} a_i.</mrow>
+    </me></p>
+</example>
+
+<example>
+  <title>Series</title>
+  <p>Consider the infinite collection of numbers <m>A=\{a_1, a_2,a_3,\ldots,\}</m>.  Here we are using subscripts to index the numbers in this collection, and the index set is <m>\mathbb{N}</m>.  We can use the index to express <m>A</m> as follows:
+    <me>
+      <mrow>A=\{a_i \, : \, i \in \mathbb{N}\}.</mrow>
+    </me></p>
+  <p>When we learned about sigma-notation in Calculus 1, we learned to write the infinite sum of the numbers in <m>A</m> as
+      <me>
+      <mrow>\displaystye \sum_{i=1}^{\infty} a_i.</mrow>
+    </me>
+We can write the same sum using the index set <m>I</m> as follows:
+    <me>
+      <mrow>\displaystye \sum_{i=1}^{\infty} a_i \displaystye \sum_{i \in \mathbb{N}} a_i.</mrow>
+    </me></p>
+</example>
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
 <title>Compactness</title>
 
 <definition>
   <statement>
-    <p>A set <m>K \subset \mathbb{R}</m> is <term>compact</term> if every sequences in <m>K</m> has a subsequence that converges in <m>K</m>.</p>
+    <p>A set <m>K \subset \mathbb{R}</m> is <term>(sequentially) compact</term> if every sequences in <m>K</m> has a subsequence that converges in <m>K</m>.</p>
   </statement>
 </definition>
 
 <example>
   <title><m>[0,1]</m> is compact</title>
   <p>Consider <m>K=[0,1] \subset \mathbb{R}</m>.  We want to show that <m>K</m> is compact.</p>
-  <p>Let <m>(x_n) \subset K</m> be a sequence.  We will show that <m>(x_n)</m> has a sonsequence that converges in <m>K</m>. That means </p>
+  <p>Let <m>(x_n) \subset K</m> be a sequence.  We will show that <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>K</m>. That means <m>(x_{n_k}) \rightarrow x_0 \in K</m>. </p>
+  <p>Since <m>) &lt; x_n &lt; 1</m> for all <m>n \in \/mathbb{N}</m>, the sequence <m>(x_n)</m> is bounded.  The Bolzano-Weierstrass Theorem tells us that <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>\mathbb{R}</m>.  Let<m>x_0</m> be the limit point of that subsequence.  Since <m>K</m> is closed, it contains all its limit points.  By Theorem 3.2.5, <m>x_0</m> is a limit point of <m>K</m>. Therefore, <m>x_0 \in K</m>.  This shows that <m>[0,1]</m> is compact.</p>
 </example>
 
+<example>
+  <title><m>[a,b]</m> is compact</title>
+  <p>For exact same reason, every closed and bonded interval is compact.</p>
+</example>
+
+<p>Recall that a set <m>A \subset \mathbb{R}</m> is <term>bonded</term> if there is an <m>M \in \mathbb{R}</m> for which <m>-M \leq x \leq M</m> for all <m>x \in A</m>.</p>
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Compactness</title>
+
+<theorem>
+    <statement>
+      <p>A set<m>K \subset \mathbb{R}</m> is (sequentially) compact if and only if <m>K</m> is closed and bounded.</p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>(<m>\Rightarrow</m>). Suppose<m>K</m> is compact.  We must show that <m>K</m> is closed and bounded.</p>
+    <p>Suppose that <m>K</m> is not bounded.  Then for each <m>n \in \mathbb{N}</m> there is an <m>x_n \in K</m> with <m>|x_n| &gt; n</m>.  These elements of <m>K</m> form a sequence <m>(x_n) \subset K</m>.  Since <m>K</m> is (sequentially) compact, the sequence has a subsequence <m>(x_{n_k})</m> that converges in <m>K</m>.  But <m>|x_{n_k}| &gt; n_k \rightarrow \infty</m> as <m>k \rightarrow \infty</m>.  This means that the subsequence is unbounded.  However, we've proved that convergent sequences must be bounded.  This is a contradiction.  Therefore, <m>K</m> must be bounded.</p>
+    <p>To see that <m>K</m> is closed, let <m>x \in \mathbb{R}</m> be a limit point of <m>K</m>.  We must show that <m>x \in K</m>.  Since <m>x</m> is a limit point of <m>K </m>, there is a sequence <m>(y_k) \subset K</m> that converges to <m>x</m>.  Since <m>K</m> is (sequentially) compact, <m>(y_k)</m> has a subsequence <m>(y_{k_{\ell}})</m> that converges in <m>K</m>.  We know that a subsequence of a convergent sequence must converge to the same limit at the sequence, so <m>(y_{k_{\ell}}) \rightarrow x</m>, and <m>x \in K</m>.  This shows that<m>K</m> is closed.</p>
+<p>This completes the proof in this direction.</p>
+<p>(<m>\Leftarrow</m>). Suppose<m>K</m> is closed and bounded.  We must show <m>K</m> is compact.  Let <m>(x_n) \subset K</m> be a sequence.  We must show that <m>(x_n)</m> has a subsequence that converges to a point in <m>K</m>.</p>
+<p>Because <m>K</m> is bounded, there is an <m>M \in \mathbb{R}</m> with <m>M &gt; 0</m> such that <m>|x| &lt; M</m> for all <m>x \in K</m>.  Therefore, <m>|x_n| &lt; M</m> for all <m>n \in \mathbb{N}</m>.  This means that <m>(x_n)</m> is a bonded sequence.  The Bolzao-Weierstrass Theorem implies that <m>(x_n)</m> has a convergent subsequence <m>(x_{n_k})</m>. Since <m>(x_{n_k}) \subset K</m> and <m>K</m> is closed (it contains all its limit points), <m>\displaystyle \lim_{k \rightrarrow \infty} (x_{n_k}) \in K</m>.  This shows that that <m>K</m> is compact.</p>
+<p>This completes the proof.</p>
+  </proof> 
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Nested Set Property</title>
+
+<theorem>
+  <title>Nested Set Property</title>
+  <statement>
+    <p>If <m>K_i</m> is a nonempty (sequentially) compact set, and if <m>K_i \supseteq K_{i+1}</m> for all <m>i \in \mathbb{N}</m> then <m>\displaystyle \cap_{i=1}^{\infty} K_i</m> is nonempty.</p>
+  </statement>
+</theorem>
+
+<p>This statement should look familiar.</p>
+
+<p>This is a generalization of the Nested Interval Property that replaces intervals with compact sets.</p>
+
+<proof>
+  <p>For each <m>n \in\mathbb{N}</m>, because <m>K_n</m> is nonempty, we can find an element in <m>K_n</m>, call it <m>x_n</m>.  This creates a sequence <m>(x_n) \subset \mathbb{R}</m>.  Since <m>K_n \subseteq K_1</m> for all <m>n</m>, <m>(x_n) \subset K_1</m>.  Because <m>K_1</m> is a (sequentially) compact set, <m>(x_n) \subset K_1</m> has a subsequence <m>(x_{n_{\ell}}) \subset K_1</m> that converges in <m>K_1</m>.  Call its limit <m>x \in K_1</m>.</p>
+  <p>Notice that, given any <m>m \in \mathbb{N}</m>, <m>K_m</m> contains the tail of <m>(x_n)</m>.  Specifically, <m>(x_n)_{n=m}^{\infty} \subset K_m</m>.  Since <m>K_m</m> is compact, the limit of <m>(x_n)</m> is in <m>K_m</m>, i.e., <m>x \in K_m</m>.  It follows that <m>\displaystyle x \in \cap_{m=1}^{\infty K_m}
+  </m>.</p>
+  <p>This completes the proof.</p>
+</proof>
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Heine-Borel</title>
+
+<p>Let <m>A \subseteq \mathbb{R}</m>.  Let <m>U_i \subset \mathbb{R}</m> be open for <m>i \in I</m> where <m>I</m> is some index set.</p>
+
+<p></p>
+
+<theorem>
+  <title>Heine-Borel</title>
+  <statement>
+    <p>A set <m>K \subset \mathbb{R}</m> is compact if and only if every open cover of <m>K</m> contains a finite subcover.</p>
+  </statement>
+</theorem>
 
 </section>
 

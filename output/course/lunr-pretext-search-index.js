@@ -2221,25 +2221,115 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Day 16 (26 March 2026)",
-  "body": " Day 16 (26 March 2026)   This is an outline of the plans for Day 15 of the class.      THursday 3\/26  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: Thursday 2 April  review session: Monday 3\/30 at 6pm, meet at classroom  New material      Compactness    A set is compact if every sequences in has a subsequence that converges in .     is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a sonsequence that converges in . That means        "
+  "body": " Day 16 (26 March 2026)   This is an outline of the plans for Day 16 of the class.      Thursday 3\/26  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: Thursday 2 April  review session: Monday 3\/30 at 6pm, meet at classroom  New material      Note: index sets  When we have a collection of things, we often organize them using an index . This is especially helpful when we need to order or manipulate elements of the collection.   Finite sum  Consider this finite collection of numbers . Here we are using subscripts to index the numbers in this collection. Let . This is the index set we are using to index our collection of numbers. We can use it to express using the index set as follows:  When we learned about sigma-notation in Calculus 1, we learned to write the sum of the numbers in as In this notation we actually call the index of summation . We can write the same sum using the index set as follows:    Series  Consider the infinite collection of numbers . Here we are using subscripts to index the numbers in this collection, and the index set is . We can use the index to express as follows:  When we learned about sigma-notation in Calculus 1, we learned to write the infinite sum of the numbers in as We can write the same sum using the index set as follows:      Compactness    A set is (sequentially) compact if every sequences in has a subsequence that converges in .     is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a subsequence that converges in . That means .  Since for all , the sequence is bounded. The Bolzano-Weierstrass Theorem tells us that has a subsequence that converges in . Let be the limit point of that subsequence. Since is closed, it contains all its limit points. By Theorem 3.2.5, is a limit point of . Therefore, . This shows that is compact.    is compact  For exact same reason, every closed and bonded interval is compact.   Recall that a set is bonded if there is an for which for all .     Compactness    A set is (sequentially) compact if and only if is closed and bounded.     ( ). Suppose is compact. We must show that is closed and bounded.  Suppose that is not bounded. Then for each there is an with . These elements of form a sequence . Since is (sequentially) compact, the sequence has a subsequence that converges in . But as . This means that the subsequence is unbounded. However, we've proved that convergent sequences must be bounded. This is a contradiction. Therefore, must be bounded.  To see that is closed, let be a limit point of . We must show that . Since is a limit point of , there is a sequence that converges to . Since is (sequentially) compact, has a subsequence that converges in . We know that a subsequence of a convergent sequence must converge to the same limit at the sequence, so , and . This shows that is closed.  This completes the proof in this direction.  ( ). Suppose is closed and bounded. We must show is compact. Let be a sequence. We must show that has a subsequence that converges to a point in .  Because is bounded, there is an with such that for all . Therefore, for all . This means that is a bonded sequence. The Bolzao-Weierstrass Theorem implies that has a convergent subsequence . Since and is closed (it contains all its limit points), . This shows that that is compact.  This completes the proof.      Nested Set Property   Nested Set Property   If is a nonempty (sequentially) compact set, and if for all then is nonempty.    This statement should look familiar.  This is a generalization of the Nested Interval Property that replaces intervals with compact sets.   For each , because is nonempty, we can find an element in , call it . This creates a sequence . Since for all , . Because is a (sequentially) compact set, has a subsequence that converges in . Call its limit .  Notice that, given any , contains the tail of . Specifically, . Since is compact, the limit of is in , i.e., . It follows that .  This completes the proof.      Heine-Borel  Let . Let be open for where is some index set.    Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.         "
 },
 {
   "id": "notes-day-16-3-2-2",
   "level": "2",
   "url": "notes-day-16.html#notes-day-16-3-2-2",
-  "type": "Definition",
-  "number": "182",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": "  A set is compact if every sequences in has a subsequence that converges in .   "
+  "body": "index "
 },
 {
   "id": "notes-day-16-3-2-3",
   "level": "2",
   "url": "notes-day-16.html#notes-day-16-3-2-3",
   "type": "Example",
+  "number": "182",
+  "title": "Finite sum.",
+  "body": " Finite sum  Consider this finite collection of numbers . Here we are using subscripts to index the numbers in this collection. Let . This is the index set we are using to index our collection of numbers. We can use it to express using the index set as follows:  When we learned about sigma-notation in Calculus 1, we learned to write the sum of the numbers in as In this notation we actually call the index of summation . We can write the same sum using the index set as follows:  "
+},
+{
+  "id": "notes-day-16-3-2-4",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-2-4",
+  "type": "Example",
   "number": "183",
+  "title": "Series.",
+  "body": " Series  Consider the infinite collection of numbers . Here we are using subscripts to index the numbers in this collection, and the index set is . We can use the index to express as follows:  When we learned about sigma-notation in Calculus 1, we learned to write the infinite sum of the numbers in as We can write the same sum using the index set as follows:  "
+},
+{
+  "id": "notes-day-16-3-3-2",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-3-2",
+  "type": "Definition",
+  "number": "184",
+  "title": "",
+  "body": "  A set is (sequentially) compact if every sequences in has a subsequence that converges in .   "
+},
+{
+  "id": "notes-day-16-3-3-3",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-3-3",
+  "type": "Example",
+  "number": "185",
   "title": "<span class=\"process-math\">\\([0,1]\\)<\/span> is compact.",
-  "body": " is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a sonsequence that converges in . That means  "
+  "body": " is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a subsequence that converges in . That means .  Since for all , the sequence is bounded. The Bolzano-Weierstrass Theorem tells us that has a subsequence that converges in . Let be the limit point of that subsequence. Since is closed, it contains all its limit points. By Theorem 3.2.5, is a limit point of . Therefore, . This shows that is compact.  "
+},
+{
+  "id": "notes-day-16-3-3-4",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-3-4",
+  "type": "Example",
+  "number": "186",
+  "title": "<span class=\"process-math\">\\([a,b]\\)<\/span> is compact.",
+  "body": " is compact  For exact same reason, every closed and bonded interval is compact.  "
+},
+{
+  "id": "notes-day-16-3-3-5",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-3-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "bonded "
+},
+{
+  "id": "notes-day-16-3-4-2",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-4-2",
+  "type": "Theorem",
+  "number": "187",
+  "title": "",
+  "body": "  A set is (sequentially) compact if and only if is closed and bounded.   "
+},
+{
+  "id": "notes-day-16-3-4-3",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-4-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " ( ). Suppose is compact. We must show that is closed and bounded.  Suppose that is not bounded. Then for each there is an with . These elements of form a sequence . Since is (sequentially) compact, the sequence has a subsequence that converges in . But as . This means that the subsequence is unbounded. However, we've proved that convergent sequences must be bounded. This is a contradiction. Therefore, must be bounded.  To see that is closed, let be a limit point of . We must show that . Since is a limit point of , there is a sequence that converges to . Since is (sequentially) compact, has a subsequence that converges in . We know that a subsequence of a convergent sequence must converge to the same limit at the sequence, so , and . This shows that is closed.  This completes the proof in this direction.  ( ). Suppose is closed and bounded. We must show is compact. Let be a sequence. We must show that has a subsequence that converges to a point in .  Because is bounded, there is an with such that for all . Therefore, for all . This means that is a bonded sequence. The Bolzao-Weierstrass Theorem implies that has a convergent subsequence . Since and is closed (it contains all its limit points), . This shows that that is compact.  This completes the proof.  "
+},
+{
+  "id": "notes-day-16-3-5-2",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-5-2",
+  "type": "Theorem",
+  "number": "188",
+  "title": "Nested Set Property.",
+  "body": " Nested Set Property   If is a nonempty (sequentially) compact set, and if for all then is nonempty.   "
+},
+{
+  "id": "notes-day-16-3-5-5",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-5-5",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " For each , because is nonempty, we can find an element in , call it . This creates a sequence . Since for all , . Because is a (sequentially) compact set, has a subsequence that converges in . Call its limit .  Notice that, given any , contains the tail of . Specifically, . Since is compact, the limit of is in , i.e., . It follows that .  This completes the proof.  "
+},
+{
+  "id": "notes-day-16-3-6-4",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-6-4",
+  "type": "Theorem",
+  "number": "189",
+  "title": "Heine-Borel.",
+  "body": " Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.   "
 },
 {
   "id": "activity-01-intro-activity",
