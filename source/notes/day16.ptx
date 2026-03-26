@@ -198,7 +198,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
 <example>
   <title>An open cover of <m>[0,1]</m> with a finite subcover</title>
   <p>Consider <m>V_{1/2}(x)</m> and <m>\mathcal{U} = \{ V_{1/2}(x) \, : \, x \in [0,1]\}</m>.  This is an open cover of <m>[0,1]</m>.</p>
-  <p>One finite subcover of <m>[0,1]</m> is
+  <p workspace="2in">One finite subcover of <m>[0,1]</m> is
     <md>
       <mrow>\{V_{1/2}(1/4), V_{1/2}(1/2), V_{1/2}(3/4)\}</mrow>
     </md></p>
