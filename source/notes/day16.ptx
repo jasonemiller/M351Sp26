@@ -76,11 +76,11 @@ We can write the same sum using the index set <m>I</m> as follows:
     </md></p>
  <p>If the objects are sets, we could write their union as
     <md>
-      <mrow>\displaystyle \cup_{\lambda \in \Lambda} X_{\lambda}.</mrow>
+      <mrow>\displaystyle \bigcup_{\lambda \in \Lambda} X_{\lambda}.</mrow>
     </md>
   and their intersection as 
     <md>
-      <mrow>\displaystyle \cap_{\lambda \in \Lambda} X_{\lambda}.</mrow>
+      <mrow>\displaystyle \bigcap_{\lambda \in \Lambda} X_{\lambda}.</mrow>
     </md></p>
     <p>And so on.</p>
 </example>
@@ -168,8 +168,14 @@ We can write the same sum using the index set <m>I</m> as follows:
 
 <p>Let <m>A \subseteq \mathbb{R}</m>.  Let <m>U_i \subset \mathbb{R}</m> be open for <m>i \in I</m> where <m>I</m> is some index set.  We say the collection <m>\mathcal{U}=\{U_i \, : \, i \in I\}</m> is an <term>open cover</term> for <m>A</m> if
 <md>
-  <mrow>\displaystyle A \subseteq \cup_{i \in I} U_i</mrow>
-</md></p>
+  <mrow>\displaystyle A \subseteq \bigcup_{i \in I} U_i</mrow>
+</md>
+We call <m>\{U_i \, : \, i \in I\}</m> an <term>open cover</term> of <m>A</m>.  If <m>I_0 \subseteq I</m> is a finite subset of the inde <m>I</m> for which 
+<md>
+  <mrow>\displaystyle A \subseteq \bigcup_{i \in I_0} U_i</mrow>
+</md>
+we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</m>.
+</p>
 
 <p>A set <m>A \subseteq \mathbb{R}</m> can have many possible open covers.  Here are some examples.</p>
 
@@ -190,7 +196,6 @@ We can write the same sum using the index set <m>I</m> as follows:
 </example>
 
 
-<p></p>
 
 <theorem>
   <title>Heine-Borel</title>
@@ -198,6 +203,9 @@ We can write the same sum using the index set <m>I</m> as follows:
     <p>A set <m>K \subset \mathbb{R}</m> is compact if and only if every open cover of <m>K</m> contains a finite subcover.</p>
   </statement>
 </theorem>
+
+<p>Note our textbook's Example 3.3.7.</p>
+
 
 </section>
 
