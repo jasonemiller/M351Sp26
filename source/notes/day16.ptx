@@ -198,7 +198,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
 
 <example>
   <title>An open cover of <m>[a,b]</m></title>
-  <p workspace="2in">Let <m>\epsilon &gt; 0</m> be given.  For <m>x \ in [a,b]</m> define <m>U_x = V_{\epsilon}(x)</m>.  Then <m>\mathcal{U}=\{U_x \, : \, x \in [a,b]\}</m> is an open cover of <m>[a,b]</m> because
+  <p workspace="2in">Let <m>\epsilon &gt; 0</m> be given.  For <m>x \in [a,b]</m> define <m>U_x = V_{\epsilon}(x)</m>.  Then <m>\mathcal{U}=\{U_x \, : \, x \in [a,b]\}</m> is an open cover of <m>[a,b]</m> because
     <md>
       <mrow>\displaystyle \bigcup_{x \in [a,b]} U_x \amp = \bigcup_{x \in [a,b]} V_{\epsilon}(x) = (a-\epsilon,b+\epsilon) \supset [a,b]</mrow>.
     </md></p>
