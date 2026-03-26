@@ -257,7 +257,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
   Because <m>\{U_i\}</m> is a cover of <m>K</m>, <m>x \in U_m</m> for some <m>m \in \mathbb{N}</m>.
 </p>
 <p>
-  Notice that the tail of the sequence <m>(x_n)_{n=m}^{\infty}</m> is not in <m>U_m</m> because none of the points are in <m>\displaystyle \bigcip_{i=1}^N U_i</m> for <m>N \geq m</m>.
+  Notice that the tail of the sequence <m>(x_n)_{n=m}^{\infty}</m> is not in <m>U_m</m> because none of the points are in <m>\displaystyle \bigcup_{i=1}^N U_i</m> for <m>N \geq m</m>.
 </p>
 <p>
   
