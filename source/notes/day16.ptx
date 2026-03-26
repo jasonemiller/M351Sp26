@@ -229,6 +229,44 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
 
 <p>Note our textbook's Example 3.3.7.</p>
 
+<proof>
+  <p>
+   (<m>\Rightarrow</m>) Suppose <m>K</m> is (sequentially) compact.  Let <m>\{U_i\}</m> be a countable open over of<m>K</m>.  We claim that there is an <m>n \in \mathbb{N}</m> for which <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is a subcover of <m>K</m>.
+  </p>
+  <p>
+    Suppose there is no such <m>n \in \mathbb{N}</m>.  Then <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is not a cover for any value of <m>n \in \mathbb{N}</m>.
+  </p>
+  <note>
+    <p>Because 
+      <md>
+        <mrow>U_1 \subseteq U_1 \cup U_2 \subseteq U_1 \cup U_2 \cup U_3 \subseteq \cdots \subseteq \bigcup_{i=1}^N U_i</mrow>
+      </md>
+      the successive unions of the open sets in the open cover form a nested sequence of open sets.  This means that
+      <md>
+        <mrow>K \setminus U_1 \supseteq K \setminus (U_1 \cup U_2) \supseteq K \setminus (U_1 \cup U_2 \cup U_3) \supseteq \cdots \supseteq K \setminus \large( \bigcup_{i=1}^N U_i \large). </mrow>
+      </md>
+    </p>
+  </note>
+  <p>
+    Since <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is not a cover for <m>K</m>, the set <m>K \setminus \bigcup_{i=1}^n U_i</m> is not empty.  Choose <m>x_n \in K \setminus  \bigcup_{i=1}^n U_i</m>.  Doing this for each <m>n \in\mathbb{N}</m> creates a sequence <m>(x_n) \subset K</m>.  
+  </p>
+  <p>
+    Because <m>K</m> is (sequentially) compact, <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>K</m>.  Leet <m>x=\lim_k x_{n_k}</m>.  Since <m>K</m> is compact, <m>x \in K</m>.
+  </p>
+<p>
+  Because <m>\{U_i\}</m> is a cover of <m>K</m>, <m>x \in U_m</m> for some <m>m \in \mathbb{N}</m>.
+</p>
+<p>
+  Notice that the tail of the sequence <m>(x_n)_{n=m}^{\infty}</m> is not in <m>U_m</m> because none of the points are in <m>\displaystyle \bigcip_{i=1}^N U_i</m> for <m>N \geq m</m>.
+</p>
+<p>
+  
+</p>
+  <p>
+   (<m>\Leftarrow</m>) 
+  </p>
+</proof>
+
 
 </section>
 
