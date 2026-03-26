@@ -111,7 +111,7 @@ We can write the same sum using the index set <m>I</m> as follows:
   <title><m>[0,1]</m> is compact</title>
   <p>Consider <m>K=[0,1] \subset \mathbb{R}</m>.  We want to show that <m>K</m> is compact.</p>
   <p>Let <m>(x_n) \subset K</m> be a sequence.  We will show that <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>K</m>. That means <m>(x_{n_k}) \rightarrow x_0 \in K</m>. </p>
-  <p>Since <m>) &lt; x_n &lt; 1</m> for all <m>n \in \/mathbb{N}</m>, the sequence <m>(x_n)</m> is bounded.  The Bolzano-Weierstrass Theorem tells us that <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>\mathbb{R}</m>.  Let<m>x_0</m> be the limit point of that subsequence.  Since <m>K</m> is closed, it contains all its limit points.  By Theorem 3.2.5, <m>x_0</m> is a limit point of <m>K</m>. Therefore, <m>x_0 \in K</m>.  This shows that <m>[0,1]</m> is compact.</p>
+  <p>Since <m>0 &lt; x_n &lt; 1</m> for all <m>n \in \mathbb{N}</m>, the sequence <m>(x_n)</m> is bounded.  The Bolzano-Weierstrass Theorem tells us that <m>(x_n)</m> has a subsequence <m>(x_{n_k})</m> that converges in <m>\mathbb{R}</m>.  Let<m>x_0</m> be the limit point of that subsequence.  Since <m>K</m> is closed, it contains all its limit points.  By Theorem 3.2.5, <m>x_0</m> is a limit point of <m>K</m>. Therefore, <m>x_0 \in K</m>.  This shows that <m>[0,1]</m> is compact.</p>
 </example>
 
 <example>
