@@ -162,7 +162,7 @@ We can write the same sum using the index set <m>I</m> as follows:
 
 <proof>
   <p>For each <m>n \in\mathbb{N}</m>, because <m>K_n</m> is nonempty, we can find an element in <m>K_n</m>, call it <m>x_n</m>.  This creates a sequence <m>(x_n) \subset \mathbb{R}</m>.  Since <m>K_n \subseteq K_1</m> for all <m>n</m>, <m>(x_n) \subset K_1</m>.  Because <m>K_1</m> is a (sequentially) compact set, <m>(x_n) \subset K_1</m> has a subsequence <m>(x_{n_{\ell}}) \subset K_1</m> that converges in <m>K_1</m>.  Call its limit <m>x \in K_1</m>.</p>
-  <p>Notice that, given any <m>m \in \mathbb{N}</m>, <m>K_m</m> contains the tail of <m>(x_n)</m>.  Specifically, <m>(x_n)_{n=m}^{\infty} \subset K_m</m>.  Since <m>K_m</m> is compact, the limit of <m>(x_n)</m> is in <m>K_m</m>, i.e., <m>x \in K_m</m>.  It follows that <m>\displaystyle x \in \bigcap_{m=1}^{\infty K_m}
+  <p>Notice that, given any <m>m \in \mathbb{N}</m>, <m>K_m</m> contains the tail of <m>(x_n)</m>.  Specifically, <m>(x_n)_{n=m}^{\infty} \subset K_m</m>.  Since <m>K_m</m> is compact, the limit of <m>(x_n)</m> is in <m>K_m</m>, i.e., <m>x \in K_m</m>.  It follows that <m>\displaystyle x \in \bigcap_{m=1}^{\infty} K_m
   </m>.</p>
   <p>This completes the proof.</p>
 </proof>
