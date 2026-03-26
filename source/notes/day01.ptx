@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week-01">
+  <title>Day 1 (27 January 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the topics we covered in the first week of class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tudesday 1/27 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Welcome</li>
+        <li>Roll: pronunciation, name corrections</li>
+        <li>Name plates</li>
+        <li><p>Introductions: basics followed by questions from the class
+          <ul>
+            <li>you</li>
+            <li>me</li>
+          </ul></p>
+        </li>
+        <li>What this course is about.</li>
+        <li>New mathematics</li>
+      </ol>
+    </p>
+  </section>
+
+  <section>
+    <title>Introductions</title>
+    <p>In pairs, you will be introduced to the class by your partner, and then you will introduce your partner.</p>
+    <p>Your introduction should include:
+      <ol>
+        <li>your name,</li>
+        <li>your major,</li>
+        <li>where you're from,</li>
+        <li>your favorite hooy or hobbies, and</li>
+        <li>something you did over break that nobody else in class did.</li>
+      </ol></p>
+      <p>Once you're introduction is over, Miller will give class a chance to ask you any follow-up questions.</p>
+      <remark><p>It's hard to come up with a question to ask in front of other people.  I will be asking you to do this every day and every week this semester.  Today gives you an opportunity to practice this skill.</p></remark>
+      <p>When student introductions are done, Miller will introduce himself and you will give a chance to ask him questions.</p>
+  </section>
+  
+  <section>
+    <title>What this course is about</title>
+      <p>This course is about filling the details that support the Calculus.</p>
+      <p>We basically go back over important results from Calculus I-III and put them on a rigorous mathematical foundation.</p>
+      <question><p workspace="4in">What characteristic or characteristics defines the academic discipline of mathematics?</p></question>
+    <p>In mathematics, <term>rigor</term> refers to solid mathematical proof.</p>
+    <p>Reading, creating, and writing proofs will be a central part of this course.</p>
+  </section>
+
+</handout>
+
+
+  
+</section>

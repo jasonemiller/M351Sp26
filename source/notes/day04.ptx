@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-04">
+  <title>Day 4 (5 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 4 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Thursday 2/5 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework:  nothing due today [sad trombone], will be due in a week</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+  <section>
+    <title>Recap: The Axiom of Completeness</title>
+<p>We were reminded that <m>\mathbb{Q}</m>, though a beautiful number system (everybody say "ordered field"!), it is literally full of holes.</p>
+<p>If we want geometry and algebra to be consistent ("two non-parallel lines intersect at a point") we must fill in the holes!</p>
+<p>We do this using the Axiom on Completeness:</p>
+
+     <theorem>
+            <title>Axiom of Completeness</title>
+            <statement>
+                <p>If <m>A</m> is a nonempty set that is bounded above, then it has a least upper bound.</p>
+            </statement>
+        </theorem>
+
+<p>With this the set of real numbers <m>\mathbb{R}</m> is the set <m>\mathbb{Q}</m> plus all the numbers we created as suprema of all possible sets that are bounded above.</p>
+
+<p>In practice, we will continue working with the real numbers in the way we've learned to work with them except that we're learning more about the reals.  For example, they form a <term>complete</term> ordered field!</p>
+
+</section>
+
+<section>
+    <title>Working with Suprema (and Infima)</title>
+
+    <definition>
+        <statement>
+            Let <m>A \subseteq \mathbb{R}</m> be nonempty.  The real number <m>s</m> is a <term>least upper bound</term> (aka <term>supremum</term>) of <m>A</m> if
+                <ol>
+                    <li><m>s</m> is an upper bound for <m>A</m>, and</li>
+                    <li>if <m>M</m> is another upper bound, then <m>s \leq M</m>.</li>
+                </ol>
+            The real number <m>\ell</m> is a <term>greatest lower bound</term> (aka <term>infimum</term>) of <m>A</m> if
+                <ol>
+                    <li><m>\ell</m> is an lower bound for <m>A</m>, and</li>
+                    <li>if <m>m</m> is another lower bound, then <m>m \leq \ell</m>.</li>
+                </ol>
+            </statement>
+    </definition>
+
+<theorem>
+    <statement>
+        <p>Let <m>A \subseteq \mathbb{R}</m> be a nonempty set that is bounded above.  Let <m>s \in \mathbb{R}</m> be an upper bound for <m>A</m>. Then <m>s=\sup(A)</m> if and only if, for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>.</p>
+    </statement>
+    </theorem>
+
+</section>
+<section>
+    <title>Working with Suprema (and Infima)</title>
+
+    <theorem>
+    <statement>
+        <p>Let <m>A \subseteq \mathbb{R}</m> be a nonempty set that is bonded above.  Let <m>s \in \mathbb{R}</m> be an uppoer bound for <m>A</m>. Then <m>s=\sup(A)</m> if and only if, for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>.</p>
+    </statement>
+    </theorem>
+        <proof>
+            <p>(<m>\Longrightarrow</m>, Contradiction) </p>
+            <p>Assume <m>s=\sup(A)</m>.  We must show that for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>.</p>
+            <p>Suppose not.  Suppose the opposite of what we want to conclude is true.  The negation of ``or every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>'' is ``there is an<m>\epsilon_0 &gt; 0</m> where <m>s-\epsilon_0 \geq a</m> for all <m>a \in A</m>.''</p>
+            <p>This assumption implies that <m>s-\epsilon_0</m> is an upper bond for <m>A</m>.  Since <m>s=\sup(A)</m> is the least upper bound for <m>A</m>, it follows that <m>s &lt; s-\epsilon_0</m>.  But this is impossible.</p>
+            <p>Therefore, our assumption that there is an<m>\epsilon_0 &gt; 0</m> where <m>s-\epsilon_0 \geq a</m> for all <m>a \in A</m> must be false.  It's opposite must be true.  Therefore, given any <m>\epsilon &gt; 0</m>, there exists an <m>a \in A</m> for which <m>s-\epsilon &lt; a</m>.  This completes the proof of this part.</p>
+
+            <p>(<m>\Longleftarrow</m>, Contradiction) </p>
+            <p>Let <m>s \in \mathbb{R}</m> be an upper bound for <m>A</m>.  Also assume that for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>.   We must show that <m>s=\sup(A)</m>.  By definition, this means we must show that (1) <m>s</m> is an upper bound for <m>A</m>, and (2) if <m>M</m> is any other upper bound for <m>A</m> then <m>s \leq M</m>.</p>
+            <p>Since we are already assuming the former, we need only prove the latter.</p>
+            <p>Let <m>M</m> be another upper bound for <m>A</m>.</p>
+            <p>Suppose <m>M &lt; s</m>.  Choose <m>\epsilon_0 = s-M</m> so that <m>M=s-\epsilon_0</m>.</p>
+            <p>Since <m>s</m> has the property that, for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon &lt; a</m>, we know there is an <m>a_0 \in A</m> for which <m>M=e-\epsilon_0 &lt; a_0</m>.</p>
+            <p>But this means that <m>M</m> is not an upper bound for <m>A</m>!  Contradiction.</p>
+            <p>Consequently, our supposition that <m>M &lt; s</m> was incorrect.  We conclude that <m>M \grq s</m>.  With this, we have shows that <m>s</m> satisfies the definition of what it means to be the supremum of <m>A</m>.  QED.</p>
+        </proof>
+    </section>
+
+<section>
+    <title>More on Suprema</title>       
+
+
+    <example>
+        <title>Supremum of a subset</title>
+        <p>If <m>A_1 \subseteq A_2</m> are sets of real numbers that are both bounded above, then <m>\sup(A_1) \leq \sup(A_2)</m>.</p>
+        <p workspace="4.5in"></p>
+    </example>
+
+    <example>
+        <title>Supremum of a union</title>
+        <p>If <m>A_1</m> and <m>A_2</m> are sets of real numbers that are bounded above, then <md>\sup(A_1 \cup A_2) = \max\{\sup(A_1), \sup(A_2)\}</md>.</p>
+        <p workspace="4.5in"></p>
+    </example>
+
+<p>Can you come up with a relationship between the suprema of two sets and the suprema of their intersection?  Their infima?</p>
+
+</section>
+
+<section>
+    <title>Consequences of Completeness</title>       
+
+<p>Well, you can't to this with the rationals!</p>
+
+<theorem>
+    <title>Nested Interval Property</title>
+        <statement>
+            For each <m>n \in \mathbb{N}</m>, define <m>I_n=[a_n,b_n] \subseteq \mathbb{R}</m> so that <m>I_n \subseteq I_{n-1}</m>.   Then <m>\bigcap_{n=1}^{\infty} I_n \neq \emptyset</m>.
+        </statement>
+</theorem>
+
+<p>The intervals in this theorem are all closed and bounded intervals of reals that form a sequence of <term>nested intervals</term>. 
+<md>I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots \supseteq I_n \supseteq \cdots</md></p>
+
+<proof>
+<p workspace="1in">
+    Before we begin, notice how the endpoints of the intervals <m>I_k</m> are related to one another.    
+</p>
+
+<p>Since <m>I_1 \subseteq I_k</m> for all <m>k</m>, we know <m>a_k \leq b_1</m> for all <m>k \in \mathbb{N}</m>.  This shows that the set <m>A=\{a_n \, : \, n \in \mathbb{N} \}</m> is bounded above.  Let <m>x=\sup(A)</m>.</p>
+<p>Consider some <m>I_n</m>.  We claim that <m>x \in I_n</m>.</p>
+<p>Since <m>x</m> is an upper bound for <m>A</m>, we know <m>a_n \leq x</m> for all <m>n \in \mathbb{N}</m>.</p>
+<p>Since <m>b_n</m> is an upper bound for <m>A</m>, and since <m>x</m> is the least upper bound for <m>A</m> we can conclude that <m>x \leq b_n</m>.  This shows <m>x \in I_n</m>.</p>
+<p>Since <m>n</m> above was arbitrary, we have shown that <m>x \in I_n</m> for all <m>n \in \mathbb{N}</m>.</p>
+<p>Consequently, <m>x \in \bigcap_{n=1}^{\infty}I_n</m>, as desired.</p>
+
+
+<figure>
+    <caption>A representation of the real line with zero and two real numbers, <m>x &lt; 0 &lt; y</m>.</caption>
+<image width="60%">
+  <prefigure xmlns="https://prefigure.org"
+     label="fig-realline">
+<diagram dimensions="(300, 75)" margins="5">
+  <coordinates bbox="(0,-1,5,1)">
+    <line endpoints="((0,0), (5,0))" stroke="black"
+          thickness="2" arrows="2"/>
+    <line endpoints="((2.5,-.1),(2.5,.1))" stroke="black" thickness="1"/>
+    <line endpoints="((1.5,-.1),(1.5,.1))" stroke="black" thickness="1"/>
+    <line endpoints="((4,-.1),(4,.1))" stroke="black" thickness="1"/>
+    <label p="(2.5,-.5)" clear-background="no"><m>0</m></label>
+    <label p="(1.5,-.5)" clear-background="no"><m>x</m></label>
+    <label p="(4,-.5)" clear-background="no"><m>y</m></label>
+  </coordinates>
+</diagram>
+  </prefigure>
+</image>
+</figure>
+
+</proof>
+
+
+</section>
+
+<section>
+    <title>Consequences of Completeness</title>       
+
+    <theorem>
+        <title>Archimedean Properties</title>
+        <statement>
+            <ol>
+                <li><p>Given any <m>x \in \mathbb{R}</m>, there is an <m>n \in \mathbb{N}</m> with <m>n &gt; x</m>.</p></li>
+                <li><p>Given any <m>x \in \mathbb{R}</m> with <m>x>0</m>, there is an <m>n \in \mathbb{N}</m> with <m>\frac{1}{n} &lt; x</m>.</p></li>
+            </ol>
+        </statement>
+    </theorem>
+
+    <p workspace="9in"></p>
+
+
+</section>
+
+<section>
+    <title>Consequences of Completeness</title>       
+
+    <theorem>
+        <title>Density of <m>\mathbb{Q}</m> in <m>\mathbb{R}</m></title>
+        <statement>
+            Let <m>a, b, \in \ mathbb{R}</m> with <m>a \neq b</m>.  Then there is an <m>r \in \mathbb{Q}</m> with <m>a &lt; r &lt; b</m>.
+        </statement>
+    </theorem>
+
+    <p workspace="9in"></p>
+
+
+</section>
+
+<section>
+    <title>Consequences of Completeness</title>       
+
+    <theorem>
+        <title>Density of <m>\mathbb{Q}</m> in <m>\mathbb{R}</m></title>
+        <statement>
+            Let <m>a, b \in \mathbb{R}</m> with <m>a \neq b</m>.  Then there is an <m>x \in \mathbb{Q}^c</m> with <m>a &lt; x &lt; b</m>.
+        </statement>
+    </theorem>
+
+    <p workspace="9in"></p>
+
+
+</section>
+
+</handout>
+
+
+  
+</section>

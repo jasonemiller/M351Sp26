@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-06">
+  <title>Day 6 (12 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 6 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Thursday 2/12 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework due</li>
+        <li>New Homework:</li>
+        <li>NOTE: the Teamsters are striking next week, starting on 17 Feb.  This may disrupt campus.  If you want to support those who are striking, talk with Miller if you want to know what to expect when the strike happens.</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+<section>
+    <title>Last time: Cardinality</title>       
+
+    <p>Last time, we talked about
+      <ul>
+        <li>the cardinality of a set</li>
+        <li>an enumeration of a set is a bijective function</li>
+        <li>a set is either finite, countable, or uncountable</li>
+        <li>the rationals are a countable set</li>
+      </ul>
+    </p>
+
+<theorem>
+  <statement>
+    <p>The set of real numbers is uncountable.</p>
+  </statement>
+  <proof>
+  <p>(Contradiction). Suppose <m>\mathbb{R}</m> is countable.  Then there exists an enumeratioon <m>\phi:\mathbb{N} \rightarrow \mathbb{R}</m>.  Let <m>x_n=\phi(n)</m> so that <me>\mathbb{R} = \{ x_1,x_2,x_3,x_4,\ldots\}</me>.
+  We are going to construct a nested sequence of closed and bounded intervals that and use the Nested Interval Principle to generate a contradiction.</p>
+  <p>Let <m>I_1 \subseteq \mathbb{R}</m> be a closed and bounded interval that does not contain <m>x_1</m>.</p>
+  <p>Let <m>I_2 \subseteq I_1</m> be a closed and bounded interval that does not contain <m>x_2</m>.  Why can we do this?  If <m>x_2 \notin I_1</m>, then we can take <m>I_2=I_1</m>.  If <m>x_2 \in I_1</m>, then <m>x_2</m> divides <m>I_1</m> into two complementary closed intervals <m>A</m> and <m>B</m> with <m>I_2=A \cup B</m> and <m>A \cap B = \{x_2\}</m>. Take <m>I_2 \subset A</m> so that <m>a_x \notin I_2</m>.</p>
+  <p>Continue in this way to define closed and bounded intervals <m>I_n</m> with <m>I_n \subseteq I_{n-1}</m> and <m>x_n \notin I_n</m>.</p>
+  <p>Consider <m>I = \bigcap_{n=1}^{\infty} I_n</m>.  The Nested Interval Property tells us that <m>I \subset \mathbb{R}</m> is nonempty.  Let <m>x_0 \in I</m>.  The Nested Interval Property tells us that <m>x_0</m> is a real number.</p>
+  <p>Since <m>\mathbb{R}</m> is countable, this <m>x_0</m> is in our enumeration, so <m>x_0=x_N</m> for some <m>N \in \mathbb{N}</m>.  But <m>x_N \notin I_N</m>, so <m>x_=x_0 \notin I</m>.  This is a contradiction.</p>
+  <p>Therefore, our supposition that <m>\mathbb{R}</m> is countably infinte was false.  The opposite is true: <m>\mathbb{R}</m> is uncountable.</p>
+  
+</proof>
+</theorem>>
+
+<corollary>
+  <statement>
+    <p>The set of irrational numbers is uncountable.</p>
+  </statement>
+</corollary>>
+
+</section>
+
+<section>
+    <title>Uncountability of the Reals</title>       
+
+<corollary>
+  <statement>
+    <p>The set of real numbers in <m>(0,1)</m> is uncountable.</p>
+  </statement>
+  <proof>
+  <p>(Contradiction, Cantor diagonalization). Suppose <m>(0,1) \subset \mathbb{R}</m> is countable.  Then there exists an enumeratioon <m>\phi:\mathbb{N} \rightarrow (0,1)</m> of all the reals in the interval.</p>
+  <p>Each <m>\phi(m)</m> has a decimal representation that looks like
+    <me>0.a_{m1}a_{m2}a_{m3}a_{m4}\cdots</me>
+    where the <m>a_{ij}</m> are numerals from <m>\{0,1,2,3,4,5,6,7,8,9\}</m>.  Using the enumeration of the reals in <m>(0,1)</m>, we can put the reals in that order as follows:
+    <me>\{\phi(1),\phi(2),\phi(3),\phi(4),\cdots\}</me>.  Another way to look at this ordering is
+    <md>
+      <mrow>\phi(1)  \amp = 0.a_{11}a_{12}a_{13}a_{14}\cdots</mrow>
+      <mrow>\phi(2)  \amp = 0.a_{21}a_{22}a_{23}a_{24}\cdots</mrow>
+      <mrow>\phi(3)  \amp = 0.a_{31}a_{32}a_{33}a_{34}\cdots</mrow>
+      <mrow>\phi(4)  \amp = 0.a_{41}a_{42}a_{43}a_{44}\cdots</mrow>
+      <mrow>\phi(5)  \amp = 0.a_{51}a_{52}a_{53}a_{54}\cdots</mrow>
+      <mrow> \vdots  \amp \, \, \, \, \vdots</mrow>
+    </md></p>
+    <p>Consider the array of numerals in the decimal expansion of each of the reals:
+      <tabular>
+        <row><cell><m>a_{11}</m></cell><cell><m>a_{12}</m></cell><cell><m>a_{13}</m></cell><cell><m>a_{14}</m></cell><cell><m>\cdots</m></cell></row>
+        <row><cell><m>a_{21}</m></cell><cell><m>a_{22}</m></cell><cell><m>a_{23}</m></cell><cell><m>a_{24}</m></cell><cell><m>\cdots</m></cell></row>
+        <row><cell><m>a_{31}</m></cell><cell><m>a_{32}</m></cell><cell><m>a_{33}</m></cell><cell><m>a_{34}</m></cell><cell><m>\cdots</m></cell></row>
+        <row><cell><m>a_{41}</m></cell><cell><m>a_{42}</m></cell><cell><m>a_{43}</m></cell><cell><m>a_{44}</m></cell><cell><m>\cdots</m></cell></row>
+        <row><cell><m>a_{51}</m></cell><cell><m>a_{52}</m></cell><cell><m>a_{53}</m></cell><cell><m>a_{54}</m></cell><cell><m>\cdots</m></cell></row>
+        <row><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\ddots</m></cell></row>
+      </tabular>
+  </p>
+  <p>Now let's use this array to specify a special real number <m>b \in (0,1).</m>. This real number <m>b</m> is going to be defined by its decimal expansion
+  <me>b=0.b_1 b_2 b_3 b_4 b_5 \cdots</me>
+where <m>b_n</m> is in <m>\{0,1,2,3,4,5,6,7,8,9\}</m>.  Define the <m>b_n</m> as follows:
+<md>
+b_n = \begin{cases}
+    2 &amp; \text{if } \text{if } a_{nn} \neq 2 \\
+    3 &amp; \text{if } \text{if } a_{nn} = 2
+  \end{cases}
+</md>.</p>
+<p>This <m>b</m> was constructed to do two things:  to be in <m>(0,1)</m> and to not be in the enumeration of the reals in <m>(0,1)</m>.  This is a contradiction, of course.</p>
+<p>Therefore, the reals in <m>(0,1)</m> are uncountable as claimed.</p>
+</proof>
+</corollary>>
+
+<corollary>
+  <statement>
+    <p>The set of irrational numbers in <m>(0,1)</m> is uncountable.</p>
+  </statement>
+</corollary>>
+
+</section>
+
+<section>
+  <title>Sequences</title>
+  <p>In Calculus 2, we study sequences as a tool to understand how to work with infinite sums of real numbers called series <md>\sum_{i=1}^{\infty} x_i</md>.</p>
+  <p>We are going to study sequences in some detail, and then use that understanding to shed light on series of real numbers, sequences of function, and series of functions.</p>
+
+  <definition>
+    <statement>A sequence is a function <m>f: \mathbb{N} \rightarrow \mathbb{R}</m>.  We say <m>f(n)</m> is the <term>nth term</term> in the sequence.
+    </statement>
+  </definition>
+
+<p>This means that a sequence is an ordered list of real numbers <m>\{f(1), f(2), f(3), f(4), \ldots \}</m>.  We tend to eschew function notation and use subscripted variables to described sequences.</p>
+
+<example>
+  <title>Sequence notation</title>
+  <p>The textbook author denotes a sequence using the notation <m>(a_n)</m>.  To connect this notation with the definition above, we show how to express the nth term of the sequence in two ways:
+     <md>a_n=f(n)</md>,
+  We will write a sequence as <m>(a_n)=\{a_1, a_2, a_3, a_4, \ldots \}</m>.</p>
+</example>
+
+<example>
+  <title>Constant sequence</title>
+  <p>The sequence where <m>f:\mathbb{N}\rightarrow\mathbb{R}</m> is a constant function gives us a constant sequence.  For example <m>(a_n)</m> defined by <m>a_n=f(n)=0</m> gives
+     <md>(a_n)=\{0, 0, 0, 0, 0, \ldots \}</md>.
+  </p>
+</example>
+
+<example>
+  <title>Harmonic sequence</title>
+  <p>The sequence <m>(a_n)</m> defined by <m>a_n=\frac{1}{n}</m> is called the <term>harmonic sequence</term>.  The sequence looks like
+     <md>(1/n)=\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \ldots \}</md>.
+  </p>
+</example>
+
+</section>
+
+<section>
+  <title>Sequences</title>
+
+  <example>
+  <title>An alternating sequence</title>
+  <p>The sequence <m>(a_n)</m> defined by <m>a_n=(-1)^n)</m> is an example of an <term>alternating sequence</term> because the terms alternate between positive and negative.  This specific sequence looks like
+     <md>((-1)^n)=\{-1, 1, -1, 1, -1, \ldots \}</md>.
+  </p>
+  <p>Any positive sequence <m>(a_n)</m> can be made into an alternating sequence thusly:  <m>((-1)^n \cdot a_n)</m>.</p>
+</example>
+
+<example>
+  <title>Powers of Two and powers of one-half</title>
+  <p>The powers of two define the sequence <m>(a_n)</m> by <md>a_n=2^{n-1}</md>.  The powers of one-half define the sequence <m>(b_n)</m> by <md>b_n=\frac{1}{2^{n-1}}</md>.  Both are examples of geometric sequences.
+  </p>
+  <p>These sequences are examples of <term>geometric sequences</term>.  Terms of geometric sequences have the form <m>a_n=Ar^n</m>.</p>
+</example>
+
+<p>The example sequences shared so far (above) have this property:  all terms of the sequences are expressed as explicit functions of <m>n \in \mathbb{N}</m>, their place in the list of terms.</p>
+<p>There are other ways to describe or define a sequence.</p>
+
+</section>
+
+<section>
+  <title>Sequences</title>
+<example>
+  <title><m>\pi</m></title>
+  <p>Define the sequence <m>(x_n)</m> to be the sequence where <m>x_n</m> is the <m>n</m>th numeral in the decimal representation of <m>\pi</m>.  This means that
+    <me>(x_n) = \{3, 1, 4, 1, 5, 9, \ldots\}</me>
+  </p>
+</example>
+
+<example>
+  <title>Fibonacci Sequence</title>
+  <p>Define the sequence <m>(F_n)</m> as follows:
+<md>
+F_n = \begin{cases}
+    1 \amp \text{if } n=1 \text{ or } n=2\\
+    F_{n-1}+F_{n-2} \amp \text{if } n &gt; 2
+  \end{cases}
+</md>.  Then
+   <me>(F_n) = \{1, 1, 2, 3, 5, 8, 13, 21, \ldots \}</me>.
+ This is an example of a <term>recursively defined</term> sequence.  Its terms are not explicit functions of the insex <m>n</m>.
+  </p>
+</example>
+
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+<p>We will invest a considerable amont of time in sequences this semester, as objects of interest and as tools to do other things.</p>
+
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that if <m>n &gt;N</m> then <m>|x_n-x_0| &lt; \epsilon</m>.</statement>
+</definition>
+
+<p>If a sequence <m>(x_n)</m> converges to <m>x_0</m> we write
+<me>\lim_{n \rightarrow \infty} x_n=x_0</me>
+or
+<me>(x_n) \longrightarrow x_0 </me>
+or
+<me>x_n \longrightarrow x_0 \text{ as } n \rightarrow \infty</me>.
+</p>
+
+<example><title>Harmonic sequence</title>
+<p workspace="5in">Prove that <m>\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0</m>.</p></example>
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+
+<example><title>Convergent sequence</title>
+<p workspace="10in">Prove that <m>\displaystyle \lim_{n \rightarrow \infty} \frac{3n+1}{7n-4}=\frac{3}{7}</m>.</p></example>
+
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+  
+<example><title>Convergent sequence</title>
+<p workspace="10in">Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{4n^3+3n}{n^3-6}=4</md>.</p></example>
+
+</section>
+
+<section>
+  <title>Divergence of Sequences</title>
+  
+<p>A sequence that does not converge is said to <term>diverge</term>.</p>
+
+<definition>
+  <statement>A sequence <m>(x_n)</m> diverges if it does not converge to a real number <m>x_0</m>.  Negating the definition of convergence, this means that there exists an <m>\epsilon>0</m> for which, regardless of yoru choice of <m>N \in \mathbb{N}</m> one can find an <m>n_0 &gt; N</m> for which <m>|x_n-x_0|> \epsilon</m>. </statement>
+</definition>
+
+<example><title>Divergent sequence</title>
+<p workspace="5in">Define the sequeqnce <m>(x_n)</m> by <m>x_n=n</m>.  Prove that this sequence diverges.</p>
+</example>
+
+<example><title>Divergent sequence</title>
+<p workspace="5in">Define the sequeqnce <m>(x_n)</m> by <m>x_n=(-1)^n</m>.  Prove that this sequence diverges.</p>
+</example>
+
+
+</section>
+<!-- ===================================== -->
+
+</handout>
+
+</section>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-11">
+  <title>Day 11 (3 March 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 11 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tuesday 3/2 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Next Homework due Tuesday (3/10):
+        <ul>
+            <li>2.4: 10</li>
+            <li>2.5: 1, 2, 5</li>
+            <li><p>Also, work the following problems:</p>
+
+<p>A. For each of the following sequences, decide whether or not the given sequence converges to a. limit.  If it does not converge to a limit, find in each case at least one convergent subsequence.  In what follows, we wuppose n=1, 2, 3, 4 ...
+
+<ol>
+  <li><m> x_n = (-1)^n ( 1- (1/n))</m></li>
+  <li><m> x_n = (-1)^n ( 2- 2^{-1}))</m></li>
+  <li><m> x_n = \sum_{j=1}^n (1/j!)</m></li>
+  <li><m> x_n = (\sin(n \pi/3))(1-(1/n))</m></li>
+  <li><m> x_n = 1+((-1)^n/n)</m></li>
+  <li><m> x_n = \sum_{i=1}^n ((-1)^i/2^i)</m></li>
+</ol></p>
+
+<p>B.  The sequence <me> \{ 1 \frac{1}{2}, 2 \frac{1}{2}, 3 \frac{1}{2}, 1 \frac{1}{3}, 2 \frac{1}{3}, 3 \frac{1}{3}, 1 \frac{1}{4}, 2 \frac{1}{4}, 3 \frac{1}{4}, 1 \frac{1}{5}, 2 \frac{1}{5}, 3 \frac{1}{5}, \ldots \}</me> diverges because it has subsequences that converge to 1, 2, and 3.  Write a sequence which has subsequences that converge to <m>N</m> different numbers where <m>N</m> is any positive integer.</p>
+</li>
+</ul></li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+
+<section>
+  <title>Series</title>
+
+<p>An <term>series of real numbers</term> is essentially an infinite sum of real numbers.</p>
+
+<p>We study series in detail in Calculus 2.  Some of what follows will be review.</p>
+
+<example>
+<title>Powers of one-half.</title>
+<p>The series <me>\displaystyle \sum_{i=0}^{\infty} \frac{1}{2^i}</me> is an example of a convergent geomteric series.  The series converges to the value 2.</p>
+</example>
+
+<example>
+<title>Harmonic Series</title>
+<p>The series <me>\displaystyle \sum_{n=1}^{\infty} \frac{1}{n}</me> is the <term>harmonic series</term> and it is a positive divergent series.  </p>
+</example>
+
+<example>
+<title>Geometric Series</title>
+<p>A series of the form <me>\displaystyle \sum_{k=0}^{\infty} A r^k</me> is called a <term>geometric series</term>.  If <m>|r| &lt; 1</m>, the series converges, and the value of its limit is <m>\displaystyle \frac{A}{1-r}</m>.</p>
+</example>
+
+
+<example>
+<title>Alternating Harmonic Series</title>
+<p>The series <me>\displaystyle \sum_{n=1}^{\infty} \frac{(-1)^n}{n}</me> is the <term>alternating harmonic series</term> and it is a conditionally convergent series.  </p>
+</example>
+
+</section>
+<section>
+  <title>Series</title>
+
+<definition>
+  <statement>
+    If <m>a_n</m> are real numbers for <m>n \in \mathbb{N}</m>, we call the sum <me>\displaystyle \sum_{n \in \mathbb{N}} a_n=\sum_{n=1}^{\infty} a_n</me> a <term>series of real numbers</term>.
+  </statement>
+</definition>
+
+<p>We study a series <m>\displaystyle \sum_{n=1}^{\infty} a_n</m> in terms of its associated <term>sequence of partial sums</term> <m>\{s_N\}</m> where
+  <me>s_N = \sum_{n=1}^{N} a_n</me>,
+is called the <m>N</m>th partial sum of the series.</p>
+
+<example>
+<title>Partial Sums of a Geometric Series</title>
+<p>The <m>N</m>th-partial sum of the geometric series <m>\displaystyle \sum_{k=0}^{\infty} A r^k</m> is 
+  <md>
+    <mrow>s_N \amp = \sum_{i=0}^N A r^k</mrow>
+    <mrow>\amp = \frac{A(1-r^{N+1})}{1-r}</mrow>
+  </md>.
+</p>
+</example>
+
+<definition>
+  <statement>
+    <p>A series <m>\displaystyle \sum_{n=1}^{\infty} a_n</m> converges when its associated sequence of partial sums <m>\{s_N\}</m> converges.  If the sequence of partial sums does not converge, we say the series diverges.</p>
+  </statement>
+</definition>
+
+</section>
+
+<section>
+  <title>Convergence of Series</title>
+
+  <example>
+    <title>Series of squares</title>
+    <p>The series <m>\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2}</m> converges.</p>
+    <p>The book explains that because all terms of the series are positive, the sequence of partial sums is monotone increasing.</p>
+    <p>The book then demonstrates that the sequence of partial sums is bounded above by <m>M=2</m>.</p>
+    <p>By the Monotone Convergence Theorem, the series converges.</p>
+    <p>To what?  The theorem doesn't tell us.</p>
+  </example>
+</section>
+
+<p>The book takes a similar approach to show the harmonic series diverges:
+  <ol>
+    <li>The sequence of partial sums is monotone increasing, and</li>
+    <li>the sequence grows without bound.</li>
+  </ol>
+Therefore, the harmonic series diverges.  But it does so very very slowly.  And the proof suggests the following theorem:</p>
+
+<theorem>
+  <title>Cauchy Condensation Test</title>
+  <statement>
+    Suppose <m>(b_n)</m> is a decreasing sequence and satisfies <m>b_n \geq 0</m> for all <m>n \in \mathbb{N}</m>.  Then the series <m>\displaystyle \sum_{i=1}^{\infty} b_n</m> converges if and only if the series
+    <me>\sum_{i=0}^{\infty} 2^nb_{2^n}=b_1+2b_2+4b_4+8b_8+ \cdots </me>
+    converges
+  </statement>
+  <proof>
+     <p>We first prove the reverse implication.  Assume that <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> converges.  We want to show that <m>\displaystyle \sum_{i=1}^{\infty} b_n</m> converges.  This means we must show that the sequence of partial sums for the latter series
+     <me>s_m = b_1+b_2+b_3+b_4+b_5+b_6+\cdots+s_{m-1}+s_m</me>
+     converges.  We will use the Monotone Convergence Theorem to prove this.  First, we will show that <m>(s_m)</m> is monotone increasing.  Second, we will show that <m>(s_m)</m> is bounded above.</p>
+     <p>Since <m>b_n \geq 0</m> for all <m>n \in \mathbb{N}</m>, the sequence of partial sums is increasing.  This establishes monotonicity.</p>
+     <p>To see that the sequence of partial sums is bounded, note that because <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> converges, its associated sequence of partial sums converges.   Because all convergent sequences are bounded, it follows that the sequence of partial sums for <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> is bounded.  Use <m>M</m> to represent this upper bound.  Let <m>(t_k)</m> be the sequence of partial sums for this series, so
+      <me>t_k = b_1+2b_2+4b_4+ \cdots + 2^kb_{2^k}</me>.</p>
+    <p>Suppose <m>m</m>, the index fot the sequence of partial sums for <m>\sum_{i=1}^{\infty} b_n</m>, is fixed.  By the Archimedean Principle, we can find a <m>k \in \mathbb{N}</m> for which <m>m \leq 2^{k+1}-1</m>.  Then, because <m>(s_m)</m> is monotone increasing, 
+      <me>s_m \leq s_{2^{k+1}-1} </me>, and
+      <md>
+        <mrow>s_{2^{k+1}-1}  \amp = b_1 + b_2 + b_3 + \cdots + b_{2^{k+1}-1}</mrow>
+        <mrow>\amp = b_1 + (b_2 + b_3) + (b_4+b_5+b_6+b_7) + \cdots + (b_{2^k} + b_{2^k+1} + \cdots + b_{2^{k+1}-1})</mrow>
+        <mrow>\amp \leq  b_1 + (b_2 + b_2) + (b_4+b_4+b_4+b_4) + \cdots + (b_{2^k} + b_{2^k} + \cdots + b_{2^{k}})</mrow>
+        <mrow>\amp =  b_1 + 2b_2 + 4b_4 + \cdots + 2^k b_{2^k}</mrow>
+        <mrow>\amp =  t_k</mrow>
+      </md></p>
+      <p>Since <m>s_m \leq t_k \leq M</m> we see that the sequence of partial sums <m>(s_m)</m> is bounded above.  By the Monotone Convergence Theorem, <m>(s_m)</m> converges.  Consquently, the series <m>\displaystyle \sum_{i=1}^{\infty} b_n</m> converges as desired.</p>
+    </proof>
+    
+    <proof>
+      <p>To prove the reverse implication, prove the contrapositive:  if <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> diverges, the <m>\displaystyle \sum_{i=1}^{\infty} b_n</m> diverges.</p>
+      <p>Suppose that <m>\displaystyle \sum_{i=1}^{\infty} b_n</m> converges.  We will use the Monotone COnvergence Theorem to show that show that <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> converges.  If we can show that the sequence <m>(q_K)</m> where
+        <me>q_K = \frac{1}{2}\sum_{n=1}^{K} 2^n b_{2^n}</me>
+        converges, convergence of  <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> will follow from the algebraic limit theorem.  Notice that because <m>(b_n)</m> is a decreasing sequence of positive reals,
+        <md>
+          <mrow>b_1 + \frac{1}{2} \sum_{n=1}^{K} 2^n b_{2^n} \amp = b_1+ b_2 + 2b_4 + 4b_8 + \cdots 2^{K-1}b_{2^K}</mrow>
+          <mrow>\amp \leq b_1 + b_2 + b_3 + b_4 +b_5 + b_6 + \cdots + b_{2^K-1}+ b_{2^K}</mrow>
+          <mrow>\amp \leq \sum_{n=1}^{\infty}b_n</mrow>
+        </md>.</p>
+        <p>Since the partial sums of  <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> are bounded above, the Monotone Convergence Theorem tells us that the series <m>\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}</m> converges, as desired.</p>
+  </proof>
+</theorem>
+
+<section>
+<title>Subsequences</title>
+
+<definition>
+    <statement>
+      <p>Let <m>(x_m)</m> be a sequence of real numbers, and let <m>n_1 &lt; n_2 &lt; n_3 &lt; \cdots</m> be an increasing sequence of natural numbers.  Then the sequence
+        <md>
+          <mrow>(x_{n_1}, x_{n_2}, x_{n_3}, x_{n_4}, \ldots)</mrow>
+        </md>
+        is called a <term>subsequence</term> of <m>(x_n)</m> and is denoted by <m>(x_{n_k})</m>, where <m>k \in \mathbb{N}</m> indexews the subsequence.</p>
+    </statement>
+  </definition>
+
+<theorem>
+  <statement>
+    Subsequences of a convergent sequence converge to the same limit as the original sequence.
+  </statement>
+</theorem>
+<proof>
+<p>The proof simply uses the definition of convergence and the idea that a subsequence is just a sequence.  The idea is to note that the <m>k</m>th term of the subsequence if at least the <m>k</m>th term in the original sequence, so the <m>N</m> we get from convergence of the primary sequence also works for the subsequence.</p>
+</proof>
+
+<corollary>
+  <title>Criterion for Divergence</title>
+  <statement>
+    If a sequence has two subsequences that converge to different values, then the original sequence diverges.
+  </statement>
+</corollary>
+</section>
+
+<!-- ===================================== -->
+
+</handout>
+
+</section>

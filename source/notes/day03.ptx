@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-03">
+  <title>Day 3 (3 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 3 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tuesday 2/3 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Agreement</li>
+        <li>Roll</li>
+        <li>Return Homework</li>
+        <li>Comments on Homework</li>
+        <li>Questions on math, reading s(1.1-1.3)</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+  <section>
+    <title>Comments on Homeworks</title>
+    <p>Proofs must be rigorous and readable.  Each proof is a peice of <term>technical writing</term> (one the transferrable skills you gain as a mathematics major).  I must be able to follow your thinking; a proof without English is not a proof.</p>
+    <p>An example is not a proof.  You cannot prove something by drawing a diagram.</p>
+    <p>When grading, I noticed more than one solution that made me think, "I believe I've read this solution before."  I am choosing to explain this away by believing that this is the result of students working together.  If you do work together, be sure to write up a solution in your own words.  If this continues to happen, then I will call people out on their homework; this comes dangerously close to violating the University's policies on Academic Integrity.</p>
+  </section>
+
+  <section>
+    <title>Distribution of homework scores</title>
+<p>Homework was out of 35 points (roughly 2 points per problem).  Total scores were distributed as follows:
+<ul>
+   <li>2 people with 30 points</li>
+   <li>2 people with 27 points</li>
+   <li>1 person with 25 points</li>
+   <li>2 people with 20 points</li>
+   <li>1 person with 18 points</li>
+   <li>3 people with 9 points</li>
+   <li>1 person with 8 points</li>
+   <li>5 people with 0 points (nothing turned in)</li>
+   <li></li>
+</ul>
+No homework redos.  Generally, a score of 50% of more is reasonable (passing) on homework.</p>
+    <p>I will endeavor to assign homework on a Thursday for the following Thursday.  I forgot to assign homework at our last class.</p>
+  </section>
+
+  <section>
+    <title>The Axiom of Completeness</title>
+<p> What is the author trying to do?  No, let me ask a more general question.  What are some vocab terms that have come up, in class and the reading?</p>
+<p><ul>
+    <li>DeMorgan's Law</li>
+    <li>supremum, infimum</li>
+    <li>set bounds:  upper, lower, total</li>
+    <li>triangle inequality</li>
+    <li>(proof techniques)</li>
+    <li><m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m>, <m>\mathbb{Q}^c</m>, <m>\mathbb{R}</m>,</li>
+</ul></p>
+    <p>What are the basic operations endowed to <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, and <m>\mathbb{Q}</m>?</p>
+
+    <p workspace="2in">Note how these n umber systems are nested and how one allows us to get to the next until we get to <m>\mathbb{Q}</m>.</p>
+
+
+    <p>To get to <m>\mathbb{Z}</m> from <m>\mathbb{N}</m> we add the additive inverses to <m>\mathbb{N}</m> and zero.</p>
+    <p>To get to <m>\mathbb{Q}</m> from <m>\mathbb{Z}</m> we add the multiplicative inverses to <m>\mathbb{Z}</m>.</p>
+    <p>It's not clear how to get from <m>\mathbb{Q}</m> to <m>\mathbb{R}</m> ... it's like we can't do it without working from the outside of <m>\mathbb{Q}</m>.  This is where the <term>Axiom of Completeness</term> comes into play; it is how we pass from <m>\mathbb{Q}</m> to <m>\mathbb{R}</m>.</p>
+
+        <theorem>
+            <title>Axiom of Completeness</title>
+            <statement>
+                <p>If <m>A</m> is a nonempty set that is bonded above, then it has a least upper bound.</p>
+            </statement>
+        </theorem>
+
+        <p>The set <m>\mathbb{Q}</m> does not obey the Axiom of Completeness because <m>\mathbb{Q}</m> doesn't have sufficient numbers (<em>i.e.</em> the irrationals).  To get the reals, we take <m>\mathbb{Q}</m> and add all the numbers required for the new set to satisfy the Axiom of Completeness.</p>
+        <p>This addition <term>completes</term> the rationals and gives us the real number system, <m>\mathbb{R}</m>.</p>
+        <p>Our take-away from this process should be that the reals are a <term>complete</term> number system that have all the nive field properties of the rationals.</p>
+</section>
+
+<section>
+    <title>Maxima and suprema</title>
+
+    <definition>
+        <statement>
+            <p>A real number <m>a_0</m> is a <term>maximum</term> of <m>A \subseteq \mathbb{R}</m> if
+                <ol>
+                    <li><m>a_0 \in A</m>, and</li>
+                    <li><m>a \leq a_0</m> for all <m>a \in A</m>.</li>
+                </ol></p>
+            <p>A real number <m>a_0</m> is a <term>minimum</term> of <m>A \subseteq \mathbb{R}</m> if
+                <ol>
+                    <li><m>a_0 \in A</m>, and</li>
+                    <li><m>a \geq a_0</m> for all <m>a \in A</m>.</li>
+                </ol></p>
+            </statement>
+    </definition>
+
+    <example>
+        <statement>
+            A finite set of real numbers always has both a minimum and a maximum.
+        </statement>
+        <answer>
+            Why?  Real numbers can be ordered, so we can order our finite collection of numbers.  Then we can see it will have a least element and a greatest element.  The least is the minimum of the set and the greatest is the maximum of the set.
+        </answer>
+    </example>
+
+    <example>
+        <statement>
+            The open interval <m>(0,1)=\{x \in \mathbb{R} \, : \, 0 &lt; x &lt; 1 \}</m>.  What is its maximum?  What is its minimum?
+        </statement>
+        <answer>
+            <p>This set does not have a maximum.  One might want to say 1 is a maximum, but it is not an element of the set, so it cannot be a maximum.  If you take a number that is a tiny bit smaller, then you can find a number in the interval that is bigger than your new number, so your new number can't be a maximum.</p>
+            <p>The same type of argument explains why the interval does not have a minimum, either.
+            </p>
+        </answer>
+    </example>
+
+    </section>
+
+<section>
+    <title>Maxima and suprema</title>
+
+    <definition>
+        <statement>
+            Let <m>A \subseteq \mathbb{R}</m> be nonempty.  The real number <m>s</m> is a <term>least upper bound</term> (aka <term>supremum</term>) of <m>A</m> if
+                <ol>
+                    <li><m>s</m> is an upper bound for <m>A</m>, and</li>
+                    <li>if <m>M</m> is another upper bound, then <m>s \leq M</m>.</li>
+                </ol>
+            The real number <m>\ell</m> is a <term>greatest lower bound</term> (aka <term>infimum</term>) of <m>A</m> if
+                <ol>
+                    <li><m>\ell</m> is an lower bound for <m>A</m>, and</li>
+                    <li>if <m>m</m> is another lower bound, then <m>m \leq \ell</m>.</li>
+                </ol>
+            </statement>
+    </definition>
+
+    <example>
+        <statement>
+            <p>For each of the following sets, determine its infimum, supremum, minimum, and maximum or decide that it does not exist.
+            <ol>
+                <li><m>A=\{ \frac{1}{n} \, : \, n \in \mathbb{N} \}</m></li>
+                <li><m>B=\{ \frac{1}{n} \, : \, n \in \mathbb{Z} \setminus \{0\} \, \}</m></li>
+                <li><m>C=[0,1] \cup [2,3]</m></li>
+                <li><m>D=\bigcap_{i=1}^{\infty} [-\frac{1}{n},1+\frac{1}{n}]</m></li>
+                <li><m>E=\{ x \in \mathbb{R} \, : \, x &lt; 0\}</m></li>
+                <li><m>F=\bigcap_{i=1}^{\infty} (1-\frac{1}{n},1+\frac{1}{n})</m></li>
+            </ol>
+            </p>
+        
+        
+            <p>
+                <tabular>
+                    <row header="yes"><cell>Set</cell><cell>sup</cell><cell>inf</cell><cell>max</cell><cell>min</cell></row>
+                    <row><cell>A</cell><cell>1</cell><cell>0</cell><cell>DNE</cell><cell>1</cell></row>
+                    <row><cell>B</cell><cell>1</cell><cell>-1</cell><cell>1</cell><cell>-1</cell></row>
+                    <row><cell>C</cell><cell>3</cell><cell>0</cell><cell>3</cell><cell>0</cell></row>
+                    <row><cell>D</cell><cell>1</cell><cell>0</cell><cell>1</cell><cell>0</cell></row>
+                    <row><cell>E</cell><cell>0</cell><cell>DNE</cell><cell>DNE</cell><cell>DNE</cell></row>
+                    <row><cell>F</cell><cell>1</cell><cell>1</cell><cell>1</cell><cell>1</cell></row>
+                </tabular>
+            </p>
+       </statement>
+    </example>
+    
+    </section>
+
+<section>
+    <title>Maxima and suprema</title>       
+    <theorem>
+        <statement>
+            <p>Let <m>A \subseteq \mathbb{R}</m> be a nonempty set that is bonded above.  Let <m>s \in \mathbb{R}</m> be an uppoer bound for <m>A</m>. Then <m>s=\sup(A)</m> if and only if, for every <m>\epsilon &gt; 0</m>, there is an <m>a \in A</m> with <m>s-\epsilon a</m>.</p>
+        </statement>
+    </theorem>
+
+    <p>We will prove this Lemma next time.</p>
+    <note><p>With this lemma we will have two ways of proving statements about suprema:  the definition (to make arguments from first principles), and this lemma (which is an equivalent characterization of suprema).</p></note>
+</section>
+
+
+
+</handout>
+
+
+  
+</section>

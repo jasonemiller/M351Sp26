@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-13">
+  <title>Day 13 (10 March 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 13 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+
+  <section>
+    <title>Tuesday 3/10 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li><p>Next Homework due Thursday (3/12):</p>
+        <ul>
+            <li>2.4: 10</li>
+            <li>2.5: 1, 2, 5</li>
+            <li><p>Also, work the following problems:</p>
+
+<p>A. For each of the following sequences, decide whether or not the given sequence converges to a. limit.  If it does not converge to a limit, find in each case at least one convergent subsequence.  In what follows, we wuppose n=1, 2, 3, 4 ...
+
+<ol>
+  <li><m> x_n = (-1)^n ( 1- (1/n))</m></li>
+  <li><m> x_n = (-1)^n ( 2- 2^{-1}))</m></li>
+  <li><m> x_n = \sum_{j=1}^n (1/j!)</m></li>
+  <li><m> x_n = (\sin(n \pi/3))(1-(1/n))</m></li>
+  <li><m> x_n = 1+((-1)^n/n)</m></li>
+  <li><m> x_n = \sum_{i=1}^n ((-1)^i/2^i)</m></li>
+</ol></p>
+
+<p>B.  The sequence <me> \{ 1 \frac{1}{2}, 2 \frac{1}{2}, 3 \frac{1}{2}, 1 \frac{1}{3}, 2 \frac{1}{3}, 3 \frac{1}{3}, 1 \frac{1}{4}, 2 \frac{1}{4}, 3 \frac{1}{4}, 1 \frac{1}{5}, 2 \frac{1}{5}, 3 \frac{1}{5}, \ldots \}</me> diverges because it has subsequences that converge to 1, 2, and 3.  Write a sequence which has subsequences that converge to <m>N</m> different numbers where <m>N</m> is any positive integer.</p>
+</li>
+</ul></li>
+        <li>Midterm:  Thursday 26 March</li>
+        <li>next class:  read section 3 of Chapter 3; talk abou review guide</li>
+        <li>New material</li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+
+<section>
+  <title>Chapter 3:  Basic Topology of  <m>\mathbb{R}</m></title>
+
+<p>Last time:  Cauchy sequences are convergent sequences, applications to series and their convergence.  Open sets</p>
+
+<p>This time:  properties of sets of real numbers.</p>
+
+<example>
+  <title>The Cantor Set</title>
+  <p workspace="8in"></p>
+</example>
+
+</section>
+
+
+<section>
+<title>Open Sets</title>
+
+<definition>
+  <title>Open Set</title>
+  <statement>
+    <p>A set <m>U \subseteq \mathbb{R}</m> is called an <term>open set</term> if for every <m>x \in U</m> there is an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x_0)  \subset U</m>.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>Open Interval</title>
+  <p>The open interval <m>(a,b)</m> is an open set.</p>
+  <p workspace="3in"></p>
+</example>
+
+<example>
+  <title>The Reals</title>
+    <p>The set of real numbers is an open set.</p>
+  <p workspace="2in"></p>
+</example>
+
+<example>
+  <title>Empty Set</title>
+    <p>The empty set is an open set.</p>
+  <p workspace="2in"></p>
+</example>
+
+</section>
+
+<section>
+
+<example>
+  <title>Finite Union of Open Sets</title>
+  <p workspace="5in">Any finite union of open sets is open.</p>
+</example>
+
+<example>
+  <title>Finite Intersection of Open Sets</title>
+  <p workspace="5in">Any finite intersection of open sets is open.</p>
+</example>
+
+</section>
+
+<section>
+
+<example>
+  <title><m>\{1\}</m> is not open</title>
+  <p workspace="3in"></p>
+</example>
+
+
+<example>
+  <title><m>(a,b]</m> is not open</title>
+  <p workspace="3in"></p>
+</example>
+  
+
+</section>
+
+<section>
+<title>Closed Sets</title>
+
+
+<definition>
+  <title>Limit Point</title>
+  <statement>
+    <p>A point <m>x</m> is a <term>limit point</term> of a set <m>A \subset \mathbb{R}</m> if every <m>\epsilon</m>-neighborhood <m>V_{\epsilon}(x)</m> intersects <m>A</m> at some point other than <m>x</m>.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>Limit Points of the empty set</title>
+   <p>The empty set has no limit points.</p>
+</example>
+
+<example>
+  <title>Limit Points of the set of all reals, <m>\mathbb{R}</m>.</title>
+   <p workspace="3in">Every real number is a limit point of <m>\mathbb{R}</m>.</p>
+</example>
+
+<example>
+  <title>Limit Points of the set <m>\{0\}</m>.</title>
+   <p workspace="3in">The singleton set has no limit points.</p>
+</example>
+
+<example>
+  <title>Limit Points of a <m>\{0, 1, 2\}</m>.</title>
+   <p workspace="3in">The finite set has no limit points.</p>
+</example>
+
+
+
+</section>
+
+
+
+
+<section>
+<title>Closed Sets</title>
+
+
+<definition>
+  <title>Limit Point</title>
+  <statement>
+    <p>A point <m>x</m> is a <term>limit point</term> of a set <m>A \subset \mathbb{R}</m> if every <m>\epsilon</m>-neighborhood <m>V_{\epsilon}(x)</m> intersects <m>A</m> at some point other than <m>x</m>.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>Terms of the sequence <m>(a_n)</m> where <m>a_n=n^{-1}</m>.</title>
+   <p workspace="3in">The only limit points of this set is <m>a=0</m>.</p>
+</example>
+
+<example>
+  <title><m>\{ x \in \mathbb{Q} \, : \, 0 &lt; x &lt; 1\}</m></title>
+   <p workspace="3in">The set of limit points is <m>[0,1] \subset \mathbb{R}</m>.</p>
+</example>
+
+</section>
+
+
+
+
+
+<section>
+<title>Closed Sets</title>
+
+<theorem>
+<statement>
+    <p>A point <m>x</m> is a <term>limit point</term> of a set <m>A \subset \mathbb{R}</m> if and only if <m>x=\lim a_n</m> for some sequence <m>(a_n)</m> contained in <m>A</m> with <m>a_n \neq x</m> for all <m>n \in \mathbb{N}</m>. </p>
+  </statement> 
+</theorem>
+
+<proof>
+<p workspace="8in"></p>
+</proof>
+
+<definition>
+  <title>Isolated Point</title>
+  <statement>
+    <p>A point <m>x</m> is an <term>isolated point</term> of a set <m>A \subset \mathbb{R}</m> if it is not a limit point of <m>A</m>.</p>
+  </statement>
+</definition>
+
+<definition>
+  <title>Closed Set</title>
+  <statement>
+    <p>A set <m>F \subseteq \mathbb{R}</m> is called a <term>closed set</term> if it contains all its limit points.</p>
+  </statement>
+</definition>
+
+</section>
+
+<section>
+<title>Closed Sets</title>
+
+  <definition>
+  <title>Closed Set</title>
+  <statement>
+    <p>A set <m>F \subseteq \mathbb{R}</m> is called a <term>closed set</term> if it contains all its limit points.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>The empty set</title>
+   <p>The empty set is closed.</p>
+</example>
+
+<example>
+  <title><m>\mathbb{R}</m>.</title>
+   <p workspace="3in"><m>\mathbb{R}</m> is closed</p>
+</example>
+
+<example>
+  <title>The set <m>\{0\}</m>.</title>
+   <p workspace="3in">The singleton set is closed.</p>
+</example>
+
+<example>
+  <title>Limit Points of a <m>\{0, 1, 2\}</m>.</title>
+   <p workspace="3in">The finite set is closed.</p>
+</example>
+
+
+</section>
+
+
+<section>
+<title>Closed Sets</title>
+
+  <definition>
+  <title>Closed Set</title>
+  <statement>
+    <p>A set <m>F \subseteq \mathbb{R}</m> is called a <term>closed set</term> if it contains all its limit points.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>Terms of the sequence <m>(a_n)</m> where <m>a_n=n^{-1}</m>.</title>
+   <p workspace="3in">The set is not closed.</p>
+</example>
+
+<example>
+  <title><m>\{ x \in \mathbb{Q} \, : \, 0 &lt; x &lt; 1\}</m></title>
+   <p workspace="3in">The set is not closed.</p>
+</example>
+</section>
+
+
+<section>
+  <title>Closure</title>
+
+<definition>
+  <statement>
+<p>  Let <m>A \subseteq \mathbb{R}</m>.  If <m>L</m> is the set of limit points of <m>A</m>, then the <term>closure of <m>A</m></term>  is <m>\overline{A} = A \cup L</m>.</p>
+  </statement>
+</definition>
+</section>
+
+<theorem>
+  <statement>
+    <p>If <m>A \subseteq \mathbb{R}</m>, then <m>\overline{A}</m> is a closed set.</p>
+  </statement>
+</theorem>
+
+<p>The set <m>\overline{A}</m> is the smallest closed set that contains <m>A</m>.</p>
+
+</handout>
+</section>

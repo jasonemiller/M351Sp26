@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-14">
+  <title>Day 14 (12 March 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 14 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+
+  <section>
+    <title>Thursday 3/12 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Next Homework due Tuesday (3/24): see Canvas</li>
+        <li>Midterm:  Thursday 26 March</li>
+        <li>talk about review guide</li>
+        <li>New material</li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Open Sets</title>
+
+<definition>
+  <title>Open Set</title>
+  <statement>
+    <p>A set <m>U \subseteq \mathbb{R}</m> is called an <term>open set</term> if for every <m>x \in U</m> there is an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x_0)  \subset U</m>.</p>
+  </statement>
+</definition>
+
+<p>Canonical example of an open set is an <term>open interval</term>.</p>
+
+<p>Other good (but extreme) examples:  <m>\mathbb{R}</m> and the empty set.</p>
+
+<example>
+  <title>Finite Intersection of Open Sets</title>
+  <p>Any finite intersection of open sets is open.</p>
+  <p>Let <m>U_i \subset \mathbb{R}</m> be an open set for <m>i=1, 2, 3, \ldots n</m>.  We want to prove that <m>U=\displaystyle \cap_{i=1}^n U_i</m> is also open.</p>
+  <p>If  <m>U</m> is empty, then the result follows because the empty set is open.</p>
+  <p>If <m>U</m> is not empty, let <m>x \in U</m>.  We must show there is an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x) \subset U</m>.  By the definition of <m>U</m>, we know that <m>x \in U_i</m> for all <m>i</m>.  Since each <m>U_i</m> is open, there is an <m>\epsilon_i &gt; 0</m> for which <m>V_{\epsilon_i}(x) \subset U_i</m>.  We want to find an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x) \subset U_i</m> for all <m>i</m>.</p>
+  <p>Take <m>\epsilon = \min\{\epsilon_1, \epsilon_2, \epsilon_3, \ldots, \epsilon_n\}</m>.  Then <m>V_{\epsilon}(x) \subset U_i</m> for all <m>i</m>.  Thus, <m>V_{\epsilon}(x) \subset U</m>, so <m>U=\displaystyle \cap_{i=1}^n U_i</m> is open.</p>
+</example>
+
+
+</section>
+
+
+<!-- ============================ -->
+
+<section>
+<title>Closed Sets</title>
+
+
+<definition>
+  <title>Limit Point</title>
+  <statement>
+    <p>A point <m>x</m> is a <term>limit point</term> of a set <m>A \subset \mathbb{R}</m> if every <m>\epsilon</m>-neighborhood <m>V_{\epsilon}(x)</m> intersects <m>A</m> at some point other than <m>x</m>.</p>
+  </statement>
+</definition>
+
+<theorem>
+<statement>
+    <p>A point <m>x</m> is a <term>limit point</term> of a set <m>A \subset \mathbb{R}</m> if and only if <m>x=\lim a_n</m> for some sequence <m>(a_n)</m> contained in <m>A</m> with <m>a_n \neq x</m> for all <m>n \in \mathbb{N}</m>. </p>
+  </statement> 
+</theorem>
+
+<example>
+  <title>Every point of the closed interval <m>[a,b]</m> is a limit point of the interval.</title>
+  <p>Let <m>x \in [a,b]</m>.  By the theorem, we need to show that <m>x</m> is the (sequential) limit of a sequence of points in the interval <m>[a,b]</m>.</p>
+  <p>Suppose that <m>x</m> is not an endpoint of the interval, and let <m>\Delta</m> be the distance between <m>x</m> and the nearest endpoint.  The the points <m>x + \Delta \cdot 2^{-n}</m> for <m>n=1, 2, 3, \ldots</m> are in <m>[a,b]</m>.  They clearly converge to <m>x</m>.  Therefore, <m>x</m> is a limit point.</p>
+  <p>Suppose that <m>x</m> is an endpoint of the interval.  If <m>x=a</m> then points <m>a + (b-a) \cdot 2^{-n}</m> for <m>n=1, 2, 3, \ldots</m> are in <m>[a,b]</m> and converge to <m>a</m>, making <m>a</m> a limit point of <m>[a,b]</m>.  If <m>x=b</m> then points <m>b - (b-a)\cdot 2^{-n}</m> for <m>n=1, 2, 3, \ldots</m> are in <m>[a,b]</m> and converge to <m>b</m>, making <m>b</m> a limit point of <m>[a,b]</m>.</p>
+  <p>This shows that every point of <m>[a,b]</m> is a limit point of <m>[a,b]</m>.</p>
+</example>
+
+<example>
+  <title>A limit point of the closed interval <m>[a,b]</m> must be in the interval.</title>
+  <p>Suppose not.  Suppose <m>x</m> is a limit point of the interval <m>[a,b]</m> that lies outside the interval.  This means that either <m>x &lt; a</m> or <m>x &gt; b</m>.</p>
+  <p>By the previous theorem, since <m>x</m> is a limit point of <m>[a,b]</m> there is a sequence <m>(x_n) \subset [a,b]</m> that converges to <m>x</m>.  Since <m>(x_n) \subset [a,b]</m> we know <m>a \leq x_n \leq b</m> for all <m>n</m>.  By the Limit Order Theorem the limit of the sequence must satisfy <m>a \leq x \leq b</m>.  But either <m>x &lt; a</m> or <m>x &gt; b</m>.  This is a contradiction.</p>
+  <p>We conclude all limit points of <m>[a,b]</m> must be in <m>[a,b]</m>.</p>
+</example>
+
+<p>NOTE:  this proof can be reworked into a direct proof of the statement.  Direct proofs are always better than indirect proofs.  Can you make the revision?</p>
+
+</section>
+
+<!-- ============================ -->
+
+<section>
+
+<p>A point in <m>A</m> that is not a limit point of <m>A</m> is called an <term>isolated point</term> of <m>A</m>.</p>
+
+<definition>
+  <title>Isolated Point</title>
+  <statement>
+    <p>A point <m>x \in A \subset \mathbb{R}</m> is an <term>isolated point</term> of <m>A</m> if it is not a limit point of <m>A</m>.</p>
+  </statement>
+</definition>
+
+<p>This means you can't get close to an isolated point of <m>A</m> from within <m>A</m>.</p>
+
+<example>
+  <title><m>x=1</m> is an isolated point of <m>\{1\} \cup [2,3]</m>.</title>
+   <p workspace="3in">Consider <m>A=\{1\} \cup [2,3]</m>.  What are the limit points?  What are the isolated points?</p>
+</example>
+
+<example>
+  <title><m>\{1\} \cup (2,3)</m>.</title>
+   <p workspace="3in">Consider <m>A=\{1\} \cup (2,3)</m>.  What are the limit points?  What are the isolated points?</p>
+</example>
+
+<definition>
+  <title>Closed Set</title>
+  <statement>
+    <p>A set <m>F \subseteq \mathbb{R}</m> is called a <term>closed set</term> if it contains all its limit points.</p>
+  </statement>
+</definition>
+
+<p>Canonical example, a closed and bounded interval: <m>[a,b]=\{x \in \mathbb{R} \, : \, a \leq c \leq b\}</m>.</p>
+
+<p>We just proved that <m>[a,b]</m> contains all its limit points, so it is a closed set.</p>
+
+</section>
+
+<!-- ============================ -->
+
+<section>
+  <title>Closure</title>
+
+<definition>
+  <statement>
+<p>  Let <m>A \subseteq \mathbb{R}</m>.  If <m>L</m> is the set of limit points of <m>A</m>, then the <term>closure of <m>A</m></term>  is <m>\overline{A} = A \cup L</m>.</p>
+  </statement>
+</definition>
+
+
+<theorem>
+  <statement>
+    <p>If <m>A \subseteq \mathbb{R}</m>, then <m>\overline{A}</m> is a closed set.</p>
+  </statement>
+</theorem>
+
+<p>The set <m>\overline{A}</m> is the smallest closed set that contains <m>A</m>.</p>
+
+</section>
+
+
+<!-- ============================ -->
+<!-- ============================ -->
+<!-- ============================ -->
+
+</handout>
+</section>

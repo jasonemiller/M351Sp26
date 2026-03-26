@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-07">
+  <title>Day 7 (16 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 7 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tuesday 2/16 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework due Wednesday</li>
+        <li>NOTE: the Teamsters are striking starting on 17 Feb and goes through 20 Feb.  This is disrupting campus.  If you do not want to cross their picket lines, I will not count you absent from class.</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+<section>
+    <title>Last time: ...</title>       
+
+    <p>Last time, we talked about
+      <ul>
+        <li>Uncountability of the reals and <m>(0,1) \subset \mathbb{R}</m></li>
+        <li>sequences</li>
+        <li>examples of sequences</li>
+        <li>convergent sequences</li>
+      </ul>
+    </p>
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that if <m>n &gt;N</m> then <m>|x_n-x_0| &lt; \epsilon</m>.</statement>
+</definition>
+
+<fact>
+  <p>"As <m>n</m> gets bigger and bigger, <m>x_n</m> gets closer and closer to <m>x_0</m>."</p>
+</fact>
+
+<p>Last time, we proved:
+  <ol>
+    <li><m>\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0</m></li>
+    <li><m>(started) \displaystyle \lim_{n \rightarrow \infty}  \frac{3n+1}{7n-4}=\frac{3}{7}</m></li>
+  </ol>
+</p>
+
+<example><title>Convergent sequence: powers of 2</title>
+<p workspace="10in">Prove that <m>\displaystyle \lim_{n \rightarrow \infty} \frac{1}{2^n}=0</m>.</p>
+
+<p>SCRATCH WORK:
+<md>
+    <mrow>\left|\frac{1}{2^n}-0\right| \amp = \left|\frac{1}{2^n}\right|</mrow>
+    <mrow> \amp = \frac{1}{2^n} \text{ because values are all positive }</mrow>
+  </md>.
+We want to make this arbitrarily small.  That is, we want to show that for large <m>n</m>, this can be made smaller than <m>\epsilon</m>.  How big does <m>n</m> need to be?  We work to find out.  Specifically, we want to solve the inequality
+<me>\frac{1}{2^n} &lt; \epsilon</me>.</p>
+
+<p>Steps to solve for <m>n</m> follow:
+  <md>
+    <mrow>\frac{1}{2^n} &lt; \epsilon</mrow>
+    <mrow>2^n &gt; \frac{1}{\epsilon}</mrow>
+    <mrow>\log_2(2^n) &gt; \log_2(\frac{1}{\epsilon})</mrow>
+    <mrow>n\log_2(2) &gt; -\log_2(\epsilon)</mrow>
+    <mrow>n &gt; -\log_2(\epsilon)</mrow>
+  </md>.
+On the left side of the last inequality is the candidate for the <m>N</m> we seek, except that it isn't a natural number.  So we set <m>N=\lceil -\log_2(\epsilon) \rceil</m>.</p>
+<p>We are now ready to prove the limit statement for the sequence <m>(2^{-n})</m>.</p>
+
+<note>
+  <p>Lots of proofs of convergence dispense with the requirement that our <m>N</m> be a natural number; the important aspect of <m>N</m> is that is ia a lower bound for the choices of <m>n</m> that make our expression <m>|x_n-x_0|</m>less than <m>\epsilon</m>.</p>
+</note>
+
+
+<proof>
+  <p>Let <m>\epsilon &gt; 0</m> be given.  Choose <m>N=\lceil -\log_2(\epsilon) \rceil</m> and let <m>n &gt; N</m>.  For this choice of <m>n</m> we see that
+  <md>
+    <mrow>\left|\frac{1}{2^n}-0\right| \amp = \left|\frac{1}{2^n}\right|</mrow>
+    <mrow> \amp = \frac{1}{2^n}</mrow>
+    <mrow> \amp &lt; \frac{1}{2^N} \text{ since }n&gt; N</mrow>
+    <mrow> \amp &lt; \frac{1}{2^{-\log_2(\epsilon)}} \text{ since } N &gt; -\log_2(\epsilon)</mrow>
+    <mrow> \amp &lt; \frac{1}{\epsilon^{-1}}</mrow>
+    <mrow> \amp = \epsilon </mrow>
+</md>
+This shows that for <m>n>N</m>, we have <m>\left|\frac{1}{2^n}-0\right| &lt; \epsilon</m>, as desired.</p>
+</proof>
+</example>
+
+</section>
+
+
+<section><title>Convergence of Sequences</title>
+
+<example><title>Convergent sequence (from last time)</title>
+<p>Prove that <m>\displaystyle \lim_{n \rightarrow \infty} \frac{3n+1}{7n-4}=\frac{3}{7}</m>.</p>
+
+<p workspace="9in">Last time, determined that <m>N=\lceil \frac{1}{7} \left( \frac{19}{7 \epsilon} +4 \right) \rceil</m>.</p>
+
+<!--
+<proof>
+  <p>Let <m>\epsilon &gt; 0</m> be given.  Choose <m>N=\lceil \frac{1}{7} \left( \frac{19}{7 \epsilon} +4 \right) \rceil</m> and let <m>n &gt; N</m>.  For this choice of <m>n</m> we see that
+  <md>
+    <mrow>\left|\frac{3n+1}{7n-4}-\frac{3}{7}\right| \amp = \left|\frac{21n+7-21n+12}{7(7n-4)}\right|</mrow>
+    <mrow> \amp = \left|\frac{19}{7(7n-4)}\right|</mrow>
+    <mrow> \amp = \frac{19}{7(7n-4)}</mrow>
+    <mrow> \amp &lt; \frac{19}{7(7N-4)} \text{ because } n &gt; N</mrow>
+    <mrow> \amp &lt; \frac{19}{7 \left ( 7 \cdot \left( \frac{1}{7} \left( \frac{19}{7 \epsilon} +4 \right) \right)-4\right)} \text{ because } N &gt; \frac{1}{7} \left( \frac{19}{7 \epsilon} +4 \right)</mrow>
+
+
+    <mrow> \amp &lt; \frac{19}{ 7 (\left( \left( \frac{19}{7 \epsilon} +4 \right) )-4)}</mrow>
+    <mrow> \amp &lt; \frac{19}{7 \left(\frac{19}{7 \epsilon}\right)} </mrow>
+    <mrow> \amp \epsilon </mrow>
+</md>
+This shows that for <m>n>N</m>, we have <m>\left|\frac{1}{2^n}-0\right| &lt; \epsilon</m>, as desired.</p>
+</proof>
+
+-->
+</example>
+
+
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+  
+<example><title>Convergent sequence</title>
+<p workspace="10in">Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{4n^3+3n}{n^3-6}=4</md>.</p></example>
+
+</section>
+
+<section>
+  <title>Divergence of Sequences</title>
+  
+<p>A sequence that does not converge is said to <term>diverge</term>.</p>
+
+<definition>
+  <statement>A sequence <m>(x_n)</m> diverges if it does not converge to a real number <m>x_0</m>.  Negating the definition of convergence, this means that there exists an <m>\epsilon>0</m> for which, regardless of your choice of <m>N \in \mathbb{N}</m> one can find an <m>n_0 &gt; N</m> for which <m>|x_n-x_0|> \epsilon</m>. </statement>
+</definition>
+
+<example><title>Divergent sequence</title>
+<p workspace="5in">Define the sequeqnce <m>(x_n)</m> by <m>x_n=n</m>.  Prove that this sequence diverges.</p>
+</example>
+
+<example><title>Divergent sequence</title>
+<p workspace="5in">Define the sequeqnce <m>(x_n)</m> by <m>x_n=(-1)^n</m>.  Prove that this sequence diverges.</p>
+</example>
+
+
+</section>
+<!-- ===================================== -->
+
+</handout>
+
+</section>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-05">
+  <title>Day 5 (10 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 4 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tuesday 2/10 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework due Thursday</li>
+        <li>NOTE: the Teamsters are striking next week, starting on 17 Feb.  This may disrupt campus.  If you want to support those who are striking, talk with Miller if you want to know what to expect when the strike happens.</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+<section>
+    <title>Consequences of Completeness</title>       
+
+    <theorem>
+        <title>Density of <m>\mathbb{Q}</m> in <m>\mathbb{R}</m></title>
+        <statement>
+            Let <m>a, b, \in \mathbb{R}</m> with <m>a \neq b</m>.  Then there is an <m>r \in \mathbb{Q}</m> with <m>a &lt; r &lt; b</m>.
+        </statement>
+    </theorem>
+
+    <proof>
+        <p>Let <m>a</m> and <m>b</m> be real numbers with <m>a &lt; b</m>.  We need to find integers <m>m</m> and <m>n</m> where <me>a &lt; \frac{m}{n} &lt; b</me>.</p>
+        <p>First, we look for the <m>n</m>.  It's the denominator of our rational number, so the closer <m>x</m> and <m>y</m> are to one another, the larger <m>n</m> will be.  Consider the real number <m>b-a &gt; 0</m>.</p>
+        <p>By the Archimedean Property of real numbers, there is an <m>n</m> with <m>0 &lt; \frac{1}{n} &lt; b-a</m>.  Now let's start looking for <m>m</m>.</p>
+        <p>We want <me>a &lt; \frac{m}{n} &lt; b</me>.  This is equivalent to wanting <me>na &lt; m &lt; nb</me>.   We choose the smallest integer <m>m</m> for which <me>m-1 &lt; na &lt; m</me>.  (This is <m>na</m> rounded up to the nearest integer.). It follows that <me>a &lt; \frac{m}{n}</me>.</p>
+        <p>Now we want to relate our rational number to <m>b</m>.  Since <m>m-1 &lt; na</m> and <m>\frac{1}{n} &lt; b-a</m>, we can write
+            <md>
+                <mrow>m \amp \leq na+1</mrow>
+                <mrow> \amp &lt; n(b-\frac{1}{n})+1</mrow>
+                <mrow> \amp = nb-1+1</mrow>
+                <mrow> \amp = nb</mrow>
+            </md>.
+        Consequently, <m>\frac{m}{n} &lt;b</m>.</p>
+        <p>We conclude that <m>a &lt; \frac{m}{n} &lt; b</m>, as desired.</p>
+    </proof>
+</section>
+
+<section>
+    <title>How big is that set?</title>       
+
+    <p>To get a better understanding of the reals, we're going to develop the concept of <term>set cardinality</term>, which is essenially a measurement of the size of a set.</p>
+
+    <definition>
+        <statement>
+            <p>A set <m>A</m> is finite if there is an <m>n \in \mathbb{N}</m> for which the elements of the set <m>\{1,2,3,4,\ldots n\}</m> and the elements of the set <m>A</m> can be put in 1-1 correspondence.</p>
+        </statement>
+    </definition>
+
+    <p>We say that this correspondence is an <term>enumeration</term> of the set <m>A</m>.</p>
+
+    <p workspace="2in">>What does it mean to "put in 1-1 correspondence" the elements of two sets?</p>
+</section>
+
+<section><title>Enumerations</title>
+<definition>
+  <title>Function</title>
+  <statement>
+    <p>A <term>function</term> from a set <m>A</m> to a set <m>B</m> is a rule <m>f</m> that assigns to each input <m>a \in A</m> exactly one output <m>f(a)=b \in B</m>.</p>
+  </statement>
+</definition>
+
+  <p workspace="2in">What mathematics vocabulary and concepts do you associate with the concept of function?</p>
+
+</section>
+
+<section><title>Enumerations</title>
+
+<definition>
+  <title>Function</title>
+  <statement>
+    <p>A <term>function</term> from a set <m>A</m> to a set <m>B</m> is a rule <m>f</m> that assigns to each input <m>a \in A</m> exactly one output <m>f(a)=b \in B</m>.</p>
+  </statement>
+</definition>
+
+<definition>
+  <title>one-to-one function</title>
+  <statement>
+    <p>A <term>function</term> <m>f: A \rightarrow B</m> is <term>one-to-one</term> if <m>f(x)=f(y)</m> means that <m>x=y</m>.</p>
+  </statement>
+</definition>
+
+<p workspace="2in">What are some examples of one-to-one functions?</p>
+
+<fact>
+  <p>A function <m>f</m> that is one-to-one has an inverse <m>f^{-1}:B \rightarrow A</m>.  Inverse functions are characterized by <m>(f^{-1} \circ f)(a)=a</m> for all <m>a \in A</m>, and <m>(f \circ f^{-1})(b)=b</m> for all <m>b \in f(A) \subseteq B</m>.</p>
+</fact>
+<!-- a monotone function is one-to-one -->
+
+<definition>
+  <title>onto function</title>
+  <statement>
+    <p>A <term>function</term> <m>f: A \rightarrow B</m> is <term>onto</term> if for every <m>b \in B</m> there is an <m>a \in A</m> with <m>f(a)=b</m>.</p>
+  </statement>
+</definition>
+
+<p workspace="2in">What are some examples of onto functions?</p>
+
+</section>
+
+<section><title>Enumerations</title>
+
+<definition>
+  <title>bijection</title>
+  <statement>
+    <p>A <term>function</term> <m>f: A \rightarrow B</m> is a <term>bijection</term> if it is both one-to-one and onto.</p>
+  </statement>
+</definition>
+
+<p>The <term>cardinality</term> of a set <m>A</m> is the number of elements in <m>A</m>.</p>
+
+<p>If a set is finite, the cardinality is the number of elements in the set.  If a set is not finite, we say it is an infinite set.</p>
+
+<definition>
+  <statement>
+    <p>Two sets <m>A</m> and <m>B</m> have the same cardinality if there is a bijection <m>\phi:A \rightarrow B</m>.</p>
+  </statement>
+</definition>
+
+<example>
+  <title>Even and Odd numbers</title>
+  <p>Let <m>E</m> be the set of even numbers.  Let <m>O</m> be the set of odd numbers.</p>
+  <p workspace="3in">Show that <m>E</m> and <m>\mathbb{N}</m> have the same cardinality.</p>
+  <p workspace="3in">Show that <m>O</m> and <m>\mathbb{N}</m> have the same cardinality.</p>
+  <p workspace="2in">Do <m>O</m> and <m>E</m> have the same cardinality.?</p>
+</example>>
+
+<p>If <m>A \subset B</m> (<m>A</m> is a proper subset of <m>B</m>), it is possible that <m>A</m> and <m>B</m> could have the same cardinality.</p>
+
+<p>We saw this with the even numbers, odd numbers, and <m>\mathbb{N}</m>.</p>
+
+</section>
+
+
+<section><title>Infinite Sets</title>
+
+<example>
+  <title>Naturals and Integers</title>
+  <p>The natural numbers and the integers have the same cardinality.</p>
+  <p workspace="3in"></p>
+</example>>
+
+<definition>
+  <title>Countability</title>
+  <statement>
+    <p>A set <m>A</m> is <term>countable</term> (or <term>countably infinite</term>) if it has the same cardinality as <m>\mathbb{N}</m>.</p>
+  </statement>
+</definition>
+
+<definition>
+  <title>Uncountable</title>
+  <statement>
+    <p>A set <m>A</m> is <term>uncountable</term> (or <term>uncountably infinite</term>) if it is infinite but not countable. </p>
+  </statement>
+</definition>
+
+</section>
+
+
+<section><title>Infinite Sets</title>
+
+<theorem>
+  <statement>
+    <p>The set of rational numbers is countable.</p>
+  </statement>
+<proof>
+  <p>Let <m>\mathbb{Q}_{-}</m> be all the negative rationals and let <m>\mathbb{Q}_{+}</m> be all the positive rationals.  We will show that <m>\mathbb{Q}_{+}</m> is countable.</p>
+  <p>Once we see that <m>\mathbb{Q}_{+}</m> is countable, we will have an enumeration of its elements <m>\{q_1,q_2,q_3,\ldots\}</m>.  It follows that <m>\mathbb{Q}_{-}</m> is countable and has some enumeration <m>\{p_1,p_2,p_3,\ldots \}</m>.  This allows us to arrange the elements of <m>\mathbb{Q} = \mathbb{Q}_{-} \cup \{0\} \cup \mathbb{Q}_{+}</m> into an array with two rows:
+  <tabular>
+    <row><cell><m>0</m></cell><cell><m>q_1</m></cell><cell><m>q_2</m></cell><cell><m>q_3</m></cell><cell><m>\cdots</m></cell></row>
+    <row><cell><m>p_1</m></cell><cell><m>p_2</m></cell><cell><m>p_3</m></cell><cell><m>p_4</m></cell><cell><m>\cdots</m></cell></row>
+  </tabular>
+</p>
+<p>We can enumerate this array by snaking through the array in a way that defines a bijection from <m>\mathbb{N}</m> to the array.</p>
+<p>This demonstrates that <m>\mathbb{Q}</m> is countable, as claimed.</p>
+<p>To see that <m>\mathbb{Q}_{+}</m> is countable, arrange the rational numbers in a doubly-infinite array as follows:
+  <tabular>
+    <row><cell><m>1/1</m></cell><cell><m>2/1</m></cell><cell><m>3/1</m></cell><cell><m>4/1</m></cell><cell><m>\cdots</m></cell></row>
+    <row><cell><m>1/2</m></cell><cell><m>2/2</m></cell><cell><m>3/2</m></cell><cell><m>4/2</m></cell><cell><m>\cdots</m></cell></row>
+    <row><cell><m>1/3</m></cell><cell><m>2/3</m></cell><cell><m>3/3</m></cell><cell><m>4/3</m></cell><cell><m>\cdots</m></cell></row>
+    <row><cell><m>1/4</m></cell><cell><m>2/4</m></cell><cell><m>3/4</m></cell><cell><m>4/4</m></cell><cell><m>\cdots</m></cell></row>
+    <row><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell></row>
+  </tabular>.
+All rational numbers show up multiple times in this array.  For each rational number in the array, we throw away all copies of the rational number except the copy that is in lowest terms.  When we throw away a rational number, we shift all the entries in its row to the left to fill the gap it leaves (and the gaps they create when they shift).</p>
+<p>This leaves us an array of rational numbers in lowest terms.</p>
+<p>By snaking through the array starting in the upper left corner and moving anti-diagonally (transverse to the array's diagonal entries), we create an enumeration from <m>\mathbb{N}</m> to <m>\mathbb{Q}_{+}</m>.  This shows that <m>\mathbb{Q}_{+}</m> is countable.</p>
+<p>This concludes the proof that <m>\mathbb{Q}</m> is countable.</p>
+</proof>
+</theorem>>
+
+</section>
+
+
+<section><title>Infinite Sets</title>
+
+<theorem>
+  <statement>
+    <p>The set of real numbers is uncountable.</p>
+  </statement>
+  <proof>
+  <p>(Contradiction). Suppose <m>\mathbb{R}</m> is countable.  Then there exists an enumeratioon <m>\phi:\mathbb{N} \rightarrow \mathbb{R}</m>.  Let <m>x_n=\phi(n)</m> so that <me>\mathbb{R} = \{ x_1,x_2,x_3,x_4,\ldots\}</me>.
+  We are going to construct a nested sequence of closed and bounded intervals that and use the Nested Interval Principle to generate a contradiction.</p>
+  <p>Let <m>I_1 \subseteq \mathbb{R}</m> be a closed and bounded interval that does not contain <m>x_1</m>.</p>
+  <p>Let <m>I_2 \subseteq I_1</m> be a closed and bounded interval that does not contain <m>x_2</m>.  Why can we do this?  If <m>x_2 \notin I_1</m>, then we can take <m>I_2=I_1</m>.  If <m>x_2 \in I_1</m>, then <m>x_2</m> divides <m>I_1</m> into two complementary closed intervals <m>A</m> and <m>B</m> with <m>I_2=A \cup B</m> and <m>A \cap B = \{x_2\}</m>. Take <m>I_2 \subset A</m> so that <m>a_x \notin I_2</m>.</p>
+  <p>Continue in this way to define closed and bounded intervals <m>I_n</m> with <m>I_n \subseteq I_{n-1}</m> and <m>x_n \notin I_n</m>.</p>
+  <p>Consider <m>I = \bigcap_{n=1}^{\infty} I_n</m>.  The Nested Interval Property tells us that <m>I \subset \mathbb{R}</m> is nonempty.  Let <m>x_0 \in I</m>.  The Nested Interval Property tells us that <m>x_0</m> is a real number.</p>
+  <p>Since <m>\mathbb{R}</m> is countable, this <m>x_0</m> is in our enumeration, so <m>x_0=x_N</m> for some <m>N \in \mathbb{N}</m>.  But <m>x_N \notin I_N</m>, so <m>x_=x_0 \notin I</m>.  This is a contradiction.</p>
+  <p>Therefore, our supposition that <m>\mathbb{R}</m> is countably infinte was false.  The opposite is true: <m>\mathbb{R}</m> is uncountable.</p>
+  
+</proof>
+</theorem>>
+
+<corollary>
+  <statement>
+    <p>The set of irrational numbers is uncountable.</p>
+  </statement>
+</corollary>>
+
+</section>
+
+<!-- ===================================== -->
+
+</handout>
+
+</section>

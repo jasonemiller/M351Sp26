@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week-01">
+  <title>Week 1, Day 1 (27 January 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the topics we covered in the first week of class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tudesday 1/27 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Welcome</li>
+        <li>Roll: pronunciation, name corrections</li>
+        <li>Name plates</li>
+        <li><p>Introductions: basics followed by questions from the class
+          <ul>
+            <li>you</li>
+            <li>me</li>
+          </ul></p>
+        </li>
+        <li>What this course is about.</li>
+        <li>New mathematics</li>
+      </ol>
+    </p>
+  </section>
+
+  <section>
+    <title>Introductions</title>
+    <p>In pairs, you will be introduced to the class by your partner, and then you will introduce your partner.</p>
+    <p>Your introduction should include:
+      <ol>
+        <li>your name,</li>
+        <li>your major,</li>
+        <li>where you're from,</li>
+        <li>your favorite hooy or hobbies, and</li>
+        <li>something you did over break that nobody else in class did.</li>
+      </ol></p>
+      <p>Once you're introduction is over, Miller will give class a chance to ask you any follow-up questions.</p>
+      <remark><p>It's hard to come up with a question to ask in front of other people.  I will be asking you to do this every day and every week this semester.  Today gives you an opportunity to practice this skill.</p></remark>
+      <p>When student introductions are done, Miller will introduce himself and you will give a chance to ask him questions.</p>
+  </section>
+  
+  <section>
+    <title>What this course is about</title>
+      <p>This course is about filling the details that support the Calculus.</p>
+      <p>We basically go back over important results from Calculus I-III and put them on a rigorous mathematical foundation.</p>
+      <question><p workspace="4in">What characteristic or characteristics defines the academic discipline of mathematics?</p></question>
+    <p>In mathematics, <term>rigor</term> refers to solid mathematical proof.</p>
+    <p>Reading, creating, and writing proofs will be a central part of this course.</p>
+  </section>
+
+  <section>
+    <title>Topic Outline</title>
+      <p>Here are the general topics we will learn about in this coruse:
+        <ol>
+          <li>The real numbers and other number systems (e.g., the rationals, irrationals)</li>
+          <li>How the real numbers are <term>complete</term> and form a continuum</li>
+          <li>Sequences and series of real numbers and their convergense</li>
+          <li>The topology of the reals, and topological concepts that help us understand functions</li>
+          <li>Functions, their limits, and their properties</li>
+          <li>Sequences of functions and their convergence</li>
+          <li>Function spaces, their properties and uses</li>
+        </ol>
+      </p>
+      <p>We will practice proof techniques we've learned before, and we will learn new techniques.</p>
+      <question><p workspace="6in">What are some proof techniques that you've studied before?</p></question>
+  </section>
+
+
+
+
+
+  <section>
+    <title>Number systems: the numbers</title>
+
+    <p workspace="1in">The set of <term>natural numbers</term> (denoted by <m>\mathbb{N}</m>) forms the most elementary and familiar system of numbers in mathematics.</p>
+    <p workspace="1in">The set of <term>integers</term> (denoted by <m>\mathbb{Z}</m>, from the German word for number, <em>Zahlen</em>) augments the naturals with zero and negative counting numbers.</p>
+    <p workspace="3in">The set of <term>rational numbers</term> (denoted by <m>\mathbb{Q}</m>, for quotient) adds lots of fractional numbers.</p>
+    <p >The Greeks get credit for being the first society that investigated mathematics rigorously.  They believed "all is number" and by "number" they mean rational numbers.</p>
+
+  </section>
+
+  <section>
+    <title>Number systems:the operations</title>
+
+    <p workspace="2in">What are the basic operations endowed to <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, and <m>\mathbb{Q}</m>?</p>
+
+    <p workspace="1in">The sets are also ordered.  What does this mean?</p>
+
+
+    <p>Without getting too deep into the concept of <term>algebraic structure</term> of these systems, all these systems are called ordered commutative rings because
+      <ul>
+        <li>they have (and are closed under) two operations:  addition and multiplication</li>
+        <li>both two operations are commutative and associative</li>
+        <li>multiplication is distributive over addition</li>
+        <li>addition has an inverse</li>
+        <li>and both operations have an identity</li>
+      </ul></p>
+
+<p>The rationals is also an ordered commutative ring, but it has a bit more 'structure' because everyt element has a multiplicative inverse.  This means that the rational numbers form a <term>field</term>.</p>
+
+<p>The Greeks believed every number was rational.</p>
+
+<p>They were wrong.</p>
+
+</section>
+
+<section>
+    <title>Irrational numbers</title>
+
+    <p workspace="2in">What is an irrational number?</p>
+    <p workspace="2in">Give a few examples of irrational numbers?</p>
+    <p workspace="2in">Are the irrational numbers a field?</p>
+    
+</section>
+
+<section>
+    <title>Constructing the Real Number system</title>
+  <p>To this point in our mathematical education, we've worked with the real numbers withot knowing much about what they are and where they came from.</p>
+  <p>In this course, we will construct them, starting from the rational numbers, as the Greeks would have wanted.</p>
+  
+
+  </section>
+
+  </handout>
+
+
+  
+</section>

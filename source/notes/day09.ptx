@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-09">
+  <title>Day 9 (24 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 9 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Tuesday 2/24 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework due today</li>
+        <li>Nest Homework due Tuesday:  
+          <ul>
+            <li>2.3:  1, 2, 7, 8, 10, 12</li>
+            <li>2.4: 1, 3, 8</li>
+            <li>Also, work the following problems:
+
+<p>For a sequence <m>>(x_n) </m> we write <m> \lim x_n = +\infty</m> provided for each <m>M &gt; 0 </m> there is a number of <m> N </m> such that <m> n &gt; N </m> implies that <m> x_n &gt; M</m>.  In this case, we say <m> (x_n) </m> diverges to <m> +\infty</m>.  Similarly, we write <m> \lim x_n = -\infty</m> provided for each <m> M &lt; 0 </m> there is a number of <m> N </m> such that <m> n &gt; N </m> implies that <m> x_n &lt; M</m>.  In this case, we say <m> (x_n) </m> diverges to <m> -\infty</m>. </p>
+
+<p>A.  Suppose that <m> (x_n) </m> diverges to <m> +\infty </m>.  Suppose there is an <m>N </m> for which if <m> n > N </m> then <m> s_n \leq t_n </m>.  Prove the following.</p>
+
+<p>A1. If <m> \lim s_n = +\infty </m> then <m> \lim t_n = + \infty </m>.</p>
+
+<p>A2. If <m> \lim t_n = -\infty </m> then <m> \lim s_n = - \infty </m>.</p>
+
+<p>A3. If <m> \lim s_n </m> and <m> \lim t_n </m> exist, then <m> \lim s_n \leq \lim t_n </m>.</p>
+
+<p>B.  Let <m> (s_n </m> and <m> (t_n) </m> be sequences where <m> \lim s_n =+\infty </m> and <m> \lim t_n > 0 </m>.  Prove that <m>\lim s_n \cdot t_n = +\infty </m>.</p>
+</li>
+</ul></li>
+        <li>Did you take our scratch work and turn it into proofs?</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+<section>
+    <title>Last time: worked through two convergence proofs</title>       
+</section>
+
+<section>
+  <title>Consequences of Convergence</title>
+  
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that if <m>n &gt;N</m> then <m>|x_n-x_0| &lt; \epsilon</m>.</statement>
+</definition>
+
+
+<p>Take a moment to consider a consequence of ``... if n &gt; N, then <m>|x_n-x_0| &lt; \epsilon</m>.''</p>
+
+<md>
+  <mrow>|x_n-x_0| &lt; \epsilon</mrow>
+  <mrow>-\epsilon &lt; x_n-x_0 &lt; \epsilon</mrow>
+  <mrow>x_0-\epsilon &lt; x_n &lt; x_0 + \epsilon </mrow>
+</md>
+
+<p workspace="3in"></p>
+
+<p>The entire tail of the sequence lies in this interval.  (The sequence is eventually entirely in this interval.)</p>
+
+<p>This interval around <m>x_0</m> is called an <term>epsilon neighborhood of <m>x_0</m></term>.</p>
+
+<definition>
+  <notation><m>V_{\epsilon}(x)</m></notation>
+  <statement><p>The <term><m>\epsilon</m>-neighborhood of <m>x_0</m></term> is the set 
+    <md>
+      <mrow>V_{\epsilon}(x_0) \amp =\{x \in \mathbb{R} \, x_0-\epsilon &lt; x &lt; x_0+\epsilon \}</mrow>
+    </md>.  It is the open interval of radius <m>\epsilon</m> centered at <m>x_0</m>.</p></statement>
+</definition>
+
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that <m>x_n \in V_{\epsilon}(x_0)</m> for all <m>n &gt; N</m>.</statement>
+</definition>
+
+</section>
+
+<section>
+  <title>Consequences of Convergence</title>
+  <theorem>
+    <statement>If <m>(x_n)</m> is a convergent sequence, then its limit is unique.</statement>
+    <proof>
+      <p>Suppose the limit is not unique.  Suppose there are two real nummbers <m>x_0</m> and <m>y_0</m> with <m>x_0 \neq y_0</m> for which <m>(x_n) \rightarrow x_0</m> and <m>(x_n) \rightarrow y_0</m>.</p>
+      <p>Let <m>\epsilon = \frac{1}{2}|x_0-y_0|</m>.</p>
+      <p>Since <m>(x_n) \rightarrow x_0</m>, there is an <m>N_x \in \mathbb{N}</m> for which <m>n &gt; N_x</m> implies <m>|x_n-x_0| &lt; \epsilon</m>.</p>
+      <p>Since <m>(x_n) \rightarrow y_0</m>, there is an <m>N_y \in \mathbb{N}</m> for which <m>n &gt; N_y</m> implies <m>|x_n-y_0| &lt; \epsilon</m>.</p>
+      <p>Choose <m>N=\max\{N_x, N_y\}</m>.  Then for <m>n &gt; N</m> we know
+      <md>
+        <mrow>|x_0 - y_0| \amp = |x_0 - x_n +x_n - y_0| </mrow>
+        <mrow> \amp \leq |x_0 - x_n| + |x_n - y_0| \text{ by the triangle inequality }</mrow>
+        <mrow>\amp &lt; \epsilon + \epsilon</mrow>
+        <mrow>\amp = \frac{1}{2}|x_0-y_0| + \frac{1}{2}|x_0-y_0|</mrow>
+        <mrow>\amp = |x_0 - y_0|</mrow>
+      </md>.  But this is absurd.  We cannot have <m>|x_0 - y_0| &lt; |x_0 - y_0|</m>.  Consequently, our supposition that the limit is not unique must have been incorrect.  Therefore,  the limit of a convergent sequence is unique.      
+      </p>
+    </proof>
+  </theorem>
+</section>
+
+<section>
+  <title>Consequences of Convergence</title>
+
+  <definition>
+    <statement>A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>bounded above</term> if there is an <m>M \in \mathbb{R}</m> for which <m>x_n \leq M</m> for all <m>n</m>.  A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>bounded below</term> if there is an <m>m \in \mathbb{R}</m> for which <m>m \leq x_n </m> for all <m>n</m>. A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>(totally) bounded</term> if is it bonded above and bounded below.</statement>
+  </definition>
+
+<p>This definition of bondedness agrees with the definition we made for bonded sets <m>A \subseteq \mathbb{R}</m>.</p>
+
+  <definition>
+    <statement>A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>unbounded</term> if it is not totally bounded.  If we want more specificity, we can say a sequence with no upper bound is <term>not bounded above</term> and a sequence that does not hae a lower bound is <term>not bounded blow</term>.
+    </statement>
+  </definition>
+
+  <example>
+    <p workspace="3in">Give an example of a sequence that is bounded. </p>
+  </example>
+
+  <example>
+    <p workspace="3in">Give an example of a sequence that is not bounded above.</p>
+  </example>
+
+  <example>
+    <p workspace="3in">Give an example of a sequence that is not bounded below.</p>
+  </example>
+
+  </section>
+
+<section>
+  <title>Consequences of Convergence</title>
+
+  <theorem>
+    <statement>If <m>(x_n)</m> is a convergent sequence, then the sequence is totally bounded.</statement>
+    <proof>
+      <p>Suppose <m>(x_n) \rightarrow x_0</m>.  Choosing <m>\epsilon =1</m>, there is an <m>N \in \mathbb{N}</m> for which <m>n &gt; N</m> means <m>|x_n-x_0| &lt; 1.</m>. This means <m>x_n &lt; L +1</m>.</p>
+      <p>Let <m>M=\max\{|x_1|,|x_2|, \ldots,|x_{N-1}|,L+1\}</m>.  Then <m>(x_n) \subset [-M,M]</m>.  This shows that <m>(x_n)</m> is bounded above and below, so it is totally bounded.</p>
+    </proof>
+  </theorem>
+</section>
+
+<section>
+  <title>Algebraic Limit Theorem</title>
+
+  <theorem>
+    <statement>If <m>(x_n)</m> and <m>(y_n)</m> are a convergent sequences with <m>x_n \rightarrow x_0</m> and <m>y_n \rightarrow y_0</m>, then
+      <ol>
+        <li><m>(c \cdot x_n) \rightarrow c \cdot x_0</m> for all <m>c \in \mathbb{R},</m></li>
+        <li><m>(x_n+y_n) \rightarrow x_0+y_0</m>,</li>
+        <li><m>(x_n \cdot y_n) \rightarrow  x_0 \cdot y_0</m>, and</li>
+        <li><m>\displaystyle \left( \frac{x_n}{y_n} \right) \rightarrow \cdot \frac{x_0}{y_0}</m> so long as <m>y_0 \neq 0</m>.</li>
+      </ol>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p workspace="8in">Proof of "<m>(c \cdot x_n) \rightarrow c \cdot x_0</m> for all <m>c \in \mathbb{R},</m>"</p>
+  </proof>
+
+  </section>
+
+<section>
+  <proof>
+    <p workspace="8in">Proof of "<m>(x_n+y_n) \rightarrow x_0+y_0</m>"</p>
+  </proof>
+</section>
+
+<section>
+  <proof>
+    <p workspace="8in">Proof of "<m>(x_n \cdot y_n) \rightarrow  x_0 \cdot y_0</m>"</p>
+  </proof>
+</section>
+
+
+<section>
+  <proof>
+    <p workspace="8in">Proof of "<m>\displaystyle \left( \frac{x_n}{y_n} \right) \rightarrow \cdot \frac{x_0}{y_0}</m> so long as <m>y_0 \neq 0</m>"</p>
+  </proof>
+</section>
+
+
+<!-- ===================================== -->
+
+</handout>
+
+</section>

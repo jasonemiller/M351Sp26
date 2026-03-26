@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-12">
+  <title>Day 12 (5 March 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 12 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+
+  <section>
+    <title>Thursday 3/5 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li><p>Next Homework due Thursday (3/12):</p>
+        <ul>
+            <li>2.4: 10</li>
+            <li>2.5: 1, 2, 5</li>
+            <li><p>Also, work the following problems:</p>
+
+<p>A. For each of the following sequences, decide whether or not the given sequence converges to a. limit.  If it does not converge to a limit, find in each case at least one convergent subsequence.  In what follows, we wuppose n=1, 2, 3, 4 ...
+
+<ol>
+  <li><m> x_n = (-1)^n ( 1- (1/n))</m></li>
+  <li><m> x_n = (-1)^n ( 2- 2^{-1}))</m></li>
+  <li><m> x_n = \sum_{j=1}^n (1/j!)</m></li>
+  <li><m> x_n = (\sin(n \pi/3))(1-(1/n))</m></li>
+  <li><m> x_n = 1+((-1)^n/n)</m></li>
+  <li><m> x_n = \sum_{i=1}^n ((-1)^i/2^i)</m></li>
+</ol></p>
+
+<p>B.  The sequence <me> \{ 1 \frac{1}{2}, 2 \frac{1}{2}, 3 \frac{1}{2}, 1 \frac{1}{3}, 2 \frac{1}{3}, 3 \frac{1}{3}, 1 \frac{1}{4}, 2 \frac{1}{4}, 3 \frac{1}{4}, 1 \frac{1}{5}, 2 \frac{1}{5}, 3 \frac{1}{5}, \ldots \}</me> diverges because it has subsequences that converge to 1, 2, and 3.  Write a sequence which has subsequences that converge to <m>N</m> different numbers where <m>N</m> is any positive integer.</p>
+</li>
+</ul></li>
+        <li>Midterm:  Thursday 26 March</li>
+        <li>next class:  read sections 1 and 2 of Chapter 3.</li>
+        <li>New material</li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+
+<section>
+  <title>Bolzano-Weierstrass Theorem</title>
+
+<p>Last time:</p>
+
+<theorem>
+  <statement>
+    Subsequences of a convergent sequence converge to the same limit as the original sequence.
+  </statement>
+</theorem>
+
+<example>
+<p>Prove that if <m>0 &lt; b &lt; 1</m> then <m>(b^n) \rightarrow 0</m>.</p>
+<p>Let <m>a_n=b^n</m>.  Since <m>0 &lt; b &lt; 1</m> we know 
+  <me>a_{n+1}=b^{n+1}=b \cdot b^n = b \cdot a_n &lt; a_n</me>
+  so we know that <m>(a_n)</m> is monotone decreasing.  Since the sequence consistes of positive numbers, it is bounded below by 0.  We can invoke the Monotone Convergence Theorem to asset that <m>(a_n)</m> converges to some real number <m>\ell</m>.</p>
+<p>To determine the value of <m>\ell</m> we note that <m>(b^{2n})</m> is a subsequence of <m>(a_n)</m>.  Therefore it also converges to <m>\ell</m>.  But it is also true that
+  <md>
+    <mrow>\lim b^{2n} \amp = \lim (b^{n}\cdot b^n) </mrow>
+    <mrow>\amp = \lim (b^{n}) \cdot \lim (\cdot b^n) </mrow>
+    <mrow>\amp = \ell \cdot \ell</mrow>
+  </md>
+  Therefore, <m>\ell=\ell^2</m>.  This means <m>0=\ell^2-\ell=\ell(\ell-1)</m> so either <m>\ell=0</m> or <m>\ell=1</m>.  Because <m>(a_n)</m> is decreasing, its limit must be <m>\ell=0</m>.</p>
+</example>
+</section>
+
+<section>
+<theorem><title>Bolzano-Weierstrass</title>
+    <p>A bounded sequence has a convergent subsequence.</p>
+</theorem>
+
+<p>The idea of the proof:
+  <ol>
+    <li>Since the sequence <m>(a_n)</m> is bounded, all its terms fall within some closed bounded ionterval <m>I_0=[-M,M]</m></li>
+    <li>Split this interval half; at least one half must contain an infinite number of terms of <m>(a_n)</m> ; call that interval <m>I_1</m>.  The length of <m>I_1=\frac{1}{2} \cdot 2M</m></li>
+      <li>Pick the first term of the sequence that's in <m>I_1</m> and call it <m>a_{n_1}</m>. (this is the first term of the subsequence that we'll show is convergent)</li>
+      <li>Consider the tail of <m>(a_n)</m> starting at <m>N=n_1</m> and repeat the previous steps: <m>I_2</m> is a half of <m>I_1</m> that contains an infinite number of terms of <m>(a_n)</m> starting at <m>M=n_1</m> and call <m>a_{n_2}</m> the first term of the subsequence that is in <m>I_2</m></li>
+      <li>This gives us a nested set of closed and bounded intervals <me>I_0 \supset I_1 \supset I_2 \supset \cdots I_n \supset I_{n+1} \supset \cdots</me> and a subsequence <m>(a_{n_k})</m> where <m>a_{n_i} \in I_i</m></li>
+      <li>The Nested Interval Principle tells us that there is a real number <m>x \in \cap_{i=0} I_i</m></li>
+      <li>we conclude by proving <m>(a_{n_k}) \rightarrow x</m> using the fact that the lengths of the intervals <m>I_i \rightarrow 0</m> </li>
+  </ol>
+</p>
+
+</section>
+
+<section>
+<title>Cauchy Sequences</title>
+
+<definition>
+  <statement>
+    A sequence <m>(a_n)</m> is a <term>Cauchy sequence</term> if for every <m>\epsilon &gt; 0</m> there is an <m>N in \mathbb{N}</m> for which if <m>n,m  &gt; N</m> then  <m>|a_n-a_m| &lt; \epsilon</m>.
+  </statement>
+</definition>
+
+<p>Note that <m>|a_n-a_m| &lt; \epsilon</m> for all <m>n,m  &gt; N</m> means
+  <md>
+    <mrow> -\epsilon &lt; a_n-a_m &lt; \epsilon</mrow>
+    <mrow> a_m-\epsilon &lt; a_n &lt; a_m+\epsilon</mrow>
+  </md>,</p>
+
+<p>All the terms of the sequence are clustering up here.</p>
+
+<theorem>
+  <statement>
+    Every convergent sequence is a Cauchy sequence.
+  </statement>
+</theorem>
+
+  <proof>
+     <p>Let <m>(x_n)</m> be a convergent sequence.  Call its limit <m>x_0</m>.  We want to show that it is a Cauchy sequence.  That means, we need to shows that given any <m>\epsilon &gt; 0</m> there is an <m>N in \mathbb{N}</m> for which if <m>n,m  &gt; N</m> then  <m>|x_n-x_m| &lt; \epsilon</m>.</p>
+     <p>Let <m>\epsilon &gt; 0</m> be given.  Because we know <m>(x_n)</m> is convergent, we know there is an <m>N in \mathbb{N}</m> for which if <m>n &gt; N</m> then  <m>|x_n-x_0| &lt; \epsilon/2</m>.  Take <m>n,m &gt; N</m>.  Then
+      <md>
+        <mrow>|x_n-x_m| \amp = |x_n-x_0+x_0-x_m|</mrow>
+        <mrow> \amp \leq |x_n-x_0|+|x_0-x_m|</mrow>
+        <mrow> \amp = |x_n-x_0|+|x_m-x_0|</mrow>
+        <mrow> \amp &lt; \epsilon/2 + \epsilon/2 </mrow>
+        <mrow> \amp = \epsilon </mrow>
+      </md>.
+      This shows that <m>(x_n)</m> is a Cauchy sequence.</p>
+    </proof>
+
+<lemma>
+  <statement>
+    Every Cauchy sequence is bounded.
+  </statement>
+</lemma>
+
+  <proof>
+     <p>Let <m>(x_n)</m> be a Cauchy sequence.  Then know there is an <m>N in \mathbb{N}</m> for which if <m>n, m &gt; N</m> then  <m>|x_n-x_m| &lt; 1</m>.  Taking <m>m=N+1</m> gives <m>|x_n-x_{N+1}| &lt; 1</m> so for <m>n &gt; N</m>,
+  <md>
+    <mrow> -1 &lt; x_n-x_{N+1} &lt; 1</mrow>
+    <mrow> x_{N+1}-1 &lt; x_n &lt; x_{N+1}+1</mrow>
+  </md>, so <m>|x_n| &lt; |x_{N+1}| + 1</m>.  This give a bound for all the terms of the sequence in its tail.  To accont for the possibility that one of the (finite number of) terms in the head of the sequence could be larger, we let
+<me>M=\max\{ |x_1|, |x_2|, \ldots, |x_N|,|x_{N+1}|+1\}</me>.  This <m>M</m> is a bound for the sequence.</p>
+</proof>
+</section>
+
+<section>
+<title>Convergence is Cauchy</title>
+
+  <theorem>
+  <title>Cauchy Criterion</title>
+  <statement>
+    A sequence of real numbers converges if and only if it is a Cauchy sequence.
+  </statement>
+</theorem>
+
+<proof>
+  <p>Let <m>(x_n)</m> be a sequence of real numbers.</p>
+  <p>Suppose the sequence <m>(x_n)</m> is convergent.  We want to show <m>(x_n)</m> is a Cauchy sequence.  This was proved above.</p>
+  <p>Suppose the sequence <m>(x_n)</m> is a Cauchy sequence.  We want to show that <m>(x_n)</m> converges.  This means we need to find a number <m>x_0</m> that is the limit of <m>(x_n)</m>.</p>
+    <p>By the above lemma, because <m>(x_n)</m> is Cauchy, it is bounded.  The Bolzano-Weierstrass Theorem tells us that every bonded sequence has a convergent subsequence, so our sequence <m>(x_n)</m> has a convergent subsequence which we will call <m>(x_{n_k})</m>.  Let's call the limit of this subsequence <m>x_0</m>.</p>
+    <p>We will show that <m>(x_n) \rightarrow x_0</m>.</p>
+    <p>Let <m>\epsilon &gt; 0</m> be given.  Since <m>(x_n)</m> is Cauchy, there is an <m>N_1 \in \mathbb{N}</m> for which if <m>n,m &gt; N_1</m> we can say <m>|x_n=x_m| &lt; \epsilon/2</m>.  Since <m>(x_{n_k}) \rightarrow x_0</m> there is an <m>N_2 \in \mathbb{N}</m> wuch that if <m>n_k &gt; N_2</m> then <m>|x_{n_k}-x_0| &lt; \epsilon/2</m>.  Set <m>N=\max\{N_1,N_2\}</m>.  Then if <m>k &gt; N</m> it follows that <m>n_k \geq k &gt; N</m> and
+      <md>
+        <mrow>|x_k-x_0| \amp = |x_k-x_{n_k} + x_{n_k} -x_0|</mrow>
+        <mrow>\amp \leq |x_k-x_{n_k}| + |x_{n_k} -x_0|</mrow>
+        <mrow>\amp &lt; \epsilon/e + \epsilon/2</mrow>
+        <mrow>\amp = \epsilon</mrow>
+      </md>.
+    This shows that <m>(x_n)</m> is a convergent sequence with limit <m>x_0</m>.</p>
+</proof>
+
+</section>
+
+
+<section>
+<title>Convergence is Cauchy</title>
+
+  <theorem>
+  <title>Cauchy Criterion for Series</title>
+  <statement>
+    The series <m>\sum_{k=1}^{\infty} a_k</m> converges if and only if, given <m>\epsilon &gt; 0</m> there exists an <m>N \in \mathbb{N}</m> such that whenever <m>n &gt; m \geq N</m> it follows that 
+    <me>|a_{m+1}+a_{m+2}+a_{m+3}+ \cdots + a_n| &lt; \epsilon</me>.      
+  </statement>
+</theorem>
+
+<proof>
+<p>Note that if <m>(s_n)</m> is the sequence of <m>n</m>th partial sums of <m>\sum_{k=1}^{\infty} a_k</m>, then
+      <me>|s_n-s_m| = |a_{m+1}+a_{m+2}+a_{m+3}+ \cdots + a_n|</me>.      
+and the result follows from the definition of convergense of a series.</p>
+</proof>
+
+<theorem>
+  <p>If the series <m>\sum_{k=1}^{\infty} a_k</m> converges, then <m>(a_k) \rightarrow 0</m>.</p>
+</theorem>
+
+<proof>
+<p>Apply the Cauchy criterion for series using <m>n=m+1</m>.</p>
+</proof>
+
+</section>
+
+<section>
+  <title>Topology:  Open and Closed Sets</title>
+
+<p>So far in the couse we've talked about:
+  <ul>
+    <li>the nature of the real numbers (i.e., completeness),</li>
+    <li>consequences of completeness of the reals, and </li>
+    <li>sequences and their behavior.</li>
+  </ul></p>
+<p>Now we are going to spend some time talking about different types of sets of real numbers.  This will give us a vocabulary to use when talking about real valued functions of a real variable and their properties (i.e., continuity, differentiability).</p>
+
+<definition>
+  <statement>
+    <p>Let <m>\epsilon &gt; 0</m> be a real number.  The <term><m>\epsilon</m>-neighborhood about <m>x_0</m></term> is the interval
+    <me>
+      V_{\epsilon)(x_0) = \{ x \in \mathbb{R} \, : \, x_0-\epsilon &lt; c &lt; x+\epsilon\}=(x_0-\epsilon, x_0+\epsilon)
+    </me>.</p>
+  </statement>
+</definition>
+
+<definition>
+  <title>Open Set</title>
+  <statement>
+    <p>A set <m>U \subseteq \mathbb{R}</m> is called an open set if for every <m>x \in U</m> there is an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon)(x_0)  \subset U</m>.</p>
+  </statement>
+</definition>
+
+</section>
+
+
+
+</handout>
+</section>

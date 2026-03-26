@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-10">
+  <title>Day 10 (26 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 10 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Thursday 2/26 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Next Homework due Tuesday:  
+          <ul>
+            <li>2.3:  1, 2, 7, 8, 10, 12</li>
+            <li>2.4: 1, 3, 8</li>
+            <li>Also, work the following problems:
+
+<p>For a sequence <m>>(x_n) </m> we write <m> \lim x_n = +\infty</m> provided for each <m>M &gt; 0 </m> there is a number of <m> N </m> such that <m> n &gt; N </m> implies that <m> x_n &gt; M</m>.  In this case, we say <m> (x_n) </m> diverges to <m> +\infty</m>.  Similarly, we write <m> \lim x_n = -\infty</m> provided for each <m> M &lt; 0 </m> there is a number of <m> N </m> such that <m> n &gt; N </m> implies that <m> x_n &lt; M</m>.  In this case, we say <m> (x_n) </m> diverges to <m> -\infty</m>. </p>
+
+<p>A.  Suppose that <m> (x_n) </m> diverges to <m> +\infty </m>.  Suppose there is an <m>N </m> for which if <m> n > N </m> then <m> s_n \leq t_n </m>.  Prove the following.</p>
+
+<p>A1. If <m> \lim s_n = +\infty </m> then <m> \lim t_n = + \infty </m>.</p>
+
+<p>A2. If <m> \lim t_n = -\infty </m> then <m> \lim s_n = - \infty </m>.</p>
+
+<p>A3. If <m> \lim s_n </m> and <m> \lim t_n </m> exist, then <m> \lim s_n \leq \lim t_n </m>.</p>
+
+<p>B.  Let <m> (s_n </m> and <m> (t_n) </m> be sequences where <m> \lim s_n =+\infty </m> and <m> \lim t_n > 0 </m>.  Prove that <m>\lim s_n \cdot t_n = +\infty </m>.</p>
+</li>
+</ul></li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+
+<section>
+  <title>Algebraic Limit Theorem</title>
+
+<p>Last time:  Algebraic Limit Theorems and their proofs.</p>
+
+  <theorem>
+    <statement>If <m>(x_n)</m> and <m>(y_n)</m> are a convergent sequences with <m>x_n \rightarrow x_0</m> and <m>y_n \rightarrow y_0</m>, then
+      <ol>
+        <li><m>(c \cdot x_n) \rightarrow c \cdot x_0</m> for all <m>c \in \mathbb{R},</m></li>
+        <li><m>(x_n+y_n) \rightarrow x_0+y_0</m>,</li>
+        <li><m>(x_n \cdot y_n) \rightarrow  x_0 \cdot y_0</m>, and</li>
+        <li><m>\displaystyle \left( \frac{x_n}{y_n} \right) \rightarrow \cdot \frac{x_0}{y_0}</m> so long as <m>y_0 \neq 0</m>.</li>
+      </ol>
+    </statement>
+  </theorem>
+</section>
+
+<section>
+  <proof>
+    <p workspace="8in">Proof of "<m>\displaystyle \left( \frac{x_n}{y_n} \right) \rightarrow \cdot \frac{x_0}{y_0}</m> so long as <m>y_0 \neq 0</m>"</p>
+  </proof>
+</section>
+
+<section>
+  <title>Order Limit Theorems</title>
+
+  <theorem>
+    <statement>Assume <m>(x_n) \rightarrow x_0</m> and <m>(y_n) \rightarrow y_0</m>.
+      <ol>
+        <li>If <m>x_n \geq 0</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \geq 0</m>.</li>
+        <li>If <m>x_n \geq y_n</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \geq y_0</m>.</li>
+        <li>If there exists a <m>c \in \mathbb{R}</m> for which <m>c \leq y_n</m> for all <m>n \in \mathbb{N}</m> then <m>c \leq y_0</m>.  Likewise, if <m>x_n \leq c</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \leq c</m>. </li>
+      </ol>
+    </statement>
+  </theorem>
+
+
+  <proof>
+    <p workspace="8in">Proof of ``If <m>x_n \geq 0</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \geq 0</m>.''</p>
+  </proof>
+</section>
+
+<section>
+  <proof>
+    <p>Proof of ``If <m>x_n \geq y_n</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \geq y_0</m>.''</p>
+
+    <p>By the algebraic limit theorem, the sequence <m>(x_n-y_n)</m> converges to <m>x_0-y_0</m>.  By the first part of the Order Limit Theorem, since <m>x_n-y_n \geq 0</m> or all <m>n \in \mathbb{N}</m>, we know <m>x_0-y_0 \geq 0</m>. Therefore, <m>x_0 \geq y_0</m>, as desired.</p>
+  </proof>
+
+
+  <proof>
+    <p>Proof of ``If there exists a <m>c \in \mathbb{R}</m> for which <m>c \leq y_n</m> for all <m>n \in \mathbb{N}</m> then <m>c \leq y_0</m>.  Likewise, if <m>x_n \leq c</m> for all <m>n \in \mathbb{N}</m> then <m>x_0 \leq c</m>.''</p>
+
+    <p>Take <m>x_n=c</m>, the constant sequence and the result follows by the second part of the Order Limit Theorem.  Likewise, take <m>y_n=c</m> and the second part of the statement follows from the second part of the Order Limit Theorem.</p>
+  </proof>
+</section>
+
+<section>
+  <title>Monotone Sequences</title>
+
+  <definition>
+    <statement>
+      <p>A sequence <m>(x_n)</m> is <term>increasing</term> if <m>a_n \leq a_{n+1}</m> for all <m>n \in \mathbb{N}</m> and <term>decreasing</term> if <m>a_n \geq a_{n+1}</m> for all <m>n \in \mathbb{N}</m>.  A sequence is <term>monotone</term> if it is either increasing or decreasing. </p>
+    </statement>
+  </definition>
+
+<theorem>
+  <title>Monotone Convergence Theorem</title>
+  <statement>
+    If a sequence is monotone and bounded, then it converges.
+  </statement>
+  <proof>
+    <p>Assume the sequence <m>(x_n)</m> is bounded and monotone.  Since it is bounded, it is both bounded above and bonded below.</p>
+    <p>Consider the case where <m>(x_n)</m> is increasing.  Then the set <m>A= \{ x_n \, : \, n \in \mathbb{N} \} \subset \mathbb{R}</m> is bonded above.  By the Axiom of Completeness, <m>A</m> has a least upper bound <m>x_0=\sup(A)</m>.  We claim that <m>\displaystyle \lim_{n \rightarrow \infty} x_n = x_0</m>.</p>
+    <p>Let <m>\epsilon &gt; 0</m> be given.  By Lemma 1.3.8, <m>x_0-\epsilon</m> is not an upper bound for <m>A</m>.  So there exists a point in the sequence <m>x_N</m> at which <m>x_0-\epsilon &lt; x_N</m>. Since our sequence is increasing, we know that if <m>n \geq N</m> then <m>x_N \leq x_n</m>.  Therefore,
+      <me>
+        <mrow> x_0 - \epsilon &lt; x_N \leq x_n \leq x_0 &lt; x_0 + \epsilon</mrow>
+      </me>.
+    </p>
+    <p>This means that <m>|x_n-x_0| &lt; \epsilon</m>.  Therefore, <m>(x_n) \rightarrow x_0</m>, as desired.</p>
+    <p>The case where <m>(x_n)</m> is decreasing is proved using the analogous results for the infimum of a bounded set of real numbers.</p>
+  </proof>
+</theorem>
+
+</section>
+
+<section>
+<title>Subsequences</title>
+
+<definition>
+    <statement>
+      <p>Let <m>(x_m)</m> be a sequence of real numbers, and let <m>n_1 &lt; n_2 &lt; n_3 &lt; \cdots</m> be an increasing sequence of natural numbers.  Then the sequence
+        <md>
+          <mrow>(x_{n_1}, x_{n_2}, x_{n_3}, x_{n_4}, \ldots)</mrow>
+        </md>
+        is called a <term>subsequence</term> of <m>(x_n)</m> and is denoted by <m>(x_{n_k})</m>, where <m>k \in \mathbb{N}</m> indexews the subsequence.</p>
+    </statement>
+  </definition>
+
+<theorem>
+  <statement>
+    Subsequences of a convergent sequence converge to the same limit as the original sequence.
+  </statement>
+</theorem>
+</section>
+
+
+<!-- ===================================== -->
+
+</handout>
+
+</section>

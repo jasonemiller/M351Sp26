@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-02">
+  <title>Day 2 (29 January 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 2 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Thursday 1/29 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Welcome</li>
+        <li>Roll: pronunciation</li>
+        <li>Collect Homework</li>
+        <li>Questions</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+  <section>
+    <title>Topic Outline</title>
+    <p>In mathematics, <term>rigor</term> refers to solid mathematical proof.</p>
+    <p>Reading, creating, and writing proofs will be a central part of this course.</p>
+      <p>Here are the general topics we will learn about in this coruse:
+        <ol>
+          <li>The real numbers and other number systems (e.g., the rationals, irrationals)</li>
+          <li>How the real numbers are <term>complete</term> and form a continuum</li>
+          <li>Sequences and series of real numbers and their convergense</li>
+          <li>The topology of the reals, and topological concepts that help us understand functions</li>
+          <li>Functions, their limits, and their properties</li>
+          <li>Sequences of functions and their convergence</li>
+          <li>Function spaces, their properties and uses</li>
+        </ol>
+      </p>
+      <p>We will practice proof techniques we've learned before, and we will learn new techniques.</p>
+      <question><p workspace="6in">What are some proof techniques that you've studied before?</p></question>
+  </section>
+
+  <section>
+    <title>Number systems: the numbers</title>
+
+    <p workspace="1in">The set of <term>natural numbers</term> (denoted by <m>\mathbb{N}</m>) forms the most elementary and familiar system of numbers in mathematics.</p>
+    <p workspace="1in">The set of <term>integers</term> (denoted by <m>\mathbb{Z}</m>, from the German word for number, <em>Zahlen</em>) augments the naturals with zero and negative counting numbers.</p>
+    <p workspace="3in">The set of <term>rational numbers</term> (denoted by <m>\mathbb{Q}</m>, for quotient) adds lots of fractional numbers.</p>
+    <p >The Greeks get credit for being the first society that investigated mathematics rigorously.  They believed "all is number" and by "number" they mean rational numbers.</p>
+
+  </section>
+
+  <section>
+    <title>Number systems:the operations</title>
+
+    <p workspace="2in">What are the basic operations endowed to <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, and <m>\mathbb{Q}</m>?</p>
+
+    <p workspace="1in">The sets are also ordered.  What does this mean?</p>
+
+
+    <p>Without getting too deep into the concept of <term>algebraic structure</term> of these systems, all these systems are called ordered commutative rings because
+      <ul>
+        <li>they have (and are closed under) two operations:  addition and multiplication</li>
+        <li>both two operations are commutative and associative</li>
+        <li>multiplication is distributive over addition</li>
+        <li>addition has an inverse</li>
+        <li>and both operations have an identity</li>
+      </ul></p>
+
+<p>The rationals is also an ordered commutative ring, but it has a bit more 'structure' because everyt element has a multiplicative inverse.  This means that the rational numbers form a <term>field</term>.</p>
+
+<p>The Greeks believed every number was rational.</p>
+
+<p>They were wrong.</p>
+
+</section>
+
+<section>
+    <title>Irrational numbers</title>
+
+    <p workspace="2in">What is an irrational number?</p>
+    <p workspace="2in">Give a few examples of irrational numbers?</p>
+    <p workspace="2in">Are the irrational numbers a field?</p>
+    
+</section>
+
+<section>
+    <title>Irrational numbers</title>
+
+    <theorem>
+  <statement>
+    <p>
+      The number <m>\sqrt{2}</m> is an irrational number.
+    </p>
+  </statement>
+
+  <proof>
+    <p>
+        We prove this by contradiction or indirectly.  Suppose <m>\sqrt{2}</m> is not irrational.  This means that the number is rational.  This means that <m>\sqrt{2}</m> can be expressed as
+        <md>
+            <mrow>\sqrt{2}=\frac{p}{q}</mrow>
+        </md>
+        where <m>p</m> and <m>q</m> are natural numbers.</p>
+        <p>Without loss of generality, we can assume <m>p/q</m> is a proper fraction (the numerator and denominator have no prime factors in common).</p>
+        <p>Then
+        <md>
+            <mrow>\sqrt{2}^2=\left( \frac{p}{q} \right)^2 = \frac{p^2}{q^2}</mrow>
+        </md> so
+        <md>
+            <mrow>2q^2=p^2</mrow>
+        </md>.
+        </p>
+        <p>The left-hand side of this equation is an even number, so <m>p^2</m> is even, too.  This means 2 is a prime factor of <m>p^2</m>.  But all prime factrors of <m>p^2</m> appear at least twice, so we know <m>p</m> is event.  This means <m>p=2r</m> for some natural number <m>r</m>.</p>
+        <p>This allows us to write
+        <md>
+            <mrow>2q^2=p^2=(2r)^2=4r^2</mrow>
+        </md>.  Diving both sides by 2 gives
+        <md>
+            <mrow>q^2=2r^2</mrow>
+        </md>.  This shows that <m>q</m> must be even, too.</p>
+        <p>We already showed that <m>p</m> was even, and we began this proof by assuming that <m>p</m> and <m>q</m> had no common prime factors.  So <m>q</m> cannot be even.  This is our contradiction.</p>
+        <p>Consequently, we deduce that <m>\sqrt{2}</m> cannot be rational.  It must be irrational, as originally claimed.</p>
+  </proof>
+</theorem>
+    
+</section>
+
+<section>
+    <title>Constructing the Real Number system</title>
+    <p>Mathematician knew they needed a number system that formed a continuum (<em>i.e.</em>, has no holes) and shares the algebraic properties of the rational number field.</p>
+    <p>To this point in our mathematical education, we've worked with the real numbers withot knowing much about what they are and where they came from.</p>
+    <p>In this course, we will construct them, starting from the rational numbers, as the Greeks would have wanted.</p>
+</section>
+
+<section>
+    <title>Sets and Operations</title>
+    <p>(I expect the following to be review from <em>Transitions</em> and <em>Discrete</em>.)</p>
+    <p>A <term>set</term> is a collection of <term>elements</term>.</p>
+
+    <p>Let <m>A</m> be a set.</p>
+   <p>If <m>x</m> is an element of <m>A</m>, we write <m>x \in A</m></p>
+    <p>If <m>x</m> is not an element of <m>A</m>, we write <m>x \notin A</m></p>
+    <p>There are two main kinds of set notation: roster notation and set-builder notation.</p>
+    <p workspace="1in">A set is represented in <term>roster notation</term> if its elements are written out, separated by commas, and this list is wrapped in curley braces, <c>{</c> and <c>}</c>.  When we represent a set in <term>set-builder notation</term> we use curley braces as before, but the elements of the set are described differently; the notation looks like <m>\{ \text{element } | \text{ rule} \}</m> or <m>\{ \text{element } : \text{ rule} \}</m> where 'element' is a symbolic representation of the set elements, and 'rule' is some pattern that the elements follow.  This is best described with some examples.</p>
+
+
+    <example>
+        <title>A Set and Elements</title>
+        <p>If <m>A=\{1,2,3\}</m> then <m>1 \in A</m> and <m>4 \notin A</m>.</p>
+    </example>
+
+<example>
+  <title>Set of all even numbers</title>
+  <p>The set of all even numbers in roster notation would be <m>\{ 2, 4, 6, 8, ... \}</m>.  In set-builder notation we could write this as <md>\{2*n \, | \, n \text{ is a natural number}\}</md>.</p>
+</example>
+
+<example>
+  <title>An infinite solution set</title>
+  <p>The set of solutions to <m>cos(x)=1</m> is <md>\{\pi/2+2\pi*k \, | \, k \text{ is an integer} \}</md>.  In roster notation this might look like <md>\{... \pi/2 -4\pi,\pi/2 -2\pi, \pi/2, \pi/2 +2\pi, \pi/2 +4\pi, ...\}.</md></p>
+</example>
+
+
+ 
+ 
+
+</section>
+
+<definition>
+    <statement><p>The set of real numbers strictly between <m>a, b in mathbb{R}</m> is called an <term>open interval from <m>a</m> to <m>b</m></term> and is denoted by <m>(a,b)</m>. Note that
+    <md>
+        <mrow>(a,b) = \{ x \in \mathbb{R} \, : \, a &lt; x &lt; b \}</mrow>
+    </md>.</p>
+    <p>The set of real numbers between <m>a, b in mathbb{R}</m> inclusive is called a <term>closed interval from <m>a</m> to <m>b</m></term> and is denoted by <m>[a,b]</m>.  Note that
+    <md>
+        <mrow>[a,b] = \{ x \in \mathbb{R} \, : \, a \leq x \leq b \}</mrow>
+    </md>.</p>
+    </statement>
+</definition>
+
+<section>
+    <p>There are three important operations on sets:  union, intersection, and complement.</p>
+  <definition><title>Set Union</title>
+        <p>If <m>A</m> and <m>B</m> are sets, the union of <m>A</m> and <m>B</m> is denoted by
+        <md>
+            <mrow>A \cup B</mrow>
+        </md>
+        and is the set consisting of elements that are either in set <m>A</m> or in set <m>B</m>.</p>
+    </definition>
+    
+    <example><p>If <m>A=\{1,2,3\}</m> and if <m>B=\{3,4,5\}</m>, then 
+    <md>
+        <mrow>A \cup B = \{1,2,3,4,5\}</mrow>
+    </md>.</p>
+</example>
+
+
+
+
+<definition><title>Set Intersection</title>
+        <p>If <m>A</m> and <m>B</m> are sets, the intersection of <m>A</m> and <m>B</m> is denoted by
+        <md>
+            <mrow>A \cap B</mrow>
+        </md>
+        and is the set consisting of elements that are in both set <m>A</m> and in set <m>B</m>.</p>
+    </definition>
+
+<example><p>If <m>A=\{1,2,3\}</m> and if <m>B=\{3,4,5\}</m>, then 
+    <md>
+        <mrow>A \cap B = \{3\}</mrow>
+    </md>.</p>
+</example>    
+
+    <definition><title>Subset</title>
+        <p>The set <m>A</m> is a <term>subset</term> of another set <m>B</m> if every element in <m>A</m> is also in <m>B</m>.  If <m>A</m> is a <term>subset</term> of <m>B</m> we write
+            <md>
+        <mrow>A \subseteq B</mrow>
+    </md>.</p>
+</definition>
+
+    <example>
+        <p>If <m>E</m> is the set of even numbers, then <m>E \subseteq \mathbb{N}</m>.</p>
+    </example>
+
+</section>
+<section>
+        <definition><title>Set Complement</title>
+        <p>The complement of a set <m>A</m> is relative to another set <m>B</m> that contains <m>A</m>, <em>i.e.</em>, <m>A \subseteq B</m>.</p>
+        <p>If <m>A \subseteq B</m>, then the complement of <m>A</m>, denoted by <m>A^c</m>, i the set of elements in <m>B</m> that are not in <m>A</m>.</p>
+</definition>
+ 
+    <example>
+        <p>In <m>\mathbb{Z}</m>, the complement of the positive numbers is the non-positive numbers, <m>\{0,-1, -2, -3, \ldots\}</m>.</p>
+    </example>
+
+    <example>
+        <p>In <m>\mathbb{N}</m>, the complement of the odd numbers is the even numbers.</p>
+    </example>
+
+    <example>
+        <p>In <m>\mathbb{R}</m>, the complement of <m>\mathbb{Q}</m> is the irrational numbers.</p>
+    </example>
+
+</section>
+
+<section>
+<p>If we have multiple sets, <m>A_1</m>, <m>A_2</m>, <m>A_3, \ldots</m>, <m>A_n</m>, we can take the union of all the sets or the intersection of all the sets.  Special notation for these are (respectively)
+<md>
+    <mrow>A_1 \cup A_2 \cup A_3 \cup \ldots \cup A_n = \bigcup_{i=1}^n A_i</mrow>
+    <mrow>A_1 \cap A_2 \cap A_3 \cap \ldots \cap A_n = \bigcap_{i=1}^n A_i</mrow>
+</md>.</p>
+<p>Union, intersection, and complement come together in DeMorgan's Law.</p>
+
+<theorem><title>DeMorgan's Law</title>
+    <statement>If <m>A_1</m>, <m>A_2</m>, <m>A_3, \ldots</m>, <m>A_n</m> are sets, then
+    <md>
+        <mrow>\left( \bigcup_{i=1}^n A_i \right)^c=\bigcap_{i=1}^n A_i^c, \text{ and }</mrow>
+        <mrow>\left( \bigcap_{i=1}^n A_i \right)^c=\bigcup_{i=1}^n A_i^c</mrow>
+    </md>.  In fact, the equality holds for infinite collections of sets, too.
+    </statement>
+</theorem>
+
+<p workspace="2in">You should be able to prove this theorem.</p>
+
+</section>
+
+<section>
+    <title>Bounded Sets</title>
+
+    <definition>
+        <statement>
+            <p>A set <m>A \subseteq \mathbb{R}</m> is <term>bounded above</term> if there is an <m> M \in \mathbb{R}</m> for which <m>M &gt; a</m> for all <m>a \in A</m>.</p>
+            <p>A set <m>A \subseteq \mathbb{R}</m> is <term>bounded below</term> if there is an <m> m \in \mathbb{R}</m> for which <m>m &lt; a</m> for all <m>a \in A</m>.</p>
+            <p>A set <m>A \subseteq \mathbb{R}</m> is <term>totally bounded</term> if there is an <m> K \in \mathbb{R}</m> for which <m>|a| &lt; K</m> for all <m>a \in A</m>.</p>
+        </statement>
+    </definition>
+
+    <example>
+        <statement>
+            <p>Each of the following sets in bounded in one way or another.  For each, find an upper bound and a lower bound and a total bound, if possible.</p>
+            <p><ol>
+                <li><m>[0,1]</m></li>
+                <li><m>(-\infty,3)</m></li>
+                <li><m>[5,\infty)</m></li>
+                <li><m>[-3,1/3)</m></li>
+            </ol></p>
+        </statement>
+    </example>
+
+
+</section>
+
+</handout>
+
+
+  
+</section>

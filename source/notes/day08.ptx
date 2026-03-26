@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-08">
+  <title>Day 8 (18 February 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 8 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+  <section>
+    <title>Thursday 2/18 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Homework due Tuesday</li>
+        <li>NOTE: the Teamsters are striking starting on 17 Feb and goes through 20 Feb.  This is disrupting campus.  Talk to them to learn why they are doing what they do.</li>
+        <li>Questions on anything?</li>
+        <li>New material</li>
+      </ol>
+    </p>
+  </section>
+  
+<section>
+    <title>Last time: ...</title>       
+
+    <p>Last time, we talked about
+      <ul>
+        <li>Convergent sequences, example proofs of</li>
+        <li>Divergence (we will have better ways to prove divergence than 'negating the definition of convergence')</li>
+      </ul>
+    </p>
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that if <m>n &gt;N</m> then <m>|x_n-x_0| &lt; \epsilon</m>.</statement>
+</definition>
+
+<p>
+  Approach to proving using the definition.
+  <ol>
+    <li>Start with goal ``<m>|x_n-x_0| &lt; \epsilon</m>'' and in scratchwork simplify <m>|x_n-x_0|</m> to see how its size depends on <m>n</m></li>
+    <li>use what you got from simplifying <m>|x_n-x_0|</m> to solve the inequality ``<m>&lt;\epsilon</m>''</li>
+    <li>your solution will suggest the ``<m>N(\epsilon)</m>'' in the definition of convergence</li>
+    <li>start proof with ``Let <m>\epsilon >0</m>'' be given.  Then ``Choose <m>N=</m>'' whatever the ``<m>N(\epsilon)</m>'' is that you identified through your scratchwork</li>
+    <li>Demonstrate ``<m>|x_n-x_0| &lt; \epsilon</m>'' using your scratchwork in reverse; you will have steps that include
+    <ul>
+      <li>``...because <m>n &gt; N</m>...''</li>
+      <li>``...because <m>N=</m>'' your <m>N(\epsilon)</m></li>
+      <li>if you use the ceiling function in your definition of <m>N(\epsilon)</m>, there will be a step where you drop it, citing ``<m>x \leq \lceil x \rceil</m>''</li>
+      <li>this will be followed by lots of cancellations, probably, culminating in a ``<m>&lt; \epsilon''</m></li>
+    </ul></li>
+  </ol>
+</p>
+
+</section>
+
+
+<section><title>Convergence of Sequences</title>
+
+<example><title>Convergent sequence (from last time)</title>
+<p>Prove that <m>\displaystyle \lim_{n \rightarrow \infty} \frac{x^2+\ln(n)}{e^n(n^2-\sqrt{n}-1)}=0</m>.</p>
+
+<p workspace="9in"></p>
+
+</example>
+
+</section>
+
+<section>
+  <title>Convergence of Sequences</title>
+  
+<p>Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{2n^2-n-1}{n^2+n+1}=2</md>.</p>
+
+<p workspace="10in">Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{2n^2+n+1}{n^2-n-1}=2</md>.</p>
+
+</section>
+
+<section>
+<p workspace="10in">Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{2n^2-n-1}{n^2+n+1}=2</md>.</p>
+</section>
+
+<section>
+<p workspace="10in">Prove that <md>\displaystyle \lim_{n \rightarrow \infty} \frac{2n^2+n+1}{n^2-n-1}=2</md>.</p>
+</section>
+
+
+
+<section>
+  <title>Consequences of Convergence</title>
+  
+<definition>
+  <notation><m>\lim_{n \rightarrow \infty} x_n=x_0</m></notation>
+  <statement>A sequence <m>(x_n)</m> converges to a real number <m>x_0</m>if for every <m>\epsilon >0</m> there is an <m>N=N(\epsilon) \in \mathbb{N}</m> with the property that if <m>n &gt;N</m> then <m>|x_n-x_0| &lt; \epsilon</m>.</statement>
+</definition>
+
+
+<p>Take a moment to consider a consequence of ``... if n &gt; N, then <m>|x_n-x_0| &lt; \epsilon</m>.''</p>
+
+<md>
+  <mrow>|x_n-x_0| &lt; \epsilon</mrow>
+  <mrow>-\epsilon &lt; x_n-x_0 &lt; \epsilon</mrow>
+  <mrow>x_0-\epsilon &lt; x_n &lt; x_0 + \epsilon </mrow>
+</md>
+
+<p workspace="3in"></p>
+
+<p>The entire tail of the sequence lies in this interval.  (The sequence is eventually entirely in this interval.)</p>
+
+<p>This interval around <m>x_0</m> is called an <term>epsilon neighborhood of <m>x_0</m></term>.</p>
+
+</section>
+
+<section>
+  <title>Consequences of Convergence</title>
+  <theorem>
+    <statement>If <m>(x_n)</m> is a convergent sequence, then its limit is unique.</statement>
+    <proof>
+      <p>Suppose the limit is not unique.  Suppose there are two real nummbers <m>x_0</m> and <m>y_0</m> with <m>x_0 \neq y_0</m> for which <m>(x_n) \rightarrow x_0</m> and <m>(x_n) \rightarrow y_0</m>.</p>
+      <p>Let <m>\epsilon = \frac{1}{2}|x_0-y_0|</m>.</p>
+      <p>Since <m>(x_n) \rightarrow x_0</m>, there is an <m>N_x \in \mathbb{N}</m> for which <m>n &gt; N_x</m> implies <m>|x_n-x_0| &lt; \epsilon</m>.</p>
+      <p>Since <m>(x_n) \rightarrow y_0</m>, there is an <m>N_y \in \mathbb{N}</m> for which <m>n &gt; N_y</m> implies <m>|x_n-y_0| &lt; \epsilon</m>.</p>
+      <p>Choose <m>N=\max\{N_x, N_y\}</m>.  Then for <m>n &gt; N</m> we know
+      <md>
+        <mrow>|x_0 - y_0| \amp = |x_0 - x_n +x_n - y_0| </mrow>
+        <mrow> \amp \leq |x_0 - x_n| + |x_n - y_0| \text{ by the triangle inequality }</mrow>
+        <mrow>\amp &lt; \epsilon + \epsilon</mrow>
+        <mrow>\amp = \frac{1}{2}|x_0-y_0| + \frac{1}{2}|x_0-y_0|</mrow>
+        <mrow>\amp = |x_0 - y_0|</mrow>
+      </md>.  But this is absurd.  We cannot have <m>|x_0 - y_0| &lt; |x_0 - y_0|</m>.  Consequently, our supposition that the limit is not unique must have been incorrect.  Therefore,  the limit of a convergent sequence is unique.      
+      </p>
+    </proof>
+  </theorem>
+</section>
+
+<section>
+  <title>Consequences of Convergence</title>
+
+  <definition>
+    <statement>A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>bounded above</term> if there is an <m>M \in \mathbb{R}</m> for which <m>x_n \leq M</m> for all <m>n</m>.  A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>bounded below</term> if there is an <m>m \in \mathbb{R}</m> for which <m>m \leq x_n </m> for all <m>n</m>. A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>(totally) bounded</term> if is it bonded above and bounded below.</statement>
+  </definition>
+
+<p>This definition of bondedness agrees with the definition we made for bonded sets <m>A \subseteq \mathbb{R}</m>.</p>
+
+  <definition>
+    <statement>A sequence <m>(x_n) \subset \mathbb{R}</m> is <term>unbounded</term> if it is not totally bounded.  If we want more specificity, we can say a sequence with no upper bound is <term>not bounded above</term> and a sequence that does not hae a lower bound is <term>not bounded blow</term>.
+    </statement>
+  </definition>
+
+  <example>
+    <p workspace="3in">Give an example of a sequence that is bounded.  A sequence that is not bounded above.  A sequence that is not bounded below.</p>
+  </example>
+
+  </section>
+
+<section>
+  <title>Consequences of Convergence</title>
+
+  <theorem>
+    <statement>If <m>(x_n)</m> is a convergent sequence, then the sequence is totally bounded.</statement>
+    <proof>
+      <p>Suppose <m>(x_n) \rightarrow x_0</m>.  Choosing <m>\epsilon =1</m>, there is an <m>N \in mathbb{N}</m> for which <m>n &gt; N</m> means <m>|x_n-x_0| &lt; 1.</m>. This means <m>x_n &lt; L +1</m>.</p>
+      <p>Let <m>M=\max\{|x_1|,|x_2|, \ldots,|x_{N-1}|,L+1\}</m>.  Then <m>(x_n) \subset [-M,M]</m>.  This shows that <m>(x_n)</m> is bonded above and below, so it is totally bounded.</p>
+    </proof>
+  </theorem>
+</section>
+<!-- ===================================== -->
+
+</handout>
+
+</section>
