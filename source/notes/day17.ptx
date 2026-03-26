@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-17">
+  <title>Day 17 (7 April 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 17 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+
+  <section>
+    <title>Tuesday 4/7 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li>Roll</li>
+        <li>Next Homework due ... : see Canvas</li>
+        <li>Midterm:  Thursday 2 April</li>
+        <li>review session: Monday 3/30 at 6pm, meet at classroom</li>
+        <li>New material</li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Compactness</title>
+
+<definition>
+  <statement>
+    <p>A set <m>K \subset \mathbb{R}</m> is <term>(sequentially) compact</term> if every sequences in <m>K</m> has a subsequence that converges in <m>K</m>.</p>
+  </statement>
+</definition>
+
+<theorem>
+    <statement>
+      <p>A set<m>K \subset \mathbb{R}</m> is (sequentially) compact if and only if <m>K</m> is closed and bounded.</p>
+    </statement>
+  </theorem>
+
+<theorem>
+  <title>Heine-Borel</title>
+  <statement>
+    <p>A set <m>K \subset \mathbb{R}</m> is compact if and only if every open cover of <m>K</m> contains a finite subcover.</p>
+  </statement>
+</theorem>
+
+<p>
+  Note writing ``<m>K</m> has the Heine-Borel property'' means that ``every open cover of <m>K</m> has a finite subcover.'' 
+</p>
+
+<proof>
+  <p>
+   (<m>\Leftarrow</m>) Suppose <m>K</m> has the property that every open cover of <m>K</m> has a finite subcover.  This is called the Heine-Borel property.  We want to show that <m>K</m> is sequentially compact.  We will do this by showing that <m>K</m> is closed and bounded.
+  </p>
+  <p>
+    To show that <m>K</m> is bounded, consider the open sets
+    <md>
+      <mrow> V_1(x)\amp =\{y \in \mathbb{R}\, : \, |x-y| &lt; 1\} </mrow>.
+    </md>
+    These are the <m>1-</m>neighborhoods of <m>x</m>.  Then the collection <m>\{v_1(x)\}_{x \in K}</m> is an open cover of <m>K</m>.  Since <m>K</m> has the Heine-Borel property, this open cover has a finite subcover <m>\{V_1(x_k)\}_{k=1}^n</m>, noting that <m>x_k \in K</m> for all <m>k</m>.
+  </p>
+    </proof>
+
+    </section>
+  
+<!-- ========================================   -->
+
+<section>
+
+  <proof>
+  <p>
+    Without loss of generality, we can assume that <m>x_i &lt; x_{i+1}</m> for <m>1=1,2,3,\ldots,N-1</m>.  Then
+    <md>
+      <mrow> x_1 -1 \amp &lt; x &lt; x_n+1 </mrow>
+    </md>
+    so <m>K</m> is bounded by <m>\max\{|x_1-1|,x_{n}+1|\}</m>.
+  </p>
+  <p>
+    To show that <m>K</m> is closed we argue indirectly.  Suppose <m>(y_k) \subset K</m> is a Cauchy sequence with limit <m>y</m>.  This means that <m>y</m> is a limit point of <m>K</m>.  We need to show <m>y \in K</m>.
+  </p>
+  <p workspace="2in">
+    Suppose not.  Suppose <m>y \notin K</m>.  Then <m>|x-y| &gt; 0</m> for all <m>x \in K</m>.  (The inequality equals zero precisely when <m>x=y</m>.). Define
+    <md>
+      <mrow>\mathcal{O}_x \amp =\{u \in K \, : \, |u-x| &lt; \frac{1}{2}|x-y|\}</mrow>
+    </md>
+  </p>
+  <p>The closer <m>x</m> is to <m>y</m>, the smaller the radius of <m>\mathcal{O}_x</m>.  The collection <m>\{\mathcal{O}_x\}_{x \in K}</m> is an open cover of <m>K</m>.  By the Heine-Borel property, this open cover has a finite subcover, <m>\{\mathcal{O}_{x_i}\}_{i=1}^{n}</m>.
+  </p>
+  <p>
+    Consider <m>\epsilon_0 = \min\{\frac{1}{2}|x_i-y|\}</m>, which is the smallest radius of the open sets in our finite subcover.  Since <m>(y_n) \rightarrow y</m>, there is an <m>N &gt; 0</m> such that <m>|y-n-y| &lt; \epsilon_0</m> for <m>n &gt; N</m>.  But these <m>y_n</m> are outside every <m>\mathcal{O}_{x_i}</m>.  So out purported finite subcover does not cover <m>K</m>!  This is a contradicion.
+  </p>
+  <p>
+    Consequently, <m>K</m> is compact.
+  </p>
+  </proof>
+
+
+</section>
+
+
+
+<!-- ============================ -->
+<!-- ============================ -->
+<!-- ============================ -->
+
+</handout>
+</section>
