@@ -64,6 +64,13 @@ We can write the same sum using the index set <m>I</m> as follows:
     </md></p>
 </example>
 
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Note:  index sets</title>
+
 <example>
   <title>Collections</title>
   <p>Suppose we have a mathematical object <m>X_{\lambda}</m>.  (This object cold be a number, or a set, or a function, or something else.). Here <m>\lambda</m> is going to serve as an index.  Let <m>\Lambda</m> be our index set.  Then the set (or collection) of all our objects can be written
@@ -110,7 +117,7 @@ We can write the same sum using the index set <m>I</m> as follows:
   <p>For exact same reason, every closed and bonded interval is compact.</p>
 </example>
 
-<p>Recall that a set <m>A \subset \mathbb{R}</m> is <term>bonded</term> if there is an <m>M \in \mathbb{R}</m> for which <m>-M \leq x \leq M</m> for all <m>x \in A</m>.</p>
+<p>Recall that a set <m>A \subset \mathbb{R}</m> is <term>bounded</term> if there is an <m>M \in \mathbb{R}</m> for which <m>-M \leq x \leq M</m> for all <m>x \in A</m>.</p>
 
 </section>
   
@@ -131,7 +138,7 @@ We can write the same sum using the index set <m>I</m> as follows:
     <p>To see that <m>K</m> is closed, let <m>x \in \mathbb{R}</m> be a limit point of <m>K</m>.  We must show that <m>x \in K</m>.  Since <m>x</m> is a limit point of <m>K </m>, there is a sequence <m>(y_k) \subset K</m> that converges to <m>x</m>.  Since <m>K</m> is (sequentially) compact, <m>(y_k)</m> has a subsequence <m>(y_{k_{\ell}})</m> that converges in <m>K</m>.  We know that a subsequence of a convergent sequence must converge to the same limit at the sequence, so <m>(y_{k_{\ell}}) \rightarrow x</m>, and <m>x \in K</m>.  This shows that<m>K</m> is closed.</p>
 <p>This completes the proof in this direction.</p>
 <p>(<m>\Leftarrow</m>). Suppose<m>K</m> is closed and bounded.  We must show <m>K</m> is compact.  Let <m>(x_n) \subset K</m> be a sequence.  We must show that <m>(x_n)</m> has a subsequence that converges to a point in <m>K</m>.</p>
-<p>Because <m>K</m> is bounded, there is an <m>M \in \mathbb{R}</m> with <m>M &gt; 0</m> such that <m>|x| &lt; M</m> for all <m>x \in K</m>.  Therefore, <m>|x_n| &lt; M</m> for all <m>n \in \mathbb{N}</m>.  This means that <m>(x_n)</m> is a bonded sequence.  The Bolzao-Weierstrass Theorem implies that <m>(x_n)</m> has a convergent subsequence <m>(x_{n_k})</m>. Since <m>(x_{n_k}) \subset K</m> and <m>K</m> is closed (it contains all its limit points), <m>\displaystyle \lim_{k \rightrarrow \infty} (x_{n_k}) \in K</m>.  This shows that that <m>K</m> is compact.</p>
+<p>Because <m>K</m> is bounded, there is an <m>M \in \mathbb{R}</m> with <m>M &gt; 0</m> such that <m>|x| &lt; M</m> for all <m>x \in K</m>.  Therefore, <m>|x_n| &lt; M</m> for all <m>n \in \mathbb{N}</m>.  This means that <m>(x_n)</m> is a bonded sequence.  The Bolzao-Weierstrass Theorem implies that <m>(x_n)</m> has a convergent subsequence <m>(x_{n_k})</m>. Since <m>(x_{n_k}) \subset K</m> and <m>K</m> is closed (it contains all its limit points), <m>\displaystyle \lim_{k \rightarrow \infty} (x_{n_k}) \in K</m>.  This shows that that <m>K</m> is compact.</p>
 <p>This completes the proof.</p>
   </proof> 
 
@@ -155,7 +162,7 @@ We can write the same sum using the index set <m>I</m> as follows:
 
 <proof>
   <p>For each <m>n \in\mathbb{N}</m>, because <m>K_n</m> is nonempty, we can find an element in <m>K_n</m>, call it <m>x_n</m>.  This creates a sequence <m>(x_n) \subset \mathbb{R}</m>.  Since <m>K_n \subseteq K_1</m> for all <m>n</m>, <m>(x_n) \subset K_1</m>.  Because <m>K_1</m> is a (sequentially) compact set, <m>(x_n) \subset K_1</m> has a subsequence <m>(x_{n_{\ell}}) \subset K_1</m> that converges in <m>K_1</m>.  Call its limit <m>x \in K_1</m>.</p>
-  <p>Notice that, given any <m>m \in \mathbb{N}</m>, <m>K_m</m> contains the tail of <m>(x_n)</m>.  Specifically, <m>(x_n)_{n=m}^{\infty} \subset K_m</m>.  Since <m>K_m</m> is compact, the limit of <m>(x_n)</m> is in <m>K_m</m>, i.e., <m>x \in K_m</m>.  It follows that <m>\displaystyle x \in \cap_{m=1}^{\infty K_m}
+  <p>Notice that, given any <m>m \in \mathbb{N}</m>, <m>K_m</m> contains the tail of <m>(x_n)</m>.  Specifically, <m>(x_n)_{n=m}^{\infty} \subset K_m</m>.  Since <m>K_m</m> is compact, the limit of <m>(x_n)</m> is in <m>K_m</m>, i.e., <m>x \in K_m</m>.  It follows that <m>\displaystyle x \in \bigcap_{m=1}^{\infty K_m}
   </m>.</p>
   <p>This completes the proof.</p>
 </proof>
@@ -183,7 +190,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
   <title>An open cover of <m>[a,b]</m></title>
   <p workspace="2in">Consider the set <m>U=(a-1,b+1)</m>.  The collection <m>\mathcal{U}=\{U\}</m> is an open over because
     <md>
-      <mrow>\cup_{U \in \mathcal{U}} U \amp = U =(a-1,b+1) \supset [a,b].</mrow>
+      <mrow>\displaystyle \bigcup_{U \in \mathcal{U}} U \amp = U =(a-1,b+1) \supset [a,b].</mrow>
     </md></p>
 </example>
 
@@ -191,7 +198,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
   <title>An open cover of <m>[a,b]</m></title>
   <p workspace="2in">Let <m>\epsilon &gt; 0</m> be given.  For <m>x \ in [a,b]</m> define <m>U_x = V_{\epsilon}(x)</m>.  Then <m>\mathcal{U}=\{U_x \, : \, x \in [a,b]\}</m> is an open cover of <m>[a,b]</m> because
     <md>
-      <mrow>\cup_{x \in [a,b]} U_x \amp = \cup_{x \in [a,b]} V_{\epsilon}(x) = (a-\epsilon,b+\epsilon) \supset [a,b]</mrow>.
+      <mrow>\displaystyle \bigcup_{x \in [a,b]} U_x \amp = \bigcup_{x \in [a,b]} V_{\epsilon}(x) = (a-\epsilon,b+\epsilon) \supset [a,b]</mrow>.
     </md></p>
 </example>
 
