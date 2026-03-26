@@ -166,7 +166,29 @@ We can write the same sum using the index set <m>I</m> as follows:
 <section>
 <title>Heine-Borel</title>
 
-<p>Let <m>A \subseteq \mathbb{R}</m>.  Let <m>U_i \subset \mathbb{R}</m> be open for <m>i \in I</m> where <m>I</m> is some index set.</p>
+<p>Let <m>A \subseteq \mathbb{R}</m>.  Let <m>U_i \subset \mathbb{R}</m> be open for <m>i \in I</m> where <m>I</m> is some index set.  We say the collection <m>\mathcal{U}=\{U_i \, : \, i \in I\}</m> is an <term>open cover</term> for <m>A</m> if
+<md>
+  <mrow>\displaystyle A \subseteq \cup_{i \in I} U_i</mrow>
+</md></p>
+
+<p>A set <m>A \subseteq \mathbb{R}</m> can have many possible open covers.  Here are some examples.</p>
+
+<example>
+  <title>An open cover of <m>[a,b]</m></title>
+  <p workspace="2in">Consider the set <m>U=(a-1,b+1)</m>.  The collection <m>\mathcal{U}=\{U\}</m> is an open over because
+    <md>
+      <mrow>\cup_{U \in \mathcal{U}} U \amp = U =(a-1,b+1) \supset [a,b].</mrow>
+    </md></p>
+</example>
+
+<example>
+  <title>An open cover of <m>[a,b]</m></title>
+  <p workspace="2in">Let <m>\epsilon &gt; 0</m> be given.  For <m>x \ in [a,b]</m> define <m>U_x = V_{\epsilon}(x)</m>.  Then <m>\mathcal{U}=\{U_x \, : \, x \in [a,b]\}</m> is an open cover of <m>[a,b]</m> because
+    <md>
+      <mrow>\cup_{x \in [a,b]} U_x \amp = \cup_{x \in [a,b]} V_{\epsilon}(x) = (a-\epsilon,b+\epsilon) \supset [a,b]</mrow>.
+    </md></p>
+</example>
+
 
 <p></p>
 
