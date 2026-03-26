@@ -48,6 +48,15 @@
     </md></p>
 </example>
 
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Note:  index sets</title>
+
+
 <example>
   <title>Series</title>
   <p>Consider the infinite collection of numbers <m>A=\{a_1, a_2,a_3,\ldots,\}</m>.  Here we are using subscripts to index the numbers in this collection, and the index set is <m>\mathbb{N}</m>.  We can use the index to express <m>A</m> as follows:
@@ -63,13 +72,6 @@ We can write the same sum using the index set <m>I</m> as follows:
       <mrow>\displaystyle \sum_{i=1}^{\infty} a_i = \sum_{i \in \mathbb{N}} a_i.</mrow>
     </md></p>
 </example>
-
-</section>
-  
-<!-- ========================================   -->
-
-<section>
-<title>Note:  index sets</title>
 
 <example>
   <title>Collections</title>
