@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Day 5 (10 February 2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Real Analysis">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.19';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Real Analysis</span> <span class="subtitle">MATH 351 Semester 2026</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="notes-day-04.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-day-06.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Course Notes</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Day 1 (27 January 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3-1" class="internal"><span class="title">Tudesday 1/27</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3-2" class="internal"><span class="title">Introductions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3-3" class="internal"><span class="title">What this course is about</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-02.html" class="internal"><span class="title">Day 2 (29 January 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-1" class="internal"><span class="title">Thursday 1/29</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-2" class="internal"><span class="title">Topic Outline</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-3" class="internal"><span class="title">Number systems: the numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-4" class="internal"><span class="title">Number systems:the operations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-5" class="internal"><span class="title">Irrational numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-6" class="internal"><span class="title">Irrational numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-7" class="internal"><span class="title">Constructing the Real Number system</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-8" class="internal"><span class="title">Sets and Operations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-10" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-11" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-12" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-02.html#notes-day-02-3-13" class="internal"><span class="title">Bounded Sets</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-03.html" class="internal"><span class="title">Day 3 (3 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-1" class="internal"><span class="title">Tuesday 2/3</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-2" class="internal"><span class="title">Comments on Homeworks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-3" class="internal"><span class="title">Distribution of homework scores</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-4" class="internal"><span class="title">The Axiom of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-5" class="internal"><span class="title">Maxima and suprema</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-6" class="internal"><span class="title">Maxima and suprema</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-03.html#notes-day-03-3-7" class="internal"><span class="title">Maxima and suprema</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-04.html" class="internal"><span class="title">Day 4 (5 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-1" class="internal"><span class="title">Thursday 2/5</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-2" class="internal"><span class="title">Recap: The Axiom of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-3" class="internal"><span class="title">Working with Suprema (and Infima)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-4" class="internal"><span class="title">Working with Suprema (and Infima)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-5" class="internal"><span class="title">More on Suprema</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-6" class="internal"><span class="title">Consequences of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-7" class="internal"><span class="title">Consequences of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-8" class="internal"><span class="title">Consequences of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-04.html#notes-day-04-3-9" class="internal"><span class="title">Consequences of Completeness</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="notes-day-05.html" class="internal"><span class="title">Day 5 (10 February 2026)</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-1" class="internal"><span class="title">Tuesday 2/10</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-2" class="internal"><span class="title">Consequences of Completeness</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-3" class="internal"><span class="title">How big is that set?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-4" class="internal"><span class="title">Enumerations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-5" class="internal"><span class="title">Enumerations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-6" class="internal"><span class="title">Enumerations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-7" class="internal"><span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-8" class="internal"><span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-05.html#notes-day-05-3-9" class="internal"><span class="title">Infinite Sets</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-06.html" class="internal"><span class="title">Day 6 (12 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-1" class="internal"><span class="title">Thursday 2/12</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-2" class="internal"><span class="title">Last time: Cardinality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-3" class="internal"><span class="title">Uncountability of the Reals</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-4" class="internal"><span class="title">Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-5" class="internal"><span class="title">Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-6" class="internal"><span class="title">Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-7" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-8" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-9" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-06.html#notes-day-06-3-10" class="internal"><span class="title">Divergence of Sequences</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-07.html" class="internal"><span class="title">Day 7 (16 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-1" class="internal"><span class="title">Tuesday 2/16</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-2" class="internal"><span class="title">Last time: ...</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-3" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-4" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-5" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-07.html#notes-day-07-3-6" class="internal"><span class="title">Divergence of Sequences</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-08.html" class="internal"><span class="title">Day 8 (18 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-1" class="internal"><span class="title">Thursday 2/18</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-2" class="internal"><span class="title">Last time: ...</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-3" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-4" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-5" class="internal"><span class="title">Convergence of Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-6" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-7" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-8" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-9" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-10" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-08.html#notes-day-08-3-11" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-09.html" class="internal"><span class="title">Day 9 (24 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-1" class="internal"><span class="title">Tuesday 2/24</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-2" class="internal"><span class="title">Last time: worked through two convergence proofs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-3" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-4" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-5" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-6" class="internal"><span class="title">Consequences of Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-7" class="internal"><span class="title">Algebraic Limit Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-8" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-9" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-09.html#notes-day-09-3-10" class="internal"><span class="title"></span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-10.html" class="internal"><span class="title">Day 10 (26 February 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-1" class="internal"><span class="title">Thursday 2/26</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-2" class="internal"><span class="title">Algebraic Limit Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-3" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-4" class="internal"><span class="title">Order Limit Theorems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-5" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-6" class="internal"><span class="title">Monotone Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-10.html#notes-day-10-3-7" class="internal"><span class="title">Subsequences</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-11.html" class="internal"><span class="title">Day 11 (3 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3-1" class="internal"><span class="title">Tuesday 3/2</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3-2" class="internal"><span class="title">Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3-3" class="internal"><span class="title">Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3-4" class="internal"><span class="title">Convergence of Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-11.html#notes-day-11-3-7" class="internal"><span class="title">Subsequences</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-12.html" class="internal"><span class="title">Day 12 (5 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-1" class="internal"><span class="title">Thursday 3/5</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-2" class="internal"><span class="title">Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-3" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-4" class="internal"><span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-5" class="internal"><span class="title">Convergence is Cauchy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-6" class="internal"><span class="title">Convergence is Cauchy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-12.html#notes-day-12-3-7" class="internal"><span class="title">Topology:  Open and Closed Sets</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-13.html" class="internal"><span class="title">Day 13 (10 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-1" class="internal"><span class="title">Tuesday 3/10</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-2" class="internal"><span class="title">Chapter 3:  Basic Topology of  <span class="process-math">\(\mathbb{R}\)</span></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-3" class="internal"><span class="title">Open Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-4" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-5" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-6" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-7" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-8" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-9" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-10" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-13.html#notes-day-13-3-11" class="internal"><span class="title">Closure</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-14.html" class="internal"><span class="title">Day 14 (12 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3-1" class="internal"><span class="title">Thursday 3/12</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3-2" class="internal"><span class="title">Open Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3-3" class="internal"><span class="title">Closed Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3-4" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-14.html#notes-day-14-3-5" class="internal"><span class="title">Closure</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-15.html" class="internal"><span class="title">Day 15 (23 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-1" class="internal"><span class="title">Tuesday 3/23</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-2" class="internal"><span class="title">Before break ...</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-3" class="internal"><span class="title">Closure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-4" class="internal"><span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-5" class="internal"><span class="title">Complements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-15.html#notes-day-15-3-6" class="internal"><span class="title">Complements</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-day-16.html" class="internal"><span class="title">Day 16 (26 March 2026)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout">
+<div class="toc-title-box"><a href="notes-day-16.html#notes-day-16-3" class="internal"><span class="title">Handout</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-16.html#notes-day-16-3-1" class="internal"><span class="title">THursday 3/26</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-16.html#notes-day-16-3-2" class="internal"><span class="title">Compactness</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="section" id="notes-day-05"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 5 (10 February 2026)</span>
+</h2>
+<section class="introduction" id="notes-day-05-2"><div class="para" id="notes-day-05-2-1">This is an outline of the plans for Day 4 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="handout" id="notes-day-05-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-05-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="section" id="notes-day-05-3-1"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tuesday 2/10</span>
+</h4>
+<div class="para logical" id="notes-day-05-3-1-2">
+<div class="para">Today’s agenda:</div>
+<ol class="decimal" id="notes-day-05-3-1-2-1">
+<li id="notes-day-05-3-1-2-1-1">
+<div class="para" id="p-derived-notes-day-05-3-1-2-1-1">Roll</div>
+<div class="autopermalink" data-description="Item 1"><a href="#notes-day-05-3-1-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="notes-day-05-3-1-2-1-2">
+<div class="para" id="p-derived-notes-day-05-3-1-2-1-2">Homework due Thursday</div>
+<div class="autopermalink" data-description="Item 2"><a href="#notes-day-05-3-1-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="notes-day-05-3-1-2-1-3">
+<div class="para" id="p-derived-notes-day-05-3-1-2-1-3">NOTE: the Teamsters are striking next week, starting on 17 Feb.  This may disrupt campus.  If you want to support those who are striking, talk with Miller if you want to know what to expect when the strike happens.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#notes-day-05-3-1-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="notes-day-05-3-1-2-1-4">
+<div class="para" id="p-derived-notes-day-05-3-1-2-1-4">Questions on anything?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#notes-day-05-3-1-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="notes-day-05-3-1-2-1-5">
+<div class="para" id="p-derived-notes-day-05-3-1-2-1-5">New material</div>
+<div class="autopermalink" data-description="Item 5"><a href="#notes-day-05-3-1-2-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Tuesday 2/10"><a href="#notes-day-05-3-1" title="Copy heading and permalink for Section: Tuesday 2/10" aria-label="Copy heading and permalink for Section: Tuesday 2/10">🔗</a></div></section><section class="section" id="notes-day-05-3-2"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
+</h4>
+<article class="theorem theorem-like" id="notes-day-05-3-2-2"><h5 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Density of <span class="process-math">\(\mathbb{Q}\)</span> in <span class="process-math">\(\mathbb{R}\)</span>.</span>
+</h5>Let <span class="process-math">\(a, b, \in \mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(r \in \mathbb{Q}\)</span> with <span class="process-math">\(a &lt; r &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 41: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-05-3-2-2" title="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div></article><details id="notes-day-05-3-2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-05-3-2-3-1">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be real numbers with <span class="process-math">\(a &lt; b\text{.}\)</span>  We need to find integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> where</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-1-6">
+\begin{equation*}
+a &lt; \frac{m}{n} &lt; b\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-2-3-2">First, we look for the <span class="process-math">\(n\text{.}\)</span>  It’s the denominator of our rational number, so the closer <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are to one another, the larger <span class="process-math">\(n\)</span> will be.  Consider the real number <span class="process-math">\(b-a &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-2-3-3">By the Archimedean Property of real numbers, there is an <span class="process-math">\(n\)</span> with <span class="process-math">\(0 &lt; \frac{1}{n} &lt; b-a\text{.}\)</span>  Now let’s start looking for <span class="process-math">\(m\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="notes-day-05-3-2-3-4">
+<div class="para">We want</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-4-1">
+\begin{equation*}
+a &lt; \frac{m}{n} &lt; b\text{.}
+\end{equation*}
+</div>
+<div class="para">This is equivalent to wanting</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-4-2">
+\begin{equation*}
+na &lt; m &lt; nb\text{.}
+\end{equation*}
+</div>
+<div class="para">We choose the smallest integer <span class="process-math">\(m\)</span> for which</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-4-4">
+\begin{equation*}
+m-1 &lt; na &lt; m\text{.}
+\end{equation*}
+</div>
+<div class="para">(This is <span class="process-math">\(na\)</span> rounded up to the nearest integer.). It follows that</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-4-6">
+\begin{equation*}
+a &lt; \frac{m}{n}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="notes-day-05-3-2-3-5">
+<div class="para">Now we want to relate our rational number to <span class="process-math">\(b\text{.}\)</span>  Since <span class="process-math">\(m-1 &lt; na\)</span> and <span class="process-math">\(\frac{1}{n} &lt; b-a\text{,}\)</span> we can write</div>
+<div class="displaymath process-math" id="notes-day-05-3-2-3-5-4">
+\begin{align*}
+m \amp \leq na+1\\
+\amp &lt; n(b-\frac{1}{n})+1\\
+\amp = nb-1+1\\
+\amp = nb\text{.}
+\end{align*}
+</div>
+<div class="para">Consequently, <span class="process-math">\(\frac{m}{n} &lt;b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-2-3-6">We conclude that <span class="process-math">\(a &lt; \frac{m}{n} &lt; b\text{,}\)</span> as desired.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-05-3-2-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-05-3-2" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><section class="section" id="notes-day-05-3-3"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How big is that set?</span>
+</h4>
+<div class="para" id="notes-day-05-3-3-2">To get a better understanding of the reals, we’re going to develop the concept of <dfn class="terminology">set cardinality</dfn>, which is essenially a measurement of the size of a set.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="notes-day-05-3-3-3"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">42</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-3-3-1-1">A set <span class="process-math">\(A\)</span> is finite if there is an <span class="process-math">\(n \in \mathbb{N}\)</span> for which the elements of the set <span class="process-math">\(\{1,2,3,4,\ldots n\}\)</span> and the elements of the set <span class="process-math">\(A\)</span> can be put in 1-1 correspondence.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 42"><a href="#notes-day-05-3-3-3" title="Copy heading and permalink for Definition 42" aria-label="Copy heading and permalink for Definition 42">🔗</a></div></article><div class="para" id="notes-day-05-3-3-4">We say that this correspondence is an <dfn class="terminology">enumeration</dfn> of the set <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-3-5">&gt;What does it mean to "put in 1-1 correspondence" the elements of two sets?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: How big is that set?"><a href="#notes-day-05-3-3" title="Copy heading and permalink for Section: How big is that set?" aria-label="Copy heading and permalink for Section: How big is that set?">🔗</a></div></section><section class="section" id="notes-day-05-3-4"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
+</h4>
+<article class="definition definition-like" id="notes-day-05-3-4-2"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">43</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Function.</span>
+</h5>
+<div class="para" id="notes-day-05-3-4-2-2-1">A <dfn class="terminology">function</dfn> from a set <span class="process-math">\(A\)</span> to a set <span class="process-math">\(B\)</span> is a rule <span class="process-math">\(f\)</span> that assigns to each input <span class="process-math">\(a \in A\)</span> exactly one output <span class="process-math">\(f(a)=b \in B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 43: Function"><a href="#notes-day-05-3-4-2" title="Copy heading and permalink for Definition 43: Function" aria-label="Copy heading and permalink for Definition 43: Function">🔗</a></div></article><div class="para" id="notes-day-05-3-4-3">What mathematics vocabulary and concepts do you associate with the concept of function?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-4" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-5"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
+</h4>
+<article class="definition definition-like" id="notes-day-05-3-5-2"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">44</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Function.</span>
+</h5>
+<div class="para" id="notes-day-05-3-5-2-2-1">A <dfn class="terminology">function</dfn> from a set <span class="process-math">\(A\)</span> to a set <span class="process-math">\(B\)</span> is a rule <span class="process-math">\(f\)</span> that assigns to each input <span class="process-math">\(a \in A\)</span> exactly one output <span class="process-math">\(f(a)=b \in B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 44: Function"><a href="#notes-day-05-3-5-2" title="Copy heading and permalink for Definition 44: Function" aria-label="Copy heading and permalink for Definition 44: Function">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-5-3"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">45</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">one-to-one function.</span>
+</h5>
+<div class="para" id="notes-day-05-3-5-3-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is <dfn class="terminology">one-to-one</dfn> if <span class="process-math">\(f(x)=f(y)\)</span> means that <span class="process-math">\(x=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 45: one-to-one function"><a href="#notes-day-05-3-5-3" title="Copy heading and permalink for Definition 45: one-to-one function" aria-label="Copy heading and permalink for Definition 45: one-to-one function">🔗</a></div></article><div class="para" id="notes-day-05-3-5-4">What are some examples of one-to-one functions?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="notes-day-05-3-5-5"><h5 class="heading">
+<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">46</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-5-5-1">A function <span class="process-math">\(f\)</span> that is one-to-one has an inverse <span class="process-math">\(f^{-1}:B \rightarrow A\text{.}\)</span>  Inverse functions are characterized by <span class="process-math">\((f^{-1} \circ f)(a)=a\)</span> for all <span class="process-math">\(a \in A\text{,}\)</span> and <span class="process-math">\((f \circ f^{-1})(b)=b\)</span> for all <span class="process-math">\(b \in f(A) \subseteq B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Fact 46"><a href="#notes-day-05-3-5-5" title="Copy heading and permalink for Fact 46" aria-label="Copy heading and permalink for Fact 46">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-5-6"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">47</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">onto function.</span>
+</h5>
+<div class="para" id="notes-day-05-3-5-6-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is <dfn class="terminology">onto</dfn> if for every <span class="process-math">\(b \in B\)</span> there is an <span class="process-math">\(a \in A\)</span> with <span class="process-math">\(f(a)=b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 47: onto function"><a href="#notes-day-05-3-5-6" title="Copy heading and permalink for Definition 47: onto function" aria-label="Copy heading and permalink for Definition 47: onto function">🔗</a></div></article><div class="para" id="notes-day-05-3-5-7">What are some examples of onto functions?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-5" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-6"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
+</h4>
+<article class="definition definition-like" id="notes-day-05-3-6-2"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">48</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">bijection.</span>
+</h5>
+<div class="para" id="notes-day-05-3-6-2-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is a <dfn class="terminology">bijection</dfn> if it is both one-to-one and onto.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 48: bijection"><a href="#notes-day-05-3-6-2" title="Copy heading and permalink for Definition 48: bijection" aria-label="Copy heading and permalink for Definition 48: bijection">🔗</a></div></article><div class="para" id="notes-day-05-3-6-3">The <dfn class="terminology">cardinality</dfn> of a set <span class="process-math">\(A\)</span> is the number of elements in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-6-4">If a set is finite, the cardinality is the number of elements in the set.  If a set is not finite, we say it is an infinite set.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="notes-day-05-3-6-5"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">49</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-6-5-1-1">Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same cardinality if there is a bijection <span class="process-math">\(\phi:A \rightarrow B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 49"><a href="#notes-day-05-3-6-5" title="Copy heading and permalink for Definition 49" aria-label="Copy heading and permalink for Definition 49">🔗</a></div></article><details id="notes-day-05-3-6-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">50</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Even and Odd numbers.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-05-3-6-6-2">Let <span class="process-math">\(E\)</span> be the set of even numbers.  Let <span class="process-math">\(O\)</span> be the set of odd numbers.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-6-6-3">Show that <span class="process-math">\(E\)</span> and <span class="process-math">\(\mathbb{N}\)</span> have the same cardinality.<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-6-6-4">Show that <span class="process-math">\(O\)</span> and <span class="process-math">\(\mathbb{N}\)</span> have the same cardinality.<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-6-6-5">Do <span class="process-math">\(O\)</span> and <span class="process-math">\(E\)</span> have the same cardinality.?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 50: Even and Odd numbers"><a href="#notes-day-05-3-6-6" title="Copy heading and permalink for Example 50: Even and Odd numbers" aria-label="Copy heading and permalink for Example 50: Even and Odd numbers">🔗</a></div></article></details><div class="para" id="notes-day-05-3-6-7">If <span class="process-math">\(A \subset B\)</span> (<span class="process-math">\(A\)</span> is a proper subset of <span class="process-math">\(B\)</span>), it is possible that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> could have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-6-8">We saw this with the even numbers, odd numbers, and <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-6" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-7"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
+</h4>
+<details id="notes-day-05-3-7-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">51</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Naturals and Integers.</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-05-3-7-2-2">The natural numbers and the integers have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-7-2-3">
+<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 51: Naturals and Integers"><a href="#notes-day-05-3-7-2" title="Copy heading and permalink for Example 51: Naturals and Integers" aria-label="Copy heading and permalink for Example 51: Naturals and Integers">🔗</a></div></article></details><article class="definition definition-like" id="notes-day-05-3-7-3"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">52</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Countability.</span>
+</h5>
+<div class="para" id="notes-day-05-3-7-3-2-1">A set <span class="process-math">\(A\)</span> is <dfn class="terminology">countable</dfn> (or <dfn class="terminology">countably infinite</dfn>) if it has the same cardinality as <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 52: Countability"><a href="#notes-day-05-3-7-3" title="Copy heading and permalink for Definition 52: Countability" aria-label="Copy heading and permalink for Definition 52: Countability">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-7-4"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">53</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uncountable.</span>
+</h5>
+<div class="para" id="notes-day-05-3-7-4-2-1">A set <span class="process-math">\(A\)</span> is <dfn class="terminology">uncountable</dfn> (or <dfn class="terminology">uncountably infinite</dfn>) if it is infinite but not countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 53: Uncountable"><a href="#notes-day-05-3-7-4" title="Copy heading and permalink for Definition 53: Uncountable" aria-label="Copy heading and permalink for Definition 53: Uncountable">🔗</a></div></article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-7" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><section class="section" id="notes-day-05-3-8"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
+</h4>
+<article class="theorem theorem-like" id="notes-day-05-3-8-2"><h5 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">54</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-8-2-1-1">The set of rational numbers is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 54"><a href="#notes-day-05-3-8-2" title="Copy heading and permalink for Theorem 54" aria-label="Copy heading and permalink for Theorem 54">🔗</a></div></article><details id="notes-day-05-3-8-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-05-3-8-2-2-1">Let <span class="process-math">\(\mathbb{Q}_{-}\)</span> be all the negative rationals and let <span class="process-math">\(\mathbb{Q}_{+}\)</span> be all the positive rationals.  We will show that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-2">Once we see that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable, we will have an enumeration of its elements <span class="process-math">\(\{q_1,q_2,q_3,\ldots\}\text{.}\)</span>  It follows that <span class="process-math">\(\mathbb{Q}_{-}\)</span> is countable and has some enumeration <span class="process-math">\(\{p_1,p_2,p_3,\ldots \}\text{.}\)</span>  This allows us to arrange the elements of <span class="process-math">\(\mathbb{Q} = \mathbb{Q}_{-} \cup \{0\} \cup \mathbb{Q}_{+}\)</span> into an array with two rows: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(q_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(p_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-3">We can enumerate this array by snaking through the array in a way that defines a bijection from <span class="process-math">\(\mathbb{N}\)</span> to the array.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-4">This demonstrates that <span class="process-math">\(\mathbb{Q}\)</span> is countable, as claimed.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-5">To see that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable, arrange the rational numbers in a doubly-infinite array as follows: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1/1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2/1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3/1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4/1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1/2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2/2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3/2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4/2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1/3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2/3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3/3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4/3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1/4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2/4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3/4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4/4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+</table></div>. All rational numbers show up multiple times in this array.  For each rational number in the array, we throw away all copies of the rational number except the copy that is in lowest terms.  When we throw away a rational number, we shift all the entries in its row to the left to fill the gap it leaves (and the gaps they create when they shift).<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-6">This leaves us an array of rational numbers in lowest terms.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-7">By snaking through the array starting in the upper left corner and moving anti-diagonally (transverse to the array’s diagonal entries), we create an enumeration from <span class="process-math">\(\mathbb{N}\)</span> to <span class="process-math">\(\mathbb{Q}_{+}\text{.}\)</span>  This shows that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-8-2-2-8">This concludes the proof that <span class="process-math">\(\mathbb{Q}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 54.1"><a href="#notes-day-05-3-8-2-2" title="Copy heading and permalink for Proof 54.1" aria-label="Copy heading and permalink for Proof 54.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-8" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><section class="section" id="notes-day-05-3-9"><h4 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
+</h4>
+<article class="theorem theorem-like" id="notes-day-05-3-9-2"><h5 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">55</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-9-2-1-1">The set of real numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 55"><a href="#notes-day-05-3-9-2" title="Copy heading and permalink for Theorem 55" aria-label="Copy heading and permalink for Theorem 55">🔗</a></div></article><details id="notes-day-05-3-9-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-05-3-9-2-2-1">
+<div class="para">(Contradiction). Suppose <span class="process-math">\(\mathbb{R}\)</span> is countable.  Then there exists an enumeratioon <span class="process-math">\(\phi:\mathbb{N} \rightarrow \mathbb{R}\text{.}\)</span>  Let <span class="process-math">\(x_n=\phi(n)\)</span> so that</div>
+<div class="displaymath process-math" id="notes-day-05-3-9-2-2-1-4">
+\begin{equation*}
+\mathbb{R} = \{ x_1,x_2,x_3,x_4,\ldots\}\text{.}
+\end{equation*}
+</div>
+<div class="para">We are going to construct a nested sequence of closed and bounded intervals that and use the Nested Interval Principle to generate a contradiction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-2">Let <span class="process-math">\(I_1 \subseteq \mathbb{R}\)</span> be a closed and bounded interval that does not contain <span class="process-math">\(x_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-3">Let <span class="process-math">\(I_2 \subseteq I_1\)</span> be a closed and bounded interval that does not contain <span class="process-math">\(x_2\text{.}\)</span>  Why can we do this?  If <span class="process-math">\(x_2 \notin I_1\text{,}\)</span> then we can take <span class="process-math">\(I_2=I_1\text{.}\)</span>  If <span class="process-math">\(x_2 \in I_1\text{,}\)</span> then <span class="process-math">\(x_2\)</span> divides <span class="process-math">\(I_1\)</span> into two complementary closed intervals <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> with <span class="process-math">\(I_2=A \cup B\)</span> and <span class="process-math">\(A \cap B = \{x_2\}\text{.}\)</span> Take <span class="process-math">\(I_2 \subset A\)</span> so that <span class="process-math">\(a_x \notin I_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-4">Continue in this way to define closed and bounded intervals <span class="process-math">\(I_n\)</span> with <span class="process-math">\(I_n \subseteq I_{n-1}\)</span> and <span class="process-math">\(x_n \notin I_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-5">Consider <span class="process-math">\(I = \bigcap_{n=1}^{\infty} I_n\text{.}\)</span>  The Nested Interval Property tells us that <span class="process-math">\(I \subset \mathbb{R}\)</span> is nonempty.  Let <span class="process-math">\(x_0 \in I\text{.}\)</span>  The Nested Interval Property tells us that <span class="process-math">\(x_0\)</span> is a real number.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-6">Since <span class="process-math">\(\mathbb{R}\)</span> is countable, this <span class="process-math">\(x_0\)</span> is in our enumeration, so <span class="process-math">\(x_0=x_N\)</span> for some <span class="process-math">\(N \in \mathbb{N}\text{.}\)</span>  But <span class="process-math">\(x_N \notin I_N\text{,}\)</span> so <span class="process-math">\(x_=x_0 \notin I\text{.}\)</span>  This is a contradiction.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-day-05-3-9-2-2-7">Therefore, our supposition that <span class="process-math">\(\mathbb{R}\)</span> is countably infinte was false.  The opposite is true: <span class="process-math">\(\mathbb{R}\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 55.1"><a href="#notes-day-05-3-9-2-2" title="Copy heading and permalink for Proof 55.1" aria-label="Copy heading and permalink for Proof 55.1">🔗</a></div></article></details><article class="corollary theorem-like" id="notes-day-05-3-9-3"><h5 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">56</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="notes-day-05-3-9-3-1-1">The set of irrational numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 56"><a href="#notes-day-05-3-9-3" title="Copy heading and permalink for Corollary 56" aria-label="Copy heading and permalink for Corollary 56">🔗</a></div></article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-9" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-05-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 5 (10 February 2026)"><a href="#notes-day-05" title="Copy heading and permalink for Section: Day 5 (10 February 2026)" aria-label="Copy heading and permalink for Section: Day 5 (10 February 2026)">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="notes-day-04.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-06.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
