@@ -2404,6 +2404,87 @@ var ptx_lunr_docs = [
   "body": " Without loss of generality, we can assume that for . Then so is bounded by .  To show that is closed we argue indirectly. Suppose is a Cauchy sequence with limit . This means that is a limit point of . We need to show .  Suppose not. Suppose . Then for all . (The inequality equals zero precisely when .). Define   The closer is to , the smaller the radius of . The collection is an open cover of . By the Heine-Borel property, this open cover has a finite subcover, .  Consider , which is the smallest radius of the open sets in our finite subcover. Since , there is an such that for . But these are outside every . So out purported finite subcover does not cover ! This is a contradicion.  Consequently, is compact.  "
 },
 {
+  "id": "notes-day-17",
+  "level": "1",
+  "url": "notes-day-17.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 17 (7 April 2026)",
+  "body": " Day 17 (7 April 2026)   This is an outline of the plans for Day 17 of the class.      Tuesday 4\/7  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: Thursday 2 April  review session: Monday 3\/30 at 6pm, meet at classroom  New material      Compactness    A set is (sequentially) compact if every sequences in has a subsequence that converges in .      A set is (sequentially) compact if and only if is closed and bounded.     Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.    Note writing `` has the Heine-Borel property'' means that ``every open cover of has a finite subcover.''   ( ) Suppose has the property that every open cover of has a finite subcover. This is called the Heine-Borel property. We want to show that is sequentially compact. We will do this by showing that is closed and bounded.  To show that is bounded, consider the open sets These are the neighborhoods of . Then the collection is an open cover of . Since has the Heine-Borel property, this open cover has a finite subcover , noting that for all .       Without loss of generality, we can assume that for . Then so is bounded by .  To show that is closed we argue indirectly. Suppose is a Cauchy sequence with limit . This means that is a limit point of . We need to show .  Suppose not. Suppose . Then for all . (The inequality equals zero precisely when .). Define   The closer is to , the smaller the radius of . The collection is an open cover of . By the Heine-Borel property, this open cover has a finite subcover, .  Consider , which is the smallest radius of the open sets in our finite subcover. Since , there is an such that for . But these are outside every . So out purported finite subcover does not cover ! This is a contradicion.  Consequently, is compact.     The Heine-Borel Property   The singleton set has the Heine-Borel property  Let and consider , the singleton set.  What would an open cover of look like. Consider where . Then . The collection is an open cover of .  Suppose is an open cover of . This means So for some . Let's define . Then is a subset of our open cover of . And because is a finite collection, it is a finite subcover of .  Note that we've just proved that has the Heine-Borel property. That is to say, is a compact set.    A finite set has the Heine-Borel property  Let and consider . Suppose is an open cover of . This means Let's see how to extract a finite subcover of from . Take . Since is an open cover of , . This means for some . Set this open set aside for our finite subcover, then consider . This means for some . Add this set to our collection of open set, then repeat this process for each that remains to find containing . When we exhaust the numbers in , we end up with a collection of at most open sets . This is a finite subcover of .  This proves that has the Heine-Borel property. That is to say, is a compact set.    The open interval does not have the Heine-Borel property  Let . Let This is an open cover of because given any , there is an with . Thus , an open set in the collection .  If had the Heine-Borel property, would have a finite subcover, . But then the intervals in the subcover would have a smallest left endpoint, . By the Archimedean Property of the reals, this leaves real numbers between 0 and uncovered! Thus could not be a cover of .  This shows that does not have the Heine-Borel property. That is to say, is not compact.                "
+},
+{
+  "id": "notes-day-17-3-2-2",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-2-2",
+  "type": "Definition",
+  "number": "194",
+  "title": "",
+  "body": "  A set is (sequentially) compact if every sequences in has a subsequence that converges in .   "
+},
+{
+  "id": "notes-day-17-3-2-3",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-2-3",
+  "type": "Theorem",
+  "number": "195",
+  "title": "",
+  "body": "  A set is (sequentially) compact if and only if is closed and bounded.   "
+},
+{
+  "id": "notes-day-17-3-2-4",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-2-4",
+  "type": "Theorem",
+  "number": "196",
+  "title": "Heine-Borel.",
+  "body": " Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.   "
+},
+{
+  "id": "notes-day-17-3-2-6",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-2-6",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " ( ) Suppose has the property that every open cover of has a finite subcover. This is called the Heine-Borel property. We want to show that is sequentially compact. We will do this by showing that is closed and bounded.  To show that is bounded, consider the open sets These are the neighborhoods of . Then the collection is an open cover of . Since has the Heine-Borel property, this open cover has a finite subcover , noting that for all .  "
+},
+{
+  "id": "notes-day-17-3-3-1",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-3-1",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Without loss of generality, we can assume that for . Then so is bounded by .  To show that is closed we argue indirectly. Suppose is a Cauchy sequence with limit . This means that is a limit point of . We need to show .  Suppose not. Suppose . Then for all . (The inequality equals zero precisely when .). Define   The closer is to , the smaller the radius of . The collection is an open cover of . By the Heine-Borel property, this open cover has a finite subcover, .  Consider , which is the smallest radius of the open sets in our finite subcover. Since , there is an such that for . But these are outside every . So out purported finite subcover does not cover ! This is a contradicion.  Consequently, is compact.  "
+},
+{
+  "id": "notes-day-17-3-4-2",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-4-2",
+  "type": "Example",
+  "number": "197",
+  "title": "The singleton set has the Heine-Borel property.",
+  "body": " The singleton set has the Heine-Borel property  Let and consider , the singleton set.  What would an open cover of look like. Consider where . Then . The collection is an open cover of .  Suppose is an open cover of . This means So for some . Let's define . Then is a subset of our open cover of . And because is a finite collection, it is a finite subcover of .  Note that we've just proved that has the Heine-Borel property. That is to say, is a compact set.  "
+},
+{
+  "id": "notes-day-17-3-4-3",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-4-3",
+  "type": "Example",
+  "number": "198",
+  "title": "A finite set has the Heine-Borel property.",
+  "body": " A finite set has the Heine-Borel property  Let and consider . Suppose is an open cover of . This means Let's see how to extract a finite subcover of from . Take . Since is an open cover of , . This means for some . Set this open set aside for our finite subcover, then consider . This means for some . Add this set to our collection of open set, then repeat this process for each that remains to find containing . When we exhaust the numbers in , we end up with a collection of at most open sets . This is a finite subcover of .  This proves that has the Heine-Borel property. That is to say, is a compact set.  "
+},
+{
+  "id": "notes-day-17-3-4-4",
+  "level": "2",
+  "url": "notes-day-17.html#notes-day-17-3-4-4",
+  "type": "Example",
+  "number": "199",
+  "title": "The open interval <span class=\"process-math\">\\((0,1)\\)<\/span> does not have the Heine-Borel property.",
+  "body": " The open interval does not have the Heine-Borel property  Let . Let This is an open cover of because given any , there is an with . Thus , an open set in the collection .  If had the Heine-Borel property, would have a finite subcover, . But then the intervals in the subcover would have a smallest left endpoint, . By the Archimedean Property of the reals, this leaves real numbers between 0 and uncovered! Thus could not be a cover of .  This shows that does not have the Heine-Borel property. That is to say, is not compact.  "
+},
+{
   "id": "activity-01-intro-activity",
   "level": "1",
   "url": "activity-01-intro-activity.html",
