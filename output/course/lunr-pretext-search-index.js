@@ -2215,6 +2215,33 @@ var ptx_lunr_docs = [
   "body": "  A set is compact if every sequences in has a subsequence that converges in .   "
 },
 {
+  "id": "notes-day-16",
+  "level": "1",
+  "url": "notes-day-16.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 16 (26 March 2026)",
+  "body": " Day 16 (26 March 2026)   This is an outline of the plans for Day 15 of the class.      THursday 3\/26  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: Thursday 2 April  review session: Monday 3\/30 at 6pm, meet at classroom  New material      Compactness    A set is compact if every sequences in has a subsequence that converges in .     is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a sonsequence that converges in . That means        "
+},
+{
+  "id": "notes-day-16-3-2-2",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-2-2",
+  "type": "Definition",
+  "number": "182",
+  "title": "",
+  "body": "  A set is compact if every sequences in has a subsequence that converges in .   "
+},
+{
+  "id": "notes-day-16-3-2-3",
+  "level": "2",
+  "url": "notes-day-16.html#notes-day-16-3-2-3",
+  "type": "Example",
+  "number": "183",
+  "title": "<span class=\"process-math\">\\([0,1]\\)<\/span> is compact.",
+  "body": " is compact  Consider . We want to show that is compact.  Let be a sequence. We will show that has a sonsequence that converges in . That means  "
+},
+{
   "id": "activity-01-intro-activity",
   "level": "1",
   "url": "activity-01-intro-activity.html",

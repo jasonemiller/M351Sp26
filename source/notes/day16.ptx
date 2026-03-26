@@ -13,14 +13,14 @@
   <handout>
 
   <section>
-    <title>Tuesday 3/23 </title>
+    <title>THursday 3/26 </title>
 
     <p>Today's agenda:
       <ol>
         <li>Roll</li>
         <li>Next Homework due ... : see Canvas</li>
         <li>Midterm:  Thursday 2 April</li>
-        <li>review session?</li>
+        <li>review session: Monday 3/30 at 6pm, meet at classroom</li>
         <li>New material</li>
       </ol></p>
   </section>
@@ -28,114 +28,7 @@
 <!-- ========================================   -->
 
 <section>
-<title>Before break ...</title>
-
-<p><term>Open set</term> of reals.</p>
-
-<definition>
-  <title>Open Set</title>
-  <statement>
-    <p>A set <m>U \subseteq \mathbb{R}</m> is called an <term>open set</term> if for every <m>x \in U</m> there is an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x_0)  \subset U</m>.</p>
-  </statement>
-</definition>
-
-<p><term>Closed sets</term> of reals, <term>limit point</term> of a set, and <term>isolated point</term> of a set.</p>
-
-<definition>
-  <title>Closed Set</title>
-  <statement>
-    <p>A set <m>F \subseteq \mathbb{R}</m> is called a <term>closed set</term> if it contains all its limit points.</p>
-  </statement>
-</definition>
-
-<p>Canonical example, a closed and bounded interval: <m>[a,b]=\{x \in \mathbb{R} \, : \, a \leq c \leq b\}</m>.</p>
-
-<p>Other examples of close sets:  the real line <m>\mathbb{R}</m>, the empty set, a finite set of points.</p>
-
-</section>
-
-<!-- ============================ -->
-
-<section>
-  <title>Closure</title>
-
-<definition>
-  <statement>
-<p>  Let <m>A \subseteq \mathbb{R}</m>.  If <m>L</m> is the set of limit points of <m>A</m>, then the <term>closure of <m>A</m></term>  is <m>\overline{A} = A \cup L</m>.</p>
-  </statement>
-</definition>
-
-<theorem>
-  <statement>
-    <p>If <m>A \subseteq \mathbb{R}</m>, then <m>\overline{A}</m> is a closed set.</p>
-  </statement>
-</theorem>
-
-<p>If this theorem is true, we will day that the set <m>\overline{A}</m> is the ``smallest closed set that contains <m>A</m>.''</p>
-
-<proof>
-  <p>Let <m>L</m> denote the limit points of <m>A</m>.  Then <m>\overline{A} = A \cup L</m>.</p>
-  <p>We must show that <m>\overline{A}</m> contains all its limit points.  Let <m>x</m> be a limit point of <m>\overline{A}</m>.  We must show <m>x \in \overline{A}</m>.</p>
-  <p>Since <m>x</m> is a limit point of <m>\overline{A}</m>, there is a sequence <m>(x_n) \subset \overline{A}=A \cup L</m> that converges to <m>x</m>.  We will show that <m>x \in L \subset \overline{A}</m>.  </p>
-  <p>We will do so by showing there is exists a sequence (to be named later) in <m>A</m> that converges to <m>x</m>.</p>
-  <p>One of two things can be true of the sequence <m>(x_n)</m>:  it is either eventually in <m>A</m>, or it is not eventually in <m>A</m>.  The former means that there is an <m>N</m> for which is <m>k \geq N</m> then <m>x_k \in A</m>.  The latter means that for any <m>N</m> we can find a <m>k \geq N</m> for which <m>x_k \notin A</m>. </p>
-  <p>Consider the case where <m>(x_n)</m> is eventually in <m>A</m>.  This means the entire tail of <m>(x_n)</m> is in <m>A</m>, so that tail is a sequence in <m>A</m> that converges to <m>x</m>.  Thus <m>x \in L</m> by Theorem 3.2.5. of the textbook.</p>
- <p workspace="3in">Now, consider the alternative case.  If <m>(x_n) \subset \overline{A}</m> is not eventually in <m>A</m>, then there is a subsequence <m>(x_{n_k})</m> of <m>(x_n)</m> for which <m>x_{n_k} \in L \setminus A</m>.</p>
-</proof>
-</section>
-<section>
-  <proof>
-  <p workspace="2in">Define a new sequence <m>(y_k)</m> by taking <m>y_k=x_{n_k} \in L \setminus A</m>.  Since each <m>y_k</m> is a limit point of <m>A</m>, we can construct a sequence <m>(x_{k,j})_{j=1}^{\infty} \subset A</m> that converges to <m>y_k</m>, for each <m>k</m>, in the following way.  For <m>\epsilon=1/n</m>, we know that each <m>V_{\epsilon}(y_k)</m> contains a point of <m>A</m> that is different from <m>y_k</m>.  Call this point <m>x_{n,k}</m>.  For each <m>k</m>, this defines a sequence <m>(x_{n,k})</m> that converges to <m>y_k</m> as <m>n</m> grows without bound.</p>
-  <p>Let <m>z_k=x_{k,k} \in A</m>.  This defines a sequence <m>(z_k) \subset A</m>.  We claim that <m>(z_k) \rightarrow x</m>.  Consequently, <m>x \in L</m> by textbook theorem 3.2.5.</p>
-  <p>To see that <m>(z_k) \rightarrow x</m>, let <m>\epsilon &gt; 0</m> be given.  Because <m>(x_n)</m> converges to <m>x</m>, and because <m>(y_k)</m> is a subsequence of <m>(x_n)</m>, it must also converge to <m>x</m>.  Therefore, there is an <m>N_1</m> for which if <m>k &gt; N_1</m> then <m>|y_k-x| &lt; \epsilon/2</m>.   By construction, there is an <m>N_2</m> for which <m>|z_{n} - y_k| &lt; 1/n &lt; \epsilon/2</m> for all <m>n &gt; N_2</m>.  Let <m>N=\max\{N_1,N_2\}</m>, and let <m>n &gt; N</m>.  Then
-    <md>
-      <mrow>|z_{n} - x| \amp = |z_{n} - y_n + y_n -x| </mrow>
-<mrow> \amp &lt; \epsilon/w + \epsilon/2 </mrow>
-<mrow> \amp = \epsilon </mrow>
-      </md>
-      .  This shows that <m>x</m> is a limit point of <m>A</m>, as desired.</p>
-</proof>
-
-</section>
-
-<section>
-<title>Complements</title>
-
-<p>Open sets and closed sets have this important relationships.</p>
-
-<theorem>
-  <statement><p>A set <m>U \subset \mathbb{R}</m> is open if and only if <m>U^c</m> is closed.  Similarly, a set <m>F \subset \mathbb{R}</m> is closed if and only if <m>F^c</m> is open.</p></statement>
-</theorem>
-
-
-<proof>
-<p workspace="2in">Suppose <m>U \subset \mathbb{R}</m> is open.  We musth show <m>U^c</m> is closed. That means we must show that <m>U^c</m> contains all its limit points.  Let <m>x</m> be a limit point of <m>U^c</m>.  Then for every <m>\epsilon &gt; 0</m>, the set <m>V_{\epsilon}(x)</m> contains a point of <m>U^c</m> that is different from <m>x</m>.  Were <m>x \in U</m>,  then there would be an <m>\epsilon &gt; 0</m> for which this was impossible!  Therefore, <m>x \in U^c</m>.</p>
-
-<p> Suppose <m>U^c</m> is closed.  We will show <m>U</m> must be open.  Let <m>x \in U</m>.  We must find an <m>\epsilon &gt; 0</m>  for which <m>V_{\epsilon}(x) subset U</m>.  Because <m>U^c</m> is closed, <m>x</m> is not a limit point of <m>U^c</m>; it is isolated from <m>U^c</m>, which means there is an <m>\epsilon &gt; 0</m>  for which <m>V_{\epsilon}(x)</m> does not intersect <m>U^c</m>.  This means <m>V_{\epsilon}(x) \subset U</m>, as desired.</p>
-
-<p>This proves the first statement.</p>
-<p>To prove the second statement, note that if <m>A \subset \mathbb{R}</m> is a set, the <m>(A^c)^c=A</m>.  So we can prove the second statement using the first and this fact abo complements.</p>
-</proof>
-
-</section>
-
-<section>
-<title>Complements</title>
-
-<p>A closing fact (haha!) about closed sets can be proved using DeMorgan's Laws and Theorem 3.2.3, the analogous result for open sets.</p>
-
-  <theorem>
-    <statement><p>
-      <ol>
-        <li>The union of a finite number of closed sets is a closed set.</li>
-        <li>The intersection of an arbitrary number of closed sets is a closed set.</li>
-      </ol></p>
-      </statement>
-  </theorem>
-
-<p>Note that Theorem 3.2.3 can be summarized by saying that open sets like unions; this theorem can be summarized by saying that closed sets like intersections.</p>
-
-<p>Next, we talk about compact sets.</p>
+<title>Compactness</title>
 
 <definition>
   <statement>
@@ -143,7 +36,16 @@
   </statement>
 </definition>
 
+<example>
+  <title><m>[0,1]</m> is compact</title>
+  <p>Consider <m>K=[0,1] \subset \mathbb{R}</m>.  We want to show that <m>K</m> is compact.</p>
+  <p>Let <m>(x_n) \subset K</m> be a sequence.  We will show that <m>(x_n)</m> has a sonsequence that converges in <m>K</m>. That means </p>
+</example>
+
+
 </section>
+
+
 
 <!-- ============================ -->
 <!-- ============================ -->
