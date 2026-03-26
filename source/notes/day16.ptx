@@ -291,7 +291,12 @@ Since <m>U_m</m> is open, there in an <m>\epsilon &gt; 0</m> for which <m>V_{\ep
   </p>
   <p>The closer <m>x</m> is to <m>y</m>, the smaller the radius of <m>\mathcal{O}_x</m>.  The collection <m>\{\mathcal{O}_x\}_{x \in K}</m> is an open cover of <m>K</m>.  By the Heine-Borel property, this open cover has a finite subcover, <m>\{\mathcal{O}_{x_i}\}_{i=1}^{n}</m>.
   </p>
-  
+  <p>
+    Consider <m>\epsilon_0 = \min\{\frac{1}{2}|x_i-y|\}</m>, which is the smallest radius of the open sets in our finite subcover.  Since <m>(y_n) \rightarrow y</m>, there is an <m>N &gt; 0</m> such that <m>|y-n-y| &lt; \epsilon_0</m> for <m>n &gt; N</m>.  But these <m>y_n</m> are outside every <m>\mathcal{O}_{x_i}</m>.  So out purported finite subcover does not cover <m>K</m>!  This is a contradicion.
+  </p>
+  <p>
+    Consequently, <m>K</m> is compact.
+  </p>
   </proof>
 
 
