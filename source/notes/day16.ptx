@@ -51,37 +51,37 @@
 <example>
   <title>Series</title>
   <p>Consider the infinite collection of numbers <m>A=\{a_1, a_2,a_3,\ldots,\}</m>.  Here we are using subscripts to index the numbers in this collection, and the index set is <m>\mathbb{N}</m>.  We can use the index to express <m>A</m> as follows:
-    <me>
+    <md>
       <mrow>A=\{a_i \, : \, i \in \mathbb{N}\}.</mrow>
-    </me></p>
+    </md></p>
   <p>When we learned about sigma-notation in Calculus 1, we learned to write the infinite sum of the numbers in <m>A</m> as
-      <me>
+      <md>
       <mrow>\displaystye \sum_{i=1}^{\infty} a_i.</mrow>
-    </me>
+    </md>
 We can write the same sum using the index set <m>I</m> as follows:
-    <me>
+    <md>
       <mrow>\displaystye \sum_{i=1}^{\infty} a_i \displaystye \sum_{i \in \mathbb{N}} a_i.</mrow>
-    </me></p>
+    </md></p>
 </example>
 
 <example>
   <title>Collections</title>
   <p>Suppose we have a mathematical object <m>X_{\lambda}</m>.  (This object cold be a number, or a set, or a function, or something else.). Here <m>/lambda</m> is going to serve as an index.  Let <m>\Lambda</m> be our index set.  Then the set (or collection) of all our objects can be written
-    <me>
+    <md>
       <mrow>X = \{ x_{\lambda} \, : \, \lambda \in \Lambda\}.</mrow>
-    </me></p>
+    </md></p>
   <p>If the objects are numbers, we could write their sum as
-    <me>
+    <md>
       <mrow>\sum_{\lambda \in \Lambda} X_{\lambda}.</mrow>
-    </me></p>
+    </md></p>
  <p>If the objects are sets, we could write their union as
-    <me>
+    <md>
       <mrow>\cup_{\lambda \in \Lambda} X_{\lambda}.</mrow>
-    </me>
+    </md>
   and their intersection as 
-    <me>
+    <md>
       <mrow>\cap_{\lambda \in \Lambda} X_{\lambda}.</mrow>
-    </me></p>
+    </md></p>
 </example>
 
 </section>
