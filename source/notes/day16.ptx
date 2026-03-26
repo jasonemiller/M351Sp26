@@ -214,7 +214,7 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
 <example>
   <title>An open cover of <m>[0,1]</m> with a finite subcover</title>
   <p>Consider <m>V_{1/2}(x)</m> and <m>\mathcal{U} = \{ V_{1/2}(x) \, : \, x \in [0,1]\}</m>.  This is an open cover of <m>[0,1]</m>.</p>
-  <p workspace="2in">One finite subcover of <m>[0,1]</m> is
+  <p workspace="1in">One finite subcover of <m>[0,1]</m> is
     <md>
       <mrow>\{V_{1/2}(1/4), V_{1/2}(1/2), V_{1/2}(3/4)\}</mrow>
     </md></p>
@@ -236,7 +236,6 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
   <p>
     Suppose there is no such <m>n \in \mathbb{N}</m>.  Then <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is not a cover for any value of <m>n \in \mathbb{N}</m>.
   </p>
-  <note>
     <p>Because 
       <md>
         <mrow>U_1 \subseteq U_1 \cup U_2 \subseteq U_1 \cup U_2 \cup U_3 \subseteq \cdots \subseteq \bigcup_{i=1}^N U_i</mrow>
@@ -246,7 +245,6 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
         <mrow>K \setminus U_1 \supseteq K \setminus (U_1 \cup U_2) \supseteq K \setminus (U_1 \cup U_2 \cup U_3) \supseteq \cdots \supseteq K \setminus \large( \bigcup_{i=1}^N U_i \large). </mrow>
       </md>
     </p>
-  </note>
   <p>
     Since <m>\{U_i \, : \, i=1, 2, 3,\ldots,n\}</m> is not a cover for <m>K</m>, the set <m>K \setminus \bigcup_{i=1}^n U_i</m> is not empty.  Choose <m>x_n \in K \setminus  \bigcup_{i=1}^n U_i</m>.  Doing this for each <m>n \in\mathbb{N}</m> creates a sequence <m>(x_n) \subset K</m>.  
   </p>
@@ -257,15 +255,44 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
   Because <m>\{U_i\}</m> is a cover of <m>K</m>, <m>x \in U_m</m> for some <m>m \in \mathbb{N}</m>.
 </p>
 <p>
-  Notice that the tail of the sequence <m>(x_n)_{n=m}^{\infty}</m> is not in <m>U_m</m> because none of the points are in <m>\displaystyle \bigcup_{i=1}^N U_i</m> for <m>N \geq m</m>.
+  Note that <m>x_m \in K/(\bigcup_{i=1}^m U_i)</m> so <m>x_m \notin U_m</m>.  Also, <m>x_{\ell} \notin U_{m}</m> when <m>\ell \geq m</m>.  This means that <m>(x_n)_{n=m}^{\infty}</m>, the tail of the sequence, is not in <m>U_m</m>.
 </p>
 <p>
-  
+Since <m>U_m</m> is open, there in an <m>\epsilon &gt; 0</m> for which <m>V_{\epsilon}(x) \subseteq U_m</m>.  Since   <m>(x_{n_k}) ]rightarrow x</m>, there is an <m>N \in \mathbb{N}</m> for which <m>k &gt; N</m> implies that <m>|x_{n_k} - x| &lt; \epsilon</m>.  That is to say, if <m>k &gt; N</m>, when <m>x_{n_k} \in V_{\epsilon}(x)</m>.
+</p>
+<p>
+  But this is a contradiction.  So the claim holds.
 </p>
   <p>
-   (<m>\Leftarrow</m>) 
+   (<m>\Leftarrow</m>) Suppose <m>K</m> has the property that every open cover of <m>K</m> has a finite subcover.  This is called the Heine-Borel property.  We want to show that <m>K</m> is sequentially compact.  We will do this by showing that <m>K</m> is closed and bounded.
   </p>
-</proof>
+  <p>
+    To show that <m>K</m> is bonded, consider the open sets
+    <md>
+      <mrow> V_1(x)\amp =\{y \in \mathbb{R}\, : \, |x-y| &lt; 1\} </mrow>.
+    </md>
+    These are the <m>1-</m>neighborhoods of <m>x</m>.  Then the collection <m>\{v_1(x)\}_{x \in K}</m> is an open cover of <m>K</m>.  Since <m>K</m> has the Heine-Borel property, this open cover has a finite subcover <m>\{V_1(x_k)\}_{k=1}^n</m>, noting that <m>x_k \in K</m> for all <m>k</m>.
+  </p>
+  <p>
+    Without loss of generality, we can assume that <m>x_i &lt; x_{i+1}</m> for <m>1=1,2,3,\ldtos,N-1</m>.  Then
+    <md>
+      <mrow> x_1 -1 \amp &lt; x &lt; x_n+1 </mrow>
+    </md>
+    so <m>K</m> is bounded by <m>\max\{|x_1-1|,x_{n}+1|\}</m>.
+  </p>
+  <p>
+    To show that <m>K</m> is closed we argue indirectly.  Suppose <m>(y_k) \subset K</m> is a Cauchy sequence with limit <m>y</m>.  This means that <m>y</m> is a limit point of <m>K</m>.  We need to show <m>y \in K</m>.
+  </p>
+  <p workspace="2in">
+    Suppose not.  Suppose <m>y \notin K</m>.  Then <m>|x-y| &gt; 0</m> for all <m>x \in K</m>.  (The inequality equals zero precisely when <m>x=y</m>.). Define
+    <md>
+      <mrow>\mathcal{O}_x \amp =\{u \in K \, : \, |u-x| &lt; \frac{1}{2}|x-y|\}</mrow>
+    </md>
+  </p>
+  <p>The closer <m>x</m> is to <m>y</m>, the smaller the radius of <m>\mathcal{O}_x</m>.  The collection <m>\{\mathcal{O}_x\}_{x \in K}</m> is an open cover of <m>K</m>.  By the Heine-Borel property, this open cover has a finite subcover, <m>\{\mathcal{O}_{x_i}\}_{i=1}^{n}</m>.
+  </p>
+  
+  </proof>
 
 
 </section>
