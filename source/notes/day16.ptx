@@ -173,7 +173,7 @@ We can write the same sum using the index set <m>I</m> as follows:
 <!-- ========================================   -->
 
 <section>
-<title>Heine-Borel</title>
+<title>Open Covers</title>
 
 <p>Let <m>A \subseteq \mathbb{R}</m>.  Let <m>U_i \subset \mathbb{R}</m> be open for <m>i \in I</m> where <m>I</m> is some index set.  We say the collection <m>\mathcal{U}=\{U_i \, : \, i \in I\}</m> is an <term>open cover</term> for <m>A</m> if
 <md>
@@ -203,6 +203,13 @@ we call <m>\{I_i \, :\, i \in I_0\}</m> a <term>finite subcover</term> of <m>A</
       <mrow>\displaystyle \bigcup_{x \in [a,b]} U_x \amp = \bigcup_{x \in [a,b]} V_{\epsilon}(x) = (a-\epsilon,b+\epsilon) \supset [a,b]</mrow>.
     </md></p>
 </example>
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Heine-Borel</title>
 
 <example>
   <title>An open cover of <m>[0,1]</m> with a finite subcover</title>
