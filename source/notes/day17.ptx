@@ -115,7 +115,7 @@
     What would an open cover of <m>F</m> look like.  Consider <m>I=(a,b)</m> where <m>a &lt; x &lt; b b</m>.  Then <m>x \in I</m>.  The collection <m>\mathcal{U}=\{I\}</m> is an open cover of <m>F</m>.
   </p>
   <p>
-    Suppose <m>\mathcal{U}=\{U_{\lambda}\,:\, \lambda \in \Lambda }</m> is an open cover of <m>F</m>.   This means
+    Suppose <m>\mathcal{U}=\{U_{\lambda}\,:\, \lambda \in \Lambda \}</m> is an open cover of <m>F</m>.   This means
     <md>
       <mrow>F \amp \subset \bigcup_{\lambda \in \Lambda} U_{\lambda}.</mrow>
     </md>
@@ -130,11 +130,11 @@
     <title>A finite set has the Heine-Borel property</title>
         
   <p>
-    Let <m>x_i \in \mathbb{R}</m> and consider <m>F=\{x_1,x_2,x_3,\ldots,x_n\}</m>.  Suppose <m>\mathcal{U}=\{U_{\lambda}\,:\, \lambda \in \Lambda }</m> is an open cover of <m>F</m>.   This means
+    Let <m>x_i \in \mathbb{R}</m> and consider <m>F=\{x_1,x_2,x_3,\ldots,x_n\}</m>.  Suppose <m>\mathcal{U}=\{U_{\lambda}\,:\, \lambda \in \Lambda \}</m> is an open cover of <m>F</m>.   This means
     <md>
       <mrow>F \amp \subset \bigcup_{\lambda \in \Lambda} U_{\lambda}.</mrow>
     </md>
-    Let's see how to extract a finite subcover of <m>F</m> from <m>\mathcal{U}</m>.  Take <m>x_1 \in F</m>.  Since <m>\mathcal{U}</m> is an open cover of <m>F</m>, <m>x_1 \in \bigcup_{\lambda \in \Lambda} U_{\lambda}</m>.  This means <m>x_1 \in U_{\lambda_1}</m> for some <m>\lambda_1 \in \Lambda</m>.  Set this open set aside for our finite subcover, then consider <m>x_2 \in \bigcup_{\lambda \in \Lambda} U_{\lambda}</m>.  This means <m>x_2 \in U_{\lambda_2}</m> for some <m>\lambda_2 \in \Lambda</m>.  Add this set to our collection of open set, then repeat this process for each <m>x_k</m> that remains to find <m>U_{\lambda_k}</m> containing <m>x_k</m>.  When we exhaust the numbers in <m>F</m>, we end up with a collection of at most <m>n</m> open sets <m>\{ U_{\lambda_k} \, : \, 1 \lewq k \leq n\}</m>.  This is a finite subcover of <m>F</m>.
+    Let's see how to extract a finite subcover of <m>F</m> from <m>\mathcal{U}</m>.  Take <m>x_1 \in F</m>.  Since <m>\mathcal{U}</m> is an open cover of <m>F</m>, <m>x_1 \in \bigcup_{\lambda \in \Lambda} U_{\lambda}</m>.  This means <m>x_1 \in U_{\lambda_1}</m> for some <m>\lambda_1 \in \Lambda</m>.  Set this open set aside for our finite subcover, then consider <m>x_2 \in \bigcup_{\lambda \in \Lambda} U_{\lambda}</m>.  This means <m>x_2 \in U_{\lambda_2}</m> for some <m>\lambda_2 \in \Lambda</m>.  Add this set to our collection of open set, then repeat this process for each <m>x_k</m> that remains to find <m>U_{\lambda_k}</m> containing <m>x_k</m>.  When we exhaust the numbers in <m>F</m>, we end up with a collection of at most <m>n</m> open sets <m>\{ U_{\lambda_k} \, : \, 1 \leq k \leq n\}</m>.  This is a finite subcover of <m>F</m>.
   </p>
   <p>
     This proves that <m>F</m> has the Heine-Borel property.  That is to say, <m>\{x_1, x_2, x_3, \ldots, x_n\}</m> is a compact set.
