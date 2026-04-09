@@ -2500,7 +2500,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Day 18 (9 April 2026)",
-  "body": " Day 18 (9 April 2026)   This is an outline of the plans for Day 18 of the class.      Thursday 4\/9  Today's agenda:  Roll  Next Homework due today : see Canvas  New material      Functional Limits  In Calculus 1, we learn about the concepts of continuity of a function and differentiability of a function . Both these concepts require the use of functional limits.   The central idea of a functional limit is this:    Functional Limit   Let and let be a limit point of the domain . We say that provided that, for all ,there exists a such that whenever (and ) it follows that .        This definition has a topological version.   Functional Limit: Topological Version   Let and let be a limit point of the domain . We say that provided that, for every neighborhood of there exists a neighborhood of with the property that for all different from (with ) it follows that .     Limit of a linear function  Prove that .       Limit of a quadratic function  Prove that .       Limit of a quadratic function  Prove that .     Sequential Criterion    Given a function and a limit point , the following two statements are equivalent:        For all sequences satisfying and , it follows that .        ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we can find an for which implies .  Let be a sequence satisfying . And let be given.                "
+  "body": " Day 18 (9 April 2026)   This is an outline of the plans for Day 18 of the class.      Thursday 4\/9  Today's agenda:  Roll  Next Homework due today : see Canvas  New material      Functional Limits  In Calculus 1, we learn about the concepts of continuity of a function and differentiability of a function . Both these concepts require the use of functional limits.   The central idea of a functional limit is this:    Functional Limit   Let and let be a limit point of the domain . We say that provided that, for all ,there exists a such that whenever (and ) it follows that .        This definition has a topological version.   Functional Limit: Topological Version   Let and let be a limit point of the domain . We say that provided that, for every neighborhood of there exists a neighborhood of with the property that for all different from (with ) it follows that .     Limit of a linear function  Prove that .       Limit of a quadratic function  Prove that .       Limit of a quadratic function  Prove that .     Sequential Criterion    Given a function and a limit point , the following two statements are equivalent:        For all sequences satisfying and , it follows that .         ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we want to be able find an for which implies .  Let be a sequence satisfying . And let be given. Since , we know there is a for which implies that .  We invoke the definition of sequential convergence of with . There is an for which means . This lets us invoke the given (1) to conclude that , as desired.  ( ). Suppose that the second statement is true. We must show that, given any we can find a for which implies .  The book proves the contrapositive by contradiction! That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction. Here's how that goes.  Suppose (2) is true. For (1) to be false means there is at least one for which no gets close enough to to guarantee . This means there will always be at least one input with and with .  Consider . For each , let be the input with and with . This gives us a sequence that converges to at the same time that the sequence does not converge to . But this contradicts (2), which we took to be true. Therefore, (1) cannot be false at the same time (2) is true. Therefore (2) must be false. We conclude that (2) implies (1).      Useful Corollaries   Algebraic Limit Theorem for Functional Limits   Let and be functions defined on a domain , and assume and for some limit point of . Then    for all                , provided         Divergence Criterion for Functional Limits   Let be a function defined on , and let be a limit point of . If there exists two sequences and in with and and but then we can conclude that the function limit does not exist.       Continuous Functions    Continuity at a point   A function is continuous at a point if, for all there exists a such that whenever (and ) it follows that .    Note here that the value of depends on both and , so we write .   Continuous n a set   If is continuous at every point in the domain we say is continuous on .         "
 },
 {
   "id": "notes-day-18-3-2-2",
@@ -2566,13 +2566,49 @@ var ptx_lunr_docs = [
   "body": "  Given a function and a limit point , the following two statements are equivalent:        For all sequences satisfying and , it follows that .      "
 },
 {
-  "id": "notes-day-18-3-6-3",
+  "id": "notes-day-18-3-6-4",
   "level": "2",
-  "url": "notes-day-18.html#notes-day-18-3-6-3",
+  "url": "notes-day-18.html#notes-day-18-3-6-4",
   "type": "Proof",
   "number": "1",
   "title": "",
-  "body": " ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we can find an for which implies .  Let be a sequence satisfying . And let be given.  "
+  "body": " ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we want to be able find an for which implies .  Let be a sequence satisfying . And let be given. Since , we know there is a for which implies that .  We invoke the definition of sequential convergence of with . There is an for which means . This lets us invoke the given (1) to conclude that , as desired.  ( ). Suppose that the second statement is true. We must show that, given any we can find a for which implies .  The book proves the contrapositive by contradiction! That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction. Here's how that goes.  Suppose (2) is true. For (1) to be false means there is at least one for which no gets close enough to to guarantee . This means there will always be at least one input with and with .  Consider . For each , let be the input with and with . This gives us a sequence that converges to at the same time that the sequence does not converge to . But this contradicts (2), which we took to be true. Therefore, (1) cannot be false at the same time (2) is true. Therefore (2) must be false. We conclude that (2) implies (1).  "
+},
+{
+  "id": "cor-alglimthmfcn",
+  "level": "2",
+  "url": "notes-day-18.html#cor-alglimthmfcn",
+  "type": "Corollary",
+  "number": "207",
+  "title": "Algebraic Limit Theorem for Functional Limits.",
+  "body": " Algebraic Limit Theorem for Functional Limits   Let and be functions defined on a domain , and assume and for some limit point of . Then    for all                , provided       "
+},
+{
+  "id": "cor-divcrit",
+  "level": "2",
+  "url": "notes-day-18.html#cor-divcrit",
+  "type": "Corollary",
+  "number": "208",
+  "title": "Divergence Criterion for Functional Limits.",
+  "body": " Divergence Criterion for Functional Limits   Let be a function defined on , and let be a limit point of . If there exists two sequences and in with and and but then we can conclude that the function limit does not exist.   "
+},
+{
+  "id": "def-cts",
+  "level": "2",
+  "url": "notes-day-18.html#def-cts",
+  "type": "Definition",
+  "number": "209",
+  "title": "Continuity at a point.",
+  "body": " Continuity at a point   A function is continuous at a point if, for all there exists a such that whenever (and ) it follows that .   "
+},
+{
+  "id": "def-ctsonA",
+  "level": "2",
+  "url": "notes-day-18.html#def-ctsonA",
+  "type": "Definition",
+  "number": "210",
+  "title": "Continuous n a set.",
+  "body": " Continuous n a set   If is continuous at every point in the domain we say is continuous on .   "
 },
 {
   "id": "activity-01-intro-activity",
