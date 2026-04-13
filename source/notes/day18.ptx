@@ -219,7 +219,6 @@
 <!-- ============================ -->
 
 <section>
-<<<<<<< HEAD
   <title>Continuous Functions</title>
   
 <p workspace="4in"></p>
@@ -246,17 +245,6 @@
   </statement>
 </definition>
 
-=======
-  <title></title>
-  
-</section>
-
-<!-- ============================ -->
-
-<section>
-  <title></title>
-  
->>>>>>> refs/remotes/origin/main
 </section>
 
 
@@ -265,8 +253,4 @@
 <!-- ============================ -->
 
 </handout>
-<<<<<<< HEAD
 </section>
-=======
-</section>
->>>>>>> refs/remotes/origin/main
