@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-day-18">
+  <title>Day 18 (9 April 2026)</title>
+
+  <introduction>
+    <p>
+      This is an outline of the plans for Day 18 of the class.
+    </p>
+  </introduction>
+
+  <!-- Can also be <handout> instead of <subsection> to get a printable version -->
+  <handout>
+
+  <section>
+    <title>Thursday 4/9 </title>
+
+    <p>Today's agenda:
+      <ol>
+        <li><p>Roll</p></li>
+        <li><p>Next Homework due today : see Canvas</p></li>
+        <li>
+          <p>
+            Test corrections due Friday by noon.
+          </p>
+        </li>
+        <li><p>New material</p></li>
+      </ol></p>
+  </section>
+  
+<!-- ========================================   -->
+
+<section>
+<title>Functional Limits</title>
+
+<p>In Calculus 1, we learn about the concepts of <term>continuity of a function</term> and <term>differentiability of a function</term>.  Both these concepts require the use of functional limits.
+
+<md>
+<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = L</mrow>
+<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = f(c)</mrow>
+<mrow>f'(x) = \displaystyle \lim_{h \rightarrow 0} \frac{1}{h} (f(x+h)-f(x))</mrow>
+</md>
+
+</p>
+
+<p workspace="3in">The central idea of a functional limit is this:
+
+<md>
+<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = L</mrow>
+</md>
+</p>
+
+<definition xml:id="def-limit">
+  <title>Functional Limit</title>
+  <statement>
+    <p>
+      Let <m>f:A \rightarrow \mathbb{R}</m> and let <m>c</m> be a limit point of the domain <m>A</m>.  We say that <m>\lim_{x \rightarrow c} f(x)=L</m> provided that, for all <m>\epsilon &gt; 0</m>,there exists a <m>\delta &gt; 0</m> such that whenever <m>0 &lt; |x-c| &lt; \delta</m> (and <m>x \in A</m>) it follows that <m>|f(x)-L| &lt; \epsilon</m>.
+    </p>
+  </statement>
+</definition>
+
+</section>
+  
+<!-- ========================================   -->
+
+<section>
+
+<p><xref ref="def-limit" /></p>
+
+<p>This definition has a topological version.</p>
+
+<definition xml:id="def-limit-top">
+  <title>Functional Limit: Topological Version</title>
+  <statement>
+    <p>
+      Let <m>f:A \rightarrow \mathbb{R}</m> and let <m>c</m> be a limit point of the domain <m>A</m>.  We say that <m>\lim_{x \rightarrow c} f(x)=L</m> provided that, for every <m>\epsilon-</m>neighborhood <m>V_{\epsilon}(L)</m> of <m>L</m> there exists a <m>\delta-</m>neighborhood <m>V_{\delta}(c)</m> of <m>c</m> with the property that for all <m>x \in V_{\delta}(c)</m> different from <m>c</m> (with <m>x \in A</m>) it follows that <m>f(x) \in V_{\epsilon}(L)</m>.
+    </p>
+  </statement>
+</definition>
+
+<example>
+  <title>Limit of a linear function</title>
+  <p workspace="4in">Prove that <m>\displaystyle \lim_{x \rightarrow 1} 3x-7=-4</m>.</p>
+  
+</example>
+
+</section>
+
+<section>
+
+<p><xref ref="def-limit" /></p>
+
+<example>
+  <title>Limit of a quadratic function</title>
+  <p workspace="8in">Prove that <m>\displaystyle \lim_{x \rightarrow 2} x^2+6x+4=20</m>.</p>
+ </example>
+
+</section>
+
+<section>
+
+<p><xref ref="def-limit" /></p>
+
+<example>
+  <title>Limit of a quadratic function</title>
+  <p workspace="8in">Prove that <m>\displaystyle \lim_{x \rightarrow 5} \frac{x+1}{x-4}=6</m>.</p>
+ </example>
+
+</section>
+
+<section>
+<title>Sequential Criterion</title>
+
+<theorem xml:id="thm-lim-seqcrit">
+  <statement>
+    <p>
+      Given a function <m>f: A \rightarrow \mathbb{R}</m> and a limit point <m>c \in A</m>, the following two statements are equivalent:
+      <ol>
+        <li>
+          <p>
+            <m>\displaystyle \lim_{x \rightarrow c} f(x)=L</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            For all sequences <m>(x_n) \subset A</m> satisfying <m>x_n \neq c</m> and <m>(x_n) \rightarrow c</m>, it follows that <m>f(x_n) \rightarrow L</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</theorem>
+
+<p workspace="2in"></p>
+
+<proof>
+  <p>
+    (<m>\Rightarrow</m>) Suppose the first statement is true.  We must show that given any sequence <m>(x_n) \subset A</m> satisfying <m>x_n \neq c</m> we can conclude that <m>f(x_n) \rightarrow L</m>.  This means, given an <m>\epsilon &gt; 0</m>, we want to be able find an <m>N=N(\epsilon)</m> for which <m>n &gt; N</m> implies <m>|f(x_n)-L| &lt; \epsilon</m>.
+  </p>
+  <p>
+    Let <m>(x_n) \subset A</m> be a sequence satisfying <m>x_n \neq c</m>.  And let <m>\epsilon &gt; 0</m> be given.  Since <m>\lim_{x \rightarrow c} f(x)=L</m>, we know there is a <m>\delta &gt; 0</m> for which <m>0 &lt; |x-c| &lt; \delta</m> implies that <m>|f(x)-L| &lt; \epsilon</m>.
+  </p>
+  <p>
+    We invoke the definition of sequential convergence of <m>(x_n)</m> with <m>\delta &gt; 0</m>.  There is an <m>N_1=N_1(\delta)</m> for which <m>n &gt; N</m> means <m>|x_n-c| &lt; \delta</m>.  This lets us invoke the given (1) to conclude that <m>|f(x_n)-L| &lt; \epsilon</m>, as desired.
+  </p>
+  <p>
+    (<m>\Leftarrow</m>). Suppose that the second statement is true.  We must show that, given any <m>\epsilon &gt; 0</m> we can find a <m>\delta &gt; 0</m> for which <m>|x-c| &lt; \delta</m> implies <m>|f(x)-L| &lt; \epsilon</m>.
+  </p>
+  <p>
+    The book proves the contrapositive by contradiction!  That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction.  Here's how that goes.
+  </p>
+  <p>
+    Suppose (2) is true.  For (1) to be false means there is at least one <m>\epsilon_0 &gt; 0</m> for which no <m>\delta &gt; 0</m> gets <m>x</m> close enough to <m>c</m> to guarantee <m>|f(x)-L| &lt; \epsilon_0</m>.  This means there will always be at least one input <m>x_*</m> with <m>|x_*-c| &lt; \delta</m> and with <m>|f(x_*)-L| &gt; \epsilon_0</m>.
+  </p>
+  <p>
+    Consider <m>\delta_n=1/n</m>.  For each <m>n</m>, let <m>x_n</m> be the input with <m>|x_n-c| &lt; \delta</m> and with <m>|f(x_n)-L| &gt; \epsilon_0</m>.  This gives us a sequence <m>(x_n)</m> that converges to <m>c</m> at the same time that the sequence <m>(f(x_n))</m> does not converge to <m>L</m>.  But this contradicts (2), which we took to be true.  Therefore, (1) cannot be false at the same time (2) is true.  Therefore (2) must be false.  We conclude that (2) implies (1).  
+  </p>
+</proof>
+</section>
+
+<!-- ============================ -->
+
+<section>
+  <title>Useful Corollaries</title>
+
+  <corollary xml:id="cor-alglimthmfcn">
+    <title>Algebraic Limit Theorem for Functional Limits</title>
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be functions defined on a domain <m>A \subset \mathbb{R}</m>, and assume <m>\lim_{x \rightarrow c}f(x)=L</m> and <m>\lim_{x \rightarrow c}g(x)=M</m> for some limit point <m>c</m> of <m>A</m>.  Then
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \lim_{x \rightarrow c} kf(x) = kL</m> for all <m>k \in \mathbb{R}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim_{x \rightarrow c} (f(x)+g(x)) = L+M</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim_{x \rightarrow c} f(x)g(x) = LM</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim_{x \rightarrow c} f(x)/g(x) = L/M</m>, provided <m>M \neq 0</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </corollary>
+
+  <corollary xml:id="cor-divcrit">
+    <title>Divergence Criterion for Functional Limits</title>
+    <statement>
+      <p>
+        Let <m>f</m> be a function defined on <m>A \subset \mathbb{R}</m>, and let <m>c</m> be a limit point of <m>A</m>.  If there exists two sequences <m>(x_n)</m> and <m>(y_n)</m> in <m>A</m> with <m>x_n \neq c</m> and <m>y_n \neq c</m> and
+        <md>
+          <mrow> \lim x_n \amp = \lim y_n =c</mrow>
+        </md>
+        but
+        <md>
+          <mrow>\lim f(x_n) \amp \neq  \lim f(y_n) </mrow>
+        </md>
+        then we can conclude that the function limit <m>\lim_{x \rightarrow c} f(x)</m> does not exist.
+      </p>
+    </statement>
+  </corollary>
+
+
+
+</section>
+
+<!-- ============================ -->
+
+<section>
+  <title>Continuous Functions</title>
+  
+<p workspace="4in"></p>
+
+<definition xml:id="def-cts">
+  <title>Continuity at a point</title>
+  
+  
+  <statement>
+    <p>
+      A function <m>f:A \rightarrow \mathbb{R}</m> is continuous at a point <m>c \in A</m> if, for all <m>\epsilon &gt; 0</m> there exists a <m>\delta &gt; 0</m> such that whenever <m>|x-c| &lt; \delta</m> (and <m>a \in A</m>) it follows that <m>|f(x)-f(c)| &lt; \epsilon</m>.
+    </p>
+  </statement>
+</definition>
+
+<p>Note here that the value of <m>\delta</m> depends on both <m>\epsilon</m> and <m>c</m>, so we write <m>\delta=\delta(\epsilon,c)</m>.</p>
+
+<definition xml:id="def-ctsonA">
+  <title>Continuous on a set</title>
+  <statement>
+    <p>
+     If <m>f: A \rightarrow \mathbb{R}</m> is continuous at every point in the domain <m>A</m> we say <m>f</m> is continuous on <m>A</m>.
+    </p>
+  </statement>
+</definition>
+
+</section>
+
+
+<!-- ============================ -->
+<!-- ============================ -->
+<!-- ============================ -->
+
+</handout>
+</section>

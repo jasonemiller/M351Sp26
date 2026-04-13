@@ -19,11 +19,36 @@
       <ol>
         <li>Roll</li>
         <li>Next Homework due ... : see Canvas</li>
-        <li>Midterm:  Thursday 2 April</li>
-        <li>review session: Monday 3/30 at 6pm, meet at classroom</li>
+        <li>Midterm:  graded, scores posted, scans emailed</li>
+        <li>Test corrections:  (see below)</li>
         <li>New material</li>
       </ol></p>
-  </section>
+
+      <p>Test corrections:
+        <ul>
+          <li>
+            <p>
+             You can redo any problem on which you lost two or more points. 
+            </p>
+          </li>
+          <li>
+            <p>
+              A solution that is done entirely correctly (using 'homework' criteria) will earn half of the points lost.  No partial credit.
+            </p>
+          </li>
+          <li>
+            <p>
+              You may consult with Miller on your solutions.  You should not work with others in the class.  You may refer to the course textbook.  You should not use other resources (e.g., online resources, tutors, other texts).
+            </p>
+          </li>
+          <li>
+            <p>
+              Test corrections are due by noon on Friday.  You may email me a scan of your work to show me that you have completed test corrections by Friday at noon, but I want paper copies of your work before I will re-evaluate your corrections.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </section>
   
 <!-- ========================================   -->
 
@@ -92,7 +117,7 @@
   <p>The closer <m>x</m> is to <m>y</m>, the smaller the radius of <m>\mathcal{O}_x</m>.  The collection <m>\{\mathcal{O}_x\}_{x \in K}</m> is an open cover of <m>K</m>.  By the Heine-Borel property, this open cover has a finite subcover, <m>\{\mathcal{O}_{x_i}\}_{i=1}^{n}</m>.
   </p>
   <p>
-    Consider <m>\epsilon_0 = \min\{\frac{1}{2}|x_i-y|\}</m>, which is the smallest radius of the open sets in our finite subcover.  Since <m>(y_n) \rightarrow y</m>, there is an <m>N &gt; 0</m> such that <m>|y-n-y| &lt; \epsilon_0</m> for <m>n &gt; N</m>.  But these <m>y_n</m> are outside every <m>\mathcal{O}_{x_i}</m>.  So out purported finite subcover does not cover <m>K</m>!  This is a contradicion.
+    Consider <m>\epsilon_0 = \min\{\frac{1}{2}|x_i-y|\}</m>, which is the smallest radius of the open sets in our finite subcover.  Since <m>(y_n) \rightarrow y</m>, there is an <m>N &gt; 0</m> such that <m>|y_n-y| &lt; \epsilon_0</m> for <m>n &gt; N</m>.  But these <m>y_n</m> are outside every <m>\mathcal{O}_{x_i}</m>.  So out purported finite subcover does not cover <m>K</m>!  This is a contradicion.
   </p>
   <p>
     Consequently, <m>K</m> is compact.
@@ -112,7 +137,7 @@
     Let <m>x \in \mathbb{R}</m> and consider <m>F=\{x\}</m>, the singleton set.
   </p>
   <p>
-    What would an open cover of <m>F</m> look like.  Consider <m>I=(a,b)</m> where <m>a &lt; x &lt; b b</m>.  Then <m>x \in I</m>.  The collection <m>\mathcal{U}=\{I\}</m> is an open cover of <m>F</m>.
+    What would an open cover of <m>F</m> look like.  Consider <m>I=(a,b)</m> where <m>a &lt; x &lt; b</m>.  Then <m>x \in I</m>.  The collection <m>\mathcal{U}=\{I\}</m> is an open cover of <m>F</m>.
   </p>
   <p>
     Suppose <m>\mathcal{U}=\{U_{\lambda}\,:\, \lambda \in \Lambda \}</m> is an open cover of <m>F</m>.   This means
@@ -166,8 +191,37 @@
 <!-- ============================ -->
 
 <section>
-  <title></title>
+  <title>Heine-Borel Theorem</title>
   
+<theorem xml:id="thm-heine-borel">
+  <statement>
+    <p>
+      Let <m>K \subset \mathbb{R}</m>.  All of the following statements are equivalent in the sense that any one implies all of the others.
+      <ol>
+        <li>
+          <p>
+            <m>K</m> is compact.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>K</m> is closed and bounded.
+          </p>
+        </li>
+        <li>
+          <p>
+            Every open cover of <m>K</m> has a finite subcover.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</theorem>
+
+<p>
+  Compact sets will play an important role as we develop the theory of functions, next.
+</p>
+
 </section>
 
 <!-- ============================ -->

@@ -2410,7 +2410,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Day 17 (7 April 2026)",
-  "body": " Day 17 (7 April 2026)   This is an outline of the plans for Day 17 of the class.      Tuesday 4\/7  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: Thursday 2 April  review session: Monday 3\/30 at 6pm, meet at classroom  New material      Compactness    A set is (sequentially) compact if every sequences in has a subsequence that converges in .      A set is (sequentially) compact if and only if is closed and bounded.     Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.    Note writing `` has the Heine-Borel property'' means that ``every open cover of has a finite subcover.''   ( ) Suppose has the property that every open cover of has a finite subcover. This is called the Heine-Borel property. We want to show that is sequentially compact. We will do this by showing that is closed and bounded.  To show that is bounded, consider the open sets These are the neighborhoods of . Then the collection is an open cover of . Since has the Heine-Borel property, this open cover has a finite subcover , noting that for all .       Without loss of generality, we can assume that for . Then so is bounded by .  To show that is closed we argue indirectly. Suppose is a Cauchy sequence with limit . This means that is a limit point of . We need to show .  Suppose not. Suppose . Then for all . (The inequality equals zero precisely when .). Define   The closer is to , the smaller the radius of . The collection is an open cover of . By the Heine-Borel property, this open cover has a finite subcover, .  Consider , which is the smallest radius of the open sets in our finite subcover. Since , there is an such that for . But these are outside every . So out purported finite subcover does not cover ! This is a contradicion.  Consequently, is compact.     The Heine-Borel Property   The singleton set has the Heine-Borel property  Let and consider , the singleton set.  What would an open cover of look like. Consider where . Then . The collection is an open cover of .  Suppose is an open cover of . This means So for some . Let's define . Then is a subset of our open cover of . And because is a finite collection, it is a finite subcover of .  Note that we've just proved that has the Heine-Borel property. That is to say, is a compact set.    A finite set has the Heine-Borel property  Let and consider . Suppose is an open cover of . This means Let's see how to extract a finite subcover of from . Take . Since is an open cover of , . This means for some . Set this open set aside for our finite subcover, then consider . This means for some . Add this set to our collection of open set, then repeat this process for each that remains to find containing . When we exhaust the numbers in , we end up with a collection of at most open sets . This is a finite subcover of .  This proves that has the Heine-Borel property. That is to say, is a compact set.    The open interval does not have the Heine-Borel property  Let . Let This is an open cover of because given any , there is an with . Thus , an open set in the collection .  If had the Heine-Borel property, would have a finite subcover, . But then the intervals in the subcover would have a smallest left endpoint, . By the Archimedean Property of the reals, this leaves real numbers between 0 and uncovered! Thus could not be a cover of .  This shows that does not have the Heine-Borel property. That is to say, is not compact.                "
+  "body": " Day 17 (7 April 2026)   This is an outline of the plans for Day 17 of the class.      Tuesday 4\/7  Today's agenda:  Roll  Next Homework due ... : see Canvas  Midterm: graded, scores posted, scans emailed  Test corrections: (see below)  New material   Test corrections:   You can redo any problem on which you lost two or more points.    A solution that is done entirely correctly (using 'homework' criteria) will earn half of the points lost. No partial credit.    You may consult with Miller on your solutions. You should not work with others in the class. You may refer to the course textbook. You should not use other resources (e.g., online resources, tutors, other texts).    Test corrections are due by noon on Friday. You may email me a scan of your work to show me that you have completed test corrections by Friday at noon, but I want paper copies of your work before I will re-evaluate your corrections.        Compactness    A set is (sequentially) compact if every sequences in has a subsequence that converges in .      A set is (sequentially) compact if and only if is closed and bounded.     Heine-Borel   A set is compact if and only if every open cover of contains a finite subcover.    Note writing `` has the Heine-Borel property'' means that ``every open cover of has a finite subcover.''   ( ) Suppose has the property that every open cover of has a finite subcover. This is called the Heine-Borel property. We want to show that is sequentially compact. We will do this by showing that is closed and bounded.  To show that is bounded, consider the open sets These are the neighborhoods of . Then the collection is an open cover of . Since has the Heine-Borel property, this open cover has a finite subcover , noting that for all .       Without loss of generality, we can assume that for . Then so is bounded by .  To show that is closed we argue indirectly. Suppose is a Cauchy sequence with limit . This means that is a limit point of . We need to show .  Suppose not. Suppose . Then for all . (The inequality equals zero precisely when .). Define   The closer is to , the smaller the radius of . The collection is an open cover of . By the Heine-Borel property, this open cover has a finite subcover, .  Consider , which is the smallest radius of the open sets in our finite subcover. Since , there is an such that for . But these are outside every . So out purported finite subcover does not cover ! This is a contradicion.  Consequently, is compact.     The Heine-Borel Property   The singleton set has the Heine-Borel property  Let and consider , the singleton set.  What would an open cover of look like. Consider where . Then . The collection is an open cover of .  Suppose is an open cover of . This means So for some . Let's define . Then is a subset of our open cover of . And because is a finite collection, it is a finite subcover of .  Note that we've just proved that has the Heine-Borel property. That is to say, is a compact set.    A finite set has the Heine-Borel property  Let and consider . Suppose is an open cover of . This means Let's see how to extract a finite subcover of from . Take . Since is an open cover of , . This means for some . Set this open set aside for our finite subcover, then consider . This means for some . Add this set to our collection of open set, then repeat this process for each that remains to find containing . When we exhaust the numbers in , we end up with a collection of at most open sets . This is a finite subcover of .  This proves that has the Heine-Borel property. That is to say, is a compact set.    The open interval does not have the Heine-Borel property  Let . Let This is an open cover of because given any , there is an with . Thus , an open set in the collection .  If had the Heine-Borel property, would have a finite subcover, . But then the intervals in the subcover would have a smallest left endpoint, . By the Archimedean Property of the reals, this leaves real numbers between 0 and uncovered! Thus could not be a cover of .  This shows that does not have the Heine-Borel property. That is to say, is not compact.      Heine-Borel Theorem    Let . All of the following statements are equivalent in the sense that any one implies all of the others.    is compact.     is closed and bounded.    Every open cover of has a finite subcover.       Compact sets will play an important role as we develop the theory of functions, next.           "
 },
 {
   "id": "notes-day-17-3-2-2",
@@ -2483,6 +2483,132 @@ var ptx_lunr_docs = [
   "number": "199",
   "title": "The open interval <span class=\"process-math\">\\((0,1)\\)<\/span> does not have the Heine-Borel property.",
   "body": " The open interval does not have the Heine-Borel property  Let . Let This is an open cover of because given any , there is an with . Thus , an open set in the collection .  If had the Heine-Borel property, would have a finite subcover, . But then the intervals in the subcover would have a smallest left endpoint, . By the Archimedean Property of the reals, this leaves real numbers between 0 and uncovered! Thus could not be a cover of .  This shows that does not have the Heine-Borel property. That is to say, is not compact.  "
+},
+{
+  "id": "thm-heine-borel",
+  "level": "2",
+  "url": "notes-day-17.html#thm-heine-borel",
+  "type": "Theorem",
+  "number": "200",
+  "title": "",
+  "body": "  Let . All of the following statements are equivalent in the sense that any one implies all of the others.    is compact.     is closed and bounded.    Every open cover of has a finite subcover.      "
+},
+{
+  "id": "notes-day-18",
+  "level": "1",
+  "url": "notes-day-18.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 18 (9 April 2026)",
+  "body": " Day 18 (9 April 2026)   This is an outline of the plans for Day 18 of the class.      Thursday 4\/9  Today's agenda:  Roll  Next Homework due today : see Canvas   Test corrections due Friday by noon.   New material      Functional Limits  In Calculus 1, we learn about the concepts of continuity of a function and differentiability of a function . Both these concepts require the use of functional limits.   The central idea of a functional limit is this:    Functional Limit   Let and let be a limit point of the domain . We say that provided that, for all ,there exists a such that whenever (and ) it follows that .        This definition has a topological version.   Functional Limit: Topological Version   Let and let be a limit point of the domain . We say that provided that, for every neighborhood of there exists a neighborhood of with the property that for all different from (with ) it follows that .     Limit of a linear function  Prove that .       Limit of a quadratic function  Prove that .       Limit of a quadratic function  Prove that .     Sequential Criterion    Given a function and a limit point , the following two statements are equivalent:        For all sequences satisfying and , it follows that .         ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we want to be able find an for which implies .  Let be a sequence satisfying . And let be given. Since , we know there is a for which implies that .  We invoke the definition of sequential convergence of with . There is an for which means . This lets us invoke the given (1) to conclude that , as desired.  ( ). Suppose that the second statement is true. We must show that, given any we can find a for which implies .  The book proves the contrapositive by contradiction! That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction. Here's how that goes.  Suppose (2) is true. For (1) to be false means there is at least one for which no gets close enough to to guarantee . This means there will always be at least one input with and with .  Consider . For each , let be the input with and with . This gives us a sequence that converges to at the same time that the sequence does not converge to . But this contradicts (2), which we took to be true. Therefore, (1) cannot be false at the same time (2) is true. Therefore (2) must be false. We conclude that (2) implies (1).      Useful Corollaries   Algebraic Limit Theorem for Functional Limits   Let and be functions defined on a domain , and assume and for some limit point of . Then    for all                , provided         Divergence Criterion for Functional Limits   Let be a function defined on , and let be a limit point of . If there exists two sequences and in with and and but then we can conclude that the function limit does not exist.       Continuous Functions    Continuity at a point   A function is continuous at a point if, for all there exists a such that whenever (and ) it follows that .    Note here that the value of depends on both and , so we write .   Continuous on a set   If is continuous at every point in the domain we say is continuous on .         "
+},
+{
+  "id": "notes-day-18-3-2-2",
+  "level": "2",
+  "url": "notes-day-18.html#notes-day-18-3-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "continuity of a function differentiability of a function "
+},
+{
+  "id": "def-limit",
+  "level": "2",
+  "url": "notes-day-18.html#def-limit",
+  "type": "Definition",
+  "number": "201",
+  "title": "Functional Limit.",
+  "body": " Functional Limit   Let and let be a limit point of the domain . We say that provided that, for all ,there exists a such that whenever (and ) it follows that .   "
+},
+{
+  "id": "def-limit-top",
+  "level": "2",
+  "url": "notes-day-18.html#def-limit-top",
+  "type": "Definition",
+  "number": "202",
+  "title": "Functional Limit: Topological Version.",
+  "body": " Functional Limit: Topological Version   Let and let be a limit point of the domain . We say that provided that, for every neighborhood of there exists a neighborhood of with the property that for all different from (with ) it follows that .   "
+},
+{
+  "id": "notes-day-18-3-3-4",
+  "level": "2",
+  "url": "notes-day-18.html#notes-day-18-3-3-4",
+  "type": "Example",
+  "number": "203",
+  "title": "Limit of a linear function.",
+  "body": " Limit of a linear function  Prove that .  "
+},
+{
+  "id": "notes-day-18-3-4-2",
+  "level": "2",
+  "url": "notes-day-18.html#notes-day-18-3-4-2",
+  "type": "Example",
+  "number": "204",
+  "title": "Limit of a quadratic function.",
+  "body": " Limit of a quadratic function  Prove that .  "
+},
+{
+  "id": "notes-day-18-3-5-2",
+  "level": "2",
+  "url": "notes-day-18.html#notes-day-18-3-5-2",
+  "type": "Example",
+  "number": "205",
+  "title": "Limit of a quadratic function.",
+  "body": " Limit of a quadratic function  Prove that .  "
+},
+{
+  "id": "thm-lim-seqcrit",
+  "level": "2",
+  "url": "notes-day-18.html#thm-lim-seqcrit",
+  "type": "Theorem",
+  "number": "206",
+  "title": "",
+  "body": "  Given a function and a limit point , the following two statements are equivalent:        For all sequences satisfying and , it follows that .      "
+},
+{
+  "id": "notes-day-18-3-6-4",
+  "level": "2",
+  "url": "notes-day-18.html#notes-day-18-3-6-4",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " ( ) Suppose the first statement is true. We must show that given any sequence satisfying we can conclude that . This means, given an , we want to be able find an for which implies .  Let be a sequence satisfying . And let be given. Since , we know there is a for which implies that .  We invoke the definition of sequential convergence of with . There is an for which means . This lets us invoke the given (1) to conclude that , as desired.  ( ). Suppose that the second statement is true. We must show that, given any we can find a for which implies .  The book proves the contrapositive by contradiction! That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction. Here's how that goes.  Suppose (2) is true. For (1) to be false means there is at least one for which no gets close enough to to guarantee . This means there will always be at least one input with and with .  Consider . For each , let be the input with and with . This gives us a sequence that converges to at the same time that the sequence does not converge to . But this contradicts (2), which we took to be true. Therefore, (1) cannot be false at the same time (2) is true. Therefore (2) must be false. We conclude that (2) implies (1).  "
+},
+{
+  "id": "cor-alglimthmfcn",
+  "level": "2",
+  "url": "notes-day-18.html#cor-alglimthmfcn",
+  "type": "Corollary",
+  "number": "207",
+  "title": "Algebraic Limit Theorem for Functional Limits.",
+  "body": " Algebraic Limit Theorem for Functional Limits   Let and be functions defined on a domain , and assume and for some limit point of . Then    for all                , provided       "
+},
+{
+  "id": "cor-divcrit",
+  "level": "2",
+  "url": "notes-day-18.html#cor-divcrit",
+  "type": "Corollary",
+  "number": "208",
+  "title": "Divergence Criterion for Functional Limits.",
+  "body": " Divergence Criterion for Functional Limits   Let be a function defined on , and let be a limit point of . If there exists two sequences and in with and and but then we can conclude that the function limit does not exist.   "
+},
+{
+  "id": "def-cts",
+  "level": "2",
+  "url": "notes-day-18.html#def-cts",
+  "type": "Definition",
+  "number": "209",
+  "title": "Continuity at a point.",
+  "body": " Continuity at a point   A function is continuous at a point if, for all there exists a such that whenever (and ) it follows that .   "
+},
+{
+  "id": "def-ctsonA",
+  "level": "2",
+  "url": "notes-day-18.html#def-ctsonA",
+  "type": "Definition",
+  "number": "210",
+  "title": "Continuous on a set.",
+  "body": " Continuous on a set   If is continuous at every point in the domain we say is continuous on .   "
 },
 {
   "id": "activity-01-intro-activity",
