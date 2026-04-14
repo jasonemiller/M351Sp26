@@ -2611,6 +2611,51 @@ var ptx_lunr_docs = [
   "body": " Continuous on a set   If is continuous at every point in the domain we say is continuous on .   "
 },
 {
+  "id": "notes-day-19",
+  "level": "1",
+  "url": "notes-day-19.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 19 (14 April 2026)",
+  "body": " Day 19 (14 April 2026)   This is an outline of the plans for Day 19 of the class.      Thursday 4\/14  Today's agenda:  Roll  Next Homework due Thursday : 4.2 and 4.3  New material       Continuous Functions   Note here that the value of depends on both and , so we could write .      is continuous at  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .       is continuous an  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Consider the inequality .  Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, we can say This shows is continuous at . Since was arbitrary, this shows that is continuous on all .      Alternate Characterization of Continuity   Let and let . The function is continuous at if and only if one of ( ), ( ), or ( ) below holds:   for all there is a such that (and ) implies ;    For all -neighborhoods of there exists a -neighborhood of with the property that for we have ; and,    For all with converging to it follows that converges to .    If is a limit point of , the previous three statement are equivalent to .        ( ( ) if and only if ( ) )  Statement ( ) is the definition of continuity at the point , and ( ) is its translation into topological terms. This establishes the equivalence.  ( ( ) if and only if ( ) )  We'll prove ( ) implies ( ) by contradiction. Assume ( ), and also assume that ( ) is not true. That is, assume there is an such that for all there is an with where .  Consider . Fix . For that , there is a point in , call the point , at which . For each , find the analogous point with this property and we get a sequence that converges to .  Notice that this sequence was constructed so it has the property that the sequence of values does not converge to . This contradicts ( ).  If follows that ( ) must be true. Hence ( ) implies ( ).  We prove the reverse implication directly.  Let be a sequence that converges to . We must show that the sequence converges to . Let be given.  By ( ), we know there is a such that if and then . Since converges to we know there is an such that if , then . For the same , it follows that .  This proves ( ) holds and establishes if and only if .  ( ( ) if and only if ( ) )  This can be established by noting that the difference between ( ) and the functional limit of ( ) is the case . When , we get so that .        "
+},
+{
+  "id": "notes-day-19-3-2-5",
+  "level": "2",
+  "url": "notes-day-19.html#notes-day-19-3-2-5",
+  "type": "Example",
+  "number": "211",
+  "title": "<span class=\"process-math\">\\(f(x)=x^2\\)<\/span> is continuous at <span class=\"process-math\">\\(x=5\\)<\/span>.",
+  "body": " is continuous at  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .  "
+},
+{
+  "id": "sec--2",
+  "level": "2",
+  "url": "notes-day-19.html#sec--2",
+  "type": "Example",
+  "number": "212",
+  "title": "<span class=\"process-math\">\\(f(x)=x^2\\)<\/span> is continuous an <span class=\"process-math\">\\(\\mathbb{R}\\)<\/span>.",
+  "body": " is continuous an  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Consider the inequality .  Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, we can say This shows is continuous at . Since was arbitrary, this shows that is continuous on all .  "
+},
+{
+  "id": "thm-altcts",
+  "level": "2",
+  "url": "notes-day-19.html#thm-altcts",
+  "type": "Theorem",
+  "number": "213",
+  "title": "Alternate Characterization of Continuity.",
+  "body": " Alternate Characterization of Continuity   Let and let . The function is continuous at if and only if one of ( ), ( ), or ( ) below holds:   for all there is a such that (and ) implies ;    For all -neighborhoods of there exists a -neighborhood of with the property that for we have ; and,    For all with converging to it follows that converges to .    If is a limit point of , the previous three statement are equivalent to .      "
+},
+{
+  "id": "notes-day-19-3-4-2",
+  "level": "2",
+  "url": "notes-day-19.html#notes-day-19-3-4-2",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " ( ( ) if and only if ( ) )  Statement ( ) is the definition of continuity at the point , and ( ) is its translation into topological terms. This establishes the equivalence.  ( ( ) if and only if ( ) )  We'll prove ( ) implies ( ) by contradiction. Assume ( ), and also assume that ( ) is not true. That is, assume there is an such that for all there is an with where .  Consider . Fix . For that , there is a point in , call the point , at which . For each , find the analogous point with this property and we get a sequence that converges to .  Notice that this sequence was constructed so it has the property that the sequence of values does not converge to . This contradicts ( ).  If follows that ( ) must be true. Hence ( ) implies ( ).  We prove the reverse implication directly.  Let be a sequence that converges to . We must show that the sequence converges to . Let be given.  By ( ), we know there is a such that if and then . Since converges to we know there is an such that if , then . For the same , it follows that .  This proves ( ) holds and establishes if and only if .  ( ( ) if and only if ( ) )  This can be established by noting that the difference between ( ) and the functional limit of ( ) is the case . When , we get so that .  "
+},
+{
   "id": "activity-01-intro-activity",
   "level": "1",
   "url": "activity-01-intro-activity.html",
