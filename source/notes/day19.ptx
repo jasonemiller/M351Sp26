@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="notes-day-18">
-  <title>Day 18 (9 April 2026)</title>
+<section xml:id="notes-day-19">
+  <title>Day 19 (14 April 2026)</title>
 
   <introduction>
     <p>
-      This is an outline of the plans for Day 18 of the class.
+      This is an outline of the plans for Day 19 of the class.
     </p>
   </introduction>
 
@@ -13,117 +13,117 @@
   <handout>
 
   <section>
-    <title>Thursday 4/9 </title>
+    <title>Thursday 4/14 </title>
 
     <p>Today's agenda:
       <ol>
         <li><p>Roll</p></li>
-        <li><p>Next Homework due today : see Canvas</p></li>
-        <li>
-          <p>
-            Test corrections due Friday by noon.
-          </p>
-        </li>
+        <li><p>Next Homework due Thursday : 4.2 and 4.3</p></li>
         <li><p>New material</p></li>
       </ol></p>
   </section>
   
 <!-- ========================================   -->
 
-<section>
-<title>Functional Limits</title>
-
-<p>In Calculus 1, we learn about the concepts of <term>continuity of a function</term> and <term>differentiability of a function</term>.  Both these concepts require the use of functional limits.
-
-<md>
-<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = L</mrow>
-<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = f(c)</mrow>
-<mrow>f'(x) = \displaystyle \lim_{h \rightarrow 0} \frac{1}{h} (f(x+h)-f(x))</mrow>
-</md>
-
-</p>
-
-<p workspace="3in">The central idea of a functional limit is this:
-
-<md>
-<mrow>\displaystyle \lim_{x \rightarrow c} f(x) = L</mrow>
-</md>
-</p>
-
-<definition xml:id="def-limit">
-  <title>Functional Limit</title>
-  <statement>
-    <p>
-      Let <m>f:A \rightarrow \mathbb{R}</m> and let <m>c</m> be a limit point of the domain <m>A</m>.  We say that <m>\lim_{x \rightarrow c} f(x)=L</m> provided that, for all <m>\epsilon &gt; 0</m>,there exists a <m>\delta &gt; 0</m> such that whenever <m>0 &lt; |x-c| &lt; \delta</m> (and <m>x \in A</m>) it follows that <m>|f(x)-L| &lt; \epsilon</m>.
-    </p>
-  </statement>
-</definition>
-
-</section>
-  
-<!-- ========================================   -->
+<!-- ============================ -->
 
 <section>
+  <title>Continuous Functions</title>
 
-<p><xref ref="def-limit" /></p>
+<p><xref ref="def-cts" /></p>
 
-<p>This definition has a topological version.</p>
+<p>Note here that the value of <m>\delta</m> depends on both <m>\epsilon</m> and <m>c</m>, so we could write <m>\delta=\delta(\epsilon,c)</m>.</p>
 
-<definition xml:id="def-limit-top">
-  <title>Functional Limit: Topological Version</title>
-  <statement>
-    <p>
-      Let <m>f:A \rightarrow \mathbb{R}</m> and let <m>c</m> be a limit point of the domain <m>A</m>.  We say that <m>\lim_{x \rightarrow c} f(x)=L</m> provided that, for every <m>\epsilon-</m>neighborhood <m>V_{\epsilon}(L)</m> of <m>L</m> there exists a <m>\delta-</m>neighborhood <m>V_{\delta}(c)</m> of <m>c</m> with the property that for all <m>x \in V_{\delta}(c)</m> different from <m>c</m> (with <m>x \in A</m>) it follows that <m>f(x) \in V_{\epsilon}(L)</m>.
-    </p>
-  </statement>
-</definition>
+<p><xref ref="def-ctsonA" /></p>
+
+<!-- <p workspace="4in"></p> -->
+<!-- picture that goes with continuous function a x=c -->
 
 <example>
-  <title>Limit of a linear function</title>
-  <p workspace="4in">Prove that <m>\displaystyle \lim_{x \rightarrow 1} 3x-7=-4</m>.</p>
-  
+  <title><m>f(x)=x^2</m> is continuous at <m>x=5</m></title>
+  <p>
+    Let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-5| &lt; \delta</m> implies <m>|f(x)-f(2)|=|x^2-25| &lt; \epsilon</m>.
+  </p>
+  <p workspace="3in">
+    SCRATCH WORK
+  </p>
+  <p>
+    Choose <m>\delta = \min\{1, \epsilon/11\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-5| &lt; \delta</m>.  Then because <m>|x-5| &lt; \delta \leq 1</m> we know <m>-1 &lt; x-5 &lt; 1</m> and <m>9 &lt; x+5 &lt; 11</m> so <m>|x+5| &lt; 11</m>.  We can also say
+    <md>
+      <mrow>|x^2-25| \amp = |x-5| \cdot |x+5| </mrow>
+      <mrow> \amp &lt; |x-5| \cdot 11 \text{ because } x-5| &lt; 1</mrow>
+      <mrow> \amp &lt; \epsilon/11 \cdot 11 \text{ because } x-5| &lt; \epsilon/11</mrow>
+      <mrow> \amp = \epsilon</mrow>.
+    </md>
+    This shows <m>f(x)=x^2</m> is continuous at <m>x=5</m>.
+  </p>
+</example>
+</section>
+
+
+<section xml:id="sec-">
+  <title></title>
+
+<example>
+  <title><m>f(x)=x^2</m> is continuous an <m>\mathbb{R}</m></title>
+  <p>
+    We need to show <m>f(x)</m> is continuous at every real number.  Let <m>c \in \mathbb{R}</m>.  We will show that <m>f(x)</m> is continuous at <m>x=c</m>.
+  </p>
+  <p>
+    Let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-c| &lt; \delta</m> implies <m>|f(x)-f(c)|=|x^2-c^2| &lt; \epsilon</m>.
+  </p>
+  <p workspace="3in">
+    SCRATCH WORK
+  </p>
+  <p>
+    Consider the inequality <m>|x-c| &lt; \delta</m>.
+  </p>
+  <p>
+    Choose <m>\delta = \min\{1, \epsilon/(1+2|c|)\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-c| &lt; \delta</m>.  Then because <m>|x-c| &lt; \delta \leq 1</m> we know <m>-1 &lt; x-c &lt; 1</m> and <m>2c-1 &lt; x+c &lt; 2c+1</m> so <m>|x+5| &lt; \max\{|2c \pm 1|\}</m>.
+  </p>
+  <p>
+     Notice that if <m>c \geq 0</m> then <m>|2c-1| &lt; |2c+1|=2c+1=2|c|+1</m>.  On the other hand, if <m>c \leq 0</m>m then <m>|2c-1| \geq |2c+1|</m> and <m>|2c-1|=|2(-|c|)-1|=|2\cdot|c|+1|=2|c|+1</m> so <m>|2c+1| \leq 2|c|+1</m>.  Therefore, regardless of the sign of <m>c \in \mathbb{R}</m> we can say <m>\max\{|2c \pm 1\|} \leq 2|c|+1</m>.  It follows that if <m>|x-c| &lt; 1</m> then <m>|x+5| &lt; 2|c|+1</m>.
+  </p>  
+  <p>With this established, we can say
+    <md>
+      <mrow>|x^2-c^2| \amp = |x-c| \cdot |x+c| </mrow>
+      <mrow> \amp &lt; |x-c| \cdot (2|c|+1) \text{ because } |x-5| &lt; 1</mrow>
+      <mrow> \amp &lt; \epsilon/(2|c|+1) \cdot (2|c|+1) \text{ because } |x-5| &lt; \epsilon/(2|c|+1)</mrow>
+      <mrow> \amp = \epsilon</mrow>.
+    </md>
+    This shows <m>f(x)=x^2</m> is continuous at <m>x=c</m>.  Since <m>c</m> was arbitrary, this shows that <m>f(x)=x^2</m> is continuous on all <m>\mathbb{R}</m>.
+  </p>
 </example>
 
 </section>
 
-<section>
-
-<p><xref ref="def-limit" /></p>
-
-<example>
-  <title>Limit of a quadratic function</title>
-  <p workspace="8in">Prove that <m>\displaystyle \lim_{x \rightarrow 2} x^2+6x+4=20</m>.</p>
- </example>
-
-</section>
 
 <section>
 
-<p><xref ref="def-limit" /></p>
-
-<example>
-  <title>Limit of a quadratic function</title>
-  <p workspace="8in">Prove that <m>\displaystyle \lim_{x \rightarrow 5} \frac{x+1}{x-4}=6</m>.</p>
- </example>
-
-</section>
-
-<section>
-<title>Sequential Criterion</title>
-
-<theorem xml:id="thm-lim-seqcrit">
+<theorem xml:id="thm-altcts">
+  <title>Alternate Characterization of Continuity</title>
   <statement>
     <p>
-      Given a function <m>f: A \rightarrow \mathbb{R}</m> and a limit point <m>c \in A</m>, the following two statements are equivalent:
+      Let <m>f:A \rightarrow \mathbb{R}</m> and let <m>c \in A</m>.  The function <m>f</m> is continuous at <m>c \in A</m> if and only if one of (<xref ref="thm-altcts-item1" />), (<xref ref="thm-altcts-item2" />), or (<xref ref="thm-altcts-item3" />) below holds:
       <ol>
-        <li>
+        <li xml:id="thm-altcts-item1">
           <p>
-            <m>\displaystyle \lim_{x \rightarrow c} f(x)=L</m>
+            for all <m>\epsilon &gt; 0</m> there is a <m>\delta &gt; 0</m> such that <m>|x-c| &lt; \delta</m> (and <m>x \in A</m>) implies <m>|f(x)-f(c)| &lt; \epsilon</m>;
           </p>
         </li>
-        <li>
+        <li xml:id="thm-altcts-item2">
           <p>
-            For all sequences <m>(x_n) \subset A</m> satisfying <m>x_n \neq c</m> and <m>(x_n) \rightarrow c</m>, it follows that <m>f(x_n) \rightarrow L</m>.
+            For all <m>\epsilon</m>-neighborhoods <m>V_{\epsilon}(f(c))</m> of <m>f(c)</m> there exists a <m>\delta</m>-neighborhood <m>V_{\delta}(c)</m> of <m>c</m> with the property that for <m>x \in V_{\delta}(c) \cap A</m> we have <m>f(x) \in V_{\epsilon}(f(c))</m>; and,
+          </p>
+        </li>
+        <li xml:id="thm-altcts-item3">
+          <p>
+            For all <m>(x_n) \subset A</m> with <m>(x_n)</m> converging to <m>c \in A</m> it follows that <m>(f(x_n))</m> converges to <m>f(c)</m>.
+          </p>
+        </li>
+        <li xml:id="thm-altcts-item4">
+          <p>
+            If <m>c</m> is a limit point of <m>A</m>, the previous three statement are equivalent to  <m>\displaystyle \lim_{x \rightarrow c} f(x)=f(c)</m>.
           </p>
         </li>
       </ol>
@@ -131,119 +131,47 @@
   </statement>
 </theorem>
 
-<p workspace="2in"></p>
-
 <proof>
   <p>
-    (<m>\Rightarrow</m>) Suppose the first statement is true.  We must show that given any sequence <m>(x_n) \subset A</m> satisfying <m>x_n \neq c</m> we can conclude that <m>f(x_n) \rightarrow L</m>.  This means, given an <m>\epsilon &gt; 0</m>, we want to be able find an <m>N=N(\epsilon)</m> for which <m>n &gt; N</m> implies <m>|f(x_n)-L| &lt; \epsilon</m>.
+    ( (<xref ref="thm-altcts-item1" />) if and only if (<xref ref="thm-altcts-item2" />) ) 
   </p>
   <p>
-    Let <m>(x_n) \subset A</m> be a sequence satisfying <m>x_n \neq c</m>.  And let <m>\epsilon &gt; 0</m> be given.  Since <m>\lim_{x \rightarrow c} f(x)=L</m>, we know there is a <m>\delta &gt; 0</m> for which <m>0 &lt; |x-c| &lt; \delta</m> implies that <m>|f(x)-L| &lt; \epsilon</m>.
+    Statement (<xref ref="thm-altcts-item1" />) is the definition of continuity at the point <m>x \in A</m>, and (<xref ref="thm-altcts-item2" />) is its translation into topological terms.  This establishes the equivalence.
   </p>
   <p>
-    We invoke the definition of sequential convergence of <m>(x_n)</m> with <m>\delta &gt; 0</m>.  There is an <m>N_1=N_1(\delta)</m> for which <m>n &gt; N</m> means <m>|x_n-c| &lt; \delta</m>.  This lets us invoke the given (1) to conclude that <m>|f(x_n)-L| &lt; \epsilon</m>, as desired.
+    ( (<xref ref="thm-altcts-item1" />) if and only if (<xref ref="thm-altcts-item3" />) )
   </p>
   <p>
-    (<m>\Leftarrow</m>). Suppose that the second statement is true.  We must show that, given any <m>\epsilon &gt; 0</m> we can find a <m>\delta &gt; 0</m> for which <m>|x-c| &lt; \delta</m> implies <m>|f(x)-L| &lt; \epsilon</m>.
+    We'll prove (<xref ref="thm-altcts-item3" />) implies (<xref ref="thm-altcts-item1" />) by contradiction.  Assume (<xref ref="thm-altcts-item3" />), and also assume that (<xref ref="thm-altcts-item1" />) is not true.  That is, assume there is an <m>\epsilon_0 &gt; 0</m> such that for all <m>\delta &gt; 0</m> there is an <m>x \in A</m> with <m>|x-c| &lt; \delta</m> where <m>|f(x)-f(c)| &gt; \epsilon_0</m>.
   </p>
   <p>
-    The book proves the contrapositive by contradiction!  That is, it proves that if (1) is false then (2) is false by assuming (1) is false and (2) is true, arriving at a contradiction.  Here's how that goes.
+    Consider <m>\delta_n=1/n</m>.  Fix <m>n</m>.  For that <m>n</m>, there is a point in <m>V_{\delta_n}(c) \cap A</m>, call the point <m>x_n</m>, at which <m>|f(x_n)-f(c)| &gt; epsilon_0</m>.  For each <m>n</m>, find the analogous point <m>x_n</m> with this property and we get a sequence <m>(x_n) \subset A</m> that converges to <m>c</m>.
   </p>
   <p>
-    Suppose (2) is true.  For (1) to be false means there is at least one <m>\epsilon_0 &gt; 0</m> for which no <m>\delta &gt; 0</m> gets <m>x</m> close enough to <m>c</m> to guarantee <m>|f(x)-L| &lt; \epsilon_0</m>.  This means there will always be at least one input <m>x_*</m> with <m>|x_*-c| &lt; \delta</m> and with <m>|f(x_*)-L| &gt; \epsilon_0</m>.
+    Notice that this sequence was constructed so it has the property that the sequence of values <m>(f(x_n))</m> does not converge to <m>f(c)</m>.  This contradicts (<xref ref="thm-altcts-item3" />).
   </p>
   <p>
-    Consider <m>\delta_n=1/n</m>.  For each <m>n</m>, let <m>x_n</m> be the input with <m>|x_n-c| &lt; \delta</m> and with <m>|f(x_n)-L| &gt; \epsilon_0</m>.  This gives us a sequence <m>(x_n)</m> that converges to <m>c</m> at the same time that the sequence <m>(f(x_n))</m> does not converge to <m>L</m>.  But this contradicts (2), which we took to be true.  Therefore, (1) cannot be false at the same time (2) is true.  Therefore (2) must be false.  We conclude that (2) implies (1).  
+    If follows that (<xref ref="thm-altcts-item1" />) must be true.  Hence (<xref ref="thm-altcts-item3" />) implies (<xref ref="thm-altcts-item1" />).
+  </p>
+  <p>
+    We prove the reverse implication directly.
+  </p>
+  <p>
+    Let <m>(x_n) \subset A</m> be a sequence that converges to <m>c</m>.  We must show that the sequence <m>(f(x_n))</m> converges to <m>f(c)</m>.  Let <m>\epsilon &gt; 0</m> be given.
+  </p>
+  <p>
+    By (<xref ref="thm-altcts-item1" />), we know there is a <m>\delta &gt; 0</m> such that if <m>|x-c| &lt; \delta</m> and <m>x \in A</m> then <m>|f(x)-f(c)| &lt; \epsilon</m>.  Since <m>(x_n)</m> converges to <m>c</m> we know there is an <m>N=N(\epsilon)</m> such that if <m>n &gt; N</m>, then <m>|x_n-c| &lt; \delta</m>.  For the same <m>n</m>, it follows that <m>|f(x_n)-f(c)| &lt; \epsilon</m>.
+  </p>
+  <p>
+    This proves (<xref ref="thm-altcts-item3" />) holds and establishes <xref ref="thm-altcts-item1" /> if and only if <xref ref="thm-altcts-item3" />.
+  </p>
+  <p>
+    ( (<xref ref="thm-altcts-item1" />) if and only if (<xref ref="thm-altcts-item4" />) )
+  </p>
+  <p>
+    This can be established by noting that the difference between (<xref ref="thm-altcts-item1" />) and the functional limit of (<xref ref="thm-altcts-item4" />) is the case <m>x=c \in V_{\delta}(c) \cap A</m>.  When <m>x=c</m>, we get <m>f(x)=f(c)</m> so that <m>f(c) \in V_{\epsilon}(f(c))</m>.
   </p>
 </proof>
-</section>
-
-<!-- ============================ -->
-
-<section>
-  <title>Useful Corollaries</title>
-
-  <corollary xml:id="cor-alglimthmfcn">
-    <title>Algebraic Limit Theorem for Functional Limits</title>
-    <statement>
-      <p>
-        Let <m>f</m> and <m>g</m> be functions defined on a domain <m>A \subset \mathbb{R}</m>, and assume <m>\lim_{x \rightarrow c}f(x)=L</m> and <m>\lim_{x \rightarrow c}g(x)=M</m> for some limit point <m>c</m> of <m>A</m>.  Then
-        <ol>
-          <li>
-            <p>
-              <m>\displaystyle \lim_{x \rightarrow c} kf(x) = kL</m> for all <m>k \in \mathbb{R}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle \lim_{x \rightarrow c} (f(x)+g(x)) = L+M</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle \lim_{x \rightarrow c} f(x)g(x) = LM</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\displaystyle \lim_{x \rightarrow c} f(x)/g(x) = L/M</m>, provided <m>M \neq 0</m>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </corollary>
-
-  <corollary xml:id="cor-divcrit">
-    <title>Divergence Criterion for Functional Limits</title>
-    <statement>
-      <p>
-        Let <m>f</m> be a function defined on <m>A \subset \mathbb{R}</m>, and let <m>c</m> be a limit point of <m>A</m>.  If there exists two sequences <m>(x_n)</m> and <m>(y_n)</m> in <m>A</m> with <m>x_n \neq c</m> and <m>y_n \neq c</m> and
-        <md>
-          <mrow> \lim x_n \amp = \lim y_n =c</mrow>
-        </md>
-        but
-        <md>
-          <mrow>\lim f(x_n) \amp \neq  \lim f(y_n) </mrow>
-        </md>
-        then we can conclude that the function limit <m>\lim_{x \rightarrow c} f(x)</m> does not exist.
-      </p>
-    </statement>
-  </corollary>
-
-
-
-</section>
-
-<!-- ============================ -->
-
-<section>
-  <title>Continuous Functions</title>
-  
-<p workspace="4in"></p>
-
-<definition xml:id="def-cts">
-  <title>Continuity at a point</title>
-  
-  
-  <statement>
-    <p>
-      A function <m>f:A \rightarrow \mathbb{R}</m> is continuous at a point <m>c \in A</m> if, for all <m>\epsilon &gt; 0</m> there exists a <m>\delta &gt; 0</m> such that whenever <m>|x-c| &lt; \delta</m> (and <m>a \in A</m>) it follows that <m>|f(x)-f(c)| &lt; \epsilon</m>.
-    </p>
-  </statement>
-</definition>
-
-<p>Note here that the value of <m>\delta</m> depends on both <m>\epsilon</m> and <m>c</m>, so we write <m>\delta=\delta(\epsilon,c)</m>.</p>
-
-<definition xml:id="def-ctsonA">
-  <title>Continuous on a set</title>
-  <statement>
-    <p>
-     If <m>f: A \rightarrow \mathbb{R}</m> is continuous at every point in the domain <m>A</m> we say <m>f</m> is continuous on <m>A</m>.
-    </p>
-  </statement>
-</definition>
-
 </section>
 
 

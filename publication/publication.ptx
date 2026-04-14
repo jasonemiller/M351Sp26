@@ -110,7 +110,7 @@
   </latex>
 
   <!-- The embed-button makes it easy to copy the code for an iframe into your LMS -->
-  <html embed-button="yes">
+  <html cross-references="cross-page" embed-button="yes">
 
     <!-- A possible attribute for the html tag above is @short-answer-responses, with values either "always" or "graded".  As in: -->
     <!--<html short-answer-responses="always">-->
@@ -215,5 +215,7 @@
     <!-- <webwork server="https://webwork-ptx.aimath.org" /> -->
     <!-- @course, @coursepassword, @user, and @userpassword can also be set. -->
     <!-- You can also set how tasks are revealed for webwork problems using the @task-reveal attribute on the above-->
+
+
 
 </publication>
