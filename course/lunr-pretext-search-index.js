@@ -2617,43 +2617,124 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Day 19 (14 April 2026)",
-  "body": " Day 19 (14 April 2026)   This is an outline of the plans for Day 19 of the class.      Thursday 4\/14  Today's agenda:  Roll  Next Homework due Thursday : 4.2 and 4.3  New material       Continuous Functions   Note here that the value of depends on both and , so we could write .      is continuous at  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .       is continuous an  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Consider the inequality .  Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, we can say This shows is continuous at . Since was arbitrary, this shows that is continuous on all .      Alternate Characterization of Continuity   Let and let . The function is continuous at if and only if one of ( ), ( ), or ( ) below holds:   for all there is a such that (and ) implies ;    For all -neighborhoods of there exists a -neighborhood of with the property that for we have ; and,    For all with converging to it follows that converges to .    If is a limit point of , the previous three statement are equivalent to .        ( ( ) if and only if ( ) )  Statement ( ) is the definition of continuity at the point , and ( ) is its translation into topological terms. This establishes the equivalence.  ( ( ) if and only if ( ) )  We'll prove ( ) implies ( ) by contradiction. Assume ( ), and also assume that ( ) is not true. That is, assume there is an such that for all there is an with where .  Consider . Fix . For that , there is a point in , call the point , at which . For each , find the analogous point with this property and we get a sequence that converges to .  Notice that this sequence was constructed so it has the property that the sequence of values does not converge to . This contradicts ( ).  If follows that ( ) must be true. Hence ( ) implies ( ).  We prove the reverse implication directly.  Let be a sequence that converges to . We must show that the sequence converges to . Let be given.  By ( ), we know there is a such that if and then . Since converges to we know there is an such that if , then . For the same , it follows that .  This proves ( ) holds and establishes if and only if .  ( ( ) if and only if ( ) )  This can be established by noting that the difference between ( ) and the functional limit of ( ) is the case . When , we get so that .        "
+  "body": " Day 19 (14 April 2026)   This is an outline of the plans for Day 19 of the class.      Thursday 4\/14  Today's agenda:  Roll  Next Homework due Thursday : 4.2 and 4.3  New material      Continuous Functions   Note here that the value of depends on both and , so we could write .        is continuous at  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then we can say This shows is continuous at .    is continuous on  Let , and let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then we can say This shows is continuous at . Since the choice of was an arbitrary real number, the above shows that is continuous at all reals.      is continuous at  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .     The Squaring Function is Continuous   is continuous on  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, choose so that . Then This shows is continuous at . Since was arbitrary, this shows that is continuous on all .      Alternate Characterization of Continuity   Let and let . The function is continuous at if and only if one of ( ), ( ), or ( ) below holds:   for all there is a such that (and ) implies ;    For all -neighborhoods of there exists a -neighborhood of with the property that for we have ; and,    For all with converging to it follows that converges to .    If is a limit point of , the previous three statement are equivalent to .        ( ( ) if and only if ( ) )  Statement ( ) is the definition of continuity at the point , and ( ) is its translation into topological terms. This establishes the equivalence.  ( ( ) if and only if ( ) )  We'll prove ( ) implies ( ) by contradiction. Assume ( ), and also assume that ( ) is not true. That is, assume there is an such that for all there is an with where .  Consider . Fix . For that , there is a point in , call the point , at which . For each , find the analogous point with this property and we get a sequence that converges to .  Notice that this sequence was constructed so it has the property that the sequence of values does not converge to . This contradicts ( ).  If follows that ( ) must be true. Hence ( ) implies ( ).  We prove the reverse implication directly.  Let be a sequence that converges to . We must show that the sequence converges to . Let be given.  By ( ), we know there is a such that if and then . Since converges to we know there is an such that if , then . For the same , it follows that .  This proves ( ) holds and establishes if and only if .  ( ( ) if and only if ( ) )  This can be established by noting that the difference between ( ) and the functional limit of ( ) is the case . When , we get so that .        "
 },
 {
-  "id": "notes-day-19-3-2-5",
+  "id": "notes-day-19-3-3-1",
   "level": "2",
-  "url": "notes-day-19.html#notes-day-19-3-2-5",
+  "url": "notes-day-19.html#notes-day-19-3-3-1",
   "type": "Example",
   "number": "211",
+  "title": "<span class=\"process-math\">\\(f(x)=7x+5\\)<\/span> is continuous at <span class=\"process-math\">\\(x=2\\)<\/span>.",
+  "body": " is continuous at  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then we can say This shows is continuous at .  "
+},
+{
+  "id": "notes-day-19-3-3-2",
+  "level": "2",
+  "url": "notes-day-19.html#notes-day-19-3-3-2",
+  "type": "Example",
+  "number": "212",
+  "title": "<span class=\"process-math\">\\(f(x)=7x+5\\)<\/span> is continuous on <span class=\"process-math\">\\(\\mathbb{R}\\)<\/span>.",
+  "body": " is continuous on  Let , and let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then we can say This shows is continuous at . Since the choice of was an arbitrary real number, the above shows that is continuous at all reals.  "
+},
+{
+  "id": "notes-day-19-3-4-1",
+  "level": "2",
+  "url": "notes-day-19.html#notes-day-19-3-4-1",
+  "type": "Example",
+  "number": "213",
   "title": "<span class=\"process-math\">\\(f(x)=x^2\\)<\/span> is continuous at <span class=\"process-math\">\\(x=5\\)<\/span>.",
-  "body": " is continuous at  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .  "
+  "body": " is continuous at  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then because we know and so . We can also say This shows is continuous at .  "
 },
 {
   "id": "sec--2",
   "level": "2",
   "url": "notes-day-19.html#sec--2",
   "type": "Example",
-  "number": "212",
-  "title": "<span class=\"process-math\">\\(f(x)=x^2\\)<\/span> is continuous an <span class=\"process-math\">\\(\\mathbb{R}\\)<\/span>.",
-  "body": " is continuous an  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .  SCRATCH WORK  Consider the inequality .  Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, we can say This shows is continuous at . Since was arbitrary, this shows that is continuous on all .  "
+  "number": "214",
+  "title": "<span class=\"process-math\">\\(f(x)=x^2\\)<\/span> is continuous on <span class=\"process-math\">\\(\\mathbb{R}\\)<\/span>.",
+  "body": " is continuous on  We need to show is continuous at every real number. Let . We will show that is continuous at .  Let be given. According to we need to show there is a for which implies .   Choose and consider for which . Then because we know and so .  Notice that if then . On the other hand, if m then and so . Therefore, regardless of the sign of we can say . It follows that if then .  With this established, choose so that . Then This shows is continuous at . Since was arbitrary, this shows that is continuous on all .  "
 },
 {
   "id": "thm-altcts",
   "level": "2",
   "url": "notes-day-19.html#thm-altcts",
   "type": "Theorem",
-  "number": "213",
+  "number": "215",
   "title": "Alternate Characterization of Continuity.",
   "body": " Alternate Characterization of Continuity   Let and let . The function is continuous at if and only if one of ( ), ( ), or ( ) below holds:   for all there is a such that (and ) implies ;    For all -neighborhoods of there exists a -neighborhood of with the property that for we have ; and,    For all with converging to it follows that converges to .    If is a limit point of , the previous three statement are equivalent to .      "
 },
 {
-  "id": "notes-day-19-3-4-2",
+  "id": "notes-day-19-3-6-2",
   "level": "2",
-  "url": "notes-day-19.html#notes-day-19-3-4-2",
+  "url": "notes-day-19.html#notes-day-19-3-6-2",
   "type": "Proof",
   "number": "1",
   "title": "",
   "body": " ( ( ) if and only if ( ) )  Statement ( ) is the definition of continuity at the point , and ( ) is its translation into topological terms. This establishes the equivalence.  ( ( ) if and only if ( ) )  We'll prove ( ) implies ( ) by contradiction. Assume ( ), and also assume that ( ) is not true. That is, assume there is an such that for all there is an with where .  Consider . Fix . For that , there is a point in , call the point , at which . For each , find the analogous point with this property and we get a sequence that converges to .  Notice that this sequence was constructed so it has the property that the sequence of values does not converge to . This contradicts ( ).  If follows that ( ) must be true. Hence ( ) implies ( ).  We prove the reverse implication directly.  Let be a sequence that converges to . We must show that the sequence converges to . Let be given.  By ( ), we know there is a such that if and then . Since converges to we know there is an such that if , then . For the same , it follows that .  This proves ( ) holds and establishes if and only if .  ( ( ) if and only if ( ) )  This can be established by noting that the difference between ( ) and the functional limit of ( ) is the case . When , we get so that .  "
+},
+{
+  "id": "notes-day-20",
+  "level": "1",
+  "url": "notes-day-20.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 20 (16 April 2026)",
+  "body": " Day 20 (16 April 2026)   This is an outline of the plans for Day 20 of the class.      Thursday 4\/16  Today's agenda:  Roll  Next Homework due Tuesday : 4.2 and 4.3  New material       Showing Continuity by Hand  Last time, we proved using the definition that a linear function is continuous at a point, and we showed it is continuous on all of .  We also proved using the definition that the squaring function is continuous at a point, and we showed it is continuous on all of .  We could do the same for the square root function , showing that it is continuous on its domain of all reals . A similar proof will show that is continuous for natural numbers .  Using the definition to show that the cosine function is continuous at uses the following facts:                  Because is arbitrary, the proof can show that the cosine function is continuous on all reals.       Continuous Functions  Last time we proved that a linear function is continuous on all of , and we proved that the squaring function is, too. The proofs revealed something about how the choice of depends (or doesn't) on both and the points at which we're establishing continuity, i.e., .  We will see that, as a consequence of the Algebraic Continuity Theorem, polynomials are continuous functions on all of   The same theorem will tell us that rational functions (which are quotients of polynomials) are continuous on their domain (which is all of minus the finite number of points at which their denominator vanishes).  We'd like to know that other elementary functions are continuous on their domains, too. These include   algebraic functions    trigonometric functions    exponential functions    logarithm functions     Other special functions, such as the hyperbolic trigonometric functions, are algebraic combinations of the above. Others, like the Normal (a.k.a., Gaussian) probability distribution function, is a functional composition of the above.  We won't go through the details for exponential functions, for example, but we can show from first principles that the exponential functions are continuous on their domain.  We have other theorems that will help us prove the other functions are continuous without relying on the definition.    Algebraic Continuity Theorem      Assume and are continuous at a point . Then,    is continuous at for all ;     is continuous at ;     is continuous at ; and     is continuous at , provided the quotient is defined.        Let's prove ( ).  Let be a sequence that converges to .  Then because and are continuous at , the sequences and converge to and , respectively.  By the Algebraic Limit Theorem for sequences, we know converges to . Therefore, by the sequential characterization of functional limits, we can conclude that converges to as .  The other items in the theorem statement are provides analogously.   With this (and some of our previous by-hand proofs) we can, with induction, show all polynomials are continuous on their domain. And all rational functions. And all trigonometric functions. And all algebraic functions.  Lots of functions.    Composition of Continuous Functions  This next theorem increases the variety of functions that we can say are continuous, such as these:                    Composition of Continuous Functions   Given and , assume that the range is contained in the domain so that the composition is defined on . If is continuous at , and if is continuous at , then is continuous at .      Continuous functions and Compact Sets   Preservation of Compact Sets   Let be continuous on . If is compact, then is compact as well.    Suppose that is compact. We want to show that is compact. We will show that is sequentially compact.  Let be a sequence in . We must show that it has a subsequence that converges to a limit in .  Fix . Since there is an with the property that . Call this element of . We can find such an element for each . This gives us a sequence . Now we can use information about begin compact.  Since is compact, has a convergent subsequence . Let be the limit of this subsequence. Since is compact, . Therefore, .  At the same time, is a subsequence of . Moreover, because is continuous on , the sequence converges to . Thus, our subsequence converges in . Therefore, is compact, as desired.      Extreme Value Theorem   Extreme Value Theorem   If is continuous on a compact set , then attains a maximum and minimum value. In other words, there exist such that for all .     Suppose is continuous on a compact set . By , is compact. Therefore, because is closed and bounded, it contains the two limit points and . Since , there is an for which . Since , there is an for which . Therefore,  This shows that attains both it absolute maximum and absolute minimum on , as claimed.         "
+},
+{
+  "id": "thm-algcts",
+  "level": "2",
+  "url": "notes-day-20.html#thm-algcts",
+  "type": "Theorem",
+  "number": "216",
+  "title": "",
+  "body": "  Assume and are continuous at a point . Then,    is continuous at for all ;     is continuous at ;     is continuous at ; and     is continuous at , provided the quotient is defined.      "
+},
+{
+  "id": "sec-algctsthm-4",
+  "level": "2",
+  "url": "notes-day-20.html#sec-algctsthm-4",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let's prove ( ).  Let be a sequence that converges to .  Then because and are continuous at , the sequences and converge to and , respectively.  By the Algebraic Limit Theorem for sequences, we know converges to . Therefore, by the sequential characterization of functional limits, we can conclude that converges to as .  The other items in the theorem statement are provides analogously.  "
+},
+{
+  "id": "thm-compctsfcn",
+  "level": "2",
+  "url": "notes-day-20.html#thm-compctsfcn",
+  "type": "Theorem",
+  "number": "217",
+  "title": "Composition of Continuous Functions.",
+  "body": " Composition of Continuous Functions   Given and , assume that the range is contained in the domain so that the composition is defined on . If is continuous at , and if is continuous at , then is continuous at .   "
+},
+{
+  "id": "thm-ctscpt",
+  "level": "2",
+  "url": "notes-day-20.html#thm-ctscpt",
+  "type": "Theorem",
+  "number": "218",
+  "title": "Preservation of Compact Sets.",
+  "body": " Preservation of Compact Sets   Let be continuous on . If is compact, then is compact as well.    Suppose that is compact. We want to show that is compact. We will show that is sequentially compact.  Let be a sequence in . We must show that it has a subsequence that converges to a limit in .  Fix . Since there is an with the property that . Call this element of . We can find such an element for each . This gives us a sequence . Now we can use information about begin compact.  Since is compact, has a convergent subsequence . Let be the limit of this subsequence. Since is compact, . Therefore, .  At the same time, is a subsequence of . Moreover, because is continuous on , the sequence converges to . Thus, our subsequence converges in . Therefore, is compact, as desired.   "
+},
+{
+  "id": "thm-extrememvalue",
+  "level": "2",
+  "url": "notes-day-20.html#thm-extrememvalue",
+  "type": "Theorem",
+  "number": "219",
+  "title": "Extreme Value Theorem.",
+  "body": " Extreme Value Theorem   If is continuous on a compact set , then attains a maximum and minimum value. In other words, there exist such that for all .   "
+},
+{
+  "id": "sec-evt-3",
+  "level": "2",
+  "url": "notes-day-20.html#sec-evt-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Suppose is continuous on a compact set . By , is compact. Therefore, because is closed and bounded, it contains the two limit points and . Since , there is an for which . Since , there is an for which . Therefore,  This shows that attains both it absolute maximum and absolute minimum on , as claimed.   "
 },
 {
   "id": "activity-01-intro-activity",
