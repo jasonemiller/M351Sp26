@@ -23,9 +23,7 @@
       </ol></p>
   </section>
   
-<!-- ========================================   -->
-
-<!-- ============================ -->
+<!-- ========================================  -->
 
 <section>
   <title>Continuous Functions</title>
@@ -38,15 +36,72 @@
 
 <!-- <p workspace="4in"></p> -->
 <!-- picture that goes with continuous function a x=c -->
+</section>
+
+<section>
+<example>
+  <title><m>f(x)=7x+5</m> is continuous at <m>x=2</m></title>
+  <p>
+    Let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-2| &lt; \delta</m> implies <m>|f(x)-f(2)|=|(7x+5)-(7 \cdot 2+5)| &lt; \epsilon</m>.
+  </p>
+  <!-- 
+  <p workspace="2in">
+    SCRATCH WORK
+  </p>
+-->
+  <p>
+    Choose <m>\delta = \min\{1, \epsilon/7\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-2| &lt; \delta</m>.  Then we can say
+    <md>
+      <mrow>|(7x+5)-(7 \cdot 2+5)| \amp = |7x+5-19| </mrow>
+      <mrow> \amp = |7x-14| </mrow>
+      <mrow> \amp = |7(x-2)| </mrow>
+      <mrow> \amp = 7 \cdot |x-2|</mrow>
+      <mrow> \amp &lt; 7 \cdot \epsilon/7 \text{ because } |x-2| &lt; \epsilon/7</mrow>
+      <mrow> \amp = \epsilon</mrow>.
+    </md>
+    This shows <m>f(x)=7x+5</m> is continuous at <m>x=2</m>.
+  </p>
+</example>
+
+<example>
+  <title><m>f(x)=7x+5</m> is continuous on <m>\mathbb{R}</m></title>
+  <p>
+    Let <m>c \in \mathbb{R}</m>, and let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-c| &lt; \delta</m> implies <m>|f(x)-f(c)|=|(7x+5)-(7 \cdot c+5)| &lt; \epsilon</m>.
+  </p>
+  <!-- 
+  <p workspace="2in">
+    SCRATCH WORK
+  </p>
+-->
+  <p>
+    Choose <m>\delta = \epsilon/7</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-c| &lt; \delta</m>.  Then we can say
+    <md>
+      <mrow>|(7x+5)-(7 \cdot c+5)| \amp = |7x+5-7c-5| </mrow>
+      <mrow> \amp = |7x-7c| </mrow>
+      <mrow> \amp = |7(x-c)| </mrow>
+      <mrow> \amp = 7 \cdot |x-c|</mrow>
+      <mrow> \amp &lt; 7 \cdot \epsilon/7 \text{ because } |x-c| &lt; \epsilon/7</mrow>
+      <mrow> \amp = \epsilon</mrow>.
+    </md>
+    This shows <m>f(x)=7x+5</m> is continuous at <m>x=c</m>.  Since the choice of <m>x=c</m> was an arbitrary real number, the above shows that <m>f(x)=7x+5</m> is continuous at all reals.
+  </p>
+</example>
+
+</section>
+
+
+<section>
 
 <example>
   <title><m>f(x)=x^2</m> is continuous at <m>x=5</m></title>
   <p>
     Let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-5| &lt; \delta</m> implies <m>|f(x)-f(2)|=|x^2-25| &lt; \epsilon</m>.
   </p>
-  <p workspace="3in">
+<!-- 
+  <p workspace="2in">
     SCRATCH WORK
   </p>
+-->
   <p>
     Choose <m>\delta = \min\{1, \epsilon/11\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-5| &lt; \delta</m>.  Then because <m>|x-5| &lt; \delta \leq 1</m> we know <m>-1 &lt; x-5 &lt; 1</m> and <m>9 &lt; x+5 &lt; 11</m> so <m>|x+5| &lt; 11</m>.  We can also say
     <md>
@@ -60,35 +115,34 @@
 </example>
 </section>
 
-
 <section xml:id="sec-">
-  <title></title>
+  <title>The Squaring Function is Continuous</title>
 
 <example>
-  <title><m>f(x)=x^2</m> is continuous an <m>\mathbb{R}</m></title>
+  <title><m>f(x)=x^2</m> is continuous on <m>\mathbb{R}</m></title>
   <p>
     We need to show <m>f(x)</m> is continuous at every real number.  Let <m>c \in \mathbb{R}</m>.  We will show that <m>f(x)</m> is continuous at <m>x=c</m>.
   </p>
   <p>
     Let <m>\epsilon &gt; 0</m> be given.  According to <xref ref="def-cts" /> we need to show there is a <m>\delta &gt; 0</m> for which <m>|x-c| &lt; \delta</m> implies <m>|f(x)-f(c)|=|x^2-c^2| &lt; \epsilon</m>.
   </p>
+  <!-- 
   <p workspace="3in">
     SCRATCH WORK
   </p>
+  -->
   <p>
-    Consider the inequality <m>|x-c| &lt; \delta</m>.
+    Choose <m>\delta = \min\{1, \epsilon/(1+2|c|)\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-c| &lt; \delta</m>.  Then because <m>|x-c| &lt; \delta \leq 1</m> we know <m>-1 &lt; x-c &lt; 1</m> and <m>2c-1 &lt; x+c &lt; 2c+1</m> so <m>|x+c| &lt; \max\{|2c \pm 1|\}</m>.
   </p>
   <p>
-    Choose <m>\delta = \min\{1, \epsilon/(1+2|c|)\}</m> and consider <m>x \in \mathbb{R}</m> for which <m>|x-c| &lt; \delta</m>.  Then because <m>|x-c| &lt; \delta \leq 1</m> we know <m>-1 &lt; x-c &lt; 1</m> and <m>2c-1 &lt; x+c &lt; 2c+1</m> so <m>|x+5| &lt; \max\{|2c \pm 1|\}</m>.
-  </p>
-  <p>
-     Notice that if <m>c \geq 0</m> then <m>|2c-1| &lt; |2c+1|=2c+1=2|c|+1</m>.  On the other hand, if <m>c \leq 0</m>m then <m>|2c-1| \geq |2c+1|</m> and <m>|2c-1|=|2(-|c|)-1|=|2\cdot|c|+1|=2|c|+1</m> so <m>|2c+1| \leq 2|c|+1</m>.  Therefore, regardless of the sign of <m>c \in \mathbb{R}</m> we can say <m>\max\{|2c \pm 1\|} \leq 2|c|+1</m>.  It follows that if <m>|x-c| &lt; 1</m> then <m>|x+5| &lt; 2|c|+1</m>.
+     Notice that if <m>c \geq 0</m> then <m>|2c-1| &lt; |2c+1|=2c+1=2|c|+1</m>.  On the other hand, if <m>c \leq 0</m>m then <m>|2c-1| \geq |2c+1|</m> and <m>|2c-1|=|2(-|c|)-1|=|2\cdot|c|+1|=2|c|+1</m> so <m>|2c+1| \leq 2|c|+1</m>.  Therefore, regardless of the sign of <m>c \in \mathbb{R}</m> we can say <m>\max\{|2c \pm 1|\} \leq 2|c|+1</m>.  It follows that if <m>|x-c| &lt; 1</m> then <m>|x+c| &lt; 2|c|+1</m>.
   </p>  
-  <p>With this established, we can say
+  <p>
+    With this established, choose <m>x \in \mathbb{R}</m> so that <m>|x-c| &lt; \delta</m>. Then
     <md>
       <mrow>|x^2-c^2| \amp = |x-c| \cdot |x+c| </mrow>
       <mrow> \amp &lt; |x-c| \cdot (2|c|+1) \text{ because } |x-5| &lt; 1</mrow>
-      <mrow> \amp &lt; \epsilon/(2|c|+1) \cdot (2|c|+1) \text{ because } |x-5| &lt; \epsilon/(2|c|+1)</mrow>
+      <mrow> \amp &lt; \epsilon/(2|c|+1) \cdot (2|c|+1) \text{ because } |x-c| &lt; \epsilon/(2|c|+1)</mrow>
       <mrow> \amp = \epsilon</mrow>.
     </md>
     This shows <m>f(x)=x^2</m> is continuous at <m>x=c</m>.  Since <m>c</m> was arbitrary, this shows that <m>f(x)=x^2</m> is continuous on all <m>\mathbb{R}</m>.
@@ -96,7 +150,6 @@
 </example>
 
 </section>
-
 
 <section>
 
