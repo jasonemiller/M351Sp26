@@ -2764,6 +2764,51 @@ var ptx_lunr_docs = [
   "body": " Uniform Continuity on Compact Sets   A function that is continuous on a compact set is uniformly continuous on .    Let be given. Since is continuous on , for each there is a for which implies .  Note that is the set of all for which . The collection is an open cover of .  Since is compact, contains a finite subcover .  This means that there are a finite number of points , where such that   Define . Then .  Let such that . Since is an open cover, there is a for which . That means . We also have It follows that   This shows that is uniformly continuous on .   "
 },
 {
+  "id": "notes-day-21",
+  "level": "1",
+  "url": "notes-day-21.html",
+  "type": "Section",
+  "number": "",
+  "title": "Day 21 (21 April 2026)",
+  "body": " Day 21 (21 April 2026)   This is an outline of the plans for Day 21 of the class.      Tuesday 4\/21  Today's agenda:  Roll  Homework due : 4.2 and 4.3  Next Homework due Thursday : 4.4: 1, 2, 4, 7, 8, 9  New material       Continuity and Uniform Continuity  We've built on our understanding of functional limits to establish the concept of continuity and some of its consequences:   What it means for a function to be continuous on a set.    What is means for a function to be uniformly continuous on a set.    The algebraic combination of continuous functions and the composition of continuous functions are also continuous.    The image of a compact set under a continuous function is also compact.    A continuous function on a compact domain attains both an absolute maximum value and an absolute minimum value.    A function that is continuous at every point of a compact set is uniformly continuous on that compact set.     I also mentioned without proof the following consequences of continuity:   If is a connected set, and if is continuous on then is a connected set.    If is continuous on , and if is an open set, then is an open set.     The first of these gives us ...   Intermediate Value Theorem   If is continuous on , and if is any number between and , then there is a at which .    This is a very important consequence of the completeness of the reals.    Differentiability  In Calculus 1, we learn about the property of differentiability, what it says about functions, and how it can be used to learn other things about functions and to model real-world phenomena.    Let be a function on an interval . Given , the derivative of at is defined by provided the limit exists. In this case we say is differentiable at . If exists for all points , we say that is differentiable on .      Differentiablity implies Continuity   If is differentiable at , then is continuous at .    This means that continuity is prerequisite for differentiability. (The contrapositive of the above.)   Suppose that is differentiable at . This means that the following limit exists and is finite:        "
+},
+{
+  "id": "thm-ivt",
+  "level": "2",
+  "url": "notes-day-21.html#thm-ivt",
+  "type": "Theorem",
+  "number": "222",
+  "title": "Intermediate Value Theorem.",
+  "body": " Intermediate Value Theorem   If is continuous on , and if is any number between and , then there is a at which .   "
+},
+{
+  "id": "def-diffbl",
+  "level": "2",
+  "url": "notes-day-21.html#def-diffbl",
+  "type": "Definition",
+  "number": "223",
+  "title": "",
+  "body": "  Let be a function on an interval . Given , the derivative of at is defined by provided the limit exists. In this case we say is differentiable at . If exists for all points , we say that is differentiable on .   "
+},
+{
+  "id": "thm-diffcts",
+  "level": "2",
+  "url": "notes-day-21.html#thm-diffcts",
+  "type": "Theorem",
+  "number": "224",
+  "title": "Differentiablity implies Continuity.",
+  "body": " Differentiablity implies Continuity   If is differentiable at , then is continuous at .   "
+},
+{
+  "id": "notes-day-21-3-6",
+  "level": "2",
+  "url": "notes-day-21.html#notes-day-21-3-6",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Suppose that is differentiable at . This means that the following limit exists and is finite:   "
+},
+{
   "id": "activity-01-intro-activity",
   "level": "1",
   "url": "activity-01-intro-activity.html",
