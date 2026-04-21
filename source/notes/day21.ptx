@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="notes-day-20">
-  <title>Day 20 (16 April 2026)</title>
+<section xml:id="notes-day-21">
+  <title>Day 21 (21 April 2026)</title>
 
   <introduction>
     <p>
-      This is an outline of the plans for Day 20 of the class.
+      This is an outline of the plans for Day 21 of the class.
     </p>
   </introduction>
 
@@ -13,13 +13,13 @@
   <handout>
 
   <section>
-    <title>Thursday 4/16 </title>
+    <title>Tuesday 4/21 </title>
 
     <p>Today's agenda:
       <ol>
         <li><p>Roll</p></li>
-        <li><p>Next Homework due Tuesday : 4.2 and 4.3</p></li>
-        <li><p>Another Homework due Thursday : 4.2 and 4.3</p></li>
+        <li><p>Homework due : 4.2 and 4.3</p></li>
+        <li><p>Next Homework due Thursday : 4.4:  1, 2, 4, 7, 8, 9</p></li>
         <li><p>New material</p></li>
       </ol></p>
   </section>
@@ -28,369 +28,120 @@
 
 <!-- ============================ -->
 
-<section xml:id="sec-ctsbyhand">
-  <title>Showing Continuity by Hand</title>
+<section xml:id="sec-review0421">
+  <title>Continuity and Uniform Continuity</title>
   
-<p>
-  Last time, we proved using the definition that a linear function is continuous at a point, and we showed it is continuous on all of <m>\mathbb{R}</m>.
-</p>
-<p>
-  We also proved using the definition that the squaring function <m>y=x^2</m> is continuous at a point, and we showed it is continuous on all of <m>\mathbb{R}</m>.
-</p>
-<p>
-  We could do the same for the square root function <m>y=\sqrt{y}</m>, showing that it is continuous on its domain of all reals <m>x \geq 0</m>.  A similar proof will show that <m>y=\sqrt[n]{y}</m> is continuous for natural numbers <m>n \geq 2</m>.
-</p>
-<p>
-  Using the definition to show that the cosine function is continuous at <m>x=c</m> uses the following facts:
-  <ol>
-    <li>
-      <p>
-        <m>\cos(x)-\cos(c) = -2 \sin\left( \frac{x+c}{2} \right) \sin \left( \frac{x-c}{2} \right)</m>
-      </p>
-    </li>
-    <li>
-      <p>
-        <m>| \sin \theta | \leq 1</m>
-      </p>
-    </li>
-    <li>
-      <p>
-        <m>| \sin \theta | \leq |\theta|</m>
-      </p>
-    </li>
-    <li>
-      <p>
-        Because <m>x=c</m> is arbitrary, the proof can show that the cosine function is continuous on all reals.
-      </p>
-    </li>
-  </ol>
-</p>
-
-</section>
-
-<section xml:id="sec-ctsfcns">
-  <title>Continuous Functions</title>
-  
-  <p>
-  Last time we proved that a linear function is continuous on all of <m>\mathbb{R}</m>, and we proved that the squaring function is, too.  The proofs revealed something about how the choice of <m>\delta</m> depends (or doesn't) on both <m>\epsilon</m> and the points at which we're establishing continuity, i.e., <m>x=c</m>.
-  </p>
-  <p>
-    We will see that, as a consequence of the Algebraic Continuity Theorem, polynomials are continuous functions on all of <m>\mathbb{R}</m> 
-  </p>
-  <p>
-    The same theorem will tell us that rational functions (which are quotients of polynomials) are continuous on their domain (which is all of <m>\mathbb{R}</m> minus the finite number of points at which their denominator vanishes).
-  </p>
-  <p>
-    We'd like to know that other elementary functions are continuous on their domains, too.  These include
-    <ul>
-      <li>
-        <p>
-          algebraic functions
-        </p>
-      </li>
-      <li>
-        <p>
-          trigonometric functions
-        </p>
-      </li>
-      <li>
-        <p>
-          exponential functions
-        </p>
-      </li>
-      <li>
-        <p>
-          logarithm functions
-        </p>
-      </li>
-    </ul>
-  </p>
-<p>
-  Other special functions, such as the hyperbolic trigonometric functions, are algebraic combinations of the above.  Others, like the Normal (a.k.a., Gaussian) probability distribution function, is a functional composition of the above.
-</p>
-<p>
-  We won't go through the details for exponential functions, for example, but we can show from first principles that the exponential functions are continuous on their domain.
-</p>
-<p>
-  We have other theorems that will help us prove the other functions are continuous without relying on the definition.
-</p>
-</section>
-
-<section xml:id="sec-algctsthm">
-  <title>Algebraic Continuity Theorem</title>
-
-<p>
-  
-</p>
-
-  <theorem xml:id="thm-algcts">
-    <statement>
-      <p>
-        Assume <m>f : A → \mathbb{R}</m> and <m>g : A → \mathbb{R}</m> are continuous at a point <m>c \in A</m>. Then,
-<ol>
-  <li>
-    <p>
-      <m>kf(x)</m> is continuous at <m>c</m> for all <m>k \in \mathbb{R}</m>;
-    </p>
-  </li>
-  <li xml:id="item-thm-algcts2">
-    <p>
-      <m>f(x)+g(x)</m> is continuous at <m>c</m>;
-    </p>
-  </li>
-  <li>
-    <p>
-      <m>f(x)g(x)</m> is continuous at <m>c</m>; and
-    </p>
-  </li>
-  <li>
-    <p>
-      <m>f(x)/g(x)</m> is continuous at <m>c</m>, provided the quotient is defined.
-    </p>
-  </li>
-</ol>
-</p>
-    </statement>
-  </theorem>
-
-  <proof>
-    <p>
-      Let's prove (<xref ref="item-thm-algcts2"/>).
-    </p>
-    <p>
-      Let <m>(x_n) \subset A</m> be a sequence that converges to <m>c</m>.
-    </p>
-    <p>
-      Then because <m>f(x)</m> and <m>g(x)</m> are continuous at <m>c</m>, the sequences <m>(f(x_n))</m> and <m>(g(x_n))</m> converge to <m>f(c)</m> and <m>g(c)</m>, respectively.
-      </p>
-    <p>
-      By the Algebraic Limit Theorem for sequences, we know <m>(f(x_n)+g(x_n))</m> converges to <m>f(c)+g(c)=(f+g)(c)</m>.  Therefore, by the sequential characterization of functional limits, we can conclude that <m>(f(x)+g(x))</m> converges to <m>f(c)+g(c)=(f+g)(c)</m> as <m>x \rightarrow c</m>.
-    </p>
-    <p>
-      The other items in the theorem statement are provides analogously.
-    </p>
-  </proof>
-
-  <p>
-    With this (and some of our previous by-hand proofs) we can, with induction, show all polynomials are continuous on their domain.  And all rational functions.  And all trigonometric functions.  And all algebraic functions.
-  </p>
-  <p>
-    Lots of functions.
-  </p>
-</section>
-
-<section xml:id="sec-compctsfcn">
-  <title>Composition of Continuous Functions</title>
-    
-  <p>
-    This next theorem increases the variety of functions that we can say are continuous, such as these:
+  <p>We've built on our understanding of functional limits to establish the concept of continuity and some of its consequences:
     <ol>
       <li>
         <p>
-          <m>\sqrt{x^2+x+1}</m>
+          What it means for a function to be continuous on a set.
         </p>
       </li>
       <li>
         <p>
-          <m>\cos(x^2)</m>
+          What is means for a function to be uniformly continuous on a set.
         </p>
       </li>
       <li>
         <p>
-          <m>e^{-x^2}</m>
+          The algebraic combination of continuous functions and the composition of continuous functions are also continuous.
+        </p>
+      </li>
+      <li>
+        <p>
+          The image of a compact set under a continuous function is also compact.
+        </p>
+      </li>
+      <li>
+        <p>
+          A continuous function on a compact domain attains both an absolute maximum value and an absolute minimum value.
+        </p>
+      </li>
+      <li>
+        <p>
+          A function that is continuous at every point of a compact set is uniformly continuous on that compact set.
         </p>
       </li>
     </ol>
   </p>
-  <theorem xml:id="thm-compctsfcn">
-    <title>Composition of Continuous Functions</title>
+
+  <p>
+    I also mentioned without proof the following consequences of continuity:
+    <ol>
+      <li>
+        <p>
+          If <m>E \subset \mathbb{R}</m> is a connected set, and if <m>f:E \rightarrow \mathbb{R}</m> is continuous on <m>E</m> then <m>f(E)</m> is a connected set.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>f:\mathbb{R} \rightarrow \mathbb{R}</m> is continuous on <m>\mathbb{R}</m>, and if <m>B \subseteq \mathbb{R}</m> is an open set, then <m>f^{-1}(B)</m> is an open set.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p> 
+    The first of these gives us ...
+  </p>
+
+  <theorem xml:id="thm-ivt">
+    <title>Intermediate Value Theorem</title>
     <statement>
       <p>
-      Given <m>f : A \rightarrow \mathbb{R}</m> and <m>g : B \rightarrow \mathbb{R}</m>, assume that the range <m>f(A) = \{f(x) : x \in A\}</m> is contained in the domain <m>B</m> so that the composition <m>g \circ f(x) = g(f(x))</m> is defined on <m>A</m>.  If <m>f</m> is continuous at <m>c \in A</m>, and if <m>g</m> is continuous at <m>f(c) \in B</m>, then <m>g \circ f</m> is continuous at <m>c</m>.
+        If <m>f:[a,b] \rightarrow \mathbb{R}</m> is continuous on <m>[a,b]</m>, and if <m>L</m> is any number between <m>f(a)</m> and <m>f(b)</m>, then there is a <m>c \in [a,b]</m> at which <m>f(c)=L</m>.
       </p>
     </statement>
   </theorem>
   
-  <proof>
-    <p>
-      Easy proof if you use the sequential characterization of continuity at a point.
-    </p>
-  </proof>
+  <p>
+    This is a very important consequence of the completeness of the reals.
+  </p>
 </section>
 
-<p workspace="4in"></p>
-
-<section xml:id="sec-ctscpt">
-  <title>Continuous functions and Compact Sets</title>
+<section xml:id="sec-diff">
+  <title>Differentiability</title>
   
-<theorem xml:id="thm-ctscpt">
-  <title>Preservation of Compact Sets</title>
+  <p>
+    In Calculus 1, we learn about the property of differentiability, what it says about functions, and how it can be used to learn other things about functions and to model real-world phenomena.
+  </p>
+
+  <definition xml:id="def-diffbl">
+    <statement>
+      <p>
+        Let <m>g : A \rightarrow \mathbb{R}</m> be a function on an interval <m>A \subseteq \mathbb{R}</m>.  Given <m>c \in A</m>, the <term>derivative of <m>g</m> at <m>c</m></term> is defined by
+        <md>
+          <mrow>g'(c) \amp = \lim_{x \rightarrow c} \frac{g(x)-x(c)}{x-c} \amp </mrow>
+        </md>
+        provided the limit exists.  In this case we say <term><m>g</m> is differentiable at <m>x=c</m></term>.  If <m>g'</m> exists for all points <m>c \in A</m>, we say that <term><m>g</m> is differentiable on <m>A</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+
+</section>
+
+<theorem xml:id="thm-diffcts">
+  <title>Differentiablity implies Continuity</title>
   <statement>
     <p>
-      Let <m>f : A \rightarrow \mathbb{R}</m> be continuous on <m>A</m>. If <m>K \subseteq A</m> is compact, then <m>f(K)</m> is compact as well.
+      If <m>f(x)</m> is differentiable at <m>x=c</m>, then <m>f</m> is continuous at <m>x=c</m>.
     </p>
   </statement>
-  <proof>
-    <p>
-      Suppose that <m>K \subseteq A</m> is compact.  We want to show that
-      <md>
-        <mrow>f(K) = \{f(y) \, : \, y \in K \}</mrow>
-      </md>
-      is compact.  We will show that <m>f(K)</m> is sequentially compact.
-    </p>
-    <p>
-      Let <m>(y_n)</m> be a sequence in <m>f(K)</m>.  We must show that it has a subsequence that converges to a limit in <m>f(K)</m>.
-    </p>
-    <p>
-      Fix <m>k \in \mathbb{N}</m>.  Since <m>y_k \in f(K)</m> there is an <m>x \in K</m> with the property that <m>f(x)=y_k</m>.  Call this element of <m>x=x_k</m>.  We can find such an element for each <m>k \in \mathbb{N}</m>.  This gives us a sequence <m>(x_n) \subset K</m>.  Now we can use information about <m>K</m> begin compact.
-    </p>
-    <p>
-      Since <m>K</m> is compact, <m>(x_n)</m> has a convergent subsequence <m>(x_{n_k})</m>.  Let <m>x_0</m> be the limit of this subsequence.  Since <m>K</m> is compact, <m>x_0 \in K</m>.  Therefore, <m>f(x_0) \in f(K)</m>.
-    </p>
-    <p>
-      At the same time, <m>(f(x_{n_k}))</m> is a subsequence of <m>(y_n) \subset f(K)</m>. Moreover, because <m>f</m> is continuous on <m>K</m>, the sequence <m>f(x_{n_k}) \subset f(K)</m> converges to <m>f(x_0)</m>.  Thus, our subsequence converges in <m>f(K)</m>.  Therefore, <m>f(K)</m> is compact, as desired.
-    </p>
-  </proof>
 </theorem>
 
-</section>
+<p>
+  This means that continuity is prerequisite for differentiability.  (The contrapositive of the above.)
+</p>
 
-
-<section xml:id="sec-evt">
-  <title>Extreme Value Theorem</title>
-
-  <theorem xml:id="thm-extrememvalue">
-    <title>Extreme Value Theorem</title>
-    <statement>
-      <p>
-        If <m>f : K \rightarrow \mathbb{R}</m> is continuous on a compact set <m>K \subset \mathbb{R}</m>, then <m>f</m> attains a maximum and minimum value. In other words, there exist <m>x_0, x_1 \in K</m> such that <m>f(x_0) \leq f(x) \leq f(x_1)</m> for all <m>x \in K</m>.
-      </p>
-    </statement>
-  </theorem>
-  
 <proof>
   <p>
-    Suppose <m>f</m> is continuous on a compact set <m>K \subset \mathbb{R}</m>.  By <xref ref="thm-ctscpt"/>, <m>f(K)</m> is compact.  Therefore, because <m>f(K)</m> is closed and bounded, it contains the two limit points <m>\alpha = \sup(f(K))</m> and <m>\beta=\inf(f(K))</m>.  Since <m>\alpha \in f(K)</m>, there is an <m>x_0 \in K</m> for which <m>f(x_0)=\inf f(K)</m>.  Since <m>\beta \in f(K)</m>, there is an <m>x_1 \in K</m> for which <m>f(x_1)=\sup f(K)</m>.  Therefore, 
+    Suppose that <m>f</m> is differentiable at <m>x=c</m>.  This means that the following limit exists and is finite:
     <md>
-      <mrow><m>f(x_0) =\inf f(K) \amp \leq f(x) \leq \sup f(K) = f(x_1)</m> </mrow>
+          <mrow>\lim_{x \rightarrow c} \frac{f(x)-f(c)}{x-c} \amp = f'(c)</mrow>
     </md>
-    <p>
-      This shows that <m>f</m> attains both it absolute maximum and absolute minimum on <m>K</m>, as claimed.
-    </p>
   </p>
 </proof>
-
-<p workspace="4in"></p>
-
-
-</section>
-
-
-<section xml:id="sec-unifcts">
-  <title>Uniform Continuity</title>
-  
-<p>
-  Our definition of continuity (see <xref ref="def-cts"/>) expresses the idea that as <m>x</m> gets closer and closer to <m>c</m>, the value of <m>f(x)</m> gets closer and closer to the value <m>f(c)</m>.  This means that we can make <m>|f(x)-f(c)|</m> as small as we want by making <m>|x-c|</m> small enough.  
-</p>
-<p>
-  We've seen through examples that how small we make <m>|x-c|</m> can depend both on <m>\epsilon</m> and <m>c</m>.
-  <ol>
-    <li>
-      <p>
-        In our proof of continuity of <m>f(x)=7x+5</m> we saw that <m>\delta=\epsilon/7</m> works.  Notice:  no dependence on <m>c</m>!
-      </p>
-    </li>
-    <li>
-      <p>
-        In a proof of continuity of <m>f(x)=\sqrt{x}</m> at a nonzero <m>x=c</m> we would see that <m>\delta=\epsilon \cdot \sqrt{c}</m> works.  Here, if <m>|c|</m> is small, then it it forces <m>\delta</m> to be smaller! 
-      </p>
-    </li>
-    <li>
-      <p>
-        In our proof of continuity of <m>f(x)=x^2</m> we saw that <m>\delta=\epsilon/(2|c|+1))</m> works.  Here, if <m>|c|</m> is big, then it forces <m>\delta</m> to be smaller.
-      </p>
-    </li>
-  </ol>
-</p>
-
-<p>
-  For some functions, the point at which we are working (i.e., <m>x=c</m>) plays an important role (viz a viz <m>f(x)=x^2</m>).
-</p>
-<p>
-  For other functions (e.g., <m>f(x)=\sqrt{x}</m> and <m>f(x)=7x+5</m>), where we are examining continuity plays less of a role.
-</p>
-
-<p workspace="4in"></p>
-
-
-<definition xml:id="def-unifcts">
-  <statement>
-    <p>
-      A function <m>f : A \rightarrow \mathbb{R}</m> is uniformly continuous on <m>A</m> if for every <m>\epsilon &gt; 0</m> there exists a <m>\delta &gt; 0</m> such that for all <m>x,y \in A</m> with <m>|x-y| &lt; \delta</m> we know <m>|f(x)-f(y)| &lt; \epsilon</m>
-    </p>
-  </statement>
-</definition>
-</section>
-
-<section xml:id="sec-unifcts2">
-  <title>Uniformly Continuous Functions</title>
-  
-<theorem xml:id="thm-unifcts">
-  <title>Uniform Continuity on Compact Sets</title>
-  <statement>
-    <p>
-      A function that is continuous on a compact set <m>K</m> is uniformly continuous on <m>K</m>.
-    </p>
-  </statement>
-
-  <proof>
-    <p>
-      Let <m>\epsilon &gt; 0</m> be given.  Since <m>f</m> is continuous on <m>K</m>, for each <m>c \in K</m> there is a <m>\delta = \delta(c) &gt; 0</m> for which <m>x \in V_{\delta(c)}(c)</m> implies <m>f(x) \in V_{\frac{1}{2}\epsilon}(f(c))</m>.
-    </p>
-    <p>
-      Note that <m>V_{\frac{1}{2} \delta(c)}(c)</m> is the set of all <m>x \in K</m> for which <m>|x-c| &lt; \frac{1}{2}\delta(c)</m>.  The collection
-      <md>
-        <mrow>\mathcal{U}  \amp = \{ V_{\frac{1}{2} \delta(c)}(c) \, : \, c \in K \}</mrow>
-      </md>
-      is an open cover of <m>K</m>.
-    </p>
-    <p>
-      Since <m>K</m> is compact, <m>\mathcal{U}</m> contains a finite subcover <m>\mathcal{U}_0</m>.
-    </p>
-    <p>
-      This means that there are a finite number of points <m>c_i \in K</m>, where <m>i=1,2,3,\dots,n</m>such that
-      <md>
-        <mrow>K \subset V_{\frac{1}{2} \delta(c_1)}(c_1) \cup  V_{\frac{1}{2} \delta(c_2)}(c_2) \cup \cdots \cup V_{\frac{1}{2} \delta(c_n)}(c_n) \cup </mrow>
-      </md>
-    </p>
-    <p>
-      Define <m>\delta = \frac{1}{2} \min \{ \delta(c_i) \, : \, i=1,2,3,\ldots,n\}</m>.  Then <m>\delta &gt; 0</m>.
-    </p>
-    <p>
-      Let <m>x,y \in K</m> such that <m>|x-y| &lt; \delta</m>.  Since <m>\mathcal{U}_0</m> is an open cover, there is a <m>1 \leq m \leq n</m> for which <m>x \in V_{\frac{1}{2} \delta(c_m)}(c_m)</m>.  That means <m>|x-c_m| &lt; \frac{1}{2} \delta(c_m)</m>.  We also have
-      <md>
-        <mrow>|y-c_m| \amp = |y-x+x-c_m|  </mrow>
-        <mrow>\amp \leq |y-x|+|x-c_m|  </mrow>
-        <mrow> \amp &lt; \delta  + \frac{1}{2} \delta(c_m)</mrow>
-        <mrow> \amp &lt; \delta(c_m)</mrow>
-      </md>
-      It follows that
-      <md>
-        <mrow>|f(x)-f(y)| \amp = |f(x)-f(c_m)+f(c_m)-f(y)|</mrow>
-        <mrow>|\amp \leq |f(x)-f(c_m)|+|f(c_m)-f(y)|</mrow>
-        <mrow> \amp &lt; \epsilon/2 | \epsilon/2 </mrow>
-        <mrow> \amp = \epsilon</mrow>
-      </md>
-    </p>
-    <p>
-      This shows that <m>f</m> is uniformly continuous on <m>K</m>.
-    </p>
-  </proof>
-</theorem>
-
-  
-  
-</section>
 <!-- ============================ -->
 <!-- ============================ -->
 <!-- ============================ -->
