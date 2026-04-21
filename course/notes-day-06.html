@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -522,14 +528,19 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="notes-day-06"><h2 class="heading hide-type">
+<section class="section" id="notes-day-06">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 6 (12 February 2026)</span>
 </h2>
-<section class="introduction" id="notes-day-06-2"><div class="para" id="notes-day-06-2-1">This is an outline of the plans for Day 6 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="handout" id="notes-day-06-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<section class="introduction" id="notes-day-06-2">
+<div class="para" id="notes-day-06-2-1">This is an outline of the plans for Day 6 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="handout" id="notes-day-06-3" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h3 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-06-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="section" id="notes-day-06-3-1"><h4 class="heading hide-type">
+<section class="section" id="notes-day-06-3-1">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Thursday 2/12</span>
 </h4>
 <div class="para logical" id="notes-day-06-3-1-2">
@@ -562,7 +573,10 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Thursday 2/12"><a href="#notes-day-06-3-1" title="Copy heading and permalink for Section: Thursday 2/12" aria-label="Copy heading and permalink for Section: Thursday 2/12">🔗</a></div></section><section class="section" id="notes-day-06-3-2"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Thursday 2/12"><a href="#notes-day-06-3-1" title="Copy heading and permalink for Section: Thursday 2/12" aria-label="Copy heading and permalink for Section: Thursday 2/12">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-2">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Last time: Cardinality</span>
 </h4>
 <div class="para logical" id="notes-day-06-3-2-2">
@@ -592,7 +606,11 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="notes-day-06-3-2-3-1-1">The set of real numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 57"><a href="#notes-day-06-3-2-3" title="Copy heading and permalink for Theorem 57" aria-label="Copy heading and permalink for Theorem 57">🔗</a></div></article><details id="notes-day-06-3-2-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-06-3-2-3-2-1">
+<div class="autopermalink" data-description="Theorem 57"><a href="#notes-day-06-3-2-3" title="Copy heading and permalink for Theorem 57" aria-label="Copy heading and permalink for Theorem 57">🔗</a></div>
+</article>
+<details id="notes-day-06-3-2-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="notes-day-06-3-2-3-2-1">
 <div class="para">(Contradiction). Suppose <span class="process-math">\(\mathbb{R}\)</span> is countable.  Then there exists an enumeratioon <span class="process-math">\(\phi:\mathbb{N} \rightarrow \mathbb{R}\text{.}\)</span>  Let <span class="process-math">\(x_n=\phi(n)\)</span> so that</div>
 <div class="displaymath process-math" id="notes-day-06-3-2-3-2-1-4">
 \begin{equation*}
@@ -614,12 +632,18 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="notes-day-06-3-2-3-2-7">Therefore, our supposition that <span class="process-math">\(\mathbb{R}\)</span> is countably infinte was false.  The opposite is true: <span class="process-math">\(\mathbb{R}\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-2-3-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 57.1"><a href="#notes-day-06-3-2-3-2" title="Copy heading and permalink for Proof 57.1" aria-label="Copy heading and permalink for Proof 57.1">🔗</a></div></article></details><article class="corollary theorem-like" id="notes-day-06-3-2-4"><h5 class="heading">
+<div class="autopermalink" data-description="Proof 57.1"><a href="#notes-day-06-3-2-3-2" title="Copy heading and permalink for Proof 57.1" aria-label="Copy heading and permalink for Proof 57.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="notes-day-06-3-2-4"><h5 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">58</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="notes-day-06-3-2-4-1-1">The set of irrational numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 58"><a href="#notes-day-06-3-2-4" title="Copy heading and permalink for Corollary 58" aria-label="Copy heading and permalink for Corollary 58">🔗</a></div></article><div class="autopermalink" data-description="Section: Last time: Cardinality"><a href="#notes-day-06-3-2" title="Copy heading and permalink for Section: Last time: Cardinality" aria-label="Copy heading and permalink for Section: Last time: Cardinality">🔗</a></div></section><section class="section" id="notes-day-06-3-3"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Corollary 58"><a href="#notes-day-06-3-2-4" title="Copy heading and permalink for Corollary 58" aria-label="Copy heading and permalink for Corollary 58">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Last time: Cardinality"><a href="#notes-day-06-3-2" title="Copy heading and permalink for Section: Last time: Cardinality" aria-label="Copy heading and permalink for Section: Last time: Cardinality">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-3">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uncountability of the Reals</span>
 </h4>
 <article class="corollary theorem-like" id="notes-day-06-3-3-2"><h5 class="heading">
@@ -627,7 +651,11 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="notes-day-06-3-3-2-1-1">The set of real numbers in <span class="process-math">\((0,1)\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 59"><a href="#notes-day-06-3-3-2" title="Copy heading and permalink for Corollary 59" aria-label="Copy heading and permalink for Corollary 59">🔗</a></div></article><details id="notes-day-06-3-3-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-06-3-3-2-2-1">(Contradiction, Cantor diagonalization). Suppose <span class="process-math">\((0,1) \subset \mathbb{R}\)</span> is countable.  Then there exists an enumeratioon <span class="process-math">\(\phi:\mathbb{N} \rightarrow (0,1)\)</span> of all the reals in the interval.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Corollary 59"><a href="#notes-day-06-3-3-2" title="Copy heading and permalink for Corollary 59" aria-label="Copy heading and permalink for Corollary 59">🔗</a></div>
+</article>
+<details id="notes-day-06-3-3-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-06-3-3-2-2-1">(Contradiction, Cantor diagonalization). Suppose <span class="process-math">\((0,1) \subset \mathbb{R}\)</span> is countable.  Then there exists an enumeratioon <span class="process-math">\(\phi:\mathbb{N} \rightarrow (0,1)\)</span> of all the reals in the interval.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="notes-day-06-3-3-2-2-2">
 <div class="para">Each <span class="process-math">\(\phi(m)\)</span> has a decimal representation that looks like</div>
@@ -723,12 +751,18 @@ b_n = \begin{cases}
 </div>
 <div class="para" id="notes-day-06-3-3-2-2-6">Therefore, the reals in <span class="process-math">\((0,1)\)</span> are uncountable as claimed.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-3-2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 59.1"><a href="#notes-day-06-3-3-2-2" title="Copy heading and permalink for Proof 59.1" aria-label="Copy heading and permalink for Proof 59.1">🔗</a></div></article></details><article class="corollary theorem-like" id="notes-day-06-3-3-3"><h5 class="heading">
+<div class="autopermalink" data-description="Proof 59.1"><a href="#notes-day-06-3-3-2-2" title="Copy heading and permalink for Proof 59.1" aria-label="Copy heading and permalink for Proof 59.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="notes-day-06-3-3-3"><h5 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">60</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="notes-day-06-3-3-3-1-1">The set of irrational numbers in <span class="process-math">\((0,1)\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 60"><a href="#notes-day-06-3-3-3" title="Copy heading and permalink for Corollary 60" aria-label="Copy heading and permalink for Corollary 60">🔗</a></div></article><div class="autopermalink" data-description="Section: Uncountability of the Reals"><a href="#notes-day-06-3-3" title="Copy heading and permalink for Section: Uncountability of the Reals" aria-label="Copy heading and permalink for Section: Uncountability of the Reals">🔗</a></div></section><section class="section" id="notes-day-06-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Corollary 60"><a href="#notes-day-06-3-3-3" title="Copy heading and permalink for Corollary 60" aria-label="Copy heading and permalink for Corollary 60">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Uncountability of the Reals"><a href="#notes-day-06-3-3" title="Copy heading and permalink for Section: Uncountability of the Reals" aria-label="Copy heading and permalink for Section: Uncountability of the Reals">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-4">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences</span>
 </h4>
 <div class="para logical" id="notes-day-06-3-4-2">
@@ -744,11 +778,15 @@ b_n = \begin{cases}
 </div>
 <article class="definition definition-like" id="notes-day-06-3-4-4"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">61</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence is a function <span class="process-math">\(f: \mathbb{N} \rightarrow \mathbb{R}\text{.}\)</span>  We say <span class="process-math">\(f(n)\)</span> is the <dfn class="terminology">nth term</dfn> in the sequence.<div class="autopermalink" data-description="Definition 61"><a href="#notes-day-06-3-4-4" title="Copy heading and permalink for Definition 61" aria-label="Copy heading and permalink for Definition 61">🔗</a></div></article><div class="para" id="notes-day-06-3-4-5">This means that a sequence is an ordered list of real numbers <span class="process-math">\(\{f(1), f(2), f(3), f(4), \ldots \}\text{.}\)</span>  We tend to eschew function notation and use subscripted variables to described sequences.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>A sequence is a function <span class="process-math">\(f: \mathbb{N} \rightarrow \mathbb{R}\text{.}\)</span>  We say <span class="process-math">\(f(n)\)</span> is the <dfn class="terminology">nth term</dfn> in the sequence.<div class="autopermalink" data-description="Definition 61"><a href="#notes-day-06-3-4-4" title="Copy heading and permalink for Definition 61" aria-label="Copy heading and permalink for Definition 61">🔗</a></div>
+</article>
+<div class="para" id="notes-day-06-3-4-5">This means that a sequence is an ordered list of real numbers <span class="process-math">\(\{f(1), f(2), f(3), f(4), \ldots \}\text{.}\)</span>  We tend to eschew function notation and use subscripted variables to described sequences.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="notes-day-06-3-4-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">62</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequence notation.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-4-6-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-4-6-2">
 <div class="para">The textbook author denotes a sequence using the notation <span class="process-math">\((a_n)\text{.}\)</span>  To connect this notation with the definition above, we show how to express the nth term of the sequence in two ways:</div>
 <div class="displaymath process-math" id="notes-day-06-3-4-6-2-2">
 \begin{equation*}
@@ -759,9 +797,13 @@ a_n=f(n)\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-4-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 62: Sequence notation"><a href="#notes-day-06-3-4-6" title="Copy heading and permalink for Example 62: Sequence notation" aria-label="Copy heading and permalink for Example 62: Sequence notation">🔗</a></div></article></details><details id="notes-day-06-3-4-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 62: Sequence notation"><a href="#notes-day-06-3-4-6" title="Copy heading and permalink for Example 62: Sequence notation" aria-label="Copy heading and permalink for Example 62: Sequence notation">🔗</a></div>
+</article></details>
+<details id="notes-day-06-3-4-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">63</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-4-7-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-4-7-2">
 <div class="para">The sequence where <span class="process-math">\(f:\mathbb{N}\rightarrow\mathbb{R}\)</span> is a constant function gives us a constant sequence.  For example <span class="process-math">\((a_n)\)</span> defined by <span class="process-math">\(a_n=f(n)=0\)</span> gives</div>
 <div class="displaymath process-math" id="notes-day-06-3-4-7-2-4">
 \begin{equation*}
@@ -770,9 +812,13 @@ a_n=f(n)\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-4-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 63: Constant sequence"><a href="#notes-day-06-3-4-7" title="Copy heading and permalink for Example 63: Constant sequence" aria-label="Copy heading and permalink for Example 63: Constant sequence">🔗</a></div></article></details><details id="notes-day-06-3-4-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 63: Constant sequence"><a href="#notes-day-06-3-4-7" title="Copy heading and permalink for Example 63: Constant sequence" aria-label="Copy heading and permalink for Example 63: Constant sequence">🔗</a></div>
+</article></details>
+<details id="notes-day-06-3-4-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">64</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Harmonic sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-4-8-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-4-8-2">
 <div class="para">The sequence <span class="process-math">\((a_n)\)</span> defined by <span class="process-math">\(a_n=\frac{1}{n}\)</span> is called the <dfn class="terminology">harmonic sequence</dfn>.  The sequence looks like</div>
 <div class="displaymath process-math" id="notes-day-06-3-4-8-2-4">
 \begin{equation*}
@@ -781,12 +827,18 @@ a_n=f(n)\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-4-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 64: Harmonic sequence"><a href="#notes-day-06-3-4-8" title="Copy heading and permalink for Example 64: Harmonic sequence" aria-label="Copy heading and permalink for Example 64: Harmonic sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-4" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 64: Harmonic sequence"><a href="#notes-day-06-3-4-8" title="Copy heading and permalink for Example 64: Harmonic sequence" aria-label="Copy heading and permalink for Example 64: Harmonic sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-4" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-5">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences</span>
 </h4>
 <details id="notes-day-06-3-5-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">65</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An alternating sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-5-2-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-5-2-2">
 <div class="para">The sequence <span class="process-math">\((a_n)\)</span> defined by <span class="process-math">\(a_n=(-1)^n)\)</span> is an example of an <dfn class="terminology">alternating sequence</dfn> because the terms alternate between positive and negative.  This specific sequence looks like</div>
 <div class="displaymath process-math" id="notes-day-06-3-5-2-2-4">
 \begin{equation*}
@@ -797,9 +849,13 @@ a_n=f(n)\text{,}
 </div>
 <div class="para" id="notes-day-06-3-5-2-3">Any positive sequence <span class="process-math">\((a_n)\)</span> can be made into an alternating sequence thusly:  <span class="process-math">\(((-1)^n \cdot a_n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 65: An alternating sequence"><a href="#notes-day-06-3-5-2" title="Copy heading and permalink for Example 65: An alternating sequence" aria-label="Copy heading and permalink for Example 65: An alternating sequence">🔗</a></div></article></details><details id="notes-day-06-3-5-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 65: An alternating sequence"><a href="#notes-day-06-3-5-2" title="Copy heading and permalink for Example 65: An alternating sequence" aria-label="Copy heading and permalink for Example 65: An alternating sequence">🔗</a></div>
+</article></details>
+<details id="notes-day-06-3-5-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">66</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Powers of Two and powers of one-half.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-5-3-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-5-3-2">
 <div class="para">The powers of two define the sequence <span class="process-math">\((a_n)\)</span> by</div>
 <div class="displaymath process-math" id="notes-day-06-3-5-3-2-2">
 \begin{equation*}
@@ -817,16 +873,23 @@ b_n=\frac{1}{2^{n-1}}\text{.}
 </div>
 <div class="para" id="notes-day-06-3-5-3-3">These sequences are examples of <dfn class="terminology">geometric sequences</dfn>.  Terms of geometric sequences have the form <span class="process-math">\(a_n=Ar^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 66: Powers of Two and powers of one-half"><a href="#notes-day-06-3-5-3" title="Copy heading and permalink for Example 66: Powers of Two and powers of one-half" aria-label="Copy heading and permalink for Example 66: Powers of Two and powers of one-half">🔗</a></div></article></details><div class="para" id="notes-day-06-3-5-4">The example sequences shared so far (above) have this property:  all terms of the sequences are expressed as explicit functions of <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> their place in the list of terms.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 66: Powers of Two and powers of one-half"><a href="#notes-day-06-3-5-3" title="Copy heading and permalink for Example 66: Powers of Two and powers of one-half" aria-label="Copy heading and permalink for Example 66: Powers of Two and powers of one-half">🔗</a></div>
+</article></details>
+<div class="para" id="notes-day-06-3-5-4">The example sequences shared so far (above) have this property:  all terms of the sequences are expressed as explicit functions of <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> their place in the list of terms.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-06-3-5-5">There are other ways to describe or define a sequence.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-5" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-6"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-5" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-6">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences</span>
 </h4>
 <details id="notes-day-06-3-6-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">67</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\pi\)</span>.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-6-2-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-6-2-2">
 <div class="para">Define the sequence <span class="process-math">\((x_n)\)</span> to be the sequence where <span class="process-math">\(x_n\)</span> is the <span class="process-math">\(n\)</span>th numeral in the decimal representation of <span class="process-math">\(\pi\text{.}\)</span>  This means that</div>
 <div class="displaymath process-math" id="notes-day-06-3-6-2-2-5">
 \begin{equation*}
@@ -835,9 +898,13 @@ b_n=\frac{1}{2^{n-1}}\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 67: \pi"><a href="#notes-day-06-3-6-2" title="Copy heading and permalink for Example 67: \pi" aria-label="Copy heading and permalink for Example 67: \pi">🔗</a></div></article></details><details id="notes-day-06-3-6-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 67: \pi"><a href="#notes-day-06-3-6-2" title="Copy heading and permalink for Example 67: \pi" aria-label="Copy heading and permalink for Example 67: \pi">🔗</a></div>
+</article></details>
+<details id="notes-day-06-3-6-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">68</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fibonacci Sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-6-3-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-6-3-2">
 <div class="para">Define the sequence <span class="process-math">\((F_n)\)</span> as follows:</div>
 <div class="displaymath process-math" id="notes-day-06-3-6-3-2-2">
 \begin{equation*}
@@ -857,14 +924,20 @@ F_{n-1}+F_{n-2} \amp \text{if } n &gt; 2
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 68: Fibonacci Sequence"><a href="#notes-day-06-3-6-3" title="Copy heading and permalink for Example 68: Fibonacci Sequence" aria-label="Copy heading and permalink for Example 68: Fibonacci Sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-6" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-7"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 68: Fibonacci Sequence"><a href="#notes-day-06-3-6-3" title="Copy heading and permalink for Example 68: Fibonacci Sequence" aria-label="Copy heading and permalink for Example 68: Fibonacci Sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Sequences"><a href="#notes-day-06-3-6" title="Copy heading and permalink for Section: Sequences" aria-label="Copy heading and permalink for Section: Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-7">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <div class="para" id="notes-day-06-3-7-2">We will invest a considerable amont of time in sequences this semester, as objects of interest and as tools to do other things.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="notes-day-06-3-7-3"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">69</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 69"><a href="#notes-day-06-3-7-3" title="Copy heading and permalink for Definition 69" aria-label="Copy heading and permalink for Definition 69">🔗</a></div></article><div class="para logical" id="notes-day-06-3-7-4">
+</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 69"><a href="#notes-day-06-3-7-3" title="Copy heading and permalink for Definition 69" aria-label="Copy heading and permalink for Definition 69">🔗</a></div>
+</article>
+<div class="para logical" id="notes-day-06-3-7-4">
 <div class="para">If a sequence <span class="process-math">\((x_n)\)</span> converges to <span class="process-math">\(x_0\)</span> we write</div>
 <div class="displaymath process-math" id="notes-day-06-3-7-4-3">
 \begin{equation*}
@@ -887,23 +960,37 @@ x_n \longrightarrow x_0 \text{ as } n \rightarrow \infty\text{.}
 </div>
 <details id="notes-day-06-3-7-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">70</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Harmonic sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-06-3-7-5-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0\text{.}\)</span><div class="workspace" data-space="5in"></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-06-3-7-5-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0\text{.}\)</span><div class="workspace" data-space="5in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-7-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 70: Harmonic sequence"><a href="#notes-day-06-3-7-5" title="Copy heading and permalink for Example 70: Harmonic sequence" aria-label="Copy heading and permalink for Example 70: Harmonic sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-7" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 70: Harmonic sequence"><a href="#notes-day-06-3-7-5" title="Copy heading and permalink for Example 70: Harmonic sequence" aria-label="Copy heading and permalink for Example 70: Harmonic sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-7" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-8">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <details id="notes-day-06-3-8-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">71</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergent sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-06-3-8-2-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{3n+1}{7n-4}=\frac{3}{7}\text{.}\)</span><div class="workspace" data-space="10in"></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-06-3-8-2-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{3n+1}{7n-4}=\frac{3}{7}\text{.}\)</span><div class="workspace" data-space="10in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 71: Convergent sequence"><a href="#notes-day-06-3-8-2" title="Copy heading and permalink for Example 71: Convergent sequence" aria-label="Copy heading and permalink for Example 71: Convergent sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-8" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-9"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 71: Convergent sequence"><a href="#notes-day-06-3-8-2" title="Copy heading and permalink for Example 71: Convergent sequence" aria-label="Copy heading and permalink for Example 71: Convergent sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-8" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-9">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <details id="notes-day-06-3-9-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">72</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergent sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-06-3-9-2-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-06-3-9-2-2">
 <div class="para">Prove that</div>
 <div class="displaymath process-math" id="notes-day-06-3-9-2-2-1">
 \begin{equation*}
@@ -913,24 +1000,40 @@ x_n \longrightarrow x_0 \text{ as } n \rightarrow \infty\text{.}
 <div class="workspace" data-space="10in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 72: Convergent sequence"><a href="#notes-day-06-3-9-2" title="Copy heading and permalink for Example 72: Convergent sequence" aria-label="Copy heading and permalink for Example 72: Convergent sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-9" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-06-3-10"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 72: Convergent sequence"><a href="#notes-day-06-3-9-2" title="Copy heading and permalink for Example 72: Convergent sequence" aria-label="Copy heading and permalink for Example 72: Convergent sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-06-3-9" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-06-3-10">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergence of Sequences</span>
 </h4>
 <div class="para" id="notes-day-06-3-10-2">A sequence that does not converge is said to <dfn class="terminology">diverge</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="notes-day-06-3-10-3"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">73</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n)\)</span> diverges if it does not converge to a real number <span class="process-math">\(x_0\text{.}\)</span>  Negating the definition of convergence, this means that there exists an <span class="process-math">\(\epsilon&gt;0\)</span> for which, regardless of yoru choice of <span class="process-math">\(N \in \mathbb{N}\)</span> one can find an <span class="process-math">\(n_0 &gt; N\)</span> for which <span class="process-math">\(|x_n-x_0|&gt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 73"><a href="#notes-day-06-3-10-3" title="Copy heading and permalink for Definition 73" aria-label="Copy heading and permalink for Definition 73">🔗</a></div></article><details id="notes-day-06-3-10-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>A sequence <span class="process-math">\((x_n)\)</span> diverges if it does not converge to a real number <span class="process-math">\(x_0\text{.}\)</span>  Negating the definition of convergence, this means that there exists an <span class="process-math">\(\epsilon&gt;0\)</span> for which, regardless of yoru choice of <span class="process-math">\(N \in \mathbb{N}\)</span> one can find an <span class="process-math">\(n_0 &gt; N\)</span> for which <span class="process-math">\(|x_n-x_0|&gt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 73"><a href="#notes-day-06-3-10-3" title="Copy heading and permalink for Definition 73" aria-label="Copy heading and permalink for Definition 73">🔗</a></div>
+</article>
+<details id="notes-day-06-3-10-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">74</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergent sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-06-3-10-4-2">Define the sequeqnce <span class="process-math">\((x_n)\)</span> by <span class="process-math">\(x_n=n\text{.}\)</span>  Prove that this sequence diverges.<div class="workspace" data-space="5in"></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-06-3-10-4-2">Define the sequeqnce <span class="process-math">\((x_n)\)</span> by <span class="process-math">\(x_n=n\text{.}\)</span>  Prove that this sequence diverges.<div class="workspace" data-space="5in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-10-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 74: Divergent sequence"><a href="#notes-day-06-3-10-4" title="Copy heading and permalink for Example 74: Divergent sequence" aria-label="Copy heading and permalink for Example 74: Divergent sequence">🔗</a></div></article></details><details id="notes-day-06-3-10-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 74: Divergent sequence"><a href="#notes-day-06-3-10-4" title="Copy heading and permalink for Example 74: Divergent sequence" aria-label="Copy heading and permalink for Example 74: Divergent sequence">🔗</a></div>
+</article></details>
+<details id="notes-day-06-3-10-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">75</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergent sequence.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-06-3-10-5-2">Define the sequeqnce <span class="process-math">\((x_n)\)</span> by <span class="process-math">\(x_n=(-1)^n\text{.}\)</span>  Prove that this sequence diverges.<div class="workspace" data-space="5in"></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-06-3-10-5-2">Define the sequeqnce <span class="process-math">\((x_n)\)</span> by <span class="process-math">\(x_n=(-1)^n\text{.}\)</span>  Prove that this sequence diverges.<div class="workspace" data-space="5in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-06-3-10-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 75: Divergent sequence"><a href="#notes-day-06-3-10-5" title="Copy heading and permalink for Example 75: Divergent sequence" aria-label="Copy heading and permalink for Example 75: Divergent sequence">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Divergence of Sequences"><a href="#notes-day-06-3-10" title="Copy heading and permalink for Section: Divergence of Sequences" aria-label="Copy heading and permalink for Section: Divergence of Sequences">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-06-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 6 (12 February 2026)"><a href="#notes-day-06" title="Copy heading and permalink for Section: Day 6 (12 February 2026)" aria-label="Copy heading and permalink for Section: Day 6 (12 February 2026)">🔗</a></div></section>
+<div class="autopermalink" data-description="Example 75: Divergent sequence"><a href="#notes-day-06-3-10-5" title="Copy heading and permalink for Example 75: Divergent sequence" aria-label="Copy heading and permalink for Example 75: Divergent sequence">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Divergence of Sequences"><a href="#notes-day-06-3-10" title="Copy heading and permalink for Section: Divergence of Sequences" aria-label="Copy heading and permalink for Section: Divergence of Sequences">🔗</a></div>
+</section><div class="autopermalink" data-description="Handout"><a href="#notes-day-06-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div>
+</section><div class="autopermalink" data-description="Section: Day 6 (12 February 2026)"><a href="#notes-day-06" title="Copy heading and permalink for Section: Day 6 (12 February 2026)" aria-label="Copy heading and permalink for Section: Day 6 (12 February 2026)">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-day-05.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-07.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

@@ -2770,7 +2770,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Day 21 (21 April 2026)",
-  "body": " Day 21 (21 April 2026)   This is an outline of the plans for Day 21 of the class.      Tuesday 4\/21  Today's agenda:  Roll  Homework due : 4.2 and 4.3  Next Homework due Thursday : 4.4: 1, 2, 4, 7, 8, 9  New material       Continuity and Uniform Continuity  We've built on our understanding of functional limits to establish the concept of continuity and some of its consequences:   What it means for a function to be continuous on a set.    What is means for a function to be uniformly continuous on a set.    The algebraic combination of continuous functions and the composition of continuous functions are also continuous.    The image of a compact set under a continuous function is also compact.    A continuous function on a compact domain attains both an absolute maximum value and an absolute minimum value.    A function that is continuous at every point of a compact set is uniformly continuous on that compact set.     I also mentioned without proof the following consequences of continuity:   If is a connected set, and if is continuous on then is a connected set.    If is continuous on , and if is an open set, then is an open set.     The first of these gives us ...   Intermediate Value Theorem   If is continuous on , and if is any number between and , then there is a at which .    This is a very important consequence of the completeness of the reals.    Differentiability  In Calculus 1, we learn about the property of differentiability, what it says about functions, and how it can be used to learn other things about functions and to model real-world phenomena.    Let be a function on an interval . Given , the derivative of at is defined by provided the limit exists. In this case we say is differentiable at . If exists for all points , we say that is differentiable on .      Differentiablity implies Continuity   If is differentiable at , then is continuous at .    This means that continuity is prerequisite for differentiability. (The contrapositive of the above.)   Suppose that is differentiable at . This means that the following limit exists and is finite:        "
+  "body": " Day 21 (21 April 2026)   This is an outline of the plans for Day 21 of the class.      Tuesday 4\/21  Today's agenda:  Roll  Homework due : 4.2 and 4.3  Next Homework due Thursday : 4.4: 1, 2, 4, 7, 8, 9  New material       Continuity and Uniform Continuity  We've built on our understanding of functional limits to establish the concept of continuity and some of its consequences:   What it means for a function to be continuous on a set.    What is means for a function to be uniformly continuous on a set.    The algebraic combination of continuous functions and the composition of continuous functions are also continuous.    The image of a compact set under a continuous function is also compact.    A continuous function on a compact domain attains both an absolute maximum value and an absolute minimum value.    A function that is continuous at every point of a compact set is uniformly continuous on that compact set.     I also mentioned without proof the following consequences of continuity:   If is a connected set, and if is continuous on then is a connected set.    If is continuous on , and if is an open set, then is an open set.     The first of these gives us ...   Intermediate Value Theorem   If is continuous on , and if is any number between and , then there is a at which .    This is a very important consequence of the completeness of the reals.  Also ...    If is continuous on , and if is invertible, then its inverse is also continuous.    Can you prove this? (Exercise 4.5.8)  This means that if power functions are continuous (they are!) then root functions are, too. Likewise, if exponential functions are continuous, so are logarithm functions. And so our stable of continuous functions grows!    Differentiability  In Calculus 1, we learn about the property of differentiability, what it says about functions, and how it can be used to learn other things about functions and to model real-world phenomena.    Let be a function on an interval . Given , the derivative of at is defined by provided the limit exists. In this case we say is differentiable at . If exists for all points , we say that is differentiable on .      Differentiablity implies Continuity   Differentiablity implies Continuity   If is differentiable at , then is continuous at .    This means that continuity is prerequisite for differentiability. (The contrapositive of the above.)   Suppose that is differentiable at . This means that the following limit exists and is finite: We need to show that is continuous at . That is, we need to show .  We will show that .  We do it thusly: And so is continuous at .        Combinations of Differentiable Functions    Let and be functions defines on an interval , and assume that both are differentiable at some point . Then    ,     for all ,     , and     , provided that .        These are proved by straight forward applications of the Algebraic Limit Theorem. The first two are very simple and the second two requiring minor finesse.       Interior Extremum Theorem   Interior Extremum Theorem   Let be differentiable on an open interval . If attains a maximumvalue at some point (i.e., for all ), then . The same is true if is a minimum value.     Suppose attains a local maximum at . We construct a sequence with for all and . We construct another sequence with for all and .  Since is a maximum, we can say that for all . By the Limit Order Theorem, this means that .  In a similar way for each because both numerator and denominator are negative. This implies that .  Therefore, .     Mean Value Theorem  A deep and very useful fact about differentiable functions is the Mean Value Theorem.     Mean Value Theorem   If is continuous on and differentiable on , then there exists a point at which     The proof is pretty slick. It starts with a proof of Rolle's Theorem.   Rolle's Theorem   Suppose is continuous on and differentiable on . If , then there exists a point at which .     The Extreme Value Theorem tells us that because is continuous on , it attains an absolute maximum and minimum on that interval. If both the maximum and minimum occur at an endpoint, then is constant on the interval, so for all .  If one of the maximum or minimum do not occur at an endpoint, then the Interior Extremum Theorem tells us there is a at which .     Proof of MVT   Suppose is continuous on and differentiable on . We want to show that there is a point at which   If , this is the case of Rolle's Theorem which we have already proved.  The other possibility is that . Without loss of generality, we will assume that . Consider the equation of the secant line through and : Define the function that is the difference between and the line: Since both and are continuous functions on , so is . Likewise, is differentiable on . Since , Rolle's Theorem tells us there's a at which . Since this tells us which completes the proof.     Chapter 6: Sequences and Series of Functions  In Calculus 2, we are introduced to power series . Lec fir all . Then is a power series in .    "
 },
 {
   "id": "thm-ivt",
@@ -2782,11 +2782,20 @@ var ptx_lunr_docs = [
   "body": " Intermediate Value Theorem   If is continuous on , and if is any number between and , then there is a at which .   "
 },
 {
+  "id": "thm-inversects",
+  "level": "2",
+  "url": "notes-day-21.html#thm-inversects",
+  "type": "Proposition",
+  "number": "223",
+  "title": "",
+  "body": "  If is continuous on , and if is invertible, then its inverse is also continuous.   "
+},
+{
   "id": "def-diffbl",
   "level": "2",
   "url": "notes-day-21.html#def-diffbl",
   "type": "Definition",
-  "number": "223",
+  "number": "224",
   "title": "",
   "body": "  Let be a function on an interval . Given , the derivative of at is defined by provided the limit exists. In this case we say is differentiable at . If exists for all points , we say that is differentiable on .   "
 },
@@ -2795,18 +2804,99 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-day-21.html#thm-diffcts",
   "type": "Theorem",
-  "number": "224",
+  "number": "225",
   "title": "Differentiablity implies Continuity.",
   "body": " Differentiablity implies Continuity   If is differentiable at , then is continuous at .   "
 },
 {
-  "id": "notes-day-21-3-6",
+  "id": "sec-diffcts-4",
   "level": "2",
-  "url": "notes-day-21.html#notes-day-21-3-6",
+  "url": "notes-day-21.html#sec-diffcts-4",
   "type": "Proof",
   "number": "1",
   "title": "",
-  "body": " Suppose that is differentiable at . This means that the following limit exists and is finite:   "
+  "body": " Suppose that is differentiable at . This means that the following limit exists and is finite: We need to show that is continuous at . That is, we need to show .  We will show that .  We do it thusly: And so is continuous at .  "
+},
+{
+  "id": "thm-algdiff",
+  "level": "2",
+  "url": "notes-day-21.html#thm-algdiff",
+  "type": "Theorem",
+  "number": "226",
+  "title": "",
+  "body": "  Let and be functions defines on an interval , and assume that both are differentiable at some point . Then    ,     for all ,     , and     , provided that .      "
+},
+{
+  "id": "sec-algdiff-3",
+  "level": "2",
+  "url": "notes-day-21.html#sec-algdiff-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " These are proved by straight forward applications of the Algebraic Limit Theorem. The first two are very simple and the second two requiring minor finesse.    "
+},
+{
+  "id": "thm-intval",
+  "level": "2",
+  "url": "notes-day-21.html#thm-intval",
+  "type": "Theorem",
+  "number": "227",
+  "title": "Interior Extremum Theorem.",
+  "body": " Interior Extremum Theorem   Let be differentiable on an open interval . If attains a maximumvalue at some point (i.e., for all ), then . The same is true if is a minimum value.   "
+},
+{
+  "id": "sec-intvalue-3",
+  "level": "2",
+  "url": "notes-day-21.html#sec-intvalue-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Suppose attains a local maximum at . We construct a sequence with for all and . We construct another sequence with for all and .  Since is a maximum, we can say that for all . By the Limit Order Theorem, this means that .  In a similar way for each because both numerator and denominator are negative. This implies that .  Therefore, .  "
+},
+{
+  "id": "thm-mvt",
+  "level": "2",
+  "url": "notes-day-21.html#thm-mvt",
+  "type": "Theorem",
+  "number": "228",
+  "title": "Mean Value Theorem.",
+  "body": " Mean Value Theorem   If is continuous on and differentiable on , then there exists a point at which    "
+},
+{
+  "id": "thm-rolles",
+  "level": "2",
+  "url": "notes-day-21.html#thm-rolles",
+  "type": "Theorem",
+  "number": "229",
+  "title": "Rolle’s Theorem.",
+  "body": " Rolle's Theorem   Suppose is continuous on and differentiable on . If , then there exists a point at which .   "
+},
+{
+  "id": "sec-mvt-7",
+  "level": "2",
+  "url": "notes-day-21.html#sec-mvt-7",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " The Extreme Value Theorem tells us that because is continuous on , it attains an absolute maximum and minimum on that interval. If both the maximum and minimum occur at an endpoint, then is constant on the interval, so for all .  If one of the maximum or minimum do not occur at an endpoint, then the Interior Extremum Theorem tells us there is a at which .  "
+},
+{
+  "id": "sec-mvtproof-2",
+  "level": "2",
+  "url": "notes-day-21.html#sec-mvtproof-2",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Suppose is continuous on and differentiable on . We want to show that there is a point at which   If , this is the case of Rolle's Theorem which we have already proved.  The other possibility is that . Without loss of generality, we will assume that . Consider the equation of the secant line through and : Define the function that is the difference between and the line: Since both and are continuous functions on , so is . Likewise, is differentiable on . Since , Rolle's Theorem tells us there's a at which . Since this tells us which completes the proof.  "
+},
+{
+  "id": "sec-ch6-2",
+  "level": "2",
+  "url": "notes-day-21.html#sec-ch6-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "power series "
 },
 {
   "id": "activity-01-intro-activity",

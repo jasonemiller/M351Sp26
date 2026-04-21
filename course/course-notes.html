@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -497,10 +503,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="course-notes"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="course-notes">
+<h2 class="heading hide-type">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Course Notes</span>
 </h2>
-<section class="introduction" id="course-notes-2"><div class="para" id="course-notes-2-1">The following notes are intended to remind you what we covered each class meeting. They are not a substitute for attending class and not a substitute for reading the textbook.<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="course-notes-2">
+<div class="para" id="course-notes-2-1">The following notes are intended to remind you what we covered each class meeting. They are not a substitute for attending class and not a substitute for reading the textbook.<div class="autopermalink" data-description="Paragraph"><a href="#course-notes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
 <li><a href="notes-week-01.html" class="internal"><span class="title">Day 1 (27 January 2026)</span></a></li>
 <li><a href="notes-day-02.html" class="internal"><span class="title">Day 2 (29 January 2026)</span></a></li>

@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -522,14 +528,19 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="notes-day-04"><h2 class="heading hide-type">
+<section class="section" id="notes-day-04">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 4 (5 February 2026)</span>
 </h2>
-<section class="introduction" id="notes-day-04-2"><div class="para" id="notes-day-04-2-1">This is an outline of the plans for Day 4 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="handout" id="notes-day-04-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<section class="introduction" id="notes-day-04-2">
+<div class="para" id="notes-day-04-2-1">This is an outline of the plans for Day 4 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="handout" id="notes-day-04-3" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h3 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-04-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="section" id="notes-day-04-3-1"><h4 class="heading hide-type">
+<section class="section" id="notes-day-04-3-1">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Thursday 2/5</span>
 </h4>
 <div class="para logical" id="notes-day-04-3-1-2">
@@ -554,7 +565,10 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Thursday 2/5"><a href="#notes-day-04-3-1" title="Copy heading and permalink for Section: Thursday 2/5" aria-label="Copy heading and permalink for Section: Thursday 2/5">🔗</a></div></section><section class="section" id="notes-day-04-3-2"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Thursday 2/5"><a href="#notes-day-04-3-1" title="Copy heading and permalink for Section: Thursday 2/5" aria-label="Copy heading and permalink for Section: Thursday 2/5">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-2">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recap: The Axiom of Completeness</span>
 </h4>
 <div class="para" id="notes-day-04-3-2-2">We were reminded that <span class="process-math">\(\mathbb{Q}\text{,}\)</span> though a beautiful number system (everybody say "ordered field"!), it is literally full of holes.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -568,16 +582,22 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="notes-day-04-3-2-5-2-1">If <span class="process-math">\(A\)</span> is a nonempty set that is bounded above, then it has a least upper bound.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 30: Axiom of Completeness"><a href="#notes-day-04-3-2-5" title="Copy heading and permalink for Theorem 30: Axiom of Completeness" aria-label="Copy heading and permalink for Theorem 30: Axiom of Completeness">🔗</a></div></article><div class="para" id="notes-day-04-3-2-6">With this the set of real numbers <span class="process-math">\(\mathbb{R}\)</span> is the set <span class="process-math">\(\mathbb{Q}\)</span> plus all the numbers we created as suprema of all possible sets that are bounded above.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 30: Axiom of Completeness"><a href="#notes-day-04-3-2-5" title="Copy heading and permalink for Theorem 30: Axiom of Completeness" aria-label="Copy heading and permalink for Theorem 30: Axiom of Completeness">🔗</a></div>
+</article>
+<div class="para" id="notes-day-04-3-2-6">With this the set of real numbers <span class="process-math">\(\mathbb{R}\)</span> is the set <span class="process-math">\(\mathbb{Q}\)</span> plus all the numbers we created as suprema of all possible sets that are bounded above.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-04-3-2-7">In practice, we will continue working with the real numbers in the way we’ve learned to work with them except that we’re learning more about the reals.  For example, they form a <dfn class="terminology">complete</dfn> ordered field!<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Recap: The Axiom of Completeness"><a href="#notes-day-04-3-2" title="Copy heading and permalink for Section: Recap: The Axiom of Completeness" aria-label="Copy heading and permalink for Section: Recap: The Axiom of Completeness">🔗</a></div></section><section class="section" id="notes-day-04-3-3"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Recap: The Axiom of Completeness"><a href="#notes-day-04-3-2" title="Copy heading and permalink for Section: Recap: The Axiom of Completeness" aria-label="Copy heading and permalink for Section: Recap: The Axiom of Completeness">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-3">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Working with Suprema (and Infima)</span>
 </h4>
 <article class="definition definition-like" id="notes-day-04-3-3-2"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>Let <span class="process-math">\(A \subseteq \mathbb{R}\)</span> be nonempty.  The real number <span class="process-math">\(s\)</span> is a <dfn class="terminology">least upper bound</dfn> (aka <dfn class="terminology">supremum</dfn>) of <span class="process-math">\(A\)</span> if <ol class="decimal" id="notes-day-04-3-3-2-1-6">
+</h5>Let <span class="process-math">\(A \subseteq \mathbb{R}\)</span> be nonempty.  The real number <span class="process-math">\(s\)</span> is a <dfn class="terminology">least upper bound</dfn> (aka <dfn class="terminology">supremum</dfn>) of <span class="process-math">\(A\)</span> if 
+<ol class="decimal" id="notes-day-04-3-3-2-1-6">
 <li id="notes-day-04-3-3-2-1-6-1">
 <div class="para" id="p-derived-notes-day-04-3-3-2-1-6-1">
 <span class="process-math">\(s\)</span> is an upper bound for <span class="process-math">\(A\text{,}\)</span> and</div>
@@ -588,7 +608,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Item 2"><a href="#notes-day-04-3-3-2-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-</ol> The real number <span class="process-math">\(\ell\)</span> is a <dfn class="terminology">greatest lower bound</dfn> (aka <dfn class="terminology">infimum</dfn>) of <span class="process-math">\(A\)</span> if <ol class="decimal" id="notes-day-04-3-3-2-1-11">
+</ol> The real number <span class="process-math">\(\ell\)</span> is a <dfn class="terminology">greatest lower bound</dfn> (aka <dfn class="terminology">infimum</dfn>) of <span class="process-math">\(A\)</span> if 
+<ol class="decimal" id="notes-day-04-3-3-2-1-11">
 <li id="notes-day-04-3-3-2-1-11-1">
 <div class="para" id="p-derived-notes-day-04-3-3-2-1-11-1">
 <span class="process-math">\(\ell\)</span> is an lower bound for <span class="process-math">\(A\text{,}\)</span> and</div>
@@ -600,12 +621,18 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item 2"><a href="#notes-day-04-3-3-2-1-11-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Definition 31"><a href="#notes-day-04-3-3-2" title="Copy heading and permalink for Definition 31" aria-label="Copy heading and permalink for Definition 31">🔗</a></div></article><article class="theorem theorem-like" id="notes-day-04-3-3-3"><h5 class="heading">
+<div class="autopermalink" data-description="Definition 31"><a href="#notes-day-04-3-3-2" title="Copy heading and permalink for Definition 31" aria-label="Copy heading and permalink for Definition 31">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="notes-day-04-3-3-3"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="notes-day-04-3-3-3-1-1">Let <span class="process-math">\(A \subseteq \mathbb{R}\)</span> be a nonempty set that is bounded above.  Let <span class="process-math">\(s \in \mathbb{R}\)</span> be an upper bound for <span class="process-math">\(A\text{.}\)</span> Then <span class="process-math">\(s=\sup(A)\)</span> if and only if, for every <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there is an <span class="process-math">\(a \in A\)</span> with <span class="process-math">\(s-\epsilon &lt; a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 32"><a href="#notes-day-04-3-3-3" title="Copy heading and permalink for Theorem 32" aria-label="Copy heading and permalink for Theorem 32">🔗</a></div></article><div class="autopermalink" data-description="Section: Working with Suprema (and Infima)"><a href="#notes-day-04-3-3" title="Copy heading and permalink for Section: Working with Suprema (and Infima)" aria-label="Copy heading and permalink for Section: Working with Suprema (and Infima)">🔗</a></div></section><section class="section" id="notes-day-04-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Theorem 32"><a href="#notes-day-04-3-3-3" title="Copy heading and permalink for Theorem 32" aria-label="Copy heading and permalink for Theorem 32">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Working with Suprema (and Infima)"><a href="#notes-day-04-3-3" title="Copy heading and permalink for Section: Working with Suprema (and Infima)" aria-label="Copy heading and permalink for Section: Working with Suprema (and Infima)">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-4">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Working with Suprema (and Infima)</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-04-3-4-2"><h5 class="heading">
@@ -613,7 +640,11 @@ eBookConfig.enable_chatcodes =  false;
 </h5>
 <div class="para" id="notes-day-04-3-4-2-1-1">Let <span class="process-math">\(A \subseteq \mathbb{R}\)</span> be a nonempty set that is bonded above.  Let <span class="process-math">\(s \in \mathbb{R}\)</span> be an uppoer bound for <span class="process-math">\(A\text{.}\)</span> Then <span class="process-math">\(s=\sup(A)\)</span> if and only if, for every <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there is an <span class="process-math">\(a \in A\)</span> with <span class="process-math">\(s-\epsilon &lt; a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 33"><a href="#notes-day-04-3-4-2" title="Copy heading and permalink for Theorem 33" aria-label="Copy heading and permalink for Theorem 33">🔗</a></div></article><details id="notes-day-04-3-4-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-04-3-4-3-1">(<span class="process-math">\(\Longrightarrow\text{,}\)</span> Contradiction)<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 33"><a href="#notes-day-04-3-4-2" title="Copy heading and permalink for Theorem 33" aria-label="Copy heading and permalink for Theorem 33">🔗</a></div>
+</article>
+<details id="notes-day-04-3-4-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-04-3-4-3-1">(<span class="process-math">\(\Longrightarrow\text{,}\)</span> Contradiction)<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-04-3-4-3-2">Assume <span class="process-math">\(s=\sup(A)\text{.}\)</span>  We must show that for every <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there is an <span class="process-math">\(a \in A\)</span> with <span class="process-math">\(s-\epsilon &lt; a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -639,20 +670,30 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="notes-day-04-3-4-3-13">Consequently, our supposition that <span class="process-math">\(M &lt; s\)</span> was incorrect.  We conclude that <span class="process-math">\(M \grq s\text{.}\)</span>  With this, we have shows that <span class="process-math">\(s\)</span> satisfies the definition of what it means to be the supremum of <span class="process-math">\(A\text{.}\)</span>  QED.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-4-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-04-3-4-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Working with Suprema (and Infima)"><a href="#notes-day-04-3-4" title="Copy heading and permalink for Section: Working with Suprema (and Infima)" aria-label="Copy heading and permalink for Section: Working with Suprema (and Infima)">🔗</a></div></section><section class="section" id="notes-day-04-3-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-04-3-4-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Working with Suprema (and Infima)"><a href="#notes-day-04-3-4" title="Copy heading and permalink for Section: Working with Suprema (and Infima)" aria-label="Copy heading and permalink for Section: Working with Suprema (and Infima)">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-5">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More on Suprema</span>
 </h4>
 <details id="notes-day-04-3-5-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Supremum of a subset.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-04-3-5-2-2">If <span class="process-math">\(A_1 \subseteq A_2\)</span> are sets of real numbers that are both bounded above, then <span class="process-math">\(\sup(A_1) \leq \sup(A_2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-04-3-5-2-2">If <span class="process-math">\(A_1 \subseteq A_2\)</span> are sets of real numbers that are both bounded above, then <span class="process-math">\(\sup(A_1) \leq \sup(A_2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-04-3-5-2-3">
 <div class="workspace" data-space="4.5in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 34: Supremum of a subset"><a href="#notes-day-04-3-5-2" title="Copy heading and permalink for Example 34: Supremum of a subset" aria-label="Copy heading and permalink for Example 34: Supremum of a subset">🔗</a></div></article></details><details id="notes-day-04-3-5-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 34: Supremum of a subset"><a href="#notes-day-04-3-5-2" title="Copy heading and permalink for Example 34: Supremum of a subset" aria-label="Copy heading and permalink for Example 34: Supremum of a subset">🔗</a></div>
+</article></details>
+<details id="notes-day-04-3-5-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Supremum of a union.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-04-3-5-3-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-04-3-5-3-2">
 <div class="para">If <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> are sets of real numbers that are bounded above, then</div>
 <div class="displaymath process-math" id="notes-day-04-3-5-3-2-3">
 \begin{equation*}
@@ -665,16 +706,23 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="4.5in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 35: Supremum of a union"><a href="#notes-day-04-3-5-3" title="Copy heading and permalink for Example 35: Supremum of a union" aria-label="Copy heading and permalink for Example 35: Supremum of a union">🔗</a></div></article></details><div class="para" id="notes-day-04-3-5-4">Can you come up with a relationship between the suprema of two sets and the suprema of their intersection?  Their infima?<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 35: Supremum of a union"><a href="#notes-day-04-3-5-3" title="Copy heading and permalink for Example 35: Supremum of a union" aria-label="Copy heading and permalink for Example 35: Supremum of a union">🔗</a></div>
+</article></details>
+<div class="para" id="notes-day-04-3-5-4">Can you come up with a relationship between the suprema of two sets and the suprema of their intersection?  Their infima?<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: More on Suprema"><a href="#notes-day-04-3-5" title="Copy heading and permalink for Section: More on Suprema" aria-label="Copy heading and permalink for Section: More on Suprema">🔗</a></div></section><section class="section" id="notes-day-04-3-6"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: More on Suprema"><a href="#notes-day-04-3-5" title="Copy heading and permalink for Section: More on Suprema" aria-label="Copy heading and permalink for Section: More on Suprema">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-6">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
 </h4>
 <div class="para" id="notes-day-04-3-6-2">Well, you can’t to this with the rationals!<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="notes-day-04-3-6-3"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Nested Interval Property.</span>
-</h5>For each <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> define <span class="process-math">\(I_n=[a_n,b_n] \subseteq \mathbb{R}\)</span> so that <span class="process-math">\(I_n \subseteq I_{n-1}\text{.}\)</span>   Then <span class="process-math">\(\bigcap_{n=1}^{\infty} I_n \neq \emptyset\text{.}\)</span><div class="autopermalink" data-description="Theorem 36: Nested Interval Property"><a href="#notes-day-04-3-6-3" title="Copy heading and permalink for Theorem 36: Nested Interval Property" aria-label="Copy heading and permalink for Theorem 36: Nested Interval Property">🔗</a></div></article><div class="para logical" id="notes-day-04-3-6-4">
+</h5>For each <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> define <span class="process-math">\(I_n=[a_n,b_n] \subseteq \mathbb{R}\)</span> so that <span class="process-math">\(I_n \subseteq I_{n-1}\text{.}\)</span>   Then <span class="process-math">\(\bigcap_{n=1}^{\infty} I_n \neq \emptyset\text{.}\)</span><div class="autopermalink" data-description="Theorem 36: Nested Interval Property"><a href="#notes-day-04-3-6-3" title="Copy heading and permalink for Theorem 36: Nested Interval Property" aria-label="Copy heading and permalink for Theorem 36: Nested Interval Property">🔗</a></div>
+</article>
+<div class="para logical" id="notes-day-04-3-6-4">
 <div class="para">The intervals in this theorem are all closed and bounded intervals of reals that form a sequence of <dfn class="terminology">nested intervals</dfn>.</div>
 <div class="displaymath process-math" id="notes-day-04-3-6-4-2">
 \begin{equation*}
@@ -683,7 +731,9 @@ I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots \supseteq I_n \supseteq \cdots
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="notes-day-04-3-6-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-04-3-6-5-1">Before we begin, notice how the endpoints of the intervals <span class="process-math">\(I_k\)</span> are related to one another.<div class="workspace" data-space="1in"></div>
+<details id="notes-day-04-3-6-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-04-3-6-5-1">Before we begin, notice how the endpoints of the intervals <span class="process-math">\(I_k\)</span> are related to one another.<div class="workspace" data-space="1in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-6-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-04-3-6-5-2">Since <span class="process-math">\(I_1 \subseteq I_k\)</span> for all <span class="process-math">\(k\text{,}\)</span> we know <span class="process-math">\(a_k \leq b_1\)</span> for all <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span>  This shows that the set <span class="process-math">\(A=\{a_n \, : \, n \in \mathbb{N} \}\)</span> is bounded above.  Let <span class="process-math">\(x=\sup(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-6-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -699,7 +749,12 @@ I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots \supseteq I_n \supseteq \cdots
 <div class="para" id="notes-day-04-3-6-5-7">Consequently, <span class="process-math">\(x \in \bigcap_{n=1}^{\infty}I_n\text{,}\)</span> as desired.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-6-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="notes-day-04-3-6-5-8"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/fig-realline.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">37<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A representation of the real line with zero and two real numbers, <span class="process-math">\(x &lt; 0 &lt; y\text{.}\)</span><div class="autopermalink" data-description="Figure 37"><a href="#notes-day-04-3-6-5-8" title="Copy heading and permalink for Figure 37" aria-label="Copy heading and permalink for Figure 37">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Proof 1"><a href="#notes-day-04-3-6-5" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-6" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><section class="section" id="notes-day-04-3-7"><h4 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">37<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A representation of the real line with zero and two real numbers, <span class="process-math">\(x &lt; 0 &lt; y\text{.}\)</span><div class="autopermalink" data-description="Figure 37"><a href="#notes-day-04-3-6-5-8" title="Copy heading and permalink for Figure 37" aria-label="Copy heading and permalink for Figure 37">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Proof 1"><a href="#notes-day-04-3-6-5" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-6" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-7">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-04-3-7-2"><h5 class="heading">
@@ -717,29 +772,44 @@ I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots \supseteq I_n \supseteq \cdots
 <div class="autopermalink" data-description="Item 2"><a href="#notes-day-04-3-7-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Theorem 38: Archimedean Properties"><a href="#notes-day-04-3-7-2" title="Copy heading and permalink for Theorem 38: Archimedean Properties" aria-label="Copy heading and permalink for Theorem 38: Archimedean Properties">🔗</a></div></article><div class="para" id="notes-day-04-3-7-3">
+<div class="autopermalink" data-description="Theorem 38: Archimedean Properties"><a href="#notes-day-04-3-7-2" title="Copy heading and permalink for Theorem 38: Archimedean Properties" aria-label="Copy heading and permalink for Theorem 38: Archimedean Properties">🔗</a></div>
+</article>
+<div class="para" id="notes-day-04-3-7-3">
 <div class="workspace" data-space="9in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-7" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><section class="section" id="notes-day-04-3-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-7" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-8">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-04-3-8-2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">39</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Density of <span class="process-math">\(\mathbb{Q}\)</span> in <span class="process-math">\(\mathbb{R}\)</span>.</span>
-</h5>Let <span class="process-math">\(a, b, \in \ mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(r \in \mathbb{Q}\)</span> with <span class="process-math">\(a &lt; r &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 39: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-04-3-8-2" title="Copy heading and permalink for Theorem 39: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 39: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div></article><div class="para" id="notes-day-04-3-8-3">
+</h5>Let <span class="process-math">\(a, b, \in \ mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(r \in \mathbb{Q}\)</span> with <span class="process-math">\(a &lt; r &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 39: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-04-3-8-2" title="Copy heading and permalink for Theorem 39: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 39: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div>
+</article>
+<div class="para" id="notes-day-04-3-8-3">
 <div class="workspace" data-space="9in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-8" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><section class="section" id="notes-day-04-3-9"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-8" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div>
+</section>
+<section class="section" id="notes-day-04-3-9">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-04-3-9-2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Density of <span class="process-math">\(\mathbb{Q}\)</span> in <span class="process-math">\(\mathbb{R}\)</span>.</span>
-</h5>Let <span class="process-math">\(a, b \in \mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(x \in \mathbb{Q}^c\)</span> with <span class="process-math">\(a &lt; x &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 40: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-04-3-9-2" title="Copy heading and permalink for Theorem 40: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 40: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div></article><div class="para" id="notes-day-04-3-9-3">
+</h5>Let <span class="process-math">\(a, b \in \mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(x \in \mathbb{Q}^c\)</span> with <span class="process-math">\(a &lt; x &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 40: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-04-3-9-2" title="Copy heading and permalink for Theorem 40: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 40: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div>
+</article>
+<div class="para" id="notes-day-04-3-9-3">
 <div class="workspace" data-space="9in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-04-3-9-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-9" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-04-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 4 (5 February 2026)"><a href="#notes-day-04" title="Copy heading and permalink for Section: Day 4 (5 February 2026)" aria-label="Copy heading and permalink for Section: Day 4 (5 February 2026)">🔗</a></div></section>
+<div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-04-3-9" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div>
+</section><div class="autopermalink" data-description="Handout"><a href="#notes-day-04-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div>
+</section><div class="autopermalink" data-description="Section: Day 4 (5 February 2026)"><a href="#notes-day-04" title="Copy heading and permalink for Section: Day 4 (5 February 2026)" aria-label="Copy heading and permalink for Section: Day 4 (5 February 2026)">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-day-03.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-05.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

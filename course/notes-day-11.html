@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -522,14 +528,19 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="notes-day-11"><h2 class="heading hide-type">
+<section class="section" id="notes-day-11">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 11 (3 March 2026)</span>
 </h2>
-<section class="introduction" id="notes-day-11-2"><div class="para" id="notes-day-11-2-1">This is an outline of the plans for Day 11 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="handout" id="notes-day-11-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<section class="introduction" id="notes-day-11-2">
+<div class="para" id="notes-day-11-2-1">This is an outline of the plans for Day 11 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="handout" id="notes-day-11-3" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h3 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-11-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="section" id="notes-day-11-3-1"><h4 class="heading hide-type">
+<section class="section" id="notes-day-11-3-1">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tuesday 3/2</span>
 </h4>
 <div class="para logical" id="notes-day-11-3-1-2">
@@ -540,7 +551,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item 1"><a href="#notes-day-11-3-1-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="notes-day-11-3-1-2-1-2">
-<div class="para" id="p-derived-notes-day-11-3-1-2-1-2"><ul class="disc" id="notes-day-11-3-1-2-1-2-1">
+<div class="para" id="p-derived-notes-day-11-3-1-2-1-2">
+<ul class="disc" id="notes-day-11-3-1-2-1-2-1">
 <li id="notes-day-11-3-1-2-1-2-1-1">
 <div class="para" id="p-derived-notes-day-11-3-1-2-1-2-1-1">2.4: 10</div>
 <div class="autopermalink" data-description="Item"><a href="#notes-day-11-3-1-2-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
@@ -594,7 +606,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Item"><a href="#notes-day-11-3-1-2-1-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-</ul></div>
+</ul>
+</div>
 <div class="autopermalink" data-description="Item 2"><a href="#notes-day-11-3-1-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="notes-day-11-3-1-2-1-3">
@@ -608,7 +621,10 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Tuesday 3/2"><a href="#notes-day-11-3-1" title="Copy heading and permalink for Section: Tuesday 3/2" aria-label="Copy heading and permalink for Section: Tuesday 3/2">🔗</a></div></section><section class="section" id="notes-day-11-3-2"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Tuesday 3/2"><a href="#notes-day-11-3-1" title="Copy heading and permalink for Section: Tuesday 3/2" aria-label="Copy heading and permalink for Section: Tuesday 3/2">🔗</a></div>
+</section>
+<section class="section" id="notes-day-11-3-2">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series</span>
 </h4>
 <div class="para" id="notes-day-11-3-2-2">An <dfn class="terminology">series of real numbers</dfn> is essentially an infinite sum of real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -617,7 +633,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="notes-day-11-3-2-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">110</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Powers of one-half..</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-11-3-2-4-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-11-3-2-4-2">
 <div class="para">The series</div>
 <div class="displaymath process-math" id="notes-day-11-3-2-4-2-1">
 \begin{equation*}
@@ -627,9 +645,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">is an example of a convergent geomteric series.  The series converges to the value 2.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 110: Powers of one-half."><a href="#notes-day-11-3-2-4" title="Copy heading and permalink for Example 110: Powers of one-half." aria-label="Copy heading and permalink for Example 110: Powers of one-half.">🔗</a></div></article></details><details id="notes-day-11-3-2-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 110: Powers of one-half."><a href="#notes-day-11-3-2-4" title="Copy heading and permalink for Example 110: Powers of one-half." aria-label="Copy heading and permalink for Example 110: Powers of one-half.">🔗</a></div>
+</article></details>
+<details id="notes-day-11-3-2-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">111</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Harmonic Series.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-11-3-2-5-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-11-3-2-5-2">
 <div class="para">The series</div>
 <div class="displaymath process-math" id="notes-day-11-3-2-5-2-1">
 \begin{equation*}
@@ -639,9 +661,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">is the <dfn class="terminology">harmonic series</dfn> and it is a positive divergent series.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 111: Harmonic Series"><a href="#notes-day-11-3-2-5" title="Copy heading and permalink for Example 111: Harmonic Series" aria-label="Copy heading and permalink for Example 111: Harmonic Series">🔗</a></div></article></details><details id="notes-day-11-3-2-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 111: Harmonic Series"><a href="#notes-day-11-3-2-5" title="Copy heading and permalink for Example 111: Harmonic Series" aria-label="Copy heading and permalink for Example 111: Harmonic Series">🔗</a></div>
+</article></details>
+<details id="notes-day-11-3-2-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">112</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric Series.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-11-3-2-6-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-11-3-2-6-2">
 <div class="para">A series of the form</div>
 <div class="displaymath process-math" id="notes-day-11-3-2-6-2-1">
 \begin{equation*}
@@ -652,9 +678,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-2-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 112: Geometric Series"><a href="#notes-day-11-3-2-6" title="Copy heading and permalink for Example 112: Geometric Series" aria-label="Copy heading and permalink for Example 112: Geometric Series">🔗</a></div></article></details><details id="notes-day-11-3-2-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Example 112: Geometric Series"><a href="#notes-day-11-3-2-6" title="Copy heading and permalink for Example 112: Geometric Series" aria-label="Copy heading and permalink for Example 112: Geometric Series">🔗</a></div>
+</article></details>
+<details id="notes-day-11-3-2-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">113</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternating Harmonic Series.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-11-3-2-7-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-11-3-2-7-2">
 <div class="para">The series</div>
 <div class="displaymath process-math" id="notes-day-11-3-2-7-2-1">
 \begin{equation*}
@@ -664,7 +694,11 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">is the <dfn class="terminology">alternating harmonic series</dfn> and it is a conditionally convergent series.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-2-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 113: Alternating Harmonic Series"><a href="#notes-day-11-3-2-7" title="Copy heading and permalink for Example 113: Alternating Harmonic Series" aria-label="Copy heading and permalink for Example 113: Alternating Harmonic Series">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Series"><a href="#notes-day-11-3-2" title="Copy heading and permalink for Section: Series" aria-label="Copy heading and permalink for Section: Series">🔗</a></div></section><section class="section" id="notes-day-11-3-3"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 113: Alternating Harmonic Series"><a href="#notes-day-11-3-2-7" title="Copy heading and permalink for Example 113: Alternating Harmonic Series" aria-label="Copy heading and permalink for Example 113: Alternating Harmonic Series">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Series"><a href="#notes-day-11-3-2" title="Copy heading and permalink for Section: Series" aria-label="Copy heading and permalink for Section: Series">🔗</a></div>
+</section>
+<section class="section" id="notes-day-11-3-3">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series</span>
 </h4>
 <article class="definition definition-like" id="notes-day-11-3-3-2"><h5 class="heading">
@@ -673,7 +707,9 @@ eBookConfig.enable_chatcodes =  false;
 \begin{equation*}
 \displaystyle \sum_{n \in \mathbb{N}} a_n=\sum_{n=1}^{\infty} a_n
 \end{equation*}
-</div>a <dfn class="terminology">series of real numbers</dfn>.<div class="autopermalink" data-description="Definition 114"><a href="#notes-day-11-3-3-2" title="Copy heading and permalink for Definition 114" aria-label="Copy heading and permalink for Definition 114">🔗</a></div></article><div class="para logical" id="notes-day-11-3-3-3">
+</div>a <dfn class="terminology">series of real numbers</dfn>.<div class="autopermalink" data-description="Definition 114"><a href="#notes-day-11-3-3-2" title="Copy heading and permalink for Definition 114" aria-label="Copy heading and permalink for Definition 114">🔗</a></div>
+</article>
+<div class="para logical" id="notes-day-11-3-3-3">
 <div class="para">We study a series <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> in terms of its associated <dfn class="terminology">sequence of partial sums</dfn> <span class="process-math">\(\{s_N\}\)</span> where</div>
 <div class="displaymath process-math" id="notes-day-11-3-3-3-4">
 \begin{equation*}
@@ -685,7 +721,9 @@ s_N = \sum_{n=1}^{N} a_n\text{,}
 </div>
 <details id="notes-day-11-3-3-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">115</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Sums of a Geometric Series.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para logical" id="notes-day-11-3-3-4-2">
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="notes-day-11-3-3-4-2">
 <div class="para">The <span class="process-math">\(N\)</span>th-partial sum of the geometric series <span class="process-math">\(\displaystyle \sum_{k=0}^{\infty} A r^k\)</span> is</div>
 <div class="displaymath process-math" id="notes-day-11-3-3-4-2-3">
 \begin{align*}
@@ -695,17 +733,25 @@ s_N \amp = \sum_{i=0}^N A r^k\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 115: Partial Sums of a Geometric Series"><a href="#notes-day-11-3-3-4" title="Copy heading and permalink for Example 115: Partial Sums of a Geometric Series" aria-label="Copy heading and permalink for Example 115: Partial Sums of a Geometric Series">🔗</a></div></article></details><article class="definition definition-like" id="notes-day-11-3-3-5"><h5 class="heading">
+<div class="autopermalink" data-description="Example 115: Partial Sums of a Geometric Series"><a href="#notes-day-11-3-3-4" title="Copy heading and permalink for Example 115: Partial Sums of a Geometric Series" aria-label="Copy heading and permalink for Example 115: Partial Sums of a Geometric Series">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="notes-day-11-3-3-5"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">116</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="notes-day-11-3-3-5-1-1">A series <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> converges when its associated sequence of partial sums <span class="process-math">\(\{s_N\}\)</span> converges.  If the sequence of partial sums does not converge, we say the series diverges.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 116"><a href="#notes-day-11-3-3-5" title="Copy heading and permalink for Definition 116" aria-label="Copy heading and permalink for Definition 116">🔗</a></div></article><div class="autopermalink" data-description="Section: Series"><a href="#notes-day-11-3-3" title="Copy heading and permalink for Section: Series" aria-label="Copy heading and permalink for Section: Series">🔗</a></div></section><section class="section" id="notes-day-11-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Definition 116"><a href="#notes-day-11-3-3-5" title="Copy heading and permalink for Definition 116" aria-label="Copy heading and permalink for Definition 116">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Series"><a href="#notes-day-11-3-3" title="Copy heading and permalink for Section: Series" aria-label="Copy heading and permalink for Section: Series">🔗</a></div>
+</section>
+<section class="section" id="notes-day-11-3-4">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Series</span>
 </h4>
 <details id="notes-day-11-3-4-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">117</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Series of squares.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-11-3-4-2-2">The series <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> converges.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-11-3-4-2-2">The series <span class="process-math">\(\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2}\)</span> converges.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-11-3-4-2-3">The book explains that because all terms of the series are positive, the sequence of partial sums is monotone increasing.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -715,7 +761,10 @@ s_N \amp = \sum_{i=0}^N A r^k\\
 </div>
 <div class="para" id="notes-day-11-3-4-2-6">To what?  The theorem doesn’t tell us.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-4-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 117: Series of squares"><a href="#notes-day-11-3-4-2" title="Copy heading and permalink for Example 117: Series of squares" aria-label="Copy heading and permalink for Example 117: Series of squares">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Convergence of Series"><a href="#notes-day-11-3-4" title="Copy heading and permalink for Section: Convergence of Series" aria-label="Copy heading and permalink for Section: Convergence of Series">🔗</a></div></section><div class="para logical" id="notes-day-11-3-5">
+<div class="autopermalink" data-description="Example 117: Series of squares"><a href="#notes-day-11-3-4-2" title="Copy heading and permalink for Example 117: Series of squares" aria-label="Copy heading and permalink for Example 117: Series of squares">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Convergence of Series"><a href="#notes-day-11-3-4" title="Copy heading and permalink for Section: Convergence of Series" aria-label="Copy heading and permalink for Section: Convergence of Series">🔗</a></div>
+</section>
+<div class="para logical" id="notes-day-11-3-5">
 <div class="para">The book takes a similar approach to show the harmonic series diverges:</div>
 <ol class="lower-alpha lower-alpha-level-1" id="notes-day-11-3-5-1">
 <li id="notes-day-11-3-5-1-1">
@@ -736,7 +785,11 @@ s_N \amp = \sum_{i=0}^N A r^k\\
 \begin{equation*}
 \sum_{i=0}^{\infty} 2^nb_{2^n}=b_1+2b_2+4b_4+8b_8+ \cdots 
 \end{equation*}
-</div>converges<div class="autopermalink" data-description="Theorem 118: Cauchy Condensation Test"><a href="#notes-day-11-3-6" title="Copy heading and permalink for Theorem 118: Cauchy Condensation Test" aria-label="Copy heading and permalink for Theorem 118: Cauchy Condensation Test">🔗</a></div></article><details id="notes-day-11-3-6-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-11-3-6-3-1">
+</div>converges<div class="autopermalink" data-description="Theorem 118: Cauchy Condensation Test"><a href="#notes-day-11-3-6" title="Copy heading and permalink for Theorem 118: Cauchy Condensation Test" aria-label="Copy heading and permalink for Theorem 118: Cauchy Condensation Test">🔗</a></div>
+</article>
+<details id="notes-day-11-3-6-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="notes-day-11-3-6-3-1">
 <div class="para">We first prove the reverse implication.  Assume that <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> converges.  We want to show that <span class="process-math">\(\displaystyle \sum_{i=1}^{\infty} b_n\)</span> converges.  This means we must show that the sequence of partial sums for the latter series</div>
 <div class="displaymath process-math" id="notes-day-11-3-6-3-1-3">
 \begin{equation*}
@@ -778,7 +831,11 @@ s_{2^{k+1}-1}  \amp = b_1 + b_2 + b_3 + \cdots + b_{2^{k+1}-1}\\
 </div>
 <div class="para" id="notes-day-11-3-6-3-5">Since <span class="process-math">\(s_m \leq t_k \leq M\)</span> we see that the sequence of partial sums <span class="process-math">\((s_m)\)</span> is bounded above.  By the Monotone Convergence Theorem, <span class="process-math">\((s_m)\)</span> converges.  Consquently, the series <span class="process-math">\(\displaystyle \sum_{i=1}^{\infty} b_n\)</span> converges as desired.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-6-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 118.1"><a href="#notes-day-11-3-6-3" title="Copy heading and permalink for Proof 118.1" aria-label="Copy heading and permalink for Proof 118.1">🔗</a></div></article></details><details id="notes-day-11-3-6-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-11-3-6-4-1">To prove the reverse implication, prove the contrapositive:  if <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> diverges, the <span class="process-math">\(\displaystyle \sum_{i=1}^{\infty} b_n\)</span> diverges.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 118.1"><a href="#notes-day-11-3-6-3" title="Copy heading and permalink for Proof 118.1" aria-label="Copy heading and permalink for Proof 118.1">🔗</a></div>
+</article></details>
+<details id="notes-day-11-3-6-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-11-3-6-4-1">To prove the reverse implication, prove the contrapositive:  if <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> diverges, the <span class="process-math">\(\displaystyle \sum_{i=1}^{\infty} b_n\)</span> diverges.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="notes-day-11-3-6-4-2">
 <div class="para">Suppose that <span class="process-math">\(\displaystyle \sum_{i=1}^{\infty} b_n\)</span> converges.  We will use the Monotone COnvergence Theorem to show that show that <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> converges.  If we can show that the sequence <span class="process-math">\((q_K)\)</span> where</div>
@@ -799,7 +856,10 @@ b_1 + \frac{1}{2} \sum_{n=1}^{K} 2^n b_{2^n} \amp = b_1+ b_2 + 2b_4 + 4b_8 + \cd
 </div>
 <div class="para" id="notes-day-11-3-6-4-3">Since the partial sums of  <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> are bounded above, the Monotone Convergence Theorem tells us that the series <span class="process-math">\(\displaystyle \sum_{i=0}^{\infty} 2^nb_{2^n}\)</span> converges, as desired.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-6-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 118.2"><a href="#notes-day-11-3-6-4" title="Copy heading and permalink for Proof 118.2" aria-label="Copy heading and permalink for Proof 118.2">🔗</a></div></article></details><section class="section" id="notes-day-11-3-7"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 118.2"><a href="#notes-day-11-3-6-4" title="Copy heading and permalink for Proof 118.2" aria-label="Copy heading and permalink for Proof 118.2">🔗</a></div>
+</article></details>
+<section class="section" id="notes-day-11-3-7">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subsequences</span>
 </h4>
 <article class="definition definition-like" id="notes-day-11-3-7-2"><h5 class="heading">
@@ -815,13 +875,25 @@ b_1 + \frac{1}{2} \sum_{n=1}^{K} 2^n b_{2^n} \amp = b_1+ b_2 + 2b_4 + 4b_8 + \cd
 <div class="para">is called a <dfn class="terminology">subsequence</dfn> of <span class="process-math">\((x_n)\)</span> and is denoted by <span class="process-math">\((x_{n_k})\text{,}\)</span> where <span class="process-math">\(k \in \mathbb{N}\)</span> indexews the subsequence.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 119"><a href="#notes-day-11-3-7-2" title="Copy heading and permalink for Definition 119" aria-label="Copy heading and permalink for Definition 119">🔗</a></div></article><article class="theorem theorem-like" id="notes-day-11-3-7-3"><h5 class="heading">
+<div class="autopermalink" data-description="Definition 119"><a href="#notes-day-11-3-7-2" title="Copy heading and permalink for Definition 119" aria-label="Copy heading and permalink for Definition 119">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="notes-day-11-3-7-3"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">120</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>Subsequences of a convergent sequence converge to the same limit as the original sequence.<div class="autopermalink" data-description="Theorem 120"><a href="#notes-day-11-3-7-3" title="Copy heading and permalink for Theorem 120" aria-label="Copy heading and permalink for Theorem 120">🔗</a></div></article><details id="notes-day-11-3-7-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-11-3-7-4-1">The proof simply uses the definition of convergence and the idea that a subsequence is just a sequence.  The idea is to note that the <span class="process-math">\(k\)</span>th term of the subsequence if at least the <span class="process-math">\(k\)</span>th term in the original sequence, so the <span class="process-math">\(N\)</span> we get from convergence of the primary sequence also works for the subsequence.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>Subsequences of a convergent sequence converge to the same limit as the original sequence.<div class="autopermalink" data-description="Theorem 120"><a href="#notes-day-11-3-7-3" title="Copy heading and permalink for Theorem 120" aria-label="Copy heading and permalink for Theorem 120">🔗</a></div>
+</article>
+<details id="notes-day-11-3-7-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-11-3-7-4-1">The proof simply uses the definition of convergence and the idea that a subsequence is just a sequence.  The idea is to note that the <span class="process-math">\(k\)</span>th term of the subsequence if at least the <span class="process-math">\(k\)</span>th term in the original sequence, so the <span class="process-math">\(N\)</span> we get from convergence of the primary sequence also works for the subsequence.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-11-3-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-11-3-7-4" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><article class="corollary theorem-like" id="notes-day-11-3-7-5"><h5 class="heading">
+<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-11-3-7-4" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="notes-day-11-3-7-5"><h5 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">121</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Criterion for Divergence.</span>
-</h5>If a sequence has two subsequences that converge to different values, then the original sequence diverges.<div class="autopermalink" data-description="Corollary 121: Criterion for Divergence"><a href="#notes-day-11-3-7-5" title="Copy heading and permalink for Corollary 121: Criterion for Divergence" aria-label="Copy heading and permalink for Corollary 121: Criterion for Divergence">🔗</a></div></article><div class="autopermalink" data-description="Section: Subsequences"><a href="#notes-day-11-3-7" title="Copy heading and permalink for Section: Subsequences" aria-label="Copy heading and permalink for Section: Subsequences">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-11-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 11 (3 March 2026)"><a href="#notes-day-11" title="Copy heading and permalink for Section: Day 11 (3 March 2026)" aria-label="Copy heading and permalink for Section: Day 11 (3 March 2026)">🔗</a></div></section>
+</h5>If a sequence has two subsequences that converge to different values, then the original sequence diverges.<div class="autopermalink" data-description="Corollary 121: Criterion for Divergence"><a href="#notes-day-11-3-7-5" title="Copy heading and permalink for Corollary 121: Criterion for Divergence" aria-label="Copy heading and permalink for Corollary 121: Criterion for Divergence">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Subsequences"><a href="#notes-day-11-3-7" title="Copy heading and permalink for Section: Subsequences" aria-label="Copy heading and permalink for Section: Subsequences">🔗</a></div>
+</section><div class="autopermalink" data-description="Handout"><a href="#notes-day-11-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div>
+</section><div class="autopermalink" data-description="Section: Day 11 (3 March 2026)"><a href="#notes-day-11" title="Copy heading and permalink for Section: Day 11 (3 March 2026)" aria-label="Copy heading and permalink for Section: Day 11 (3 March 2026)">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-day-10.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-12.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

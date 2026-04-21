@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -522,14 +528,19 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="notes-day-05"><h2 class="heading hide-type">
+<section class="section" id="notes-day-05">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 5 (10 February 2026)</span>
 </h2>
-<section class="introduction" id="notes-day-05-2"><div class="para" id="notes-day-05-2-1">This is an outline of the plans for Day 4 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="handout" id="notes-day-05-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<section class="introduction" id="notes-day-05-2">
+<div class="para" id="notes-day-05-2-1">This is an outline of the plans for Day 4 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="handout" id="notes-day-05-3" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h3 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-05-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="section" id="notes-day-05-3-1"><h4 class="heading hide-type">
+<section class="section" id="notes-day-05-3-1">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tuesday 2/10</span>
 </h4>
 <div class="para logical" id="notes-day-05-3-1-2">
@@ -558,12 +569,19 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Tuesday 2/10"><a href="#notes-day-05-3-1" title="Copy heading and permalink for Section: Tuesday 2/10" aria-label="Copy heading and permalink for Section: Tuesday 2/10">🔗</a></div></section><section class="section" id="notes-day-05-3-2"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Tuesday 2/10"><a href="#notes-day-05-3-1" title="Copy heading and permalink for Section: Tuesday 2/10" aria-label="Copy heading and permalink for Section: Tuesday 2/10">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-2">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Completeness</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-05-3-2-2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Density of <span class="process-math">\(\mathbb{Q}\)</span> in <span class="process-math">\(\mathbb{R}\)</span>.</span>
-</h5>Let <span class="process-math">\(a, b, \in \mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(r \in \mathbb{Q}\)</span> with <span class="process-math">\(a &lt; r &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 41: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-05-3-2-2" title="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div></article><details id="notes-day-05-3-2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-05-3-2-3-1">
+</h5>Let <span class="process-math">\(a, b, \in \mathbb{R}\)</span> with <span class="process-math">\(a \neq b\text{.}\)</span>  Then there is an <span class="process-math">\(r \in \mathbb{Q}\)</span> with <span class="process-math">\(a &lt; r &lt; b\text{.}\)</span><div class="autopermalink" data-description="Theorem 41: Density of \mathbb{Q} in \mathbb{R}"><a href="#notes-day-05-3-2-2" title="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}" aria-label="Copy heading and permalink for Theorem 41: Density of \mathbb{Q} in \mathbb{R}">🔗</a></div>
+</article>
+<details id="notes-day-05-3-2-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="notes-day-05-3-2-3-1">
 <div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be real numbers with <span class="process-math">\(a &lt; b\text{.}\)</span>  We need to find integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> where</div>
 <div class="displaymath process-math" id="notes-day-05-3-2-3-1-6">
 \begin{equation*}
@@ -619,7 +637,11 @@ m \amp \leq na+1\\
 </div>
 <div class="para" id="notes-day-05-3-2-3-6">We conclude that <span class="process-math">\(a &lt; \frac{m}{n} &lt; b\text{,}\)</span> as desired.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-05-3-2-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-05-3-2" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div></section><section class="section" id="notes-day-05-3-3"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 1"><a href="#notes-day-05-3-2-3" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Consequences of Completeness"><a href="#notes-day-05-3-2" title="Copy heading and permalink for Section: Consequences of Completeness" aria-label="Copy heading and permalink for Section: Consequences of Completeness">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-3">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How big is that set?</span>
 </h4>
 <div class="para" id="notes-day-05-3-3-2">To get a better understanding of the reals, we’re going to develop the concept of <dfn class="terminology">set cardinality</dfn>, which is essenially a measurement of the size of a set.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -629,12 +651,17 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-3-3-1-1">A set <span class="process-math">\(A\)</span> is finite if there is an <span class="process-math">\(n \in \mathbb{N}\)</span> for which the elements of the set <span class="process-math">\(\{1,2,3,4,\ldots n\}\)</span> and the elements of the set <span class="process-math">\(A\)</span> can be put in 1-1 correspondence.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 42"><a href="#notes-day-05-3-3-3" title="Copy heading and permalink for Definition 42" aria-label="Copy heading and permalink for Definition 42">🔗</a></div></article><div class="para" id="notes-day-05-3-3-4">We say that this correspondence is an <dfn class="terminology">enumeration</dfn> of the set <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 42"><a href="#notes-day-05-3-3-3" title="Copy heading and permalink for Definition 42" aria-label="Copy heading and permalink for Definition 42">🔗</a></div>
+</article>
+<div class="para" id="notes-day-05-3-3-4">We say that this correspondence is an <dfn class="terminology">enumeration</dfn> of the set <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-3-5">&gt;What does it mean to "put in 1-1 correspondence" the elements of two sets?<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: How big is that set?"><a href="#notes-day-05-3-3" title="Copy heading and permalink for Section: How big is that set?" aria-label="Copy heading and permalink for Section: How big is that set?">🔗</a></div></section><section class="section" id="notes-day-05-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: How big is that set?"><a href="#notes-day-05-3-3" title="Copy heading and permalink for Section: How big is that set?" aria-label="Copy heading and permalink for Section: How big is that set?">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-4">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
 </h4>
 <article class="definition definition-like" id="notes-day-05-3-4-2"><h5 class="heading">
@@ -642,10 +669,15 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-4-2-2-1">A <dfn class="terminology">function</dfn> from a set <span class="process-math">\(A\)</span> to a set <span class="process-math">\(B\)</span> is a rule <span class="process-math">\(f\)</span> that assigns to each input <span class="process-math">\(a \in A\)</span> exactly one output <span class="process-math">\(f(a)=b \in B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 43: Function"><a href="#notes-day-05-3-4-2" title="Copy heading and permalink for Definition 43: Function" aria-label="Copy heading and permalink for Definition 43: Function">🔗</a></div></article><div class="para" id="notes-day-05-3-4-3">What mathematics vocabulary and concepts do you associate with the concept of function?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Definition 43: Function"><a href="#notes-day-05-3-4-2" title="Copy heading and permalink for Definition 43: Function" aria-label="Copy heading and permalink for Definition 43: Function">🔗</a></div>
+</article>
+<div class="para" id="notes-day-05-3-4-3">What mathematics vocabulary and concepts do you associate with the concept of function?<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-4" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-4" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-5">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
 </h4>
 <article class="definition definition-like" id="notes-day-05-3-5-2"><h5 class="heading">
@@ -653,12 +685,16 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-5-2-2-1">A <dfn class="terminology">function</dfn> from a set <span class="process-math">\(A\)</span> to a set <span class="process-math">\(B\)</span> is a rule <span class="process-math">\(f\)</span> that assigns to each input <span class="process-math">\(a \in A\)</span> exactly one output <span class="process-math">\(f(a)=b \in B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 44: Function"><a href="#notes-day-05-3-5-2" title="Copy heading and permalink for Definition 44: Function" aria-label="Copy heading and permalink for Definition 44: Function">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-5-3"><h5 class="heading">
+<div class="autopermalink" data-description="Definition 44: Function"><a href="#notes-day-05-3-5-2" title="Copy heading and permalink for Definition 44: Function" aria-label="Copy heading and permalink for Definition 44: Function">🔗</a></div>
+</article>
+<article class="definition definition-like" id="notes-day-05-3-5-3"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">45</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">one-to-one function.</span>
 </h5>
 <div class="para" id="notes-day-05-3-5-3-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is <dfn class="terminology">one-to-one</dfn> if <span class="process-math">\(f(x)=f(y)\)</span> means that <span class="process-math">\(x=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 45: one-to-one function"><a href="#notes-day-05-3-5-3" title="Copy heading and permalink for Definition 45: one-to-one function" aria-label="Copy heading and permalink for Definition 45: one-to-one function">🔗</a></div></article><div class="para" id="notes-day-05-3-5-4">What are some examples of one-to-one functions?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Definition 45: one-to-one function"><a href="#notes-day-05-3-5-3" title="Copy heading and permalink for Definition 45: one-to-one function" aria-label="Copy heading and permalink for Definition 45: one-to-one function">🔗</a></div>
+</article>
+<div class="para" id="notes-day-05-3-5-4">What are some examples of one-to-one functions?<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="fact theorem-like" id="notes-day-05-3-5-5"><h5 class="heading">
@@ -666,15 +702,22 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-5-5-1">A function <span class="process-math">\(f\)</span> that is one-to-one has an inverse <span class="process-math">\(f^{-1}:B \rightarrow A\text{.}\)</span>  Inverse functions are characterized by <span class="process-math">\((f^{-1} \circ f)(a)=a\)</span> for all <span class="process-math">\(a \in A\text{,}\)</span> and <span class="process-math">\((f \circ f^{-1})(b)=b\)</span> for all <span class="process-math">\(b \in f(A) \subseteq B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Fact 46"><a href="#notes-day-05-3-5-5" title="Copy heading and permalink for Fact 46" aria-label="Copy heading and permalink for Fact 46">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-5-6"><h5 class="heading">
+<div class="autopermalink" data-description="Fact 46"><a href="#notes-day-05-3-5-5" title="Copy heading and permalink for Fact 46" aria-label="Copy heading and permalink for Fact 46">🔗</a></div>
+</article>
+<article class="definition definition-like" id="notes-day-05-3-5-6"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">47</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">onto function.</span>
 </h5>
 <div class="para" id="notes-day-05-3-5-6-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is <dfn class="terminology">onto</dfn> if for every <span class="process-math">\(b \in B\)</span> there is an <span class="process-math">\(a \in A\)</span> with <span class="process-math">\(f(a)=b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 47: onto function"><a href="#notes-day-05-3-5-6" title="Copy heading and permalink for Definition 47: onto function" aria-label="Copy heading and permalink for Definition 47: onto function">🔗</a></div></article><div class="para" id="notes-day-05-3-5-7">What are some examples of onto functions?<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Definition 47: onto function"><a href="#notes-day-05-3-5-6" title="Copy heading and permalink for Definition 47: onto function" aria-label="Copy heading and permalink for Definition 47: onto function">🔗</a></div>
+</article>
+<div class="para" id="notes-day-05-3-5-7">What are some examples of onto functions?<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-5" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-6"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-5" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-6">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerations</span>
 </h4>
 <article class="definition definition-like" id="notes-day-05-3-6-2"><h5 class="heading">
@@ -682,7 +725,9 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-6-2-2-1">A <dfn class="terminology">function</dfn> <span class="process-math">\(f: A \rightarrow B\)</span> is a <dfn class="terminology">bijection</dfn> if it is both one-to-one and onto.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 48: bijection"><a href="#notes-day-05-3-6-2" title="Copy heading and permalink for Definition 48: bijection" aria-label="Copy heading and permalink for Definition 48: bijection">🔗</a></div></article><div class="para" id="notes-day-05-3-6-3">The <dfn class="terminology">cardinality</dfn> of a set <span class="process-math">\(A\)</span> is the number of elements in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 48: bijection"><a href="#notes-day-05-3-6-2" title="Copy heading and permalink for Definition 48: bijection" aria-label="Copy heading and permalink for Definition 48: bijection">🔗</a></div>
+</article>
+<div class="para" id="notes-day-05-3-6-3">The <dfn class="terminology">cardinality</dfn> of a set <span class="process-math">\(A\)</span> is the number of elements in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-6-4">If a set is finite, the cardinality is the number of elements in the set.  If a set is not finite, we say it is an infinite set.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -691,9 +736,13 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-6-5-1-1">Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same cardinality if there is a bijection <span class="process-math">\(\phi:A \rightarrow B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 49"><a href="#notes-day-05-3-6-5" title="Copy heading and permalink for Definition 49" aria-label="Copy heading and permalink for Definition 49">🔗</a></div></article><details id="notes-day-05-3-6-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<div class="autopermalink" data-description="Definition 49"><a href="#notes-day-05-3-6-5" title="Copy heading and permalink for Definition 49" aria-label="Copy heading and permalink for Definition 49">🔗</a></div>
+</article>
+<details id="notes-day-05-3-6-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">50</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Even and Odd numbers.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-05-3-6-6-2">Let <span class="process-math">\(E\)</span> be the set of even numbers.  Let <span class="process-math">\(O\)</span> be the set of odd numbers.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-05-3-6-6-2">Let <span class="process-math">\(E\)</span> be the set of even numbers.  Let <span class="process-math">\(O\)</span> be the set of odd numbers.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-6-6-3">Show that <span class="process-math">\(E\)</span> and <span class="process-math">\(\mathbb{N}\)</span> have the same cardinality.<div class="workspace" data-space="3in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -704,32 +753,47 @@ m \amp \leq na+1\\
 <div class="para" id="notes-day-05-3-6-6-5">Do <span class="process-math">\(O\)</span> and <span class="process-math">\(E\)</span> have the same cardinality.?<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 50: Even and Odd numbers"><a href="#notes-day-05-3-6-6" title="Copy heading and permalink for Example 50: Even and Odd numbers" aria-label="Copy heading and permalink for Example 50: Even and Odd numbers">🔗</a></div></article></details><div class="para" id="notes-day-05-3-6-7">If <span class="process-math">\(A \subset B\)</span> (<span class="process-math">\(A\)</span> is a proper subset of <span class="process-math">\(B\)</span>), it is possible that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> could have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 50: Even and Odd numbers"><a href="#notes-day-05-3-6-6" title="Copy heading and permalink for Example 50: Even and Odd numbers" aria-label="Copy heading and permalink for Example 50: Even and Odd numbers">🔗</a></div>
+</article></details>
+<div class="para" id="notes-day-05-3-6-7">If <span class="process-math">\(A \subset B\)</span> (<span class="process-math">\(A\)</span> is a proper subset of <span class="process-math">\(B\)</span>), it is possible that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> could have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-6-8">We saw this with the even numbers, odd numbers, and <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-6" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div></section><section class="section" id="notes-day-05-3-7"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Enumerations"><a href="#notes-day-05-3-6" title="Copy heading and permalink for Section: Enumerations" aria-label="Copy heading and permalink for Section: Enumerations">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-7">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
 </h4>
 <details id="notes-day-05-3-7-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">51</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Naturals and Integers.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-05-3-7-2-2">The natural numbers and the integers have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-05-3-7-2-2">The natural numbers and the integers have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-7-2-3">
 <div class="workspace" data-space="3in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 51: Naturals and Integers"><a href="#notes-day-05-3-7-2" title="Copy heading and permalink for Example 51: Naturals and Integers" aria-label="Copy heading and permalink for Example 51: Naturals and Integers">🔗</a></div></article></details><article class="definition definition-like" id="notes-day-05-3-7-3"><h5 class="heading">
+<div class="autopermalink" data-description="Example 51: Naturals and Integers"><a href="#notes-day-05-3-7-2" title="Copy heading and permalink for Example 51: Naturals and Integers" aria-label="Copy heading and permalink for Example 51: Naturals and Integers">🔗</a></div>
+</article></details>
+<article class="definition definition-like" id="notes-day-05-3-7-3"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">52</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Countability.</span>
 </h5>
 <div class="para" id="notes-day-05-3-7-3-2-1">A set <span class="process-math">\(A\)</span> is <dfn class="terminology">countable</dfn> (or <dfn class="terminology">countably infinite</dfn>) if it has the same cardinality as <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 52: Countability"><a href="#notes-day-05-3-7-3" title="Copy heading and permalink for Definition 52: Countability" aria-label="Copy heading and permalink for Definition 52: Countability">🔗</a></div></article><article class="definition definition-like" id="notes-day-05-3-7-4"><h5 class="heading">
+<div class="autopermalink" data-description="Definition 52: Countability"><a href="#notes-day-05-3-7-3" title="Copy heading and permalink for Definition 52: Countability" aria-label="Copy heading and permalink for Definition 52: Countability">🔗</a></div>
+</article>
+<article class="definition definition-like" id="notes-day-05-3-7-4"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">53</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uncountable.</span>
 </h5>
 <div class="para" id="notes-day-05-3-7-4-2-1">A set <span class="process-math">\(A\)</span> is <dfn class="terminology">uncountable</dfn> (or <dfn class="terminology">uncountably infinite</dfn>) if it is infinite but not countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-7-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 53: Uncountable"><a href="#notes-day-05-3-7-4" title="Copy heading and permalink for Definition 53: Uncountable" aria-label="Copy heading and permalink for Definition 53: Uncountable">🔗</a></div></article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-7" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><section class="section" id="notes-day-05-3-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Definition 53: Uncountable"><a href="#notes-day-05-3-7-4" title="Copy heading and permalink for Definition 53: Uncountable" aria-label="Copy heading and permalink for Definition 53: Uncountable">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-7" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-8">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-05-3-8-2"><h5 class="heading">
@@ -737,7 +801,11 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-8-2-1-1">The set of rational numbers is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 54"><a href="#notes-day-05-3-8-2" title="Copy heading and permalink for Theorem 54" aria-label="Copy heading and permalink for Theorem 54">🔗</a></div></article><details id="notes-day-05-3-8-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-05-3-8-2-2-1">Let <span class="process-math">\(\mathbb{Q}_{-}\)</span> be all the negative rationals and let <span class="process-math">\(\mathbb{Q}_{+}\)</span> be all the positive rationals.  We will show that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 54"><a href="#notes-day-05-3-8-2" title="Copy heading and permalink for Theorem 54" aria-label="Copy heading and permalink for Theorem 54">🔗</a></div>
+</article>
+<details id="notes-day-05-3-8-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-05-3-8-2-2-1">Let <span class="process-math">\(\mathbb{Q}_{-}\)</span> be all the negative rationals and let <span class="process-math">\(\mathbb{Q}_{+}\)</span> be all the positive rationals.  We will show that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-05-3-8-2-2-2">Once we see that <span class="process-math">\(\mathbb{Q}_{+}\)</span> is countable, we will have an enumeration of its elements <span class="process-math">\(\{q_1,q_2,q_3,\ldots\}\text{.}\)</span>  It follows that <span class="process-math">\(\mathbb{Q}_{-}\)</span> is countable and has some enumeration <span class="process-math">\(\{p_1,p_2,p_3,\ldots \}\text{.}\)</span>  This allows us to arrange the elements of <span class="process-math">\(\mathbb{Q} = \mathbb{Q}_{-} \cup \{0\} \cup \mathbb{Q}_{+}\)</span> into an array with two rows: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -805,7 +873,11 @@ m \amp \leq na+1\\
 </div>
 <div class="para" id="notes-day-05-3-8-2-2-8">This concludes the proof that <span class="process-math">\(\mathbb{Q}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-8-2-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 54.1"><a href="#notes-day-05-3-8-2-2" title="Copy heading and permalink for Proof 54.1" aria-label="Copy heading and permalink for Proof 54.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-8" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><section class="section" id="notes-day-05-3-9"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 54.1"><a href="#notes-day-05-3-8-2-2" title="Copy heading and permalink for Proof 54.1" aria-label="Copy heading and permalink for Proof 54.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-8" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div>
+</section>
+<section class="section" id="notes-day-05-3-9">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Infinite Sets</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-05-3-9-2"><h5 class="heading">
@@ -813,7 +885,11 @@ m \amp \leq na+1\\
 </h5>
 <div class="para" id="notes-day-05-3-9-2-1-1">The set of real numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 55"><a href="#notes-day-05-3-9-2" title="Copy heading and permalink for Theorem 55" aria-label="Copy heading and permalink for Theorem 55">🔗</a></div></article><details id="notes-day-05-3-9-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="notes-day-05-3-9-2-2-1">
+<div class="autopermalink" data-description="Theorem 55"><a href="#notes-day-05-3-9-2" title="Copy heading and permalink for Theorem 55" aria-label="Copy heading and permalink for Theorem 55">🔗</a></div>
+</article>
+<details id="notes-day-05-3-9-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="notes-day-05-3-9-2-2-1">
 <div class="para">(Contradiction). Suppose <span class="process-math">\(\mathbb{R}\)</span> is countable.  Then there exists an enumeratioon <span class="process-math">\(\phi:\mathbb{N} \rightarrow \mathbb{R}\text{.}\)</span>  Let <span class="process-math">\(x_n=\phi(n)\)</span> so that</div>
 <div class="displaymath process-math" id="notes-day-05-3-9-2-2-1-4">
 \begin{equation*}
@@ -835,12 +911,18 @@ m \amp \leq na+1\\
 </div>
 <div class="para" id="notes-day-05-3-9-2-2-7">Therefore, our supposition that <span class="process-math">\(\mathbb{R}\)</span> is countably infinte was false.  The opposite is true: <span class="process-math">\(\mathbb{R}\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-2-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 55.1"><a href="#notes-day-05-3-9-2-2" title="Copy heading and permalink for Proof 55.1" aria-label="Copy heading and permalink for Proof 55.1">🔗</a></div></article></details><article class="corollary theorem-like" id="notes-day-05-3-9-3"><h5 class="heading">
+<div class="autopermalink" data-description="Proof 55.1"><a href="#notes-day-05-3-9-2-2" title="Copy heading and permalink for Proof 55.1" aria-label="Copy heading and permalink for Proof 55.1">🔗</a></div>
+</article></details>
+<article class="corollary theorem-like" id="notes-day-05-3-9-3"><h5 class="heading">
 <span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">56</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="notes-day-05-3-9-3-1-1">The set of irrational numbers is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-05-3-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 56"><a href="#notes-day-05-3-9-3" title="Copy heading and permalink for Corollary 56" aria-label="Copy heading and permalink for Corollary 56">🔗</a></div></article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-9" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-05-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 5 (10 February 2026)"><a href="#notes-day-05" title="Copy heading and permalink for Section: Day 5 (10 February 2026)" aria-label="Copy heading and permalink for Section: Day 5 (10 February 2026)">🔗</a></div></section>
+<div class="autopermalink" data-description="Corollary 56"><a href="#notes-day-05-3-9-3" title="Copy heading and permalink for Corollary 56" aria-label="Copy heading and permalink for Corollary 56">🔗</a></div>
+</article><div class="autopermalink" data-description="Section: Infinite Sets"><a href="#notes-day-05-3-9" title="Copy heading and permalink for Section: Infinite Sets" aria-label="Copy heading and permalink for Section: Infinite Sets">🔗</a></div>
+</section><div class="autopermalink" data-description="Handout"><a href="#notes-day-05-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div>
+</section><div class="autopermalink" data-description="Section: Day 5 (10 February 2026)"><a href="#notes-day-05" title="Copy heading and permalink for Section: Day 5 (10 February 2026)" aria-label="Copy heading and permalink for Section: Day 5 (10 February 2026)">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-day-04.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-06.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

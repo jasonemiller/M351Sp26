@@ -35,11 +35,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -55,10 +55,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -485,6 +485,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#notes-day-21-3-1" class="internal"><span class="title">Tuesday 4/21</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-review0421" class="internal"><span class="title">Continuity and Uniform Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diff" class="internal"><span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-diffcts" class="internal"><span class="title">Differentiablity implies Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-algdiff" class="internal"><span class="title">Combinations of Differentiable Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-intvalue" class="internal"><span class="title">Interior Extremum Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvt" class="internal"><span class="title">Mean Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-mvtproof" class="internal"><span class="title">Proof of MVT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="notes-day-21.html#sec-ch6" class="internal"><span class="title">Chapter 6:  Sequences and Series of Functions</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -522,14 +528,19 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="notes-day-08"><h2 class="heading hide-type">
+<section class="section" id="notes-day-08">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Day 8 (18 February 2026)</span>
 </h2>
-<section class="introduction" id="notes-day-08-2"><div class="para" id="notes-day-08-2-1">This is an outline of the plans for Day 8 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="handout" id="notes-day-08-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<section class="introduction" id="notes-day-08-2">
+<div class="para" id="notes-day-08-2-1">This is an outline of the plans for Day 8 of the class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="handout" id="notes-day-08-3" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h3 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=notes-day-08-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="section" id="notes-day-08-3-1"><h4 class="heading hide-type">
+<section class="section" id="notes-day-08-3-1">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Thursday 2/18</span>
 </h4>
 <div class="para logical" id="notes-day-08-3-1-2">
@@ -558,7 +569,10 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Thursday 2/18"><a href="#notes-day-08-3-1" title="Copy heading and permalink for Section: Thursday 2/18" aria-label="Copy heading and permalink for Section: Thursday 2/18">🔗</a></div></section><section class="section" id="notes-day-08-3-2"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Thursday 2/18"><a href="#notes-day-08-3-1" title="Copy heading and permalink for Section: Thursday 2/18" aria-label="Copy heading and permalink for Section: Thursday 2/18">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-2">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Last time: ...</span>
 </h4>
 <div class="para logical" id="notes-day-08-3-2-2">
@@ -575,12 +589,17 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Last time: ..."><a href="#notes-day-08-3-2" title="Copy heading and permalink for Section: Last time: ..." aria-label="Copy heading and permalink for Section: Last time: ...">🔗</a></div></section><section class="section" id="notes-day-08-3-3"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Last time: ..."><a href="#notes-day-08-3-2" title="Copy heading and permalink for Section: Last time: ..." aria-label="Copy heading and permalink for Section: Last time: ...">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-3">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <article class="definition definition-like" id="notes-day-08-3-3-2"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">85</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 85"><a href="#notes-day-08-3-3-2" title="Copy heading and permalink for Definition 85" aria-label="Copy heading and permalink for Definition 85">🔗</a></div></article><div class="para logical" id="notes-day-08-3-3-3">
+</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 85"><a href="#notes-day-08-3-3-2" title="Copy heading and permalink for Definition 85" aria-label="Copy heading and permalink for Definition 85">🔗</a></div>
+</article>
+<div class="para logical" id="notes-day-08-3-3-3">
 <div class="para">Approach to proving using the definition.</div>
 <ol class="decimal" id="notes-day-08-3-3-3-1">
 <li id="notes-day-08-3-3-3-1-1">
@@ -602,7 +621,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li id="notes-day-08-3-3-3-1-5">
 <div class="para" id="p-derived-notes-day-08-3-3-3-1-5">
-<span class="process-math">\(|x_n-x_0| &lt; \epsilon\)</span><ul class="disc" id="notes-day-08-3-3-3-1-5-2">
+<span class="process-math">\(|x_n-x_0| &lt; \epsilon\)</span>
+<ul class="disc" id="notes-day-08-3-3-3-1-5-2">
 <li id="notes-day-08-3-3-3-1-5-2-1">
 <div class="para" id="p-derived-notes-day-08-3-3-3-1-5-2-1">``...because <span class="process-math">\(n &gt; N\text{...}\)</span>’’</div>
 <div class="autopermalink" data-description="Item"><a href="#notes-day-08-3-3-3-1-5-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
@@ -628,18 +648,27 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-3" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-08-3-4"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-3" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-4">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <details id="notes-day-08-3-4-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">86</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergent sequence (from last time).</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-08-3-4-2-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{x^2+\ln(n)}{e^n(n^2-\sqrt{n}-1)}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-08-3-4-2-2">Prove that <span class="process-math">\(\displaystyle \lim_{n \rightarrow \infty} \frac{x^2+\ln(n)}{e^n(n^2-\sqrt{n}-1)}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-08-3-4-2-3">
 <div class="workspace" data-space="9in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 86: Convergent sequence (from last time)"><a href="#notes-day-08-3-4-2" title="Copy heading and permalink for Example 86: Convergent sequence (from last time)" aria-label="Copy heading and permalink for Example 86: Convergent sequence (from last time)">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-4" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-08-3-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 86: Convergent sequence (from last time)"><a href="#notes-day-08-3-4-2" title="Copy heading and permalink for Example 86: Convergent sequence (from last time)" aria-label="Copy heading and permalink for Example 86: Convergent sequence (from last time)">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-4" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-5">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Sequences</span>
 </h4>
 <div class="para logical" id="notes-day-08-3-5-2">
@@ -661,7 +690,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="10in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-5" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div></section><section class="section" id="notes-day-08-3-6"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Convergence of Sequences"><a href="#notes-day-08-3-5" title="Copy heading and permalink for Section: Convergence of Sequences" aria-label="Copy heading and permalink for Section: Convergence of Sequences">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-6">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
 </h4>
 <div class="para logical" id="notes-day-08-3-6-1">
@@ -674,7 +706,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="10in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section"><a href="#notes-day-08-3-6" title="Copy heading and permalink for Section" aria-label="Copy heading and permalink for Section">🔗</a></div></section><section class="section" id="notes-day-08-3-7"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section"><a href="#notes-day-08-3-6" title="Copy heading and permalink for Section" aria-label="Copy heading and permalink for Section">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-7">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"></span>
 </h4>
 <div class="para logical" id="notes-day-08-3-7-1">
@@ -687,12 +722,17 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="10in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section"><a href="#notes-day-08-3-7" title="Copy heading and permalink for Section" aria-label="Copy heading and permalink for Section">🔗</a></div></section><section class="section" id="notes-day-08-3-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section"><a href="#notes-day-08-3-7" title="Copy heading and permalink for Section" aria-label="Copy heading and permalink for Section">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-8">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Convergence</span>
 </h4>
 <article class="definition definition-like" id="notes-day-08-3-8-2"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">87</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 87"><a href="#notes-day-08-3-8-2" title="Copy heading and permalink for Definition 87" aria-label="Copy heading and permalink for Definition 87">🔗</a></div></article><div class="para" id="notes-day-08-3-8-3">Take a moment to consider a consequence of ``... if n &gt; N, then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span>’’<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>A sequence <span class="process-math">\((x_n)\)</span> converges to a real number <span class="process-math">\(x_0\)</span>if for every <span class="process-math">\(\epsilon &gt;0\)</span> there is an <span class="process-math">\(N=N(\epsilon) \in \mathbb{N}\)</span> with the property that if <span class="process-math">\(n &gt;N\)</span> then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span><div class="autopermalink" data-description="Definition 87"><a href="#notes-day-08-3-8-2" title="Copy heading and permalink for Definition 87" aria-label="Copy heading and permalink for Definition 87">🔗</a></div>
+</article>
+<div class="para" id="notes-day-08-3-8-3">Take a moment to consider a consequence of ``... if n &gt; N, then <span class="process-math">\(|x_n-x_0| &lt; \epsilon\text{.}\)</span>’’<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="notes-day-08-3-8-4">
 \begin{gather*}
@@ -709,12 +749,19 @@ x_0-\epsilon &lt; x_n &lt; x_0 + \epsilon
 </div>
 <div class="para" id="notes-day-08-3-8-7">This interval around <span class="process-math">\(x_0\)</span> is called an <dfn class="terminology">epsilon neighborhood of <span class="process-math">\(x_0\)</span></dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-8-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-8" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div></section><section class="section" id="notes-day-08-3-9"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-8" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-9">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Convergence</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-08-3-9-2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">88</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>If <span class="process-math">\((x_n)\)</span> is a convergent sequence, then its limit is unique.<div class="autopermalink" data-description="Theorem 88"><a href="#notes-day-08-3-9-2" title="Copy heading and permalink for Theorem 88" aria-label="Copy heading and permalink for Theorem 88">🔗</a></div></article><details id="notes-day-08-3-9-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-08-3-9-2-2-1">Suppose the limit is not unique.  Suppose there are two real nummbers <span class="process-math">\(x_0\)</span> and <span class="process-math">\(y_0\)</span> with <span class="process-math">\(x_0 \neq y_0\)</span> for which <span class="process-math">\((x_n) \rightarrow x_0\)</span> and <span class="process-math">\((x_n) \rightarrow y_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-9-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>If <span class="process-math">\((x_n)\)</span> is a convergent sequence, then its limit is unique.<div class="autopermalink" data-description="Theorem 88"><a href="#notes-day-08-3-9-2" title="Copy heading and permalink for Theorem 88" aria-label="Copy heading and permalink for Theorem 88">🔗</a></div>
+</article>
+<details id="notes-day-08-3-9-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-08-3-9-2-2-1">Suppose the limit is not unique.  Suppose there are two real nummbers <span class="process-math">\(x_0\)</span> and <span class="process-math">\(y_0\)</span> with <span class="process-math">\(x_0 \neq y_0\)</span> for which <span class="process-math">\((x_n) \rightarrow x_0\)</span> and <span class="process-math">\((x_n) \rightarrow y_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-9-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-08-3-9-2-2-2">Let <span class="process-math">\(\epsilon = \frac{1}{2}|x_0-y_0|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-9-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -736,30 +783,52 @@ x_0-\epsilon &lt; x_n &lt; x_0 + \epsilon
 <div class="para">But this is absurd.  We cannot have <span class="process-math">\(|x_0 - y_0| &lt; |x_0 - y_0|\text{.}\)</span>  Consequently, our supposition that the limit is not unique must have been incorrect.  Therefore,  the limit of a convergent sequence is unique.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-9-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 88.1"><a href="#notes-day-08-3-9-2-2" title="Copy heading and permalink for Proof 88.1" aria-label="Copy heading and permalink for Proof 88.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-9" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div></section><section class="section" id="notes-day-08-3-10"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 88.1"><a href="#notes-day-08-3-9-2-2" title="Copy heading and permalink for Proof 88.1" aria-label="Copy heading and permalink for Proof 88.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-9" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-10">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Convergence</span>
 </h4>
 <article class="definition definition-like" id="notes-day-08-3-10-2"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">89</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">bounded above</dfn> if there is an <span class="process-math">\(M \in \mathbb{R}\)</span> for which <span class="process-math">\(x_n \leq M\)</span> for all <span class="process-math">\(n\text{.}\)</span>  A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">bounded below</dfn> if there is an <span class="process-math">\(m \in \mathbb{R}\)</span> for which <span class="process-math">\(m \leq x_n \)</span> for all <span class="process-math">\(n\text{.}\)</span> A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">(totally) bounded</dfn> if is it bonded above and bounded below.<div class="autopermalink" data-description="Definition 89"><a href="#notes-day-08-3-10-2" title="Copy heading and permalink for Definition 89" aria-label="Copy heading and permalink for Definition 89">🔗</a></div></article><div class="para" id="notes-day-08-3-10-3">This definition of bondedness agrees with the definition we made for bonded sets <span class="process-math">\(A \subseteq \mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">bounded above</dfn> if there is an <span class="process-math">\(M \in \mathbb{R}\)</span> for which <span class="process-math">\(x_n \leq M\)</span> for all <span class="process-math">\(n\text{.}\)</span>  A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">bounded below</dfn> if there is an <span class="process-math">\(m \in \mathbb{R}\)</span> for which <span class="process-math">\(m \leq x_n \)</span> for all <span class="process-math">\(n\text{.}\)</span> A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">(totally) bounded</dfn> if is it bonded above and bounded below.<div class="autopermalink" data-description="Definition 89"><a href="#notes-day-08-3-10-2" title="Copy heading and permalink for Definition 89" aria-label="Copy heading and permalink for Definition 89">🔗</a></div>
+</article>
+<div class="para" id="notes-day-08-3-10-3">This definition of bondedness agrees with the definition we made for bonded sets <span class="process-math">\(A \subseteq \mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="notes-day-08-3-10-4"><h5 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">90</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">unbounded</dfn> if it is not totally bounded.  If we want more specificity, we can say a sequence with no upper bound is <dfn class="terminology">not bounded above</dfn> and a sequence that does not hae a lower bound is <dfn class="terminology">not bounded blow</dfn>.<div class="autopermalink" data-description="Definition 90"><a href="#notes-day-08-3-10-4" title="Copy heading and permalink for Definition 90" aria-label="Copy heading and permalink for Definition 90">🔗</a></div></article><details id="notes-day-08-3-10-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+</h5>A sequence <span class="process-math">\((x_n) \subset \mathbb{R}\)</span> is <dfn class="terminology">unbounded</dfn> if it is not totally bounded.  If we want more specificity, we can say a sequence with no upper bound is <dfn class="terminology">not bounded above</dfn> and a sequence that does not hae a lower bound is <dfn class="terminology">not bounded blow</dfn>.<div class="autopermalink" data-description="Definition 90"><a href="#notes-day-08-3-10-4" title="Copy heading and permalink for Definition 90" aria-label="Copy heading and permalink for Definition 90">🔗</a></div>
+</article>
+<details id="notes-day-08-3-10-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">91</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5></summary><article class="example example-like knowl__content"><div class="para" id="notes-day-08-3-10-5-1">Give an example of a sequence that is bounded.  A sequence that is not bounded above.  A sequence that is not bounded below.<div class="workspace" data-space="3in"></div>
+</h5></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="notes-day-08-3-10-5-1">Give an example of a sequence that is bounded.  A sequence that is not bounded above.  A sequence that is not bounded below.<div class="workspace" data-space="3in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-10-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 91"><a href="#notes-day-08-3-10-5" title="Copy heading and permalink for Example 91" aria-label="Copy heading and permalink for Example 91">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-10" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div></section><section class="section" id="notes-day-08-3-11"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Example 91"><a href="#notes-day-08-3-10-5" title="Copy heading and permalink for Example 91" aria-label="Copy heading and permalink for Example 91">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-10" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div>
+</section>
+<section class="section" id="notes-day-08-3-11">
+<h4 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consequences of Convergence</span>
 </h4>
 <article class="theorem theorem-like" id="notes-day-08-3-11-2"><h5 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">92</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>If <span class="process-math">\((x_n)\)</span> is a convergent sequence, then the sequence is totally bounded.<div class="autopermalink" data-description="Theorem 92"><a href="#notes-day-08-3-11-2" title="Copy heading and permalink for Theorem 92" aria-label="Copy heading and permalink for Theorem 92">🔗</a></div></article><details id="notes-day-08-3-11-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="notes-day-08-3-11-2-2-1">Suppose <span class="process-math">\((x_n) \rightarrow x_0\text{.}\)</span>  Choosing <span class="process-math">\(\epsilon =1\text{,}\)</span> there is an <span class="process-math">\(N \in mathbb{N}\)</span> for which <span class="process-math">\(n &gt; N\)</span> means <span class="process-math">\(|x_n-x_0| &lt; 1.\text{.}\)</span> This means <span class="process-math">\(x_n &lt; L +1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-11-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h5>If <span class="process-math">\((x_n)\)</span> is a convergent sequence, then the sequence is totally bounded.<div class="autopermalink" data-description="Theorem 92"><a href="#notes-day-08-3-11-2" title="Copy heading and permalink for Theorem 92" aria-label="Copy heading and permalink for Theorem 92">🔗</a></div>
+</article>
+<details id="notes-day-08-3-11-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="notes-day-08-3-11-2-2-1">Suppose <span class="process-math">\((x_n) \rightarrow x_0\text{.}\)</span>  Choosing <span class="process-math">\(\epsilon =1\text{,}\)</span> there is an <span class="process-math">\(N \in mathbb{N}\)</span> for which <span class="process-math">\(n &gt; N\)</span> means <span class="process-math">\(|x_n-x_0| &lt; 1.\text{.}\)</span> This means <span class="process-math">\(x_n &lt; L +1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-11-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-day-08-3-11-2-2-2">Let <span class="process-math">\(M=\max\{|x_1|,|x_2|, \ldots,|x_{N-1}|,L+1\}\text{.}\)</span>  Then <span class="process-math">\((x_n) \subset [-M,M]\text{.}\)</span>  This shows that <span class="process-math">\((x_n)\)</span> is bonded above and below, so it is totally bounded.<div class="autopermalink" data-description="Paragraph"><a href="#notes-day-08-3-11-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 92.1"><a href="#notes-day-08-3-11-2-2" title="Copy heading and permalink for Proof 92.1" aria-label="Copy heading and permalink for Proof 92.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-11" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div></section><div class="autopermalink" data-description="Handout"><a href="#notes-day-08-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div></section><div class="autopermalink" data-description="Section: Day 8 (18 February 2026)"><a href="#notes-day-08" title="Copy heading and permalink for Section: Day 8 (18 February 2026)" aria-label="Copy heading and permalink for Section: Day 8 (18 February 2026)">🔗</a></div></section>
+<div class="autopermalink" data-description="Proof 92.1"><a href="#notes-day-08-3-11-2-2" title="Copy heading and permalink for Proof 92.1" aria-label="Copy heading and permalink for Proof 92.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section: Consequences of Convergence"><a href="#notes-day-08-3-11" title="Copy heading and permalink for Section: Consequences of Convergence" aria-label="Copy heading and permalink for Section: Consequences of Convergence">🔗</a></div>
+</section><div class="autopermalink" data-description="Handout"><a href="#notes-day-08-3" title="Copy heading and permalink for Handout" aria-label="Copy heading and permalink for Handout">🔗</a></div>
+</section><div class="autopermalink" data-description="Section: Day 8 (18 February 2026)"><a href="#notes-day-08" title="Copy heading and permalink for Section: Day 8 (18 February 2026)" aria-label="Copy heading and permalink for Section: Day 8 (18 February 2026)">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-day-07.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-day-09.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
